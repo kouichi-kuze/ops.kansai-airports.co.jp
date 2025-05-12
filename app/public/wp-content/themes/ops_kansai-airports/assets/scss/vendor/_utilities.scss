@@ -145,93 +145,53 @@
   pointer-events: none;
 }
 
-.mx-atuo {
-  @include m.mx-atuo;
+.mx-auto {
+  @include m.mx-auto;
 }
 
-// Generates classes .mt-x, .mb-x, .ml-x, .mr-x where x is one of the defined scale values (rem)
-// Scale: 0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6
-$margin-scales: 0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6;
+// Import string module for replace function
 
-@each $i in $margin-scales {
-  .mt-#{$i} {
-    margin-top: #{$i}rem !important;
-  }
-  .mb-#{$i} {
-    margin-bottom: #{$i}rem !important;
-  }
-  .ml-#{$i} {
-    margin-left: #{$i}rem !important;
-  }
-  .mr-#{$i} {
-    margin-right: #{$i}rem !important;
-  }
+// margin utility classes with responsive variants
+// Scale values in rem units mapped to safe class-name parts
+$margin-scales: (
+  0.5: 1,
+  1:   2,
+  1.5: 3,
+  2:   4,
+  2.5: 5,
+  3:   6,
+  4:   7,
+  5:   8,
+  6:   9,
+);
+
+// Generate base margin classes
+@each $value, $name in $margin-scales {
+  .mt-#{$name} { margin-top: $value * 1rem !important; }
+  .mb-#{$name} { margin-bottom: $value * 1rem !important; }
+  .ml-#{$name} { margin-left: $value * 1rem !important; }
+  .mr-#{$name} { margin-right: $value * 1rem !important; }
 }
 
-@media only screen and (min-width: g.$desktop-breakpoint-sm) {
-  @each $i in $margin-scales {
-    .mt-sm-#{$i} {
-      margin-top: #{$i}rem !important;
-    }
-    .mb-sm-#{$i} {
-      margin-bottom: #{$i}rem !important;
-    }
-    .ml-sm-#{$i} {
-      margin-left: #{$i}rem !important;
-    }
-    .mr-sm-#{$i} {
-      margin-right: #{$i}rem !important;
-    }
-  }
-}
+// Responsive breakpoints
+$desktop-breakpoint-sm: 576px;
+$desktop-breakpoint-md: 768px;
+$desktop-breakpoint-lg: 992px;
+$desktop-breakpoint-xl: 1200px;
 
-@media only screen and (min-width: g.$desktop-breakpoint-md) {
-  @each $i in $margin-scales {
-    .mt-md-#{$i} {
-      margin-top: #{$i}rem !important;
-    }
-    .mb-md-#{$i} {
-      margin-bottom: #{$i}rem !important;
-    }
-    .ml-md-#{$i} {
-      margin-left: #{$i}rem !important;
-    }
-    .mr-md-#{$i} {
-      margin-right: #{$i}rem !important;
-    }
-  }
-}
-
-@media only screen and (min-width: g.$desktop-breakpoint-lg) {
-  @each $i in $margin-scales {
-    .mt-lg-#{$i} {
-      margin-top: #{$i}rem !important;
-    }
-    .mb-lg-#{$i} {
-      margin-bottom: #{$i}rem !important;
-    }
-    .ml-lg-#{$i} {
-      margin-left: #{$i}rem !important;
-    }
-    .mr-lg-#{$i} {
-      margin-right: #{$i}rem !important;
-    }
-  }
-}
-
-@media only screen and (min-width: g.$desktop-breakpoint-xl) {
-  @each $i in $margin-scales {
-    .mt-xl-#{$i} {
-      margin-top: #{$i}rem !important;
-    }
-    .mb-xl-#{$i} {
-      margin-bottom: #{$i}rem !important;
-    }
-    .ml-xl-#{$i} {
-      margin-left: #{$i}rem !important;
-    }
-    .mr-xl-#{$i} {
-      margin-right: #{$i}rem !important;
+// Generate responsive margin classes for each breakpoint
+@each $bp, $min in (
+  sm: $desktop-breakpoint-sm,
+  md: $desktop-breakpoint-md,
+  lg: $desktop-breakpoint-lg,
+  xl: $desktop-breakpoint-xl
+) {
+  @media only screen and (min-width: $min) {
+    @each $value, $name in $margin-scales {
+      .mt-#{$bp}-#{$name} { margin-top: $value * 1rem !important; }
+      .mb-#{$bp}-#{$name} { margin-bottom: $value * 1rem !important; }
+      .ml-#{$bp}-#{$name} { margin-left: $value * 1rem !important; }
+      .mr-#{$bp}-#{$name} { margin-right: $value * 1rem !important; }
     }
   }
 }

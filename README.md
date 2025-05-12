@@ -29,3 +29,14 @@ TOP
 
 
 # テーマ構成
+themes\ops_kansai-airports
+
+１）assets内に
+img,css,jsをそれぞれ格納し、scssファイルを使用してCSSを作成
+２）incフォルダ
+共通で使うようなファイルを格納
+３）parts 
+バナーなどで共通で使いそうなパーツを格納
+４）template
+各固定ページ、及びお知らせなどのアーカイブ作成用ファイル
+５）ルートその他
