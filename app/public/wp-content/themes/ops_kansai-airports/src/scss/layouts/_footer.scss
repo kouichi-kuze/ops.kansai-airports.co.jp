@@ -1,0 +1,79 @@
+// 共通スタイル
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+
+
+.site-footer {
+	background: #F1F7F7;
+	padding: 55px 0 0;
+	@media only screen and (min-width: g.$desktop-breakpoint-md) {
+		padding: 70px 0 0;
+	}
+
+	&__logo {
+		max-width: 298px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md) {
+			max-width: 348px
+		}
+	}
+  }
+  
+  .site-footer__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em;
+  }
+  
+  
+  
+  .site-footer__actions .btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0.6em 1em;
+	border-radius: 4px;
+  }
+  
+  .btn--primary { background: #007bff; color: #fff; }
+  .btn--secondary { background: #6c757d; color: #fff; }
+  
+  .footer-info-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5em 0;
+  }
+  .footer-info-table th {
+	text-align: left;
+	padding: 0.5em;
+	vertical-align: top;
+	width: 25%;
+  }
+  .footer-info-table td {
+	padding: 0.5em;
+  }
+  
+  .footer-nav-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em 1em;
+	list-style: none;
+	padding: 0;
+  }
+  .footer-nav-list li a {
+	color: #555;
+	text-decoration: none;
+  }
+  
+  @media (max-width: 600px) {
+	.site-footer__top {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+	.site-footer__actions .btn {
+	  width: 100%;
+	  justify-content: center;
+	}
+  }
+  

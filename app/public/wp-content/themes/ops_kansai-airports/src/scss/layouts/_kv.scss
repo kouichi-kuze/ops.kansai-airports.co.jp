@@ -1,0 +1,212 @@
+// 共通スタイル
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+
+.l-hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 45%;
+    @media only screen and (min-width: g.$desktop-breakpoint-md) {
+        position: relative;
+        padding-bottom: 0;
+    }
+    .hero-inner {
+        //position: relative;
+        position: absolute;
+        @include m.mx-auto;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            position: absolute;
+            width: calc(100% - 40px);
+            height: 100%;
+            //min-width: 728px;
+            min-width: 960px;
+            //@include m.mx-auto;
+            //width: 100%;
+            top: 0;
+            //left: 50%;
+            //transform: translateX(-50%);
+            left: 40px;
+        }
+
+        @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+            width: 67%;
+            min-width: 960px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0;
+        }
+    }
+
+    .hero-lead {
+        width: 22%;
+        position: absolute;
+        top: 30px;
+        right: 4%;
+        z-index: 2;
+        line-height: 1;
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            width: 39%;
+            top: 7%;
+            left: 0;
+            right: auto;
+        }
+    }
+
+    .hero-title {
+        width: 17%;
+        position: absolute;
+        left: 4%;
+        top: 30px;
+        z-index: 2;
+        line-height: 1;
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            width: 54%;
+            left: 0;
+            top: 30%;
+        }
+    }
+
+    .hero-bg {
+        position: relative;
+        @include m.mx-auto;
+        width: 100%;
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            min-width: 1100px;
+        }
+    }
+
+    .hero-badge-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0px;
+        width: 88%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: calc(45% - 28%);
+        z-index: 2;
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            width: 35%;
+            gap: 5px;
+            position: absolute;
+            left: 7%;
+            transform: translateX(0);
+            //bottom: 25%;
+            top: 50%;
+            bottom: auto;
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+            width: 38%;
+        }
+        &-item {
+            &-02 {
+                padding-top: 18%;
+                @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.kv-btn-list {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    width: 88%;
+    @media only screen and (min-width: g.$desktop-breakpoint-md) {
+        //width: 512px;
+        width: 50%;
+        position: absolute;
+        //width: auto;
+        left: 0;
+        transform: translateX(0);
+        top: 80%;
+        bottom: auto;
+        gap: 20px;
+    }
+
+    @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+        width: 52%;
+    }
+}
+
+.kv-btn-list-link {
+    width: 100%;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.btn-common {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #04C755;
+    color: g.$white;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1;
+    @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+        font-size: 22px;
+    }
+    .ico-btn-line {
+        width: 32px;
+        line-height: 1;
+    }
+
+    &.btn-line-kv {
+        width: 240px;
+        height: 56px;
+        border-radius: 8px;
+    }
+}
+
+.btn-reserve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F96E6E;
+    color: g.$white;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1;
+    @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+        font-size: 22px;
+    }
+
+    .ico-btn-reserve {
+        width: 32px;
+        line-height: 1;
+    }
+
+    .sm {
+        font-size: 10px;
+        font-weight: 500;
+        @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+            font-size: 11.5px;
+        }
+    }
+
+    &.btn-reserve-kv {
+        width: 240px;
+        height: 56px;
+        border-radius: 8px;
+    }
+}

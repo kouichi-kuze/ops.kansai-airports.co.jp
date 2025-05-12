@@ -1,0 +1,99 @@
+@use "../utils/variables" as g;
+
+//mixin
+@mixin mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin font-center {
+  text-align: center;
+}
+
+@mixin gradient-bg($direction: to right) {
+  background: linear-gradient(
+    $direction,
+    #309BFF 0%,
+    #14ABF6 49%,
+    #6E9EF9 100%
+  );
+}
+
+// FONT
+@mixin font-jp-xl-700 {
+  font-family: g.$font-noto-sans;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: auto;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    font-size: 40px;
+  }
+  @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+    font-size: 40px;
+  }
+}
+
+@mixin font-jp-lg-700 {
+  font-family: g.$font-noto-sans;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: auto;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    font-size: 24px;
+  }
+  @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+    font-size: 24px;
+  }
+}
+
+@mixin font-jp-md-400 {
+  font-family: g.$font-noto-sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+    font-size: 16px;
+  }
+}
+
+@mixin font-jp-md-700 {
+  font-family: g.$font-noto-sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+    font-size: 16px;
+  }
+}
+
+@mixin font-jp-sm-400 {
+  font-family: g.$font-noto-sans;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: auto;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    font-size: 14px;
+  }
+  @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+    font-size: 14px;
+  }
+}
+
+@mixin font-jp-xs-400 {
+  font-family: g.$font-noto-sans;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    font-size: 12px;
+  }
+  @media only screen and (min-width: g.$desktop-breakpoint-lg) {
+    font-size: 12px;
+  }
+}

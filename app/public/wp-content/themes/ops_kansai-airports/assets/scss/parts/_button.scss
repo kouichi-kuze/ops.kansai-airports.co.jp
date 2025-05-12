@@ -1,0 +1,28 @@
+// 共通スタイル
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+
+.btn {
+    &::before {
+        content: "";
+    }
+    
+    &::after {
+        content: "";
+    }
+    &:hover {
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            width: 192px;
+        }
+    }
+
+    // PRIMARY カラー
+    &__primary {
+  
+    }
+  
+    // 白地に PRIMARY カラーのテキスト版
+    &__white {
+  
+    }
+}

@@ -1,0 +1,35 @@
+// 共通スタイル
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+
+
+body {
+    font-family: g.$font-noto-sans;
+    margin: 0;
+    padding: 0;
+    color: g.$primary;
+    font-weight: 400;
+}
+
+a {
+    color: g.$primary;
+    text-decoration: none;
+    
+    @media only screen and (min-width: g.$desktop-breakpoint-md) {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+li,ul,ol,h1,h2,h3,h4,h5,div,p,dl.dt.dd,table,td,th {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

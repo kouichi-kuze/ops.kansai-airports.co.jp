@@ -1,0 +1,1 @@
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/common.js"></script>

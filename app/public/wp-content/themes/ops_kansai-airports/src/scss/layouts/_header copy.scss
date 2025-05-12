@@ -1,0 +1,146 @@
+// 共通スタイル
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+
+.site-header {
+	background: g.$white;
+    font-family: g.$font-ibm-plex-sans;
+
+	&__inner {
+		//max-width: 1200px;
+        width: 100%;
+		margin: 0 auto;
+		padding: 0 15px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+        box-sizing: border-box;
+
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+			padding: 0 24px;
+            height: 88px;
+		}
+	}
+
+	&__skip {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #000;
+		color: g.$white;
+		padding: 8px;
+		font-size: 14px;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 1px;
+		z-index: 1000;
+		&:focus {
+			clip: auto;
+			clip-path: none;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__toggle {
+		display: block;
+        &:checked ~ &__nav {
+            transform: translateX(0);
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            display: none;
+            
+        }
+	}
+
+	&__toggle-label {
+        display: block;
+		cursor: pointer;
+		span {
+			display: block;
+			width: 24px;
+			height: 2px;
+			margin: 4px 0;
+			background: g.$black;
+			transition: 0.3s;
+		}
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            display: none;
+        }
+	}
+
+	&__nav {
+        position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: g.$white;
+		transform: translateX(-100%);
+		transition: transform 0.3s ease;
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+            position: relative;
+            top: auto;
+            left: auto;
+            width: auto;
+            background-color: transparent;
+            transform: translateX(0);
+        }
+
+		ul {
+			flex-direction: column;
+            @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+		}
+
+
+		& .site-header__item {
+            margin: 16px 0;
+            text-align: center;
+            @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                margin-left: 24px;
+                text-align: left;
+            }
+			a {
+				text-decoration: none;
+				font-size: 14px;
+				color: g.$black;
+				&:hover,
+				&:focus {
+					//color: #007acc;
+                    color: g.$black;
+				}
+			}
+			&.site-header__social {
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					svg {
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+            
+			.button--primary {
+				padding: 8px 16px;
+				background: #007acc;
+				color: g.$white;
+				border-radius: 4px;
+				&:hover,
+				&:focus {
+					background: darken(#007acc, 10%);
+				}
+			}
+		}
+	}
+}
