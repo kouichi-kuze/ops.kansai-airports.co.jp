@@ -2,7 +2,9 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
-
+html{
+	margin-top: 0!important;
+}
 body {
     font-family: g.$font-noto-sans;
     margin: 0;
