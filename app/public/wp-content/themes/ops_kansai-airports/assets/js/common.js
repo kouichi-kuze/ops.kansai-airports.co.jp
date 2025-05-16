@@ -35,35 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	//スクロール後非表示
 	$(function () {
-		const $list = $('.page-content-link-list');
-		const $end = $('.hidden-area');
+	  const $list = $('.page-content-link-list');
+	  const $end = $('.hidden-area');
 
-		$(window).on('scroll', function () {
-				const scrollTop = $(this).scrollTop();
-				const windowBottom = scrollTop + $(window).height();
+	  $(window).on('scroll', function () {
+		// ウィンドウ幅をチェック
+		if ($(window).width() < 1200) {
+		  // 1200px未満の場合は初期状態に戻す
+		  $list.removeClass('fixed').show();
+		  return;
+		}
 
-			// fixed クラスの付け外し（300px以上スクロールしたら）
-			if (scrollTop >= 300) {
-				$list.addClass('fixed');
-				} else {
-				$list.removeClass('fixed');
-			}
+		const scrollTop = $(this).scrollTop();
+		const windowBottom = scrollTop + $(window).height();
 
-			// hidden-area に差し掛かったら非表示
-			if ($list.length && $end.length) {
-				const endTop = $end.offset().top;
+		// fixed クラスの付け外し（300px以上スクロールしたら）
+		if (scrollTop >= 300) {
+		  $list.addClass('fixed');
+		} else {
+		  $list.removeClass('fixed');
+		}
 
-				if (windowBottom >= endTop) {
-				$list.fadeOut();
-				} else {
-				$list.fadeIn();
-				}
-			}
-		});
-	});	
-	
-	
-	
+		// hidden-area に差し掛かったら非表示
+		if ($list.length && $end.length) {
+		  const endTop = $end.offset().top;
+
+		  if (windowBottom >= endTop) {
+			$list.fadeOut();
+		  } else {
+			$list.fadeIn();
+		  }
+		}
+	  });
+	});
 	
 	
 	
