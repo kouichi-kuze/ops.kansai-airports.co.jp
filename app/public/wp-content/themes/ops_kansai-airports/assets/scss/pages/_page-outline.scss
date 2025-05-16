@@ -17,3 +17,285 @@
     }
 }
 */
+#page-company-outline .companyinfo-box{
+	margin-top: 80px;
+}
+@media only screen and (min-width: g.$desktop-breakpoint-xl){
+	#page-company-outline .companyinfo-box{
+		margin-top: 120px;
+	}
+}
+#page-company-outline{
+	background-color: g.$bg-blue;
+}
+#page-company-outline .sub-page-main{
+	padding-top: 60px;
+}
+#page-content-link_01 .margin-adjust{
+	margin-top: -80px;
+    padding-top: 80px;
+}
+.sub-page-main.bg-lightpurple{
+	background-color: #ffffff;
+    background-image: url("../img/outline/bg_lightpurple_diag.png");
+    background-repeat: no-repeat;
+	background-position: top 40px left -20px;
+    background-size: 80%;
+}
+.company-profile-item .attention{
+	font-size: 12px;
+}
+@media only screen and (min-width: g.$desktop-breakpoint-md){
+	#page-company-outline .sub-page-main{
+		padding-top: 120px;
+	}
+	.sub-page-main.bg-lightpurple{
+		background-position: top 70px left 0px;
+		background-size: 70%;
+	}
+
+}
+@media only screen and (min-width: g.$desktop-breakpoint-xl){
+	.company-profile-item{
+		display: flex;
+	}
+	.sub-page-main.bg-lightpurple{
+		background-position: top 70px left 0px;
+   		 background-size: 40%;
+	}
+	.company-profile-item .title{
+		font-size: 16px;
+		min-width: 160px;
+		padding: 30px 0 30px 20px;
+		margin-bottom: 1px;
+	}
+	.company-profile-item .text{
+		padding: 30px 0 30px 20px;
+		margin: 0;
+	}
+	.company-profile-item .text,
+	.blank-hiringratio-item .title, 
+	.blank-hiringratio-item .text{
+		font-size: 14px;
+	}
+	.blank-hiringratio-head .date{
+		font-size: 12px;
+	}
+	.company-profile-item .text{
+		width: 100%;
+		margin-bottom: 1px;
+	}
+	.blank-hiringratio-head{
+		display: flex;
+		justify-content: space-between;
+	}
+	.blank-hiringratio-head,
+	.company-profile-item .attention{
+		padding-right: 7px;
+	}
+}
+.company-system{
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+.company-system-item{
+	margin-bottom: 20px;
+	border-radius: 6px;
+    overflow: hidden;
+}
+.company-system-item .title{
+	padding: 15px 30px;
+	background-color: g.$secondary;
+	color: g.$white;
+	font-size: 14px;
+	font-weight: 400;
+}
+.company-system-item .text{
+	padding: 20px 30px;
+	background-color: g.$white;
+	color: g.$primary;
+	font-size: 13px;
+	font-weight: 400;
+}
+.company-location-outer{
+	margin-top: 30px;
+}
+.maps-group{
+	position: relative;
+	width: 100%;
+    height: 49vw;
+    overflow: hidden;
+	border-radius: 12px;
+	margin-bottom: 30px;
+}
+
+.maps-group iframe{
+	border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.company-location .title{
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+.company-location .text{
+	font-size: 14px;
+	font-weight: 400;
+}
+.company-location .text p{
+	margin-bottom: 15px;
+}
+.company-location .contact{
+	margin-bottom: 70px;
+	
+}
+.company-location .text p a{
+	display: block;
+	line-height: 1.7;
+}
+.company-location .contact .pdf a{
+	position: relative;
+
+}
+.company-location .contact .pdf a::after{
+	content: "";
+	background: url(../img/outline/icon_target_blank.svg) no-repeat center / contain;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	vertical-align: middle;
+	right: 0px;
+	
+	
+}
+@media only screen and (min-width: g.$desktop-breakpoint-md){
+	.company-location .text p.tel a{
+		pointer-events: none
+	}
+}
+.company-location .contact .contact-link a,
+.company-location .contact .pdf a{
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+}
+.company-location .contact .contact-link a{
+	padding: 13px 0;
+}
+.company-location .contact .pdf a{
+	padding: 15px 0;
+}
+.company-location .contact .pdf a img{
+	width: 47px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.company-location .contact .contact-link,
+.company-location .contact .pdf{
+	border-top: solid 1px g.$primary;
+}
+.company-location .contact .pdf{
+	border-bottom: solid 1px g.$primary;
+}
+
+@media only screen and (min-width: g.$desktop-breakpoint-md){
+	.company-location-outer{
+		margin-top: 60px;
+	}
+	.maps-group{
+		height: 41vw;
+		max-height: 360px;
+		margin-bottom: 60px;
+	}
+	.company-location .title{
+		font-size: 18px;
+	}
+	.company-location .text{
+		font-size: 16px;
+	}
+	.company-location .contact{
+		max-width: 360px;
+	}
+}
+
+
+.company-location .contact .contact-link a{
+    padding-right: 40px;
+    position: relative;
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			padding-right:32px;
+	}
+	&::before{
+		content: "";
+		display: inline-block;
+		position: absolute;
+		background-color: #07185C;
+		width: 16px;
+		height: 16px;
+		border-radius: 50px;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		transition: all 0.3s;
+		transform-origin: 50% 0;
+        @media only screen and (min-width: g.$desktop-breakpoint-xl) {
+				width: 17px;
+				height: 17px;
+        }
+	}
+	&::after{
+		content: "";
+		background: url(../img/common/icon_menu_arrow.svg) no-repeat center / contain;
+		display: inline-block;
+		width: 11px;
+		height: 7px;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		vertical-align: middle;
+		right: 3px;
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				width: 10px;
+				height: 7px;
+				top: 50%;
+				transform: translate(0, -50%);
+		}
+	}
+    &:hover::before{
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+				scale: 1.5;
+				transform-origin: 50% 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
