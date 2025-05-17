@@ -17,6 +17,7 @@
     }
 }
 */
+#page-company-inquiry  a,
 #page-company-outline a{
 	text-decoration: none;
 }
@@ -44,10 +45,20 @@
 }
 @media only screen and (min-width: g.$desktop-breakpoint-xl){
 	.p-side-3-8{
-		padding: 0 60px;
+		padding: 0 80px;
 	}
 	.p-side-15-3{
 		padding: 0 30px;
+	}
+	.max-128{
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+}
+@media only screen and (min-width: 1800px){
+	#page-company-outline .p-side-3-8,
+	#page-company-inquiry .p-side-3-8{
+		padding: 0 60px;
 	}
 }
 
@@ -123,12 +134,17 @@
 .dot-ttl::before{
   background-color: g.$primary;
 }
+.left-bulueline-ttl,
 .left-pinkline-ttl{
 	position: relative;
 	font-size: 20px;
 	font-weight: 700;
 	padding-left: calc(15px + 6px);
 }
+.left-bulueline-ttl{
+	font-size: 18px;
+}
+.left-bulueline-ttl::before,
 .left-pinkline-ttl::before{
 	content: "";
 	display: inline-block;
@@ -140,11 +156,31 @@
 	left: 0;
 	transform: translate(0 ,-50%);
 }
+.left-bulueline-ttl::before{
+	background-color: g.$primary;
+}
+.left-border-ttl{
+	font-size: 14px;
+	font-weight: 700;
+	display: flex;
+    align-items: center;
+}
+.left-border-ttl::before{
+	content: "";
+	width: 20px;
+	height: 1px;
+	display: inline-block;
+	background-color: g.$primary;
+	margin-right: 10px;
+		
+}
 @media only screen and (min-width: g.$desktop-breakpoint-xl){
+	.left-bulueline-ttl,
 	.left-pinkline-ttl{
 		font-size: 24px;
 		padding-left: calc(20px + 6px);
 	}
+	.left-bulueline-ttl::before,
 	.left-pinkline-ttl::before{
 		height: 24px;
 	}
@@ -302,13 +338,19 @@
 @media only screen and (min-width: g.$desktop-breakpoint-xl){
 	.left-content{
 		max-width: 800px;
-	}.sikaku_box.fixed {
-    position: fixed;
-    top: 50px;
-    left: auto;
-    z-index: +1;
-}
+	}
+	.sikaku_box.fixed {
+		position: fixed;
+		top: 50px;
+		left: auto;
+		z-index: +1;
+	}
 	
+}
+@media only screen and (min-width: 1800px) {
+    .left-content {
+        max-width: 960px;
+    }
 }
 
 
@@ -396,6 +438,19 @@
 	background-color: g.$white;;
 	margin-bottom: 90px;
 }
+.white-radius-box{
+	border-radius: 8px;
+	background-color: g.$white;
+	padding: 30px;
+}
+@media only screen and (min-width: g.$desktop-breakpoint-xl){
+	.white-radius-box{
+		padding: 40px;
+	}
+}
+
+
+
 .company-affi-item{
 	list-style-type: disc;
 	margin-left: 18px;
@@ -425,11 +480,84 @@
 		border-radius: 8px;
 	}
 }
+//disc-list
+.disc-list .disc-item{
+	list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.7;
+	font-weight: 700;
+}
+//pdf-list
+
+.pdf-list a{
+	position: relative;
+	display: block;
+    font-size: 14px;
+    font-weight: 700;
+	padding: 15px 0;
+	text-decoration: none;
+}
+.pdf-list a img{
+	width: 47px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.pdf-list a::after{
+	content: "";
+    background: url(../img/outline/icon_target_blank.svg) no-repeat center / contain;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    vertical-align: middle;
+    right: 0px;
+}
+.pdf-list .pdf-item{
+//	border-top: solid 1px #07185C;
+	border-bottom: solid 1px #07185C;
+}
+.pdf-list .pdf-item:first-of-type{
+	border-top: solid 1px #07185C;
+}
 
 
 
 
-
+//slick設定
+//次のスライドをチラ見せ幅
+.slick-slider .slick-list {
+    padding: 0 5% 0 0 !important;
+}
+.slick-initialized .slick-slide{
+	padding-right: 20px;
+}
+.slick-slide .slick-cloned{
+	padding-right: 0px!important;
+}
+@media only screen and (min-width: g.$desktop-breakpoint-xl){
+	//次のスライドをチラ見せ幅
+	.slick-slider .slick-list {
+		padding: 0 0 0 0 !important;
+	}
+	.slick-initialized .slick-slide{
+		padding-right: 40px;
+	}
+	.slick-slide .slick-cloned{
+		padding-right: 0px!important;
+	}
+	.slick-initialized .slick-slide:nth-of-type(even){
+		padding-right: 0px;
+	}
+	#page-company-inquiry .security{
+		position: relative;
+		overflow: visible;	
+	}
+	#page-company-inquiry .security-img{
+		width: 840px;
+	}
+}
 
 
 
