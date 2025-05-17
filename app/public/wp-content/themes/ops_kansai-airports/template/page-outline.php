@@ -24,7 +24,7 @@ Template Name:企業概要
 	
 	
 		<div class="sub-page-main bg-lightpurple">
-			<div class="p-side-3-8">
+			<div class="p-side-3-16">
 				<div class="left-content">
 					<div class="read">
 						<p class="read-ttl"><img src="<?php bloginfo('template_url'); ?>//assets/img/outline/outline_read_ttl.png" alt="空港の安全　安心を守る"></p>
@@ -119,7 +119,7 @@ Template Name:企業概要
 			</div>
 			<section class="sec-bulue-box">
 				<div id="page-content-link_02" class="content">
-					<div class="p-side-3-8">
+					<div class="p-side-3-16">
 						<div class="left-content">
 							<div class="margin-adjust">
 								<h2 class="left-pinkline-ttl">組織体制</h2>
@@ -201,7 +201,7 @@ Template Name:企業概要
 			</section>
 			<section class="sec-box">
 				<div id="page-content-link_03">
-					<div class="p-side-3-8">
+					<div class="p-side-3-16">
 						<div class="left-content">
 							
 							<div class="margin-adjust">
