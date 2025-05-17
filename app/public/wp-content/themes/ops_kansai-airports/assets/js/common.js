@@ -72,6 +72,45 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	
 	
+	//inquiryスライダー
+	$('.slick-slider').slick({
+	//autoplay: true,
+    infinite: true,
+    arrows: false,
+    dots: false,
+    pauseOnFocus: false ,
+    pauseOnHover: false ,
+	//centerPadding: "5%",// チラ見せの幅
+    //autoplaySpeed: 2000 ,
+    //speed: 1000,
+    // 画像の枚数を指定、1枚表示、１枚チラ見せさせたい場合は、１を指定
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		
+//    infinite: true,
+//    slidesToShow: 1,
+////		centerPadding: "10%",
+//   // slidesToScroll: 1,
+//	//center modeとcenterPadding を指定
+//    centerMode: true,
+//    centerPadding: "20%",
+		
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        }
+    }]
+});
+	
+	
+	
+	
+	
+
+	
+	
 	
 	
 	
