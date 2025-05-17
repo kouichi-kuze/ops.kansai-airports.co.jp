@@ -6,7 +6,7 @@ Template Name:代表メッセージ
 <?php get_template_part( 'inc/header' ); ?>
 
 
-<div class="sub-page-header">
+<div class="sub-page-header p-side-3-8">
   <!-- パンくずリスト -->
   <div class="breadcrumb-wrap">
     <?php get_template_part( 'inc/breadcrumb' ); ?>
@@ -23,7 +23,7 @@ Template Name:代表メッセージ
 		<div class="p-side-3-8">
 			<div class="max-128">
 				<div class="ceo-message-content">
-					<figure class="ceo-img"><img src="<?php bloginfo('template_url'); ?>//assets/img/company/ceo_img.png" alt="代表取締役社長　石川 浩司"></figure>
+					<figure class="ceo-img"><img src="<?php bloginfo('template_url'); ?>/assets/img/company/ceo_img.png" alt="代表取締役社長　石川 浩司"></figure>
 					<div class="ceo-message">
 						<p class="text-left">弊社、関西エアポートオペレーションサービス株式会社は、関西国際空港、大阪国際空港、神戸空港の現場において、安全・安心、お客様サービスを担ってきたグループ６社の部門が集合し、関西エアポートグループの空港オペレーション部門を担う会社として2019年4月１日に発足し、本日5年の区切りを迎えることができました。 これもひとえに、空港をご利用いただいている皆様方、関係先の皆様方の日ごろからのご支援、ご高配の賜物と感謝いたしております。</p>
 						<p class="text-left">弊社におきましては、空港運営の基本となる、“空港の安全管理、保安管理、警備、空港消防、給油施設管理運用などの飛行場運用業務”、“旅客サービス、防火・防災、清掃、駐車場運営などのターミナルビル運営業務”を行い、また、空港運営における危機の発生に備えての準備・訓練を繰り返し、被害を最小限にする努力を日々絶え間なく行っています。</p>

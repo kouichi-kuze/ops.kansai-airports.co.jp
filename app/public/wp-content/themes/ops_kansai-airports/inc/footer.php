@@ -141,7 +141,8 @@
 </div>
 <!-- /wrapper -->
 <!-- jQuery CDN --> 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <!-- 自作JS --> 
 <script type="<?php echo get_stylesheet_directory_uri() ?>/assets/js/common.js"></script>
 

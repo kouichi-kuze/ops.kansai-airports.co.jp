@@ -9,6 +9,7 @@
 <?php get_template_part( 'inc/head' ); ?>
 <?php wp_head(); ?>
 <?php get_template_part( 'inc/css' ); ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 <link href="<?php echo get_stylesheet_directory_uri() ?>/assets/css/style.css" rel="stylesheet">
 </head>
 <body>

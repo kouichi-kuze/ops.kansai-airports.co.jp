@@ -6,7 +6,7 @@ Template Name:企業概要
 <?php get_template_part( 'inc/header' ); ?>
 
 
-<div class="sub-page-header">
+<div class="sub-page-header p-side-3-8">
   <!-- パンくずリスト -->
   <div class="breadcrumb-wrap">
     <?php get_template_part( 'inc/breadcrumb' ); ?>
@@ -19,9 +19,6 @@ Template Name:企業概要
   </div>
 </div>
 <main  id="page-company-outline">
-	
-	
-	
 	
 		<div class="sub-page-main bg-lightpurple">
 			<div class="p-side-3-16">
@@ -261,41 +258,5 @@ Template Name:企業概要
 				</div>
 			</section>
 		</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 </main >
 <?php get_template_part( 'inc/footer' ); ?>
