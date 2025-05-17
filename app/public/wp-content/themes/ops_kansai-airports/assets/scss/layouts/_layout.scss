@@ -24,26 +24,40 @@
 .content-inner{
   padding: 0 30px!important;
 }
+.page-content-link-list .d-xl-inline-block{
+	display: none;
+}
+
 
 //saide padding
-.p-side-3-8{
+.p-side-3-8,
+.p-side-3-16{
 	padding: 0 30px;
 }
 .p-side-15-3{
 	padding: 0 15px;
 }
+.mb-2-4{
+	margin-bottom: 20px;
+}
 @media only screen and (min-width: g.$desktop-breakpoint-md){
+	.p-side-3-16,
 	.p-side-3-8{
 		padding: 0 40px;
 	}
 	.p-side-15-3{
 		padding: 0 20px;
 	}
-	
-	
+	.mb-2-4{
+		margin-bottom: 40px;
+	}
+//	.pl-4-16{
+//		padding-left: 40px;
+//	}
 	
 }
 @media only screen and (min-width: g.$desktop-breakpoint-xl){
+	.p-side-3-16,
 	.p-side-3-8{
 		padding: 0 80px;
 	}
@@ -54,12 +68,22 @@
 		max-width: 1280px;
 		margin: 0 auto;
 	}
+	.pl-4-16{
+		padding-left: 80px;
+	}
 }
 @media only screen and (min-width: 1800px){
 	#page-company-outline .p-side-3-8,
 	#page-company-inquiry .p-side-3-8{
 		padding: 0 60px;
 	}
+	.p-side-3-16{
+		padding: 0 160px;
+	}
+	.pl-4-16{
+		padding-left: 160px;
+	}
+	
 }
 
 
