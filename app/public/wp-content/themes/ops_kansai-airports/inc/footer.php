@@ -1,87 +1,100 @@
 
 <footer class="site-footer">
-	<!--sp　footer-->
 	<div id="footer-sm">
 		<div class="footer-bg">
+	<!--sp　footer nav-->
 		  <nav class="nav-sp-menu">
 			<ul>
 			  <li class=""> <a class="menu__item__link js-menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ</a> </li>
 			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">企業情報 <span>Company</span></a>
 				<ul class="submenu">
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">代表メッセージ</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">会社概要</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a> </li>
 				</ul>
 			  </li>
-			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">お知らせ <span>Information</span></a>
+			  <li class=""> <a class="menu__item__link" href="">お知らせ <span>Information</span></a>
+<!--
 				<ul class="submenu">
 				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 				</ul>
+-->
 			  </li>
 			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">事業紹介 <span>Service</span></a>
 				<ul class="submenu">
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">事業紹介</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">オペレーションマネジメント事業</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">警備事業</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">消防事業</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">ターミナルマネジメント事業</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">清掃・カート事業</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">駐車場運営事業</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">カーゴエリアオペレーション事業</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">給油運用事業</a> </li>
 				</ul>
 			  </li>
 			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">採用情報 <span>Recruit</span></a>
 				<ul class="submenu">
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 				</ul>
 			  </li>
-			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">お問い合わせ <span>Contact</span></a>
+			  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ <span>Contact</span></a>
+<!--
 				<ul class="submenu">
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 				</ul>
+-->
 			  </li>
 			</ul>
 		  </nav>
 			<div class="content-inner">
+	<!--PC　footer nav-->
 				<div class="footer-pc-nav-area">
 					  <nav class="nav-pc-menu">
 						<ul>
-						  <li class="fismenu icon_menu_arrow"> <a class="menu__item__link js-menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ<span>Top</span></a> </li>
-						  <li class="fismenu menu-close"> <a class="menu__item__link js-menu__item__link" href="">企業情報 <span>Company</span></a>
+						  <li class="fismenu icon_menu_arrow"> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ<span>Top</span></a> </li>
+						  <li class="fismenu menu-close"> <a class="menu__item__link js-menu__item__link non-link" href="">企業情報 <span>Company</span></a>
 							<ul class="submenu">
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">代表メッセージ</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">会社概要</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a> </li>
 							</ul>
 						  </li>
-						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link js-menu__item__link" href="">お知らせ <span>Information</span></a>
+						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link" href="">お知らせ <span>Information</span></a>
+<!--
 							<ul class="submenu">
 							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
+							</ul>
+-->
+						  </li>
+						</ul>
+						<ul>
+						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>services/">事業紹介 <span>Service</span></a>
+							<ul class="submenu">
+<!--							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">事業紹介</a> </li>-->
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/management/">オペレーションマネジメント事業</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/security/">警備事業</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/fire/">消防事業</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/terminal/">ターミナルマネジメント事業</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/cart-cleaning/">清掃・カート事業</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/parking/">駐車場運営事業</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/cargo/">カーゴエリアオペレーション事業</a> </li>
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/fueling/">給油運用事業</a> </li>
 							</ul>
 						  </li>
 						</ul>
 						<ul>
-						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link js-menu__item__link" href="">事業紹介 <span>Service</span></a>
+						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>recruit/">採用情報 <span>Recruit</span></a>
 							<ul class="submenu">
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">オペレーションマネジメント事業</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">警備事業</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">消防事業</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">ターミナルマネジメント事業</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">清掃・カート事業</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">駐車場運営事業</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">カーゴエリアオペレーション事業</a> </li>
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">給油運用事業</a> </li>
+<!--							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報</a> </li>-->
+							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 							</ul>
 						  </li>
-						</ul>
-						<ul>
-						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link js-menu__item__link" href="">採用情報 <span>Recruit</span></a>
-							<ul class="submenu">
-							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">先輩の声</a> </li>
-							</ul>
-						  </li>
-						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link js-menu__item__link" href="">お問い合わせ <span>Contact</span></a>
+						  <li class="fismenu menu-close icon_menu_arrow"> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ <span>Contact</span></a>
 <!--
 							<ul class="submenu">
 							  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>

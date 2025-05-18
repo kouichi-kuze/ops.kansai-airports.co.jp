@@ -192,6 +192,9 @@
 		display: inline-block;
 		position: relative;
 	}
+	.site-footer .nav-pc-menu .menu__item__link.non-link{
+		pointer-events: none;
+	}
 	.site-footer .nav-pc-menu .menu__item__link span{
 		font-size: 12px;
 		font-weight: 400;
