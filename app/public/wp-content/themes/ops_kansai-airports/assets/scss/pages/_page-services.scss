@@ -17,3 +17,153 @@
     }
 }
 */
+.company-service a{
+	text-decoration: none;
+}
+.company-service .bottom-border-bulue-ttl{
+	margin-bottom: 40px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		margin-bottom: 60px;
+	}
+}
+.company-service .glay-box{
+	margin-bottom: 30px;
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		margin-bottom: 40px;
+	}
+	&:hover .img-content .img {
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			transform: scale(1.1);
+		}
+	}
+	&:hover .text-content .btn-bace-round .btn-setting::before {
+		scale: 1.5;
+        transform-origin: 50% 0;
+	}
+}
+.company-service .glay-box .text-content .btn-bace-round .btn-setting{
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		padding: 18px 100px 18px 30px;
+		font-size: 16px;
+	}
+	&::before{
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			width: 30px;
+		height: 30px;
+		}
+	}
+	&::after{
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			right: 20px;
+		}
+	}
+}
+.company-service .glay-box .img-content .img {
+	transition: transform .4s ease;
+}
+.company-service .glay-box .img-content{
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 80 / 53;
+	border-radius: 8px;
+	overflow: hidden;
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		border-radius: 15px;
+	}
+}
+.company-service .glay-box .img{
+	background: url("../img/service/img_service_management.png") no-repeat center/cover;
+	width: 100%;
+	height: 100%;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		aspect-ratio: 57 / 33;
+	}
+}
+.company-service .glay-box .img.--service_management{
+	background: url("../img/service/service_management.png") no-repeat center/cover;
+}
+.company-service .glay-box .img.--img_service_security{
+	background: url("../img/service/img_service_security.png") no-repeat center/cover;
+}
+.company-service .glay-box .img.--img_service_firefighting{
+	background: url("../img/service/img_service_firefighting.png") no-repeat center/cover;
+}
+.company-service .glay-box .img.--img_service_terminalmana{
+	background: url("../img/service/img_service_terminalmana.png") no-repeat center/cover;
+}
+.company-service .glay-box .img.--img_service_cleaning{
+	background: url("../img/service/img_service_cleaning.png") no-repeat center/cover;
+}
+.company-service .glay-box .img.--img_service_operation{
+	background: url("../img/service/img_service_operation.png") no-repeat center/cover;
+}
+.company-service .glay-box .img.--img_service_parking{
+	background: url("../img/service/img_service_parking.png") no-repeat center/cover;
+}
+.company-service .glay-box .img.--img_service_refueling{
+	background: url("../img/service/img_service_refueling.png") no-repeat center/cover;
+}
+.company-service .glay-box .text-content .ttl{
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 8px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		font-size: 24px;
+	}
+}
+.company-service .glay-box .text-content .text{
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 20px;
+	line-height: 1.7;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		margin-bottom: 30px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		margin-bottom: 40px;
+	}
+}
+.company-service .glay-box .btn-bace-round{
+	text-align: right;
+}
+.company-service .glay-box .content-item{
+	display: flex;
+    flex-flow: column;
+    gap: 20px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		flex-flow: row;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+	    gap: 40px;
+		align-items: center;
+	}
+}
+.company-service .glay-box .content-item li{
+	flex: 1;
+}
+
+
+
+.company-service .glay-box{}
+.company-service .glay-box{}
+.company-service .glay-box{}
+.company-service .glay-box{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
