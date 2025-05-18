@@ -35,87 +35,92 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	//スクロール後非表示
 	$(function () {
-	  const $list = $('.page-content-link-list');
-	  const $end = $('.hidden-area');
+		const $list = $('.page-content-link-list');
+		const $end = $('.hidden-area');
 
-	  $(window).on('scroll', function () {
-		// ウィンドウ幅をチェック
-		if ($(window).width() < 1200) {
-		  // 1200px未満の場合は初期状態に戻す
-		  $list.removeClass('fixed').show();
-		  return;
-		}
+		$(window).on('scroll', function () {
+			// ウィンドウ幅をチェック
+			if ($(window).width() < 1200) {
+				// 1200px未満の場合は初期状態に戻す
+				$list.removeClass('fixed').show();
+				return;
+			}
 
-		const scrollTop = $(this).scrollTop();
-		const windowBottom = scrollTop + $(window).height();
+			const scrollTop = $(this).scrollTop();
+			const windowBottom = scrollTop + $(window).height();
 
-		// fixed クラスの付け外し（300px以上スクロールしたら）
-		if (scrollTop >= 300) {
-		  $list.addClass('fixed');
-		} else {
-		  $list.removeClass('fixed');
-		}
+			// fixed クラスの付け外し（300px以上スクロールしたら）
+			if (scrollTop >= 300) {
+				$list.addClass('fixed');
+				} else {
+				$list.removeClass('fixed');
+			}
 
-		// hidden-area に差し掛かったら非表示
-		if ($list.length && $end.length) {
-		  const endTop = $end.offset().top;
+			// hidden-area に差し掛かったら非表示
+			if ($list.length && $end.length) {
+				const endTop = $end.offset().top;
 
-		  if (windowBottom >= endTop) {
-			$list.fadeOut();
-		  } else {
-			$list.fadeIn();
-		  }
-		}
-	  });
-	});
-	
+				if (windowBottom >= endTop) {
+					$list.fadeOut();
+					} else {
+					$list.fadeIn();
+				}
+			}
+		});
+	});	
 	
 	
 	
 	//inquiryスライダー
 	$('.slick-slider').slick({
-	//autoplay: true,
-    infinite: true,
-    arrows: false,
-    dots: false,
-    pauseOnFocus: false ,
-    pauseOnHover: false ,
-	//centerPadding: "5%",// チラ見せの幅
-    //autoplaySpeed: 2000 ,
-    //speed: 1000,
-    // 画像の枚数を指定、1枚表示、１枚チラ見せさせたい場合は、１を指定
+		//autoplay: true,
+		infinite: true,
+		arrows: false,
+		dots: false,
+		pauseOnFocus: false ,
+		pauseOnHover: false ,
 		slidesToShow: 2,
 		slidesToScroll: 2,
-		
-//    infinite: true,
-//    slidesToShow: 1,
-////		centerPadding: "10%",
-//   // slidesToScroll: 1,
-//	//center modeとcenterPadding を指定
-//    centerMode: true,
-//    centerPadding: "20%",
-		
-    responsive: [{
-        breakpoint: 1200,
-        settings: {
-		slidesToShow: 1,
+		responsive: [{
+			breakpoint: 1200,
+			settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			}
+		}]
+	});
+	
+//recruit-bnr-slider	
+  $('.recruit-bnr-slider').slick({
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 0,
+		speed: 7500,
+		infinite: true,
+		cssEase: 'linear',
+		slidesToShow: 2,
 		slidesToScroll: 1,
-        }
-    }]
-});
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
+		responsive: [
+			{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 1.5,
+			}
+		},
+			{
+			breakpoint: 768,//モニターの横幅が769px以下の見せ方
+			settings: {
+				slidesToShow: 1,//スライドを画面に2枚見せる
+			}
+		},
+			{
+			breakpoint: 520,
+			settings: {
+				slidesToShow: 0.7,
+			}
+		}
+	]
+	});
 	
 	
 	
