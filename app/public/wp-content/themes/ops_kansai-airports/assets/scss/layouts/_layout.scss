@@ -25,6 +25,9 @@
 #page-company-outline a{
 	text-decoration: none;
 }
+.non-link{
+	pointer-events: none!important;
+}
 .content-inner{
   padding: 0 30px!important;
 }
