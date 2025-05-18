@@ -17,6 +17,10 @@
     }
 }
 */
+// -----------------
+//　パーツ
+//--------------------
+
 #page-company-inquiry  a,
 #page-company-outline a{
 	text-decoration: none;
@@ -28,19 +32,24 @@
 	display: none;
 }
 
-
+.max-128{
+	max-width: 1280px;
+	margin: 0 auto;
+}
 //saide padding
 .p-side-3-8,
 .p-side-3-16{
 	padding: 0 30px;
 }
-.p-side-15-3{
+.p-side-15-3,
+.p-side-15-8{
 	padding: 0 15px;
 }
 .mb-2-4{
 	margin-bottom: 20px;
 }
 @media only screen and (min-width: g.$desktop-breakpoint-md){
+	.p-side-15-8,
 	.p-side-3-16,
 	.p-side-3-8{
 		padding: 0 40px;
@@ -51,12 +60,9 @@
 	.mb-2-4{
 		margin-bottom: 40px;
 	}
-//	.pl-4-16{
-//		padding-left: 40px;
-//	}
-	
 }
 @media only screen and (min-width: g.$desktop-breakpoint-xl){
+	.p-side-15-8,
 	.p-side-3-16,
 	.p-side-3-8{
 		padding: 0 80px;
@@ -85,7 +91,9 @@
 	}
 	
 }
-
+.bg-color-primary{
+	background-color: g.$primary;
+}
 
 
 //コンテンツヘッダー
@@ -209,7 +217,31 @@
 		height: 24px;
 	}
 }
-
+.bottom-border-bulue-ttl{
+	position: relative;
+	font-size: 24px;
+	font-weight: 700;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		font-size: 28px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		font-size: 32px;
+	}
+	&::after{
+		content: "";
+		width: 35px;
+		height: 6px;
+		position: absolute;
+		display: inline-block;
+		background-color: g.$secondary;
+		bottom: -10px;
+		left: 0;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			width: 40px;
+			bottom: -15px;
+		}
+	}
+}
 
 
 
@@ -219,7 +251,11 @@
     font-size: 50px;
   }
 }
-//サブページメイン
+
+// -----------------
+//　サブページ共通レイアウト
+//--------------------
+
 .sub-page-main{
 	background-color: g.$white;
 	border-radius: 20px 20px 0 0;
@@ -236,6 +272,18 @@
 		padding-top: 80px;
 	}
 	
+}
+.glay-box{
+	background-color: g.$btn-white;
+	padding: 20px;
+	border-radius: 8px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding: 30px;
+		border-radius: 15px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		padding: 40px;
+	}
 }
 //Companyinfo
 .companyinfo-box a {
@@ -376,7 +424,6 @@
         max-width: 960px;
     }
 }
-
 
 //スクロール一調整
 .margin-adjust{
@@ -547,31 +594,31 @@
 }
 
 
-
-
-//slick設定
+// -----------------
+//　slick設定
+//--------------------
 //次のスライドをチラ見せ幅
-.slick-slider .slick-list {
+#page-company-inquiry .security-img .slick-slider .slick-list {
     padding: 0 5% 0 0 !important;
 }
-.slick-initialized .slick-slide{
+#page-company-inquiry .security-img .slick-initialized .slick-slide{
 	padding-right: 20px;
 }
-.slick-slide .slick-cloned{
+#page-company-inquiry .security-img .slick-slide .slick-cloned{
 	padding-right: 0px!important;
 }
 @media only screen and (min-width: g.$desktop-breakpoint-xl){
 	//次のスライドをチラ見せ幅
-	.slick-slider .slick-list {
+	#page-company-inquiry .security-img .slick-slider .slick-list {
 		padding: 0 0 0 0 !important;
 	}
-	.slick-initialized .slick-slide{
+	#page-company-inquiry .security-img .slick-initialized .slick-slide{
 		padding-right: 40px;
 	}
-	.slick-slide .slick-cloned{
+	#page-company-inquiry .security-img .slick-slide .slick-cloned{
 		padding-right: 0px!important;
 	}
-	.slick-initialized .slick-slide:nth-of-type(even){
+	#page-company-inquiry .security-img .slick-initialized .slick-slide:nth-of-type(even){
 		padding-right: 0px;
 	}
 	#page-company-inquiry .security{
@@ -582,6 +629,151 @@
 		width: 840px;
 	}
 }
+//----recruit-bnr-slider------
+//このページのfooterの背景色変更
+#page-company-service + .site-footer{
+	background-color: g.$primary;
+}
+.recruit-bnr-slider-outer{
+	overflow: hidden;
+    border-radius: 15px;
+}
+.recruit-bnr-content{
+	position: relative;
+	background-color: g.$primary;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.recruit-bnr-slider-outer .btn_recruit-bnr-slider-sp{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: inline-block;
+    width: 280px;
+    height: auto;
+    z-index: 1;
+	&::before{
+		content: "";
+		display: inline-block;
+		position: absolute;
+		background-color: g.$white;
+		width: 26px;
+		height: 26px;
+		border-radius: 50px;
+		bottom: 27%;
+    right: 55px;
+		transition: all 0.3s;
+	}
+	&::after{
+		content: "";
+		display: inline-block;
+		background: url(../img/common/icon_btn-bace-square-arrow.png) center/contain;
+		width: 11px;
+		height: 14px;
+		vertical-align: middle;
+		position: absolute;
+		bottom: 29%;
+    right: 62px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		width: 338px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		display: none;
+	}
+}
+
+
+.recruit-bnr-slider-outer .btn_recruit-bnr-slider-pc{
+	display: none;
+	height: 0;
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		display: inline-block;
+		width: 400px;
+		height: auto;
+		z-index: 1;
+		&::before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			background-color: g.$white;
+			width: 26px;
+			height: 26px;
+			border-radius: 50px;
+        bottom: 26%;
+        right: 100px;
+			transition: all 0.3s;
+		}
+		&::after{
+			content: "";
+			display: inline-block;
+			background: url(../img/common/icon_btn-bace-square-arrow.png) center/contain;
+			width: 11px;
+			height: 14px;
+			vertical-align: middle;
+			position: absolute;
+			bottom: 28%;
+        right: 107px;
+		}
+	}
+}
+.recruit-bnr-link:hover .recruit-bnr-slider-outer .btn_recruit-bnr-slider-pc::before,
+.recruit-bnr-link:hover .recruit-bnr-slider-outer .btn_recruit-bnr-slider-sp::before{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			scale: 1.5;
+		}
+}
+
+
+
+
+
+
+
+
+
+
+/*
+サンプル
+.test {
+    @include m.mx-auto //mixinの変数は @include m.xxxxx
+    color: g.secondary;
+    &:after {
+        content: "";
+    }
+    @media only screen and (min-width: g.$desktop-breakpoint-md) {
+        &:hover {
+            color: g.primary; //variablesの変数は g.$xxxx
+        }
+    }
+}
+*/
+
+
+// -----------------
+//　投稿ページ共通
+//--------------------
+
+.main-ounded-content{
+	background-color: g.$white;
+    border-radius: 20px;
+    overflow: hidden;
+	padding: 40px 0;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding: 60px 0;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		padding: 80px 0;
+	}
+}
+
+
 
 
 

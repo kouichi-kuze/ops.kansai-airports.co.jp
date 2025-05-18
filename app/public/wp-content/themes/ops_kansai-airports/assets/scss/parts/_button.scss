@@ -27,7 +27,56 @@
   
     }
 }
-
+.btn-bace-round .btn-setting{
+	display: inline-block;
+	position: relative;
+	background-color: #00BFF2;
+	padding: 12px 54px 12px 20px;
+	border-radius: 50px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		background-color: #ffffff;
+		width: 24px;
+		height: 24px;
+		border-radius: 50px;
+		top: 50%;
+		right: 12px;
+		transform: translate(0, -50%);
+		transition: all 0.3s;
+		transform-origin: 50% 0;
+	}
+	&::after{
+		content: "";
+		display: inline-block;
+		background: url(../img/common/icon_btn-bace-round-arrow.png) center/contain;
+		width: 11px;
+		height: 14px;
+		vertical-align: middle;
+		position: absolute;
+		top: 50%;
+		right: 18px;
+		transform: translate(0, -50%);
+	}
+	&:hover::before{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			scale: 1.5;
+			transform-origin: 50% 0;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}
 
 .companyinfo-box .companyinfo-link{
 	position: relative;
