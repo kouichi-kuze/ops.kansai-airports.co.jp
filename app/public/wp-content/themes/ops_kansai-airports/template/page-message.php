@@ -48,8 +48,8 @@ Template Name:代表メッセージ
 				<p class="page-header__subtitle">Company Information</p>
 			  </div>
 				<ul class="companyinfo-list">
-					<li class="companyinfo-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>">代表メッセージ</a></li>
-					<li class="companyinfo-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>">会社概要</a></li>
+					<li class="companyinfo-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a></li>
+					<li class="companyinfo-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a></li>
 				</ul>
 			</div>
 		</section>
