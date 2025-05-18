@@ -40,7 +40,7 @@
 				  <a class="nav-iink" href="">お知らせ <span>Information</span></a>
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
-					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>">お知らせトップ</a> </li>
+					  <li class="secondmenu-top_item one-link"> <a class="" href="<?php echo home_url( '/' ); ?>">お知らせトップ</a> </li>
 <!--
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
@@ -78,7 +78,7 @@
 				  <a class="nav-iink" href="">お問い合わせ <span>Contact</span></a>
 				  <div class="secondmenu_outline righa-adj">
 					<ul class="secondmenu">
-					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせトップ</a> </li>
+					  <li class="secondmenu-top_item one-link"> <a class="" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせトップ</a> </li>
 <!--
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
@@ -102,14 +102,14 @@
 	  </div>
 	  <nav class="nav-sp-menu">
 		<ul>
-		  <li class=""> <a class="menu__item__link js-menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ</a> </li>
+		  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ</a> </li>
 		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">企業情報 <span>Company</span></a>
 			<ul class="submenu">
 			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a> </li>
 			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a> </li>
 			</ul>
 		  </li>
-		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">お知らせ <span>Information</span></a>
+		  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>">お知らせ <span>Information</span></a>
 <!--
 			<ul class="submenu">
 			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
@@ -137,7 +137,7 @@
 			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 			</ul>
 		  </li>
-		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">お問い合わせ <span>Contact</span></a>
+		  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>">お問い合わせ <span>Contact</span></a>
 <!--
 			<ul class="submenu">
 			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
