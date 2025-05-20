@@ -20,7 +20,8 @@
 // -----------------
 //　パーツ
 //--------------------
-
+#top-news-page a,
+#main-content.archive-recruit a,
 #page-company-inquiry  a,
 #page-company-outline a{
 	text-decoration: none;
@@ -37,6 +38,10 @@
 
 .max-128{
 	max-width: 1280px;
+	margin: 0 auto;
+}
+.max-138{
+	max-width: 1380px;
 	margin: 0 auto;
 }
 //saide padding
@@ -734,31 +739,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-/*
-サンプル
-.test {
-    @include m.mx-auto //mixinの変数は @include m.xxxxx
-    color: g.secondary;
-    &:after {
-        content: "";
-    }
-    @media only screen and (min-width: g.$desktop-breakpoint-md) {
-        &:hover {
-            color: g.primary; //variablesの変数は g.$xxxx
-        }
-    }
-}
-*/
-
-
 // -----------------
 //　投稿ページ共通
 //--------------------
@@ -775,7 +755,19 @@
 		padding: 80px 0;
 	}
 }
-
+//ページネーション　クラスがわからないので、後でやる
+//.wp-pagenavi{
+//	text-align: center;
+//	font-size: 14px;
+//    font-weight: 700;
+//	color: g.$primary;
+//	& a{
+//		display: inline-block;
+//		width: 35px;
+//		height: 35px;
+//		background-color: g.$white;
+//	}
+//}
 
 
 

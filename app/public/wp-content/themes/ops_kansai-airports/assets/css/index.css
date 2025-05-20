@@ -2,13 +2,11 @@
   display: flex;
   gap: 16px;
   margin-top: 26px;
-}start;
-  justify-content: space-between;
+}g-right: 8px;
 }
-.lazyblocks-tools-page #normal-sortables > .postbox-container {
-  width: calc(50% - 15px);
-}
-@media screen and (max-width: 782px) {
+.lzb-template-settings-panel .components-select-control select[multiple] ~ .components-input-control__suffix {
+  display: none;
+}reen and (max-width: 782px) {
   .lazyblocks-tools-page #normal-sortables > .postbox-container {
     width: 100%;
   }
