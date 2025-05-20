@@ -23,7 +23,7 @@
 
 
 
-
+<!--HTMLここから-->
 <div class="sub-page-header p-side-3-8">
   <!-- パンくずリスト -->
   <div class="breadcrumb-wrap">
@@ -37,7 +37,6 @@
     <p class="page-header__subtitle">Recruit</p>
   </div>
 </div>
-
 
 <main id="main-content" class="archive-recruit">
 	<div id="top-recruit-page" class="bg-color-primary">
@@ -249,19 +248,7 @@
 	</div>
 	
 </main >
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--/HTMLここまで-->
 
 
 <?php get_template_part( 'inc/footer' ); ?>
