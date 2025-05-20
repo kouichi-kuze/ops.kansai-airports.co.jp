@@ -1,12 +1,13 @@
-.lzb-gutenberg-remove-post-meta-modal-buttons {
+.lazyblocks-tools-page #normal-sortables {
   display: flex;
-  gap: 16px;
-  margin-top: 26px;
-}g-right: 8px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.lzb-template-settings-panel .components-select-control select[multiple] ~ .components-input-control__suffix {
-  display: none;
-}reen and (max-width: 782px) {
+.lazyblocks-tools-page #normal-sortables > .postbox-container {
+  width: calc(50% - 15px);
+}
+@media screen and (max-width: 782px) {
   .lazyblocks-tools-page #normal-sortables > .postbox-container {
     width: 100%;
   }
