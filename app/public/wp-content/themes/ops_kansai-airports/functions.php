@@ -72,6 +72,10 @@ function add_next_post_link_class($output) {
 }
 add_filter( 'next_post_link', 'add_next_post_link_class' );
 
+//アイキャッチ画像を有効化
+add_theme_support( 'post-thumbnails' );
+
+
 
 //固定ページのみクラシックエディタに変更
 /*
