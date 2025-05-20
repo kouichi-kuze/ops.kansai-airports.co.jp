@@ -99,10 +99,11 @@
 	
   <!-- タイトルとサブタイトル -->
   <div class="page-header__titles">
-    <h1 class="page-header__title">採用情報</h1>
-    <p class="page-header__subtitle">Recruit</p>
+    <h1 class="page-header__title">お知らせ</h1>
+    <p class="page-header__subtitle">Information</p>
   </div>
 </div>
+
 <div id="page" class="archive-news">
 	<div id="information">
 		<div id="top-news-page" class="bg-color-primary">
