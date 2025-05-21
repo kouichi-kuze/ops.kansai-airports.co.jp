@@ -48,6 +48,7 @@ img {
     }
 }
 */
+#information a,
 #top-news-page a,
 #main-content.archive-recruit a,
 #page-company-inquiry a,
@@ -2046,9 +2047,8 @@ img {
   opacity: 0;
 }
 
-/*areaにis-activeというクラスがついた時の形状*/
 #top-news-page .tab-area.is-active {
-  display: block; /*表示*/
+  display: block;
   animation-name: displayAnime; /*ふわっと表示させるためのアニメーション*/
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -2070,6 +2070,219 @@ img {
 @media only screen and (min-width: 768px) {
   #top-news-page p.list-none {
     font-size: 16px;
+  }
+}
+
+#information .main-ounded-content {
+  padding: 40px 0 56px;
+  border-radius: 20px 0 0 20px;
+}
+@media only screen and (min-width: 768px) {
+  #information .main-ounded-content {
+    padding: 60px 0 68px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #information .main-ounded-content {
+    padding: 80px 0;
+  }
+}
+
+#information .content-head {
+  padding: 0 5px;
+}
+@media only screen and (min-width: 768px) {
+  #information .content-head {
+    padding: 0;
+  }
+}
+
+#information .date-cat-content {
+  display: flex;
+  margin-bottom: 10px;
+}
+#information .date-cat-content .date {
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-block;
+}
+#information .date-cat-content .date::after {
+  content: "|";
+  display: inline-block;
+  height: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 15px;
+}
+#information .date-cat-content .categry {
+  font-size: 12px;
+  font-weight: 700;
+}
+#information .date-cat-content .categry li {
+  display: inline-block;
+  vertical-align: middle;
+}
+#information .date-cat-content .categry li::after {
+  content: "|";
+  display: inline-block;
+  height: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 15px;
+}
+#information .date-cat-content .categry li:last-of-type::after {
+  content: none;
+}
+@media only screen and (min-width: 768px) {
+  #information .date-cat-content {
+    margin-bottom: 40px;
+  }
+}
+
+#information .title {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  #information .title {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+}
+
+#information .entry p {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  #information .entry p {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+}
+
+#information .entry figure {
+  margin-bottom: 20px;
+}
+#information .entry figure img {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#information .entry .wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex {
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  #information .entry .wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex {
+    display: flex;
+    gap: 20px;
+  }
+  #information .entry .wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #information .entry .wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex {
+    gap: 35px;
+  }
+}
+
+#information .entry h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  border-left: solid 5px #00BFF2;
+}
+@media only screen and (min-width: 768px) {
+  #information .entry h2 {
+    font-size: 20px;
+    padding-left: 20px;
+    border-left: solid 6px #00BFF2;
+  }
+}
+
+#information .entry .wp-block-button {
+  margin-bottom: 30px;
+}
+#information .entry .wp-block-button a.wp-block-button__link.wp-element-button {
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  padding-right: 18px;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+#information .entry .wp-block-button a.wp-block-button__link.wp-element-button::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 58%;
+  transform: translate(0, -50%);
+  width: 14px;
+  height: 9px;
+  background: url("../img/news/icon_button_arrow.svg") no-repeat center/cover;
+}
+@media only screen and (min-width: 768px) {
+  #information .entry .wp-block-button a.wp-block-button__link.wp-element-button {
+    font-size: 16px;
+  }
+}
+
+#information .entry a {
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+}
+@media only screen and (min-width: 768px) {
+  #information .entry a {
+    font-size: 16px;
+  }
+}
+
+#information .entry {
+  padding-bottom: 0px;
+  border-bottom: solid 1px #07185C;
+}
+@media only screen and (min-width: 768px) {
+  #information .entry {
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #information .entry {
+    padding-bottom: 60px;
+  }
+}
+
+#information .btn-bace-round {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  #information .btn-bace-round .btn-setting {
+    padding: 18px 94px 18px 30px;
+  }
+}
+#information .btn-bace-round .btn-setting a {
+  color: #ffffff;
+}
+@media only screen and (min-width: 768px) {
+  #information .btn-bace-round .btn-setting a {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #information .btn-bace-round {
+    margin-top: 60px;
   }
 }
 
