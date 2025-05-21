@@ -798,6 +798,10 @@
 							</div>
 						</div>
 							<!-- 表示内容：ページネーション（例：前へ / 次へ） -->
+						
+							<div class="breadcrumb-wrap">
+								<?php get_template_part( 'inc/breadcrumb' ); ?>
+							  </div>
 					</div>
 				</div>
 			</div>

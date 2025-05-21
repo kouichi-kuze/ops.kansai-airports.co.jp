@@ -236,6 +236,11 @@
 					</ul>
 					
 						<!-- 表示内容：ページネーション（例：前へ / 次へ） -->
+							<div class="breadcrumb-wrap">
+								<?php get_template_part( 'inc/breadcrumb' ); ?>
+							  </div>
+					
+					
 						<!-- 条件：投稿が1件もない場合 -->
 <!--							<p class="list-none">まだ採用情報がありません。</p>-->
 						<!-- 表示内容：投稿が存在しないときのメッセージ -->
