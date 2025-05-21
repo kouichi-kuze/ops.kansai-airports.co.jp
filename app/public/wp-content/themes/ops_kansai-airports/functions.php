@@ -302,11 +302,23 @@ function rename_post_object_labels() {
 
 //archive.phpをお知らせにする
 // 投稿タイプ「post」のスラッグを information に変更し、アーカイブを有効化
+//add_filter('register_post_type_args', 'change_post_slug', 10, 2);
+//function change_post_slug($args, $post_type) {
+//  if ($post_type === 'post') {
+//    $args['rewrite']['slug'] = 'information';
+//    $args['has_archive'] = true; // ←ここを必ず追加！
+//  }
+//  return $args;
+//}
 add_filter('register_post_type_args', 'change_post_slug', 10, 2);
 function change_post_slug($args, $post_type) {
   if ($post_type === 'post') {
+    // rewrite が配列か確認し、そうでなければ初期化
+    if (!is_array($args['rewrite'])) {
+      $args['rewrite'] = [];
+    }
     $args['rewrite']['slug'] = 'information';
-    $args['has_archive'] = true; // ←ここを必ず追加！
+    $args['has_archive'] = true;
   }
   return $args;
 }

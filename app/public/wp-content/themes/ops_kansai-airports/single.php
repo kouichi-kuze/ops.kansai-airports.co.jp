@@ -26,23 +26,13 @@
 <!--<div id="post">-->
 <div class="post_detail">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<?php the_tags('<ul class="tags"><li>','</li><li>','</li></ul>'); ?>
 	
 	<div class="content-head">
 		<div class="date-cat-content">
 		  <span class="date">
 			<?php the_time(__('Y.m.d', 'kubrick')) ?>
 		  </span>
-		<ul class="categry"><li><?php
-		$category_links = array();
-		$categories = get_the_category();
-		if ( $categories ) {
-		  foreach ( $categories as $category ) {
-			$category_links[] = '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>';
-		  }
-		  echo implode( '</li><li>', $category_links );
-		}
-		?></li></ul>
+			<?php the_tags('<ul class="tags"><li>','</li><li>','</li></ul>'); ?>
 		</div>
 
 		<h1 class="title">

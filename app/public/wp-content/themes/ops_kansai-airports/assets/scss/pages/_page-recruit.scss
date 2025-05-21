@@ -2,9 +2,11 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
+#main-content.single-recruit + .site-footer, //ここだけ<main>タグのクラス名をおかないとスタイルが効かない。
 #main-content.archive-recruit + .site-footer{ //ここだけ<main>タグのクラス名をおかないとスタイルが効かない。
 	background-color: g.$bg-blue;
 }
+#single-recruit-page .bottom-border-bulue-ttl,
 #top-recruit-page .bottom-border-bulue-ttl{
 	margin-bottom: 40px;
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
@@ -396,12 +398,153 @@
 	}
 }
 
+//リクルート詳細ページ
+#single-recruit-page .post_detail .post_detail-head{
+	margin-bottom: 40px;
+	display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+	& .tags{
+		display: inline-block;
+	}
+	& .tags li{
+		font-size: 15px;
+		font-weight: 700;
+		padding: 4px 7px;
+		background-color: g.$bg-light-gray;
+		margin-right: 15px;
+	}
+	& .title{
+		display: inline-block;
+		font-size: 24px;
+		font-weight: 700;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		margin-bottom: 60px;
+		& .tags li{
+			font-size: 20px;
+			padding: 6px 10px;
+			margin-right: 25px;
+		}
+	& .title{
+		font-size: 40px;
+	}
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		margin-bottom: 80px;
+	}
+}
+
+#single-recruit-page .post_detail .entry .wp-block-button{
+	text-align: center;
+	& a{
+		font-size: 16px;
+		font-weight: 700px;
+		color: g.$white;
+		display: inline-block;
+		background-color: g.$primary;
+		border-radius: 8px;
+		padding: 18px 50px;
+		&::after{
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background: url(../img/recruit/icon_target_blank_white.svg) no-repeat center / contain;
+			vertical-align: middle;
+			margin-left: 15px;
+		}
+	}
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			& a{
+				font-size: 20px;
+				padding: 30px 77px;
+				&::after{
+					width: 18px;
+					height: 18px;
+					margin-left: 10px;					
+				}
+			}
+			
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			
+		}
+}
 
 
+#single-recruit-page .post_detail .recruit-info-table{
+	 border-bottom: solid 1px g.$line-bk-gray;
+	& .title{
+		font-size: 14px;
+		font-weight: 700;
+		margin: 20px auto
+	}
+	& .text{
+	font-size: 13px;
+	font-weight: 400;
+	margin: 20px auto;
+	line-height: 1.7;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		display: flex;
+		align-items: center;
+		& .title{
+			font-size: 16px;
+			min-width: 160px;
+			padding: 30px 0 30px 20px;
+//			margin-bottom: 1px;
+			margin: 0;
+		}
+		& .text{
+			padding: 30px 0 30px 20px;
+			margin: 0;
+			font-size: 14px;
+			width: 100%;
+			margin-bottom: 1px;
+		}
+	}
+	
+}
+#single-recruit-page .post_detail .recruit-info-table-outer{
+	margin-bottom: 40px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		margin-bottom: 60px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		margin-bottom: 80px;
+	}
+}
+#single-recruit-page .post_detail a.border-bt-link{
+	& .underline{
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	& .pdf{
+		font-size: 12px;
+		color: g.$white;
+		background-color: g.$primary;
+		padding: 2px 12px;
+		border-radius: 50px;
+		margin: 0 5px;
+	}
+	&::after{
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background-image: url("../img/recruit/icon_target_blank_blue.svg");
+		vertical-align: middle;
+	}
+}
 
 
-
-
+#single-recruit-page .post_detail{}
+#single-recruit-page .post_detail{}
+#single-recruit-page .post_detail{}
+#single-recruit-page .post_detail{}
+#single-recruit-page .post_detail{}
 
 
 
