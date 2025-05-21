@@ -104,24 +104,75 @@ function theme_enqueue_scripts() {
  * パンくずリストを出力する関数
  */
 function mytheme_breadcrumb() {
-    // トップへのリンク
     $home = '<a href="' . home_url() . '">HOME</a>';
-    // 現在のページタイトル取得
-    if ( is_singular() ) {
-        $title = get_the_title();
-        $breadcrumb = $home . ' &raquo; ' . $title;
+    $breadcrumb = $home;
+
+    if ( is_singular('post') ) {
+        // 投稿のカテゴリー階層を取得
+        $categories = get_the_category();
+        if ($categories) {
+            $cat = $categories[0];
+            $parent_cats = [];
+            while ($cat->parent != 0) {
+                $cat = get_category($cat->parent);
+                array_unshift($parent_cats, $cat);
+            }
+            foreach ($parent_cats as $parent) {
+                $breadcrumb .= ' &raquo; <a href="' . get_category_link($parent->term_id) . '">' . esc_html($parent->name) . '</a>';
+            }
+            $current_cat = $categories[0];
+            $breadcrumb .= ' &raquo; <a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a>';
+        }
+        $breadcrumb .= ' &raquo; ' . get_the_title();
     }
+
+    elseif ( is_page() ) {
+        // 固定ページの親階層を再帰的に取得
+        $ancestors = array_reverse(get_post_ancestors(get_the_ID()));
+        foreach ( $ancestors as $ancestor_id ) {
+            $breadcrumb .= ' &raquo; <a href="' . get_permalink($ancestor_id) . '">' . get_the_title($ancestor_id) . '</a>';
+        }
+        $breadcrumb .= ' &raquo; ' . get_the_title();
+    }
+
     elseif ( is_category() ) {
-        $cat    = get_queried_object();
-        $breadcrumb = $home . ' &raquo; ' . esc_html( $cat->name );
+        $cat = get_queried_object();
+        $ancestors = array_reverse(get_ancestors($cat->term_id, 'category'));
+        foreach ( $ancestors as $ancestor_id ) {
+            $breadcrumb .= ' &raquo; <a href="' . get_category_link($ancestor_id) . '">' . get_cat_name($ancestor_id) . '</a>';
+        }
+        $breadcrumb .= ' &raquo; ' . esc_html($cat->name);
     }
-    // ほか archive, search, 404 など必要に応じて分岐を追加
-    else {
-        $breadcrumb = $home;
+
+    elseif ( is_post_type_archive() ) {
+        $breadcrumb .= ' &raquo; ' . post_type_archive_title('', false);
+    }
+
+    elseif ( is_tax() ) {
+        $term = get_queried_object();
+        $ancestors = array_reverse(get_ancestors($term->term_id, $term->taxonomy));
+        foreach ( $ancestors as $ancestor_id ) {
+            $breadcrumb .= ' &raquo; <a href="' . get_term_link($ancestor_id, $term->taxonomy) . '">' . get_term($ancestor_id)->name . '</a>';
+        }
+        $breadcrumb .= ' &raquo; ' . esc_html($term->name);
+    }
+
+    elseif ( is_tag() ) {
+        $tag = get_queried_object();
+        $breadcrumb .= ' &raquo; タグ: ' . esc_html($tag->name);
+    }
+
+    elseif ( is_search() ) {
+        $breadcrumb .= ' &raquo; 検索結果: ' . get_search_query();
+    }
+
+    elseif ( is_404() ) {
+        $breadcrumb .= ' &raquo; ページが見つかりません';
     }
 
     echo '<nav class="breadcrumb">' . $breadcrumb . '</nav>';
 }
+
 
 /**
  * 投稿のスラッグを自動生成：news＋タイムスタンプ
