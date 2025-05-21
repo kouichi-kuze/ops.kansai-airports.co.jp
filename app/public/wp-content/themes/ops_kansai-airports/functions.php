@@ -219,12 +219,12 @@ function register_custom_post_types() {
     'menu_position'   => 5,
     'supports'        => [ 'title', 'editor', 'thumbnail', 'excerpt' ],
     // ここでカテゴリとタグを紐付け
-    'taxonomies'      => [ 'category', 'post_tag' ],
+    //'taxonomies'      => [ 'category', 'post_tag' ],
     'show_in_rest'    => true,
   ] );
 
   // 先輩の声
-  register_post_type( 'staffvoice', [
+  register_post_type( 'voices', [
     'label'           => '先輩の声',
     'labels'          => [
       'name'          => '先輩の声',
@@ -239,16 +239,34 @@ function register_custom_post_types() {
     'menu_position'   => 6,
     'supports'        => [ 'title', 'editor', 'thumbnail' ],
     // ここでカテゴリとタグを紐付け
-    'taxonomies'      => [ 'category', 'post_tag' ],
+    //'taxonomies'      => [ 'category', 'post_tag' ],
     'show_in_rest'    => true,
   ] );
 
   // カテゴリ・タグをカスタム投稿にも有効化
-  register_taxonomy_for_object_type( 'category', 'recruit' );
   register_taxonomy_for_object_type( 'post_tag', 'recruit' );
-  register_taxonomy_for_object_type( 'category', 'staffvoice' );
-  register_taxonomy_for_object_type( 'post_tag', 'staffvoice' );
+  register_taxonomy_for_object_type( 'post_tag', 'voices' );
 }
+
+// 採用情報専用カテゴリ
+register_taxonomy('recruit_category', 'recruit', [
+  'label'        => '採用カテゴリ',
+  'hierarchical' => true,
+  'public'       => true,
+  'rewrite'      => ['slug' => 'recruit/category'],
+  'show_in_rest' => true,
+  'show_ui'      => true,
+]);
+
+// 先輩の声専用カテゴリ
+register_taxonomy('voices_category', 'voices', [
+  'label'        => '先輩の声カテゴリ',
+  'hierarchical' => true,
+  'public'       => true,
+  'rewrite'      => ['slug' => 'recruit/voices/category'],
+  'show_in_rest' => true,
+  'show_ui'      => true,
+]);
 
 // 管理画面メニューの「投稿」→「お知らせ」に変更
 add_action( 'admin_menu', 'rename_post_menu_items' );
@@ -280,6 +298,17 @@ function rename_post_object_labels() {
     $labels->all_items          = 'お知らせ一覧';
     $labels->menu_name          = 'お知らせ';
     $labels->name_admin_bar     = 'お知らせ';
+}
+
+//archive.phpをお知らせにする
+// 投稿タイプ「post」のスラッグを information に変更し、アーカイブを有効化
+add_filter('register_post_type_args', 'change_post_slug', 10, 2);
+function change_post_slug($args, $post_type) {
+  if ($post_type === 'post') {
+    $args['rewrite']['slug'] = 'information';
+    $args['has_archive'] = true; // ←ここを必ず追加！
+  }
+  return $args;
 }
 
 ?>
