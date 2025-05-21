@@ -14,9 +14,9 @@
 </div>
 
 
-<div id="page" class="archive-news">
+<div id="page" class="single-news">
 	<div id="information">
-		<div id="top-news-page" class="bg-color-primary">
+		<div id="single-news-page" class="bg-color-primary">
 			<div class="main-ounded-content bg-color-primary">
 				<div class="p-side-3-8">
 					<div class="max-128">
@@ -27,10 +27,9 @@
 <div class="post_detail">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<?php the_tags('<ul class="tags"><li>','</li><li>','</li></ul>'); ?>
-  <h1 class="title">
-    <?php the_title(); ?>
-  </h1>
-	<div class="date-cat-content">
+	
+	<div class="content-head">
+		<div class="date-cat-content">
 		  <span class="date">
 			<?php the_time(__('Y.m.d', 'kubrick')) ?>
 		  </span>
@@ -44,6 +43,11 @@
 		  echo implode( '</li><li>', $category_links );
 		}
 		?></li></ul>
+		</div>
+
+		<h1 class="title">
+		<?php the_title(); ?>
+		</h1>
 	</div>
 	
 	
@@ -54,11 +58,14 @@
   </div>
   <div class="navigation">
    
-      <?php previous_post_link( '%link', 'PREV', TRUE ) ?>
-    
-	  <a href="<?php echo get_option('home'); ?>/category/news/" class="back">BACK TO INDEX</a>
+<!--      <?php previous_post_link( '%link', 'PREV', TRUE ) ?>-->
+	  <div class="btn-bace-round">
+			<div class="btn-setting">
+			  <a href="<?php echo get_option('home'); ?>/category/news/" class="back">お知らせ一覧</a>
+		  </div>
+	  </div>
   
-      <?php next_post_link( '%link', 'NEXT', TRUE ) ?>
+<!--      <?php next_post_link( '%link', 'NEXT', TRUE ) ?>-->
     
   </div>
   <?php endwhile; else: ?>
