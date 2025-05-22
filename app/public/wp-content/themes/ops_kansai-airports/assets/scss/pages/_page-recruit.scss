@@ -435,7 +435,6 @@
 		margin-bottom: 80px;
 	}
 }
-
 #single-recruit-page .post_detail .entry .wp-block-button{
 	text-align: center;
 	& a{
@@ -472,8 +471,6 @@
 			
 		}
 }
-
-
 #single-recruit-page .post_detail .recruit-info-table{
 	 border-bottom: solid 1px g.$line-bk-gray;
 	& .title{
@@ -540,19 +537,303 @@
 }
 
 
-#single-recruit-page .post_detail{}
-#single-recruit-page .post_detail{}
-#single-recruit-page .post_detail{}
-#single-recruit-page .post_detail{}
-#single-recruit-page .post_detail{}
+#page-recruit-voices-outline {
+	& .main-ounded-content{
+		border-radius: 0 0 0 0;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			padding: 40px 0;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			padding: 80px 0;
+		}
+	}
+}
+#page-recruit-voices-outline .selectbox-blue-under {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+	&::after{
+		position: absolute;
+		right: 15px;
+		pointer-events: none;
+		transform: translateY(-25%) rotate(45deg);
+		width: 9px;
+		height: 9px;
+		margin-left: 10px;
+		border-bottom: 2px solid g.$primary;
+		border-right: 2px solid g.$primary;
+		content: '';
+		transition: transform .3s;
+	}
+	& select{
+		appearance: none;
+		padding: 15px 30px 15px 15px;
+		width: 278px;
+		min-width: 230px;
+//		height: 2.8em;
+//		padding: .4em calc(.8em + 30px) .4em .8em;
+		border: none;
+		border-bottom: 2px solid g.$primary;
+		background-color: g.$white;
+		color: g.$primary;
+		font-size: 14px;
+		font-weight: 700;
+		cursor: pointer;
+		&:focus{
+			outline: none;
+		}
+	}
+}
+#page-recruit-voices-outline .select-content {
+	text-align: center;
+	margin-bottom: 40px;
+	& .title{
+		font-size: 16px;
+		font-weight: 700;
+		color: g.$primary;
+		margin-right: 8px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		text-align: left;
+		margin-bottom: 45px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		margin-bottom: 80px;
+	}
+}
+#page-recruit-voices-outline .recruit-voices-list-card{
+	& .recruit-voices-list{
+		display: flex;
+		flex-flow: column;
+		gap: 40px;
+		justify-content: space-between;
+	}
+	& .img {
+		aspect-ratio: 3 / 2;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		border-radius: 12px;
+		margin-bottom: 15px;
+		& img{
+			aspect-ratio: 3 / 2;
+			object-fit: cover;
+			border-radius: 12px;
+			overflow: hidden;
+			transition: all 0.3s;
+		}
+	}
+	& .text{
+		& .title{
+			position: relative;
+			font-size: 18px;
+			font-weight: 700;
+			padding-bottom: 15px;
+			margin-bottom: 20px;
+			&::after{
+				content: "";
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 45px;
+				height: 8px;
+				background-color: g.$secondary;
+					
+			}
+		}
+		& .work{
+			display: block;
+			max-width: 202px;
+			font-size: 14px;
+			font-weight: 700;
+			color: g.$secondary;
+			padding: 5px 10px;
+			background-color: g.$line-bk-gray;
+			margin-bottom: 10px;
+			border-radius: 4px;
+		}
+		& .name{
+			font-size: 16px;
+			font-weight: 700;
+			display: block;
+		}
+		& .button-area{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			& .place{
+				font-size: 12px;
+				font-weight: 400;
+				display: inline-block;
+			}
+			& .Joining{
+				font-size: 12px;
+				font-weight: 400;
+				display: inline-block;
+			}
+			& .btn span{
+				display: inline-block;
+				position: relative;
+				width: 58px;
+				height: 29px;
+				border-radius: 50px;
+				background-color: g.$secondary;
+				transition: all 0.3s;
+				&::after{
+					content: "";
+					display: inline-block;
+					background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat center / contain;
+					width: 28px;
+					height: 5px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		& .recruit-voices-list{
+			flex-flow: wrap;
+			gap: 40px 60px;
+			& .recruit-voices-item{
+				width: calc(100% / 2 - 30px);
+				& a:hover .text .button-area .btn span{
+					scale: 1.1;
+				}
+				& a:hover .img img{
+					scale: 1.1;
+				}
+			}
+			& .btn:hover{
+				width: auto;
+			}
+		}
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		& .recruit-voices-list{
+			gap: 120px 80px;
+			& .recruit-voices-item{
+				width: calc(100% / 2 - 40px);
+			}
+			& .flex{
+				display: flex;
+				justify-content: space-between;
+				gap: 30px;
+				align-items: flex-end;
+			}
+		}
+		& .img {
+			aspect-ratio: 26 / 36;
+			border-radius: 20px;
+			margin-bottom: 0;
+			& img{
+				aspect-ratio: 26 / 36;
+				border-radius: 20px;
+			}
+		}
+		& .text{
+			& .title{
+				font-size: 24px;
+			}
+			& .work{
+				font-size: 16px;
+				margin-bottom: 20px;
+				max-width: 228px;
+			}
+			& .name{
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+			& .button-area{
+				& .place{
+					font-size: 14px;
+				}
+				& .Joining{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
 
 
+.header-bg-half-color .blue-under-line-ttl{
+	margin-bottom: 30px;
+	& .breadcrumb-wrap{
+		margin-bottom: 25px;
+	}
+	& .page-header__title{
+		font-size: 20px;
+		margin-right: 10px;
+	}
+	& .page-header__subtitle{
+		font-size: 12px;
+	}
+	&::before{
+		width: 30px;
+		bottom: -9px;
+		left: -2px;
+		transform: translate(50%, 0);
+	}
+}
+.header-bg-half-color .head-senior-img{
+	margin-left: 15px;
+	margin-bottom: 30px;
+	& img{
+		aspect-ratio: 3 / 2;
+		object-fit: cover;
+		border-radius: 20px 0 0 20px;
+		overflow: hidden;
+	}
+}
+.header-bg-half-color .head-senior-text{
+	margin-bottom: 40px;
+	& .title{
+		font-size: 20px;
+		color: g.$white;
+		margin-bottom: 30px;
+	}
+	& .work{
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 700;
+		color: g.$secondary;
+		margin-bottom: 15px;
+		padding: 4px 10px;
+		border-radius: 4px;
+		background-color: g.$white;
+	}
+	& .name{
+		display: block;
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	& .department{
+		display: block;
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	& .place{
+		display: inline-block;
+		font-size: 14px;
+	}
+	& .Joining{
+		display: inline-block;
+		font-size: 14px;
+	}
+}
 
-
-
-
-
-
+.header-bg-half-color{}
+.header-bg-half-color{}
+.header-bg-half-color{}
+.header-bg-half-color{}
+.header-bg-half-color{}
+.header-bg-half-color{}
+.header-bg-half-color{}
 
 
 
