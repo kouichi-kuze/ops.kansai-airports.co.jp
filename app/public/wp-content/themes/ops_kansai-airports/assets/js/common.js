@@ -122,6 +122,41 @@ document.addEventListener('DOMContentLoaded', () => {
 	]
 	});
 	
+//recruit-voices-slider	
+	$('.recruit-voices-slider').slick({
+  infinite: false,
+  slidesToShow: 4.2,
+  slidesToScroll: 1,
+		arrows: true,
+    appendArrows: $('.arrow_box'),
+    prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+    nextArrow: '<div class="slide-arrow next-arrow"></div>',
+		responsive: [
+			{
+			breakpoint: 960,
+			settings: {
+				slidesToShow: 3.2,
+			}
+		},
+			{
+			breakpoint: 769,
+			settings: {
+				slidesToShow: 2.2,
+			}
+		},
+			{
+			breakpoint: 520,
+			settings: {
+				slidesToShow: 1.2,
+			}
+		}
+
+	]		
+		
+		
+});
+	
+	
 	//任意のタブにURLからリンクするための設定
 function GethashID (hashIDName){
 	if(hashIDName){
