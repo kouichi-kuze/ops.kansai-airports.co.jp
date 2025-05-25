@@ -351,21 +351,48 @@ add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
 }, 99, 2 );
 
 
-// 投稿 のブロックカテゴリを追加
+// 投稿のブロックカテゴリを追加
 add_filter( 'block_categories_all', function( $categories, $editor_context ) {
-    // すでに同名のスラッグがないか念のためチェック
-    foreach ( $categories as $cat ) {
-        if ( 'senpai-voice' === $cat['slug'] ) {
-            return $categories;
+    // すでに登録済みかチェックするヘルパー
+    $exists = function( $slug ) use ( $categories ) {
+        foreach ( $categories as $cat ) {
+            if ( $slug === $cat['slug'] ) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    // 追加したいカテゴリを定義
+    $new_cats = [
+        [
+            'slug'  => 'senpai-voice',
+            'title' => '先輩の声',
+            'icon'  => null,
+        ],
+        [
+            'slug'  => 'recruit-guidelines',
+            'title' => '募集要項',
+            'icon'  => null,
+        ],
+        [
+            'slug'  => 'information',
+            'title' => 'お知らせ',
+            'icon'  => null,
+        ],
+        [
+            'slug'  => 'recruit-info',
+            'title' => '採用情報',
+            'icon'  => null,
+        ],
+    ];
+
+    // 存在しないものだけ末尾に追加
+    foreach ( $new_cats as $new ) {
+        if ( ! $exists( $new['slug'] ) ) {
+            $categories[] = $new;
         }
     }
-
-    // 新しいカテゴリを末尾に追加
-    $categories[] = [
-        'slug'  => 'senpai-voice',   // 小文字＋ダッシュのみ
-        'title' => '先輩の声',       // インサーターに表示される名前
-        'icon'  => null,             // 任意でアイコンスラッグ（Dashicon 名など）
-    ];
 
     return $categories;
 }, 10, 2 );
