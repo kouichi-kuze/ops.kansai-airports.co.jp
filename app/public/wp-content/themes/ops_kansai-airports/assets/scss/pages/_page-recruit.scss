@@ -405,29 +405,29 @@
     flex-flow: row;
     justify-content: flex-start;
     align-items: center;
-	& .tags{
+	.tags{
 		display: inline-block;
 	}
-	& .tags li{
+	.tags li{
 		font-size: 15px;
 		font-weight: 700;
 		padding: 4px 7px;
 		background-color: g.$bg-light-gray;
 		margin-right: 15px;
 	}
-	& .title{
+	.title{
 		display: inline-block;
 		font-size: 24px;
 		font-weight: 700;
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
 		margin-bottom: 60px;
-		& .tags li{
+		.tags li{
 			font-size: 20px;
 			padding: 6px 10px;
 			margin-right: 25px;
 		}
-	& .title{
+	.title{
 		font-size: 40px;
 	}
 	}
@@ -437,7 +437,7 @@
 }
 #single-recruit-page .post_detail .entry .wp-block-button{
 	text-align: center;
-	& a{
+	a{
 		font-size: 16px;
 		font-weight: 700px;
 		color: g.$white;
@@ -456,7 +456,7 @@
 		}
 	}
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			& a{
+			a{
 				font-size: 20px;
 				padding: 30px 77px;
 				&::after{
@@ -473,12 +473,12 @@
 }
 #single-recruit-page .post_detail .recruit-info-table{
 	 border-bottom: solid 1px g.$line-bk-gray;
-	& .title{
+	.title{
 		font-size: 14px;
 		font-weight: 700;
 		margin: 20px auto
 	}
-	& .text{
+	.text{
 	font-size: 13px;
 	font-weight: 400;
 	margin: 20px auto;
@@ -487,14 +487,14 @@
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		display: flex;
 		align-items: center;
-		& .title{
+		.title{
 			font-size: 16px;
 			min-width: 160px;
 			padding: 30px 0 30px 20px;
 //			margin-bottom: 1px;
 			margin: 0;
 		}
-		& .text{
+		.text{
 			padding: 30px 0 30px 20px;
 			margin: 0;
 			font-size: 14px;
@@ -514,11 +514,11 @@
 	}
 }
 #single-recruit-page .post_detail a.border-bt-link{
-	& .underline{
+	.underline{
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
-	& .pdf{
+	.pdf{
 		font-size: 12px;
 		color: g.$white;
 		background-color: g.$primary;
@@ -538,7 +538,7 @@
 
 
 #page-recruit-voices-outline {
-	& .main-ounded-content{
+	.main-ounded-content{
 		border-radius: 0 0 0 0;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			padding: 40px 0;
@@ -565,7 +565,7 @@
 		content: '';
 		transition: transform .3s;
 	}
-	& select{
+	select{
 		appearance: none;
 		padding: 15px 30px 15px 15px;
 		width: 278px;
@@ -587,7 +587,7 @@
 #page-recruit-voices-outline .select-content {
 	text-align: center;
 	margin-bottom: 40px;
-	& .title{
+	.title{
 		font-size: 16px;
 		font-weight: 700;
 		color: g.$primary;
@@ -602,20 +602,21 @@
 	}
 }
 #page-recruit-voices-outline .recruit-voices-list-card{
-	& .recruit-voices-list{
+	.recruit-voices-list{
 		display: flex;
 		flex-flow: column;
 		gap: 40px;
 		justify-content: space-between;
 	}
-	& .img {
+	.img {
 		aspect-ratio: 3 / 2;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
 		border-radius: 12px;
 		margin-bottom: 15px;
-		& img{
+		
+		img{
 			aspect-ratio: 3 / 2;
 			object-fit: cover;
 			border-radius: 12px;
@@ -623,8 +624,8 @@
 			transition: all 0.3s;
 		}
 	}
-	& .text{
-		& .title{
+	.text{
+		.title{
 			position: relative;
 			font-size: 18px;
 			font-weight: 700;
@@ -642,7 +643,7 @@
 					
 			}
 		}
-		& .work{
+		.work{
 			display: block;
 			max-width: 202px;
 			font-size: 14px;
@@ -653,26 +654,26 @@
 			margin-bottom: 10px;
 			border-radius: 4px;
 		}
-		& .name{
+		.name{
 			font-size: 16px;
 			font-weight: 700;
 			display: block;
 		}
-		& .button-area{
+		.button-area{
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
-			& .place{
+			.place{
 				font-size: 12px;
 				font-weight: 400;
 				display: inline-block;
 			}
-			& .Joining{
+			.Joining{
 				font-size: 12px;
 				font-weight: 400;
 				display: inline-block;
 			}
-			& .btn span{
+			.btn span{
 				display: inline-block;
 				position: relative;
 				width: 58px;
@@ -695,63 +696,69 @@
 		}
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
-		& .recruit-voices-list{
+		.recruit-voices-list{
 			flex-flow: wrap;
 			gap: 40px 60px;
-			& .recruit-voices-item{
+			.recruit-voices-item{
 				width: calc(100% / 2 - 30px);
-				& a:hover .text .button-area .btn span{
+				a:hover .text .button-area .btn span{
 					scale: 1.1;
 				}
-				& a:hover .img img{
+				a:hover .img img{
 					scale: 1.1;
 				}
 			}
-			& .btn:hover{
+			.btn:hover{
 				width: auto;
 			}
 		}
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
-		& .recruit-voices-list{
+		.recruit-voices-list{
 			gap: 120px 80px;
-			& .recruit-voices-item{
+			.recruit-voices-item{
 				width: calc(100% / 2 - 40px);
 			}
-			& .flex{
+			.flex{
 				display: flex;
 				justify-content: space-between;
 				gap: 30px;
 				align-items: flex-end;
 			}
 		}
-		& .img {
+		.img {
 			aspect-ratio: 26 / 36;
 			border-radius: 20px;
 			margin-bottom: 0;
-			& img{
+			.archive {
+				width: 49%;
+			}
+			img{
 				aspect-ratio: 26 / 36;
 				border-radius: 20px;
 			}
 		}
-		& .text{
-			& .title{
+		.text{
+			.archive {
+				width: 51%;
+			}
+			.title{
 				font-size: 24px;
 			}
-			& .work{
+			.work{
 				font-size: 16px;
 				margin-bottom: 20px;
 				max-width: 228px;
 			}
-			& .name{
+			.name{
 				font-size: 18px;
 				margin-bottom: 20px;
 			}
-			& .button-area{
-				& .place{
+			.button-area{
+				.place{
 					font-size: 14px;
 				}
-				& .Joining{
+				.Joining{
 					font-size: 14px;
 				}
 			}
@@ -760,17 +767,25 @@
 }
 
 .header-bg-half-color{
-	& .blue-under-line-ttl{
+	position: relative;
+	.hero-voices {
+		
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			
+		}
+	}
+
+	.blue-under-line-ttl{
 		margin-bottom: 30px;
-		& .breadcrumb-wrap{
+		.breadcrumb-wrap{
 			margin-bottom: 25px;
 		}
-		& .page-header__title{
+		.page-header__title{
 			font-size: 20px;
 			margin-right: 10px;
 			font-weight: 500;
 		}
-		& .page-header__subtitle{
+		.page-header__subtitle{
 			font-size: 12px;
 		}
 		&::before{
@@ -780,24 +795,24 @@
 			transform: translate(50%, 0);
 		}
 	}
-	& .head-senior-img{
+	.head-senior-img{
 		margin-left: 15px;
 		margin-bottom: 30px;
-		& img{
+		img{
 			aspect-ratio: 3 / 2;
 			object-fit: cover;
 			border-radius: 20px 0 0 20px;
 			overflow: hidden;
 		}
 	}
-	& .head-senior-text{
+	.head-senior-text{
 		margin-bottom: 40px;
-		& .title{
+		.title{
 			font-size: 20px;
 			color: g.$white;
 			margin-bottom: 30px;
 		}
-		& .work{
+		.work{
 			display: inline-block;
 			font-size: 14px;
 			font-weight: 700;
@@ -807,100 +822,105 @@
 			border-radius: 4px;
 			background-color: g.$white;
 		}
-		& .name{
+		.name{
 			display: block;
 			font-size: 20px;
 			font-weight: 700;
 			margin-bottom: 10px;
 		}
-		& .department{
+		.department{
 			display: block;
 			font-size: 14px;
 			margin-bottom: 10px;
 		}
-		& .place{
+		.place{
 			display: inline-block;
 			font-size: 14px;
 		}
-		& .Joining{
+		.Joining{
 			display: inline-block;
 			font-size: 14px;
 		}
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
-		& .sub-page-lightbulule-header{
+		.sub-page-lightbulule-header{
 			width: 85%;
+			min-height: 450px;
+			box-sizing: border-box;
 		}
-		& .head-senior-text{
+		.head-senior-text{
 			max-width: calc(420px + 40px);
 			
 		}
-		& .blue-under-line-ttl::before{
+		.blue-under-line-ttl::before{
 			left: 23px;;
 		}
-		& .head-senior-img{
+		.head-senior-img{
 			position: absolute;
 			max-width: 420px;
 			right: 40px;
 			width: 39.8vw;
-			& img{
+			bottom: 50px;
+			img{
 				border-radius: 15px;
 			}
 		}
 		
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
-		& .sub-page-lightbulule-header{
+		.sub-page-lightbulule-header{
+			min-height: 650px;
 			width: 67%;
-			& .breadcrumb-wrap{
+			.breadcrumb-wrap{
 				margin-bottom: 40px;
 			}
-			& .blue-under-line-ttl{
+			.blue-under-line-ttl{
 				display: flex;
 				align-items: flex-end;
 				&::before{
 					left: 64px;
 					bottom: -15px;
 				}
-				& .page-header__title{
+				.page-header__title{
 					font-size: 24px;
 					margin-bottom: 0;
 				}
-				& .page-header__subtitle{
+				.page-header__subtitle{
 					margin-bottom: 8px;
 				}
 			}
 		}
-		& .head-senior-text{
+		.head-senior-text{
 			max-width: calc(600px + 40px);
 			margin-bottom: 80px;
-			& .title{
+			.title{
 				font-size: 40px;
 				margin-bottom: 40px;
 			}
 			
 		}
-		& .head-senior-img{
+		.head-senior-img{
 			right: 4vw;
 			max-width: 600px;
 			width: 40.8vw;
 		}
 	}
 	@media only screen and (min-width: 1800px){
-		& .head-senior-img{
+		.head-senior-img{
 			right: 15%;
-			max-width: 770px;
+			//max-width: 770px;
+			max-width: 600px;
 			width: 40.8vw;
-			top: 130px;
+			//top: 130px;
 		}
 	}
 }
 
 #page-recruit-voices-outline #single-recruit-voices-page{
-	& .main-ounded-content{
+	.main-ounded-content{
 		background-color: g.$staffvoicebg;
 		padding-bottom: 0;
-		& .bg-senior-voice-blue{
+		.bg-senior-voice-blue{
 			background-image: url("../img/voice/bg-senior-voice-blue.png");
 			background-repeat: no-repeat;
 			background-position: bottom -190px left -122px;
@@ -912,7 +932,7 @@
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			padding-bottom: 0;
-			& .bg-senior-voice-blue{
+			.bg-senior-voice-blue{
 				background-size: 56%;
 				background-position: top 30px left -242px;
 			}
@@ -920,13 +940,32 @@
 	}
 	}
 #page-recruit-voices-outline #single-recruit-voices-page .senior-voice{
-	& .qa-ttl{
+	margin-bottom: 60px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		margin-bottom: 10px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		margin-bottom: 100px;
+	}
+	&:last-child {
+		//margin-bottom: 0;
+	}
+	.qa-ttl{
 		margin-bottom: 30px;
-		& h3{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			margin-bottom: 40px;
+		}
+		h3{
 			font-size: 20px;
 			font-weight: 700;
 			padding-left: 40px;
 			position: relative;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				font-size: 28px;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				font-size: 28px;
+			}
 			&::before{
 				content: "";
 				width: 50px;
@@ -938,6 +977,12 @@
 				left: -20px;
 				top: 50%;
 				transform: translate(0, -50%) rotate(-45deg);
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					left: -28px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					left: -28px;
+				}
 			}
 			&::after{
 				content: "Q";
@@ -948,94 +993,75 @@
 				left: -3px;
 				top: 50%;
 				transform: translate(0, -50%);
-			}
-		}
-	}
-	& p{
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 1.75;
-		margin-bottom: 60px;
-	}
-	& img{
-		aspect-ratio: 3 / 2;
-		object-fit: cover;
-		border-radius: 12px;
-		overflow: hidden;
-		margin-bottom: 60px;
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-md){
-		& .qa-ttl{
-			margin-bottom: 40px;
-			& h3{
-				font-size: 24px;
-				&::before{
-					width: 67px;
-					height: 35px;
-					left: -28px;
-
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					font-size: 28px;
 				}
-				&::after{
-					font-size: 24px;
-				}
-			}
-		}
-		& p{
-			font-size: 16px;
-		}
-		& img{
-			aspect-ratio: 80 / 36;
-		}
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-xl){
-		& .qa-ttl{
-			& h3{
-				font-size: 28px;
-				&::before{
-					left: -28px;
-				}
-				&::after{
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					font-size: 28px;
 				}
 			}
 		}
-		& p{
-			margin-bottom: 100px;
+	}
+	p{
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.75;
+		//margin-bottom: 60px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 16px;
 		}
-		& img{
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			//margin-bottom: 100px;
+		}
+	}
+	img{
+		aspect-ratio: 3 / 2;
+		object-fit: cover;
+		border-radius: 12px;
+		overflow: hidden;
+		//margin-bottom: 60px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			aspect-ratio: 96 / 44;
-			margin-bottom: 100px;
+			//margin-bottom: 100px;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			aspect-ratio: 96 / 44;
+			//margin-bottom: 100px;
 		}
 	}
 }
+
 #page-recruit-voices-outline #single-recruit-voices-page .senior-message{
 	padding: 40px 30px;
 	background-color: #93D6FF;
 	border-radius: 12px;
 	margin-bottom: 60px;
-	& .left-lightbulueline-ttl{
+	box-sizing: border-box;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding: 80px 120px;
+		margin-bottom: 100px;
+	}
+	.left-lightbulueline-ttl{
 		margin-bottom: 30px;
 		&::before{
 			height: 100%;
 		}
-	}
-	& p{
-		font-size: 14px;
-		line-height: 1.75;
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-xl){
-		& .left-lightbulueline-ttl{
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			font-size: 24px;
 		}
-		& p{
+	}
+	p{
+		font-size: 14px;
+		line-height: 1.75;
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			font-size: 16px;
 		}
 	}
 }
 #page-recruit-voices-outline #single-recruit-voices-page .one-day-schedule{
-	& .diagonal-dot-ttl{
+	.diagonal-dot-ttl{
 		margin-bottom: 30px;
-		& h3 {
+		h3 {
 			font-size: 24px;
 			font-weight: 700;
 			position: relative;
@@ -1055,30 +1081,30 @@
 				z-index: -1;
 			}
 		}
-		& .annotation{
+		.annotation{
 			font-size: 12px;
 			font-weight: 400;
 			display: block;
 		}
 	}
-	& .schedule-list{
-		& .schedule-item{
+	.schedule-list{
+		.schedule-item{
 			background-color: g.$line-bk-gray;
 			padding: 20px 15px;
 			border-radius: 6px;
 			margin-bottom: 10px;
-			& .time{
+			.time{
 				font-size: 20px;
 				font-weight: 400;
 				color: g.$blue400;
 				margin-bottom: 5px;
 			}
-			& .text dt{
+			.text dt{
 				font-size: 16px;
 				font-weight: 700;
 				margin-bottom: 5px;
 			}
-			& .text dd{
+			.text dd{
 				font-size: 13px;
 				font-weight: 400;
 			}
@@ -1090,8 +1116,8 @@
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		display: flex;
 		gap: 122px;
-		& .diagonal-dot-ttl{
-			& h3 {
+		.diagonal-dot-ttl{
+			h3 {
 				font-size: 32px;
 				margin-bottom: 10px;
 				&::before{
@@ -1100,14 +1126,14 @@
 				}
 			}
 		}
-		& .schedule-list{
+		.schedule-list{
 			width: 550px;
-			& .schedule-item{
+			.schedule-item{
 				display: flex;
 				align-items: center;
 				gap: 40px;
 				padding: 20px 30px;
-				& .text dd{
+				.text dd{
 					font-size: 14px;
 				}
 			}

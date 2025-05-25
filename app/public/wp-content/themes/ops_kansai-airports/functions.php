@@ -118,56 +118,66 @@ function mytheme_breadcrumb() {
                 array_unshift($parent_cats, $cat);
             }
             foreach ($parent_cats as $parent) {
-                $breadcrumb .= ' &raquo; <a href="' . get_category_link($parent->term_id) . '">' . esc_html($parent->name) . '</a>';
+                $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($parent->term_id) . '">' . esc_html($parent->name) . '</a>';
             }
             $current_cat = $categories[0];
-            $breadcrumb .= ' &raquo; <a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a>';
+            $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a>';
         }
-        $breadcrumb .= ' &raquo; ' . get_the_title();
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }
 
     elseif ( is_page() ) {
         // 固定ページの親階層を再帰的に取得
         $ancestors = array_reverse(get_post_ancestors(get_the_ID()));
         foreach ( $ancestors as $ancestor_id ) {
-            $breadcrumb .= ' &raquo; <a href="' . get_permalink($ancestor_id) . '">' . get_the_title($ancestor_id) . '</a>';
+            $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_permalink($ancestor_id) . '">' . get_the_title($ancestor_id) . '</a>';
         }
-        $breadcrumb .= ' &raquo; ' . get_the_title();
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }
 
     elseif ( is_category() ) {
         $cat = get_queried_object();
         $ancestors = array_reverse(get_ancestors($cat->term_id, 'category'));
         foreach ( $ancestors as $ancestor_id ) {
-            $breadcrumb .= ' &raquo; <a href="' . get_category_link($ancestor_id) . '">' . get_cat_name($ancestor_id) . '</a>';
+            $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($ancestor_id) . '">' . get_cat_name($ancestor_id) . '</a>';
         }
-        $breadcrumb .= ' &raquo; ' . esc_html($cat->name);
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . esc_html($cat->name);
     }
 
     elseif ( is_post_type_archive() ) {
-        $breadcrumb .= ' &raquo; ' . post_type_archive_title('', false);
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . post_type_archive_title('', false);
+    }
+
+    elseif ( is_singular('voices') ) {
+        // ① 採用情報 固定ページへのリンク
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報</a>';
+        // ② 先輩の声アーカイブへのリンク
+        $archive_link = get_post_type_archive_link( 'voices' );
+        $breadcrumb  .= ' <span class="breadcrumb-diver"></span> <a href="' . esc_url( $archive_link ) . '">先輩の声一覧</a>';
+        // ③ 現在の投稿タイトル
+        $breadcrumb  .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }
 
     elseif ( is_tax() ) {
         $term = get_queried_object();
         $ancestors = array_reverse(get_ancestors($term->term_id, $term->taxonomy));
         foreach ( $ancestors as $ancestor_id ) {
-            $breadcrumb .= ' &raquo; <a href="' . get_term_link($ancestor_id, $term->taxonomy) . '">' . get_term($ancestor_id)->name . '</a>';
+            $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_term_link($ancestor_id, $term->taxonomy) . '">' . get_term($ancestor_id)->name . '</a>';
         }
-        $breadcrumb .= ' &raquo; ' . esc_html($term->name);
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . esc_html($term->name);
     }
 
     elseif ( is_tag() ) {
         $tag = get_queried_object();
-        $breadcrumb .= ' &raquo; タグ: ' . esc_html($tag->name);
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> タグ: ' . esc_html($tag->name);
     }
 
     elseif ( is_search() ) {
-        $breadcrumb .= ' &raquo; 検索結果: ' . get_search_query();
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> 検索結果: ' . get_search_query();
     }
 
     elseif ( is_404() ) {
-        $breadcrumb .= ' &raquo; ページが見つかりません';
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> ページが見つかりません';
     }
 
     echo '<nav class="breadcrumb">' . $breadcrumb . '</nav>';
@@ -203,6 +213,7 @@ function auto_news_slug( $data, $postarr ) {
 // 1) カスタム投稿タイプ登録 + カテゴリ／タグ紐付け
 add_action( 'init', 'register_custom_post_types' );
 function register_custom_post_types() {
+  /*固定ページで代用
   // 採用情報
   register_post_type( 'recruit', [
     'label'           => '採用情報',
@@ -222,8 +233,9 @@ function register_custom_post_types() {
     //'taxonomies'      => [ 'category', 'post_tag' ],
     'show_in_rest'    => true,
   ] );
+  */
 
-  // 先輩の声
+   // 先輩の声
   register_post_type( 'voices', [
     'label'           => '先輩の声',
     'labels'          => [
@@ -234,17 +246,18 @@ function register_custom_post_types() {
       'all_items'     => '先輩の声一覧',
     ],
     'public'          => true,
-    'has_archive'     => true,
-    'rewrite'         => [ 'slug' => 'voices' ],
+    'has_archive'     => 'recruit/voices',
+    'rewrite'         => [
+      'slug'       => 'recruit/voices',
+      'with_front' => false,
+    ],
     'menu_position'   => 6,
     'supports'        => [ 'title', 'editor', 'thumbnail' ],
-    // ここでカテゴリとタグを紐付け
-    //'taxonomies'      => [ 'category', 'post_tag' ],
+    //'taxonomies'      => [ 'category' ],  // ここで category を紐付け
     'show_in_rest'    => true,
   ] );
 
-  // カテゴリ・タグをカスタム投稿にも有効化
-  register_taxonomy_for_object_type( 'post_tag', 'recruit' );
+  // 投稿タグも紐付けたい場合
   register_taxonomy_for_object_type( 'post_tag', 'voices' );
 }
 
@@ -322,5 +335,39 @@ function change_post_slug($args, $post_type) {
   }
   return $args;
 }
+
+add_theme_support( 'editor' );
+
+//投稿・固定ページのスラッグを固定プレフィックス＋日時にする
+add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
+    // 新規登録かつスラッグが空のときのみ適用
+    if ( empty( $postarr['post_name'] ) && in_array( $data['post_type'], [ 'post', 'page' ], true ) ) {
+        $prefix = $data['post_type'] === 'post' ? 'post' : 'page';
+        // 日時を使ったユニーク文字列（例: 2025年05月25日14時30分00秒）
+        $timestamp = date( 'YmdHis' );
+        $data['post_name'] = $prefix . '-' . $timestamp;
+    }
+    return $data;
+}, 99, 2 );
+
+
+// 投稿 のブロックカテゴリを追加
+add_filter( 'block_categories_all', function( $categories, $editor_context ) {
+    // すでに同名のスラッグがないか念のためチェック
+    foreach ( $categories as $cat ) {
+        if ( 'senpai-voice' === $cat['slug'] ) {
+            return $categories;
+        }
+    }
+
+    // 新しいカテゴリを末尾に追加
+    $categories[] = [
+        'slug'  => 'senpai-voice',   // 小文字＋ダッシュのみ
+        'title' => '先輩の声',       // インサーターに表示される名前
+        'icon'  => null,             // 任意でアイコンスラッグ（Dashicon 名など）
+    ];
+
+    return $categories;
+}, 10, 2 );
 
 ?>
