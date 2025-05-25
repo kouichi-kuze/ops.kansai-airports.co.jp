@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	});
-
 	//sp nav アコーディオン
 	$(".js-menu__item__link").each(function () {
 		$(this).on("click", function () {
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			return false;
 		});
 	});
-	
 	//ページ内スクロール
 	$(function(){
 		$('a[href^="#"]').click(function(){
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			return false;
 		});
 	});
-	
 	//スクロール後非表示
 	$(function () {
 		const $list = $('.page-content-link-list');
@@ -70,8 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	});	
 	
 	
-	
-	//inquiryスライダー
+//=====================
+//	スライダー設定
+//=====================
+	//inquiry
 	$('.slick-slider').slick({
 		//autoplay: true,
 		infinite: true,
@@ -89,8 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}]
 	});
-	
-//recruit-bnr-slider	
+	//recruit-bnr-slider	
   $('.recruit-bnr-slider').slick({
 		arrows: false,
 		autoplay: true,
@@ -121,40 +119,47 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	]
 	});
-	
-//recruit-voices-slider	
+	//recruit-voices-slider	
 	$('.recruit-voices-slider').slick({
-  infinite: false,
-  slidesToShow: 4.2,
-  slidesToScroll: 1,
+		infinite: false,
+		slidesToShow: 4.2,
+		slidesToScroll: 1,
 		arrows: true,
-    appendArrows: $('.arrow_box'),
-    prevArrow: '<div class="slide-arrow prev-arrow"></div>',
-    nextArrow: '<div class="slide-arrow next-arrow"></div>',
+		appendArrows: $('.arrow_box'),
+		prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+		nextArrow: '<div class="slide-arrow next-arrow"></div>',
 		responsive: [
 			{
-			breakpoint: 960,
-			settings: {
-				slidesToShow: 3.2,
-			}
-		},
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 3.2,
+				}
+			},
 			{
-			breakpoint: 769,
-			settings: {
-				slidesToShow: 2.2,
-			}
-		},
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 2.2,
+				}
+			},
 			{
-			breakpoint: 520,
-			settings: {
-				slidesToShow: 1.2,
+				breakpoint: 520,
+				settings: {
+					slidesToShow: 1.2,
+				}
 			}
-		}
-
-	]		
-		
-		
-});
+		]		
+	});
+	//services-subpage-slider  (page-services-xxxx)
+	$('.services-subpage-slider').slick({ //{}を入れる
+		autoplay: true, 
+		dots: true,
+		dotsClass: 'dots-wrap',
+		arrows:false,
+		speed: 1500,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+	
 	
 	
 	//任意のタブにURLからリンクするための設定
