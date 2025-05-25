@@ -205,7 +205,7 @@
 			font-size: 14px;
 			font-weight: 700;
 			line-height: 2;
-			margin: 40px 0 calc(60px + 60px);
+			margin: 40px 0 60px;
 		}
 		& .btn-bace-round{
 			text-align: center;
@@ -249,7 +249,7 @@
 			}
 			& .description{
 				font-size: 16px;
-				margin: 60px 0 calc(80px + 60px);
+				margin: 60px 0 80px;
 				padding: 0 40px;
 			}
 			& .btn-bace-round{
@@ -280,7 +280,7 @@
 			}
 			& .description{
 				padding: 0;
-				margin: 60px auto calc(80px + 60px);
+				margin: 60px auto 120px;
 			}
 			& .mv-img{
 				padding: 0 80px;
@@ -414,6 +414,31 @@
 			line-height: 1.7;
 		}
 	}
+	& .white-radius-box{
+		padding: 20px 30px;
+		& .dot-ttl{
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+		& .left-border-ttl{
+			font-size: 14px;
+			padding-left: 0;
+			margin-bottom: 5px;
+		}
+		& .tel{
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 5px;
+			& span{
+				font-size: 14px;
+				font-weight: 700;
+			}
+		}
+		& .text{
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
 		& .services-content-list{
 			margin-bottom: 30px;
@@ -439,6 +464,18 @@
 			margin-bottom: 20px;
 			& .disc-item{
 				font-size: 16px;
+			}
+		}
+		& .white-radius-box{
+			padding: 30px 40px;
+			& .dot-ttl{
+				font-size: 16px;
+			}
+			& .tel{
+				font-size: 24px;
+				& span{
+					font-size: 16px;
+				}
 			}
 		}
 	}
