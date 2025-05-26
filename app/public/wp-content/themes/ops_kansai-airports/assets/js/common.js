@@ -149,6 +149,50 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		]		
 	});
+	
+	//topページ top-slider-list
+	$('.top-slider-list').slick({
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 0,
+		speed: 7500,
+		infinite: true,
+		cssEase: 'linear',
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		responsive: [
+			{
+			breakpoint: 1800,
+			settings: {
+				slidesToShow: 4.8,
+			}
+		},
+			{
+			breakpoint: 1440,
+			settings: {
+				slidesToShow: 4,
+			}
+		},
+			{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3.2,
+			}
+		},
+			{
+			breakpoint: 960,
+			settings: {
+				slidesToShow: 2.5,
+			}
+		},
+		{
+			breakpoint: 438,//モニターの横幅が426px以下の見せ方
+			settings: {
+				slidesToShow: 2,//スライドを画面に1.5枚見せる
+			}
+		}
+	]
+	});
 	//services-subpage-slider  (page-services-xxxx)
 	$('.services-subpage-slider').slick({ //{}を入れる
 		autoplay: true, 
@@ -195,7 +239,10 @@ $(window).on('load', function () {
 	var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
 	GethashID (hashName);//設定したタブの読み込み
 });
+	
 
+
+	
 	
 	
 	
@@ -209,6 +256,21 @@ $(window).on('load', function () {
 	
 });
 
+
+
+//======topページ servis======
+
+$(document).ready(function () {
+  $('.service-item a').hover(function () {
+    const classList = $(this).attr('class'); // クラス名一覧を文字列で取得
+    const match = classList.match(/service_item_link_([0-9]+)/); // 番号だけ取得
+
+    if (match) {
+      const num = match[1].padStart(2, '0'); // 1 → 01 に変換
+      $('.service_img').css('background-image', `url(/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png)`);
+    }
+  });
+});
 
 
 
