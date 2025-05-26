@@ -2,18 +2,262 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
-/*
-サンプル
-.test {
-    @include m.mx-auto //mixinの変数は @include m.xxxxx
-    color: g.secondary;
-    &:after {
-        content: "";
-    }
-    @media only screen and (min-width: g.$desktop-breakpoint-md) {
-        &:hover {
-            color: g.primary; //variablesの変数は g.$xxxx
-        }
-    }
+
+
+#page-top a{
+	text-decoration: none;
 }
-*/
+//タイトル
+.ttl-2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+  display: inline-block;
+  line-height: 1;
+	@media (min-width: 960px){
+		font-size: 50px;
+	}
+	span{
+	  font-size: 14px;
+	  display: block;
+	  margin-bottom: 7px;
+		&::before{
+		  content: "";
+		  display: inline-block;
+		  width: 8px;
+		  height: 8px;
+		  background-color: #EB008B;
+		  border-radius: 2px;
+		  vertical-align: middle;
+		  margin-right: 10px;
+		  margin-bottom: 3px;
+		}
+	}
+}
+.content-inner {
+  padding: 0 30px;
+}
+
+
+
+//===TOPスライダー=======
+.top-slider-list{
+	img{
+		width:100%;//スライダー内の画像を横幅100%に
+		height:auto;
+	}
+	.top-slider-list .slick-slide {
+		margin:0;//スライド左右の余白調整
+	}
+}
+.top-slider-outer{
+	background-color: g.$white;
+}
+
+//======top-service=======
+.service-bg{
+	background-color: #ffffff;
+	padding: 60px 0 88px;
+	background-image: url("../img/top/bg_purple_diag.png");
+	background-size: 400px 383px;
+	background-repeat:no-repeat;
+	background-position: top 260px right -100px;
+}
+.top-ttl-area{
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-bottom: 40px;
+}
+.service_img{
+	display: none;
+	width: 50%;
+	height: 667px;
+	margin-right: 40px;
+	border-radius: 15px;
+	background-image: url(../img/top/service_img_01.png);
+	background-size: cover;
+	background-position: center;
+	transition: all 0.3s;
+	@media (min-width: 960px){
+		display: block;
+	}
+}
+.service-list-outer{
+	width: 100%;
+}
+
+@media (min-width: 960px){
+	#top-service .flex-box-right{
+		width: 50%;
+	}
+	#top-service .flex-bok{
+		display: flex;
+	}
+}
+
+#top-service .service-item{
+	margin-bottom: 10px;
+	a{
+		display: block;
+		position: relative;
+		font-weight: 700;
+		padding: 18px 50px 18px 20px;
+		background-color: #f6f6f6;
+		border-radius: 6px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md) {
+			&:hover{
+				color: #ffffff;
+				background-color: #07185C;
+				&::before{
+				  scale: 1.5;
+				  transform-origin: 50% 0;
+				}
+			}
+		}
+		&::before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			background-color: #ffffff;
+			width: 24px;
+			height: 24px;
+			border-radius: 50px;
+			top: 50%;
+			right: 20px;
+			transform: translate(0, -50%);
+			transition: all 0.3s;
+			transform-origin: 50% 0;
+		}
+		&::after{
+			content: "";
+			display: inline-block;
+			background: url("../img/common/icon_btn-bace-round-arrow.png") center/contain;
+			width: 11px;
+			height: 14px;
+			vertical-align: middle;
+			position: absolute;
+			top: 50%;
+			right: 26px;
+			transform: translate(0, -50%);
+		}
+	}
+}
+/*画像切り替えのアニメーション*/
+#top-service .service_img {
+  transition: background-image 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+#top-service .service_img.fade {
+  opacity: 0;
+}
+
+//=======top recruit===================
+		#top-recruit .recruit_img {
+			width: 	100%;
+			height: 250px;
+			background: url("../img/top/recruit_img.png") no-repeat center/cover;
+		}	
+		#top-recruit .recruit-bg{
+			background-color: #ffffff;
+			padding: 60px 0;
+			background-image: url(../img/top/bg_blue_diag.png);
+			background-size: 400px 383px;
+			background-repeat: no-repeat;
+			background-position: top 260px right -100px;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			#top-recruit .padding-l{
+				padding-left: 60px;
+			}
+		}
+		#top-recruit .top-ttl-area{
+			display: block;
+			margin-bottom: 30px;
+		}
+		#top-recruit .ttl-2{
+			margin-bottom: 40px;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			#top-recruit .top-ttl-area{
+				display: flex;
+				margin-bottom: 60px;
+			}
+			#top-recruit .ttl-2{
+				margin-bottom: 0;
+			}
+			.btn-bace-square .btn-setting{
+				min-width: 354px;
+			}
+		}
+		#top-recruit .ttl-3{
+			margin-bottom: 30px;
+		}
+		#top-recruit .recruit-info-date{
+			font-size: 12px;
+			font-weight: 700;
+			display: block;
+		}
+		#top-recruit .recruit-info-ttl{
+			font-size: 13px;
+			font-weight: 400;
+			width: 100%;
+		}
+		#top-recruit .recruit-info-link{
+			display: flex;
+			gap: 40px;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 0;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			#top-recruit .recruit-info-link{
+				gap: 60px;
+			}
+		}
+		#top-recruit .recruit-info-item{
+			border-bottom: solid 1px #EFEFEF;
+		}
+		#top-recruit .recruit-info-item:first-child .recruit-info-link{
+			padding-top: 0;
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

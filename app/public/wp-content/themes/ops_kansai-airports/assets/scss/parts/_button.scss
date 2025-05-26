@@ -27,6 +27,7 @@
   
     }
 }
+.btn-bace-square .btn-setting ,
 .btn-bace-round .btn-setting{
 	display: inline-block;
 	position: relative;
@@ -69,14 +70,28 @@
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
 }
+.btn-bace-square .btn-setting {
+//  display: inline-block;
+//  position: relative;
+  background-color: #EB008B;
+//  padding: 12px 54px 12px 20px;
+  border-radius: 6px;
+//  color: #ffffff;
+//  font-size: 14px;
+//  font-weight: 700;
+  width: 100%;
+}
+
+.btn-bace-square .btn-setting::after {
+  background: url(../img/common/icon_btn-bace-square-arrow.png) center/contain;
+  width: 11px;
+  height: 13px;
+  right: 18px;
+}
+
+
+
 
 .companyinfo-box .companyinfo-link{
 	position: relative;
