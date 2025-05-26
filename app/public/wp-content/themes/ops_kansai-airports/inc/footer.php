@@ -37,7 +37,7 @@
 			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">採用情報 <span>Recruit</span></a>
 				<ul class="submenu">
 				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/voices/">先輩の声</a> </li>
+				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 				</ul>
 			  </li>
 			  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ <span>Contact</span></a>

@@ -68,7 +68,7 @@
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
 					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>recruit/">採用情報トップ</a> </li>
-					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>recruit/voices/">先輩の声</a> </li>
+					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 					</ul>
 				  </div>
 			  </li>
