@@ -2,18 +2,129 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
-/*
-サンプル
-.test {
-    @include m.mx-auto //mixinの変数は @include m.xxxxx
-    color: g.secondary;
-    &:after {
-        content: "";
-    }
-    @media only screen and (min-width: g.$desktop-breakpoint-md) {
-        &:hover {
-            color: g.primary; //variablesの変数は g.$xxxx
-        }
-    }
+.table-content{
+  color: #696969;
+	p{
+		font-size: 14px;
+		&.mb-ss{
+			margin-bottom: 20px;
+		}
+	}
+	
+	h4{
+		font-size: 20px;
+		margin-bottom: 10px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+	h5{
+		font-size: 16px;
+		margin-bottom: 5px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			margin-bottom: 10px;
+		}
+	}
 }
-*/
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 1.6;
+  border: 1px solid #d7d7d7;
+  color: #696969;
+	margin-bottom: 35px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+	  font-size: 14px;
+	}
+
+  th,
+  td {
+    padding: 10px 12px;
+    border: 1px solid #d7d7d7;
+	  border-bottom: 0;
+    text-align: left;
+    vertical-align: top;
+    font-weight: 400;
+	  @media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding: 12px 16px;
+	  }
+  }
+
+  th {
+    font-weight: 700;
+    background-color: #f8f8f8;
+  }
+
+  caption.ot-scrn-rdr {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+    position: absolute;
+  }
+
+  a {
+    color: #696969;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: none;
+    text-decoration-color: #696969;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  thead {
+    display: none;
+	  @media only screen and (min-width: g.$desktop-breakpoint-md){
+		  display: table-header-group;
+	  }
+  }
+
+  tr {
+    display: block;
+	  @media only screen and (min-width: g.$desktop-breakpoint-md){
+		  display: table-row;
+	  }
+  }
+
+  td {
+    display: block;
+    width: 100%;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #d7d7d7;
+    position: relative;
+
+    &::before {
+      content: attr(data-label);
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+	  @media only screen and (min-width: g.$desktop-breakpoint-md){
+		  display: table-cell;
+		  width: auto;
+		  padding-left: 16px;
+		  border: 1px solid #d7d7d7;
+
+		  &::before {
+			content: none;
+			  left: 16px;
+
+			  
+		  }
+	  }
+  }
+
+}
+
+

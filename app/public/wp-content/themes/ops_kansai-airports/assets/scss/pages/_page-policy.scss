@@ -1,19 +1,1 @@
 // 共通スタイル
-@use "../utils/variables" as g;
-@use "../utils/mixin" as m;
-
-/*
-サンプル
-.test {
-    @include m.mx-auto //mixinの変数は @include m.xxxxx
-    color: g.secondary;
-    &:after {
-        content: "";
-    }
-    @media only screen and (min-width: g.$desktop-breakpoint-md) {
-        &:hover {
-            color: g.primary; //variablesの変数は g.$xxxx
-        }
-    }
-}
-*/

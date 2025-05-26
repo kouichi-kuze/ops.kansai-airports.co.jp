@@ -1,0 +1,186 @@
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+#page-policy{
+	background-color: g.$bg-blue;
+	.sub-page-main{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			padding-top: 80px;
+		}
+	}
+}
+.policy-content-box{
+	&.flex{
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		gap: 30px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			flex-flow: wrap;
+			align-items: flex-start;
+			gap: 80px;
+		}
+
+		.flex-item{
+			flex: 1;
+			&.p-mark{
+				max-width: 160px;
+				margin: 0 auto;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					max-width: 190px;
+				}
+			}
+		}
+	}
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.7;
+	margin-bottom: 60px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		font-size: 16px;
+		margin-bottom: 100px;
+	}
+	p {
+		margin-bottom: 40px;
+		font-size: 14px;
+		font-weight: 400;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 16px;
+		}
+		
+	}
+	.contact{
+		margin-bottom: 40px;
+		p{
+			display: flex;
+			vertical-align: middle;
+			margin-bottom: 0;
+			&.tel::before , &::before{
+				content: "Tel：";
+				display: inline-block;
+				margin-right: 5px;
+				white-space: nowrap;
+
+			}
+			&.tel a{
+				pointer-events: none;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					pointer-events: revert;
+				}
+				&:hover{
+					text-decoration: none;
+					opacity: .5;
+				}
+			}
+			&.address::before{
+				content: "郵便：";
+			}
+			&.mail::before{
+				content: "E-Mail：";
+			}
+			&.mail a{
+				text-decoration: underline;
+				text-underline-offset: 3px;
+				text-decoration-thickness: 1px;
+				text-decoration-skip-ink: none;
+				text-decoration-color: g.$primary;
+				&:hover{
+					opacity: .5;
+				}
+			}
+		}
+	}
+	.left-pinkline-ttl{
+		margin-bottom: 30px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			margin-bottom: 40px;
+		}
+	}
+	.dot-ttl{
+		font-weight: 700;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 20px;								
+		&::before{
+			content: "";
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			border-radius: 2px;
+			vertical-align: middle;
+			margin-right: 0;
+			margin-bottom: 3px;
+			flex: none;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+	}
+}
+.alpha-list {
+	list-style: none; // デフォルトの数字を消す
+	counter-reset: item; // カウンターをリセット
+	padding-left: 5px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding-left: 20px;
+		font-size: 16px;
+	}
+
+  > li {
+    counter-increment: item; // カウントを進める
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: counter(item, lower-alpha) ') ';
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+.type-disc-list{
+	list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: 400;
+  > li {
+    list-style-type: disc;
+  }
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		font-size: 16px;
+	}
+}
+.numbered-list {
+	counter-reset: item;
+	list-style: none;
+	padding-left: 0;
+	font-size: 16px;
+	font-weight: bold;
+	p {
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+
+	> li {
+		position: relative;
+		padding-left: 25px;
+		margin-bottom: 40px;
+		font-weight: 700;
+
+	&::before {
+	  counter-increment: item;
+	  content: counter(item) ".";
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  font-size: 18px;
+	}
+	}
+}
+
