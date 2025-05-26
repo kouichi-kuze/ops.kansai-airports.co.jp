@@ -1,28 +1,4 @@
 <?php get_template_part( 'inc/header' ); ?>
-<!--
-<main id="main-content" class="archive-recruit">
-  <h1>採用情報一覧</h1>
-  <?php if ( have_posts() ) : ?>
-    <ul class="recruit-list">
-      <?php while ( have_posts() ) : the_post(); ?>
-        <li>
-          <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail( 'thumbnail' ); ?>
-            <h2><?php the_title(); ?></h2>
-            <p><?php the_excerpt(); ?></p>
-          </a>
-        </li>
-      <?php endwhile; ?>
-    </ul>
-    <?php the_posts_pagination(); ?>
-  <?php else : ?>
-    <p>まだ採用情報がありません。</p>
-  <?php endif; ?>
-</main>
--->
-
-
-
 <!--HTMLここから-->
 <div class="sub-page-header p-side-3-8">
   <!-- パンくずリスト -->
@@ -45,205 +21,39 @@
 				<div class="max-128">
 					<h2 class="bottom-border-bulue-ttl">募集要項</h2>
 					<div class="max-md40-xl58">
-						<div class="new-recruit-link"><a href="<?php echo home_url( '/' ); ?>">2026年新卒採用</a></div>
-						<ul class="pdf-list">
-							<li class="pdf-item"><a href="<?php echo home_url( '/' ); ?>">＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></a></li>
-						</ul>
-						<p class="annotation">※応募時、履歴書と一緒にこちらの同意書の郵送が必要です。</p>
-					</div>
+						<div class="new-recruit-link">
+						<a href="<?php echo esc_url( $link_url ); ?>">
+							2026年新卒採用
+							</a>
+            			</div>
+					<ul class="pdf-list">
+						<li class="pdf-item"><a href="xxxxxx">＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></a></li>
+					</ul>
+					<p class="annotation">※応募時、履歴書と一緒にこちらの同意書の郵送が必要です。</p>
+				</div>
+
 					<ul>
-						<li class="recruit-list">
-							<div class="recruit-item"> 
-								<h2 class="left-pinkline-ttl">消防スタッフ</h2>
-								<ul class="text-contentouter">
-									<li class="">
-										<a href="<?php the_permalink(); ?>" class="hover-ani">
-											<div class="recruit-icat">
-												<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/img_archive-recruit_01.png" alt="消防スタッフ" >
-											</div>
-											<div class="text-content">
-												<div class="text-item">
-													<span class="work-style">契約社員</span>
-													<p class="business-content">空港消防スタッフ</p>
-													<div class="work-place-list">
-														<span class="work-place">勤務地： </span>
-														<span class="work-place-item">関西国際空港</span>
-														<span class="work-place-item">大阪国際空港</span>
-													</div>
-												</div>
-												<div class="btn-bace-round">
-													<div class="btn-setting">募集要項を見る</div>
-												</div>
-											</div>
-										</a> 
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="recruit-list">
-							<div class="recruit-item"> 
-								<h2 class="left-pinkline-ttl">空港インフォメーションスタッフ</h2>
-								<ul class="text-contentouter">
-									<li class="">
-										<a href="<?php the_permalink(); ?>" class="hover-ani">
-											<div class="recruit-icat">
-												<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/img_archive-recruit_02.png" alt="空港インフォメーションスタッフ" >
-											</div>
-											<div class="text-content">
-												<div class="text-item">
-													<span class="work-style">契約社員</span>
-													<p class="business-content">空港インフォメーション業務</p>
-													<div class="work-place-list">
-														<span class="work-place">勤務地： </span>
-														<span class="work-place-item">関西国際空港</span>
-													</div>
-												</div>
-												<div class="btn-bace-round">
-													<div class="btn-setting">募集要項を見る</div>
-												</div>
-											</div>
-										</a> 
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="recruit-list">
-							<div class="recruit-item"> 
-								<h2 class="left-pinkline-ttl">駐車場運営スタッフ</h2>
-								<ul class="text-contentouter">
-									<li class="">
-										<a href="<?php the_permalink(); ?>" class="hover-ani">
-											<div class="recruit-icat">
-												<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/img_archive-recruit_03.png" alt="駐車場運営スタッフ" >
-											</div>
-											<div class="text-content">
-												<div class="text-item">
-													<span class="work-style">契約社員</span>
-													<p class="business-content">空港インフォメーション業務</p>
-													<div class="work-place-list">
-														<span class="work-place">勤務地： </span>
-														<span class="work-place-item">関西国際空港</span>
-													</div>
-												</div>
-												<div class="btn-bace-round">
-													<div class="btn-setting">募集要項を見る</div>
-												</div>
-											</div>
-										</a> 
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="recruit-list">
-							<div class="recruit-item"> 
-								<h2 class="left-pinkline-ttl">空港警備スタッフ</h2>
-								<ul class="text-contentouter">
-									<li class="">
-										<a href="<?php the_permalink(); ?>" class="hover-ani">
-											<div class="recruit-icat">
-												<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/img_archive-recruit_04.png" alt="警備スタッフ" >
-											</div>
-											<div class="text-content">
-												<div class="text-item">
-													<span class="work-style">契約社員</span>
-													<p class="business-content">警備スタッフ</p>
-													<div class="work-place-list">
-														<span class="work-place">勤務地： </span>
-														<span class="work-place-item">関西国際空港</span>
-														<span class="work-place-item">大阪国際空港</span>
-													</div>
-												</div>
-												<div class="btn-bace-round">
-													<div class="btn-setting">募集要項を見る</div>
-												</div>
-											</div>
-										</a> 
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="recruit-list">
-							<div class="recruit-item"> 
-								<h2 class="left-pinkline-ttl">防災センタースタッフ</h2>
-								<ul class="text-contentouter">
-									<li class="">
-										<a href="<?php the_permalink(); ?>" class="hover-ani">
-											<div class="recruit-icat">
-												<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/img_archive-recruit_05.png" alt="防災センタースタッフ" >
-											</div>
-											<div class="text-content">
-												<div class="text-item">
-													<span class="work-style">契約社員</span>
-													<p class="business-content">防災センタースタッフ</p>
-													<div class="work-place-list">
-														<span class="work-place">勤務地： </span>
-														<span class="work-place-item">関西国際空港</span>
-													</div>
-												</div>
-												<div class="btn-bace-round">
-													<div class="btn-setting">募集要項を見る</div>
-												</div>
-											</div>
-										</a> 
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="recruit-list">
-							<div class="recruit-item"> 
-								<h2 class="left-pinkline-ttl">展望ホール　バスガイドスタッフ</h2>
-								<ul class="text-contentouter">
-									<li class="">
-										<a href="<?php the_permalink(); ?>" class="hover-ani">
-											<div class="recruit-icat">
-												<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/img_archive-recruit_06.png" alt="展望ホール バスガイドスタッフ" >
-											</div>
-											<div class="text-content">
-												<div class="text-item">
-													<span class="work-style">契約社員</span>
-													<p class="business-content">展望ホール バスガイドスタッフ</p>
-													<div class="work-place-list">
-														<span class="work-place">勤務地： </span>
-														<span class="work-place-item">関西国際空港</span>
-													</div>
-												</div>
-												<div class="btn-bace-round">
-													<div class="btn-setting">募集要項を見る</div>
-												</div>
-											</div>
-										</a> 
-									</li>
-									<li class="">
-										<a href="<?php the_permalink(); ?>" class="hover-ani">
-											<div class="text-content">
-												<div class="text-item">
-													<span class="work-style">パート・アルバイト</span>
-													<p class="business-content">展望ホール バスガイドスタッフ</p>
-													<div class="work-place-list">
-														<span class="work-place">勤務地： </span>
-														<span class="work-place-item">関西国際空港</span>
-													</div>
-												</div>
-												<div class="btn-bace-round">
-													<div class="btn-setting">募集要項を見る</div>
-												</div>
-											</div>
-										</a> 
-									</li>
-								</ul>
-							</div>
-						</li>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php
+							// 1) 本文からブロックをパース
+							$blocks = parse_blocks( get_the_content() );
+							// 2) 自分の Lazy Block スラッグに置き換えてください
+							$my_blocks = array_filter( $blocks, function( $b ) {
+								return $b['blockName'] === 'lazyblock/recruirecruitlist';
+							});
+							// 3) レンダー
+							foreach ( $my_blocks as $block ) {
+								echo '<div class="archive-lazyblock">';
+								echo render_block( $block );
+								echo '</div>';
+							}
+						?>
+						<?php endwhile; endif; ?>
 					</ul>
 					
-						<!-- 表示内容：ページネーション（例：前へ / 次へ） -->
-							<div class="breadcrumb-wrap">
-								<?php get_template_part( 'inc/breadcrumb' ); ?>
-							  </div>
-					
-					
-						<!-- 条件：投稿が1件もない場合 -->
-<!--							<p class="list-none">まだ採用情報がありません。</p>-->
-						<!-- 表示内容：投稿が存在しないときのメッセージ -->
+					<div class="breadcrumb-wrap">
+						<?php get_template_part( 'inc/breadcrumb' ); ?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -255,5 +65,64 @@
 </main >
 <!--/HTMLここまで-->
 
-
 <?php get_template_part( 'inc/footer' ); ?>
+
+<?php
+// 値を取り出し
+$title       = isset( $attributes['recruit_list_title'] ) ? $attributes['recruit_list_title'] : '';
+$img_attr    = isset( $attributes['recruit_list_img'] ) ? $attributes['recruit_list_img'] : null;
+$infos       = isset( $attributes['recruit_list_info'] ) ? $attributes['recruit_list_info'] : [];
+$btn_label   = '募集要項を見る';
+// パーマリンク取得（レンダラーコールバックで set していない場合はこちらでも可）
+// $permalink = get_permalink();
+?>
+<li class="recruit-list">
+  <div class="recruit-item">
+    <h2 class="left-pinkline-ttl"><?php echo esc_html( $title ); ?></h2>
+    <ul class="text-contentouter">
+      <li class="recruit-icat-items">
+        <div class="recruit-icat">
+          <?php if ( $img_attr && ! empty( $img_attr['url'] ) ) : ?>
+            <img src="<?php echo esc_url( $img_attr['url'] ); ?>"
+                 alt="<?php echo esc_attr( $img_attr['alt'] ); ?>" />
+          <?php endif; ?>
+        </div>
+
+        <?php if ( ! empty( $infos ) ) : ?>
+          <?php foreach ( $infos as $info ) :
+            // サブフィールド名に合わせて取り出し
+            $type      = isset( $info['recruit_list_type'] ) ? $info['recruit_list_type'] : '';
+            $business  = isset( $info['recruit_list_business'] ) ? $info['recruit_list_business'] : '';
+            $workplace = isset( $info['recruit_list_workplace'] ) ? $info['recruit_list_workplace'] : '';
+            ?>
+            <div class="text-content">
+              <div class="text-item">
+                <?php if ( $type ) : ?>
+                  <span class="work-style"><?php echo esc_html( $type ); ?></span>
+                <?php endif; ?>
+
+                <?php if ( $business ) : ?>
+                  <p class="business-content"><?php echo esc_html( $business ); ?></p>
+                <?php endif; ?>
+
+                <?php if ( $workplace ) : ?>
+                  <div class="work-place-list">
+                    <span class="work-place">勤務地： </span>
+                    <span class="work-place-item"><?php echo esc_html( $workplace ); ?></span>
+                  </div>
+                <?php endif; ?>
+              </div>
+
+              <a href="<?php echo esc_url( get_permalink() ); ?>" class="hover-ani">
+                <div class="btn-bace-round">
+                  <div class="btn-setting"><?php echo esc_html( $btn_label ); ?></div>
+                </div>
+              </a>
+            </div>
+          <?php endforeach; ?>
+        <?php endif; ?>
+
+      </li>
+    </ul>
+  </div>
+</li>

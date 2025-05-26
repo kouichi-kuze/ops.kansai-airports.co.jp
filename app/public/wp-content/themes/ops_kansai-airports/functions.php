@@ -212,7 +212,7 @@ function auto_news_slug( $data, $postarr ) {
 // 1) カスタム投稿タイプ登録 + カテゴリ／タグ紐付け
 add_action( 'init', 'register_custom_post_types' );
 function register_custom_post_types() {
-  /*固定ページで代用
+
   // 採用情報
   register_post_type( 'recruit', [
     'label'           => '採用情報',
@@ -232,7 +232,7 @@ function register_custom_post_types() {
     //'taxonomies'      => [ 'category', 'post_tag' ],
     'show_in_rest'    => true,
   ] );
-  */
+ 
 
    // 先輩の声
   register_post_type( 'voices', [
@@ -245,9 +245,9 @@ function register_custom_post_types() {
       'all_items'     => '先輩の声一覧',
     ],
     'public'          => true,
-    'has_archive'     => 'recruit/voices',
+    'has_archive'     => 'voices',
     'rewrite'         => [
-      'slug'       => 'recruit/voices',
+      'slug'       => 'voices',
       'with_front' => false,
     ],
     'menu_position'   => 6,
@@ -261,7 +261,7 @@ function register_custom_post_types() {
 }
 
 // 採用情報専用カテゴリ
-/*
+
 register_taxonomy('recruit_category', 'recruit', [
   'label'        => '採用カテゴリ',
   'hierarchical' => true,
@@ -270,14 +270,14 @@ register_taxonomy('recruit_category', 'recruit', [
   'show_in_rest' => true,
   'show_ui'      => true,
 ]);
-*/
+
 
 // 先輩の声専用カテゴリ
 register_taxonomy('voices_category', 'voices', [
   'label'        => '先輩の声カテゴリ',
   'hierarchical' => true,
   'public'       => true,
-  'rewrite'      => ['slug' => 'recruit/voices/category'],
+  'rewrite'      => ['slug' => 'voices/category'],
   'show_in_rest' => true,
   'show_ui'      => true,
 ]);
@@ -413,5 +413,6 @@ add_filter( 'block_categories_all', function( $categories, $editor_context ) {
 
     return $categories;
 }, 10, 2 );
+
 
 ?>

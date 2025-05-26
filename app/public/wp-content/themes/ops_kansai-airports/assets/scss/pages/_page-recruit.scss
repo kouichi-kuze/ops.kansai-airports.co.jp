@@ -98,7 +98,7 @@
 	.text-content {
 		width: 100%;
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			padding-left: 50px;
+			padding-left:0;
 			width: 64%;
 			margin: 0 0 0 auto;
 		}
@@ -1225,10 +1225,22 @@
 	}
 }
 
+.single-recruit {
+	.wp-block-lazyblock-recruirecruitlist {
+		display: none;
+	}
+}
 
 
-
-
+	<!--
+				<?php
+				$terms = get_the_terms( $post_id, 'recruit_category' );
+				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
+					<?php foreach ( $terms as $term ) : ?>
+						<span class="work-style"><?php echo esc_html( $term->name ); ?></span>
+					<?php endforeach; ?>
+				<?php endif; ?>
+					-->
 
 
 
