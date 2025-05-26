@@ -208,7 +208,6 @@ function auto_news_slug( $data, $postarr ) {
     return $data;
 }
 
-
 //投稿を追加
 // 1) カスタム投稿タイプ登録 + カテゴリ／タグ紐付け
 add_action( 'init', 'register_custom_post_types' );
@@ -262,6 +261,7 @@ function register_custom_post_types() {
 }
 
 // 採用情報専用カテゴリ
+/*
 register_taxonomy('recruit_category', 'recruit', [
   'label'        => '採用カテゴリ',
   'hierarchical' => true,
@@ -270,6 +270,7 @@ register_taxonomy('recruit_category', 'recruit', [
   'show_in_rest' => true,
   'show_ui'      => true,
 ]);
+*/
 
 // 先輩の声専用カテゴリ
 register_taxonomy('voices_category', 'voices', [
@@ -323,17 +324,33 @@ function rename_post_object_labels() {
 //  }
 //  return $args;
 //}
-add_filter('register_post_type_args', 'change_post_slug', 10, 2);
-function change_post_slug($args, $post_type) {
-  if ($post_type === 'post') {
-    // rewrite が配列か確認し、そうでなければ初期化
-    if (!is_array($args['rewrite'])) {
-      $args['rewrite'] = [];
+
+add_filter( 'register_post_type_args', 'change_post_slug_to_information', 10, 2 );
+function change_post_slug_to_information( $args, $post_type ) {
+    if ( 'post' === $post_type ) {
+        // rewrite が配列か確認し、そうでなければ初期化
+        if ( ! is_array( $args['rewrite'] ) ) {
+            $args['rewrite'] = [];
+        }
+        $args['rewrite']['slug']       = 'information';
+        $args['rewrite']['with_front'] = false;
+        $args['has_archive']           = 'information';
     }
-    $args['rewrite']['slug'] = 'information';
-    $args['has_archive'] = true;
-  }
-  return $args;
+    return $args;
+}
+
+add_filter( 'register_taxonomy_args', 'change_category_base', 10, 2 );
+function change_category_base( $args, $taxonomy ) {
+    if ( 'category' === $taxonomy ) {
+        // rewrite が配列か確認し…
+        if ( ! is_array( $args['rewrite'] ) ) {
+            $args['rewrite'] = [];
+        }
+        // ベースを information/category に
+        $args['rewrite']['slug']       = 'information/category';
+        $args['rewrite']['with_front'] = false;
+    }
+    return $args;
 }
 
 add_theme_support( 'editor' );
@@ -376,7 +393,7 @@ add_filter( 'block_categories_all', function( $categories, $editor_context ) {
             'icon'  => null,
         ],
         [
-            'slug'  => 'information',
+            'slug'  => 'information-cat',
             'title' => 'お知らせ',
             'icon'  => null,
         ],
