@@ -71,7 +71,7 @@ Template Name:トップページ
 										<li>
 											<div class="information_list__item">
 												<div class="information_list__card">
-													<a href="<?php echo home_url( '/' ); ?>">
+													<a href="<?php the_permalink(); ?>">
 													<div class="flex-container">
 														<div class="information_list__thumb">
 															<?php

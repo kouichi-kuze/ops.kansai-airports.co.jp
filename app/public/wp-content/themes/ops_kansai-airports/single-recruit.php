@@ -36,11 +36,14 @@
 		</h1>
 	</div>
 
+	<?php the_content(); ?>
 <!--
 <div class="date">
     <?php the_time(__('Y.m.d', 'kubrick')) ?>
 </div>
 -->
+<?php the_content(); ?>
+<!--
 <div class="entry">
 	<div class="recruit-info-table-outer">
 		<dl class="recruit-info-table">
@@ -68,9 +71,9 @@
 		</dl>
 		
 	</div>
-<?php the_content(); ?>
+
 	
-</div>
+</div>-->
 <!--
 <div class="navigation">
 

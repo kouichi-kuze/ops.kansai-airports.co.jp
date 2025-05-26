@@ -169,7 +169,7 @@
 										<li>
 											<div class="information_list__item">
 												<div class="information_list__card">
-													<a href="<?php echo home_url( '/' ); ?>">
+													<a href="<?php the_permalink(); ?>">
 													<div class="flex-container">
 														<div class="information_list__thumb">
 															<?php
@@ -218,7 +218,7 @@
 									<li>
 										<div class="information_list__item">
 											 <div class="information_list__card">
-												<a href="<?php echo home_url( '/' ); ?>">
+												<a href="<?php the_permalink(); ?>">
 													<div class="flex-container">
 														<div class="information_list__thumb"><img src="<?php bloginfo('template_url'); ?>/assets/img/news/img_news_01.png" alt=""></div>
 														<div class="information_list__caption">
