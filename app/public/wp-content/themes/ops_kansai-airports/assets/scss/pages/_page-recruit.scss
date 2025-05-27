@@ -80,6 +80,32 @@
 		margin-bottom: 40px;
 	}
 }
+
+.recruit-icat-items {
+	display: flex;
+	flex-flow: column;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+	}
+
+	.text-content {
+		width: 100%;
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			padding-left:0;
+			width: 64%;
+			margin: 0 0 0 auto;
+		}
+
+	}
+}
+
 #top-recruit-page .recruit-item .recruit-icat{
 	aspect-ratio: 3 / 2;
     width: 100%;
@@ -93,6 +119,7 @@
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		aspect-ratio: 17 / 10;
+		width: 30%;
 	}
 }
 #top-recruit-page .recruit-item img{
@@ -511,6 +538,23 @@
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		margin-bottom: 80px;
+	}
+
+	dd.text {
+		a {
+		text-decoration: underline;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		img {
+			vertical-align: bottom;
+			line-height: 1;
+			padding-bottom: 3px;
+		}
 	}
 }
 #single-recruit-page .post_detail a.border-bt-link{
@@ -1142,11 +1186,61 @@
 	
 }
 
+.btn-entry-link-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		margin-bottom: 100px;
+	}
+	.btn-entry-link {
+		background-color: g.$primary;
+		color: g.$white;
+		border-radius: 8px;
+		font-size: 18px;
+		width: 80%;
+		max-width: 430px;
+		height: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 20px;
+			height: 90px;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+
+		svg {
+			&.ico-link {
+				margin-left: 10px;
+			}
+			path {
+				fill: g.$white;
+			}
+		}
+	}
+}
+
+.single-recruit {
+	.wp-block-lazyblock-recruirecruitlist {
+		display: none;
+	}
+}
 
 
-
-
-
+//	<!--
+//				<?php
+//				$terms = get_the_terms( $post_id, 'recruit_category' );
+//				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
+//					<?php foreach ( $terms as $term ) : ?>
+//						<span class="work-style"><?php echo esc_html( $term->name ); ?></span>
+//					<?php endforeach; ?>
+//				<?php endif; ?>
+//					-->
 
 
 
