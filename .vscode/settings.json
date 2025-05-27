@@ -1,0 +1,36 @@
+// {
+//   "liveSassCompile.settings.formats": [
+//     {
+//       "format": "expanded",
+//       "extensionName": ".css",
+//       "savePath": "/assets/css"
+//     }
+//   ],
+//   "liveSassCompile.settings.includeItems": [
+//     "/assets/scss/style.scss"
+//   ],
+//   "liveSassCompile.settings.excludeList": [
+//     "/node_modules/**"
+//   ],
+//   "liveSassCompile.settings.generateMap": false,
+//   "liveSassCompile.settings.alwaysCompileOnSave": true,
+//   "liveSassCompile.settings.includePaths": [
+//     "assets/scss"
+//   ]
+// }
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/app/public/wp-content/themes/ops_kansai-airports/assets/css"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**"
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.alwaysCompileOnSave": true,
+  "liveServer.settings.port": 5502
+}
