@@ -178,17 +178,6 @@
 		margin-bottom: 15px;
 	}
 }
-//#top-recruit-page .text-contentouter .hover-ani:hover + .recruit-icat img{
-//	@media only screen and (min-width: g.$desktop-breakpoint-md){
-//		transform: scale(1.1);}
-//		transition: all 0.3s 
-//	}
-//#top-recruit-page .text-contentouter .hover-ani:hover .btn-setting::before{
-//	@media only screen and (min-width: g.$desktop-breakpoint-md){
-//		scale: 1.5;
-//		transform-origin: 50% 0;
-//	}
-//}
 #top-recruit-page .recruit-item .hover-ani:hover .recruit-icat img{
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
 		transform: scale(1.1);}
