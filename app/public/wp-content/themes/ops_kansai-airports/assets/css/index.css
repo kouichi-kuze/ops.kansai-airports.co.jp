@@ -1,7 +1,8 @@
-.lazyblocks-tools-page #normal-sortables {
+.lzb-gutenberg-remove-post-meta-modal-buttons {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  gap: 16px;
+  margin-top: 26px;
+}start;
   justify-content: space-between;
 }
 .lazyblocks-tools-page #normal-sortables > .postbox-container {
