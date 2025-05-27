@@ -257,6 +257,14 @@
 				margin: 0 40px;
 				& .btn-setting{
 					font-size: 16px;
+					padding: 0;
+					a{
+						padding: 20px 116px 20px 30px !important;
+						display: inline-block;
+						&:hover{
+							text-decoration: none;
+						}
+					}
 				}
 			}
 		}
@@ -480,7 +488,6 @@
 		}
 	}
 }
-
 
 
 
