@@ -314,19 +314,6 @@ function rename_post_object_labels() {
     $labels->name_admin_bar     = 'お知らせ';
 }
 
-add_action('acf/init', function(){
-  // acf_add_options_page() が存在するときだけ動く
-  if ( function_exists('acf_add_options_page') ) {
-    acf_add_options_page([
-      'page_title' => '採用情報設定',
-      'menu_title' => '採用情報設定',
-      'menu_slug'  => 'recruit-archive-settings',
-      'capability' => 'edit_posts',
-      'redirect'   => false,
-    ]);
-  }
-});
-
 //archive.phpをお知らせにする
 // 投稿タイプ「post」のスラッグを information に変更し、アーカイブを有効化
 //add_filter('register_post_type_args', 'change_post_slug', 10, 2);
