@@ -38,7 +38,7 @@
 				  <a class="nav-iink" href="">お知らせ <span>Information</span></a>
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
-					  <li class="secondmenu-top_item one-link"> <a class="" href="<?php echo home_url( '/' ); ?>">お知らせトップ</a> </li>
+					  <li class="secondmenu-top_item one-link"> <a class="" href="<?php echo home_url( '/' ); ?>information">お知らせトップ</a> </li>
 <!--
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>

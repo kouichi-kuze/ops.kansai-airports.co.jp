@@ -208,12 +208,11 @@ function auto_news_slug( $data, $postarr ) {
     return $data;
 }
 
-
 //投稿を追加
 // 1) カスタム投稿タイプ登録 + カテゴリ／タグ紐付け
 add_action( 'init', 'register_custom_post_types' );
 function register_custom_post_types() {
-  /*固定ページで代用
+
   // 採用情報
   register_post_type( 'recruit', [
     'label'           => '採用情報',
@@ -233,7 +232,7 @@ function register_custom_post_types() {
     //'taxonomies'      => [ 'category', 'post_tag' ],
     'show_in_rest'    => true,
   ] );
-  */
+ 
 
    // 先輩の声
   register_post_type( 'voices', [
@@ -246,9 +245,9 @@ function register_custom_post_types() {
       'all_items'     => '先輩の声一覧',
     ],
     'public'          => true,
-    'has_archive'     => 'recruit/voices',
+    'has_archive'     => 'voices',
     'rewrite'         => [
-      'slug'       => 'recruit/voices',
+      'slug'       => 'voices',
       'with_front' => false,
     ],
     'menu_position'   => 6,
@@ -262,6 +261,7 @@ function register_custom_post_types() {
 }
 
 // 採用情報専用カテゴリ
+
 register_taxonomy('recruit_category', 'recruit', [
   'label'        => '採用カテゴリ',
   'hierarchical' => true,
@@ -271,12 +271,13 @@ register_taxonomy('recruit_category', 'recruit', [
   'show_ui'      => true,
 ]);
 
+
 // 先輩の声専用カテゴリ
 register_taxonomy('voices_category', 'voices', [
   'label'        => '先輩の声カテゴリ',
   'hierarchical' => true,
   'public'       => true,
-  'rewrite'      => ['slug' => 'recruit/voices/category'],
+  'rewrite'      => ['slug' => 'voices/category'],
   'show_in_rest' => true,
   'show_ui'      => true,
 ]);
@@ -313,6 +314,19 @@ function rename_post_object_labels() {
     $labels->name_admin_bar     = 'お知らせ';
 }
 
+add_action('acf/init', function(){
+  // acf_add_options_page() が存在するときだけ動く
+  if ( function_exists('acf_add_options_page') ) {
+    acf_add_options_page([
+      'page_title' => '採用情報設定',
+      'menu_title' => '採用情報設定',
+      'menu_slug'  => 'recruit-archive-settings',
+      'capability' => 'edit_posts',
+      'redirect'   => false,
+    ]);
+  }
+});
+
 //archive.phpをお知らせにする
 // 投稿タイプ「post」のスラッグを information に変更し、アーカイブを有効化
 //add_filter('register_post_type_args', 'change_post_slug', 10, 2);
@@ -323,17 +337,33 @@ function rename_post_object_labels() {
 //  }
 //  return $args;
 //}
-add_filter('register_post_type_args', 'change_post_slug', 10, 2);
-function change_post_slug($args, $post_type) {
-  if ($post_type === 'post') {
-    // rewrite が配列か確認し、そうでなければ初期化
-    if (!is_array($args['rewrite'])) {
-      $args['rewrite'] = [];
+
+add_filter( 'register_post_type_args', 'change_post_slug_to_information', 10, 2 );
+function change_post_slug_to_information( $args, $post_type ) {
+    if ( 'post' === $post_type ) {
+        // rewrite が配列か確認し、そうでなければ初期化
+        if ( ! is_array( $args['rewrite'] ) ) {
+            $args['rewrite'] = [];
+        }
+        $args['rewrite']['slug']       = 'information';
+        $args['rewrite']['with_front'] = false;
+        $args['has_archive']           = 'information';
     }
-    $args['rewrite']['slug'] = 'information';
-    $args['has_archive'] = true;
-  }
-  return $args;
+    return $args;
+}
+
+add_filter( 'register_taxonomy_args', 'change_category_base', 10, 2 );
+function change_category_base( $args, $taxonomy ) {
+    if ( 'category' === $taxonomy ) {
+        // rewrite が配列か確認し…
+        if ( ! is_array( $args['rewrite'] ) ) {
+            $args['rewrite'] = [];
+        }
+        // ベースを information/category に
+        $args['rewrite']['slug']       = 'information/category';
+        $args['rewrite']['with_front'] = false;
+    }
+    return $args;
 }
 
 add_theme_support( 'editor' );
@@ -351,23 +381,51 @@ add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
 }, 99, 2 );
 
 
-// 投稿 のブロックカテゴリを追加
+// 投稿のブロックカテゴリを追加
 add_filter( 'block_categories_all', function( $categories, $editor_context ) {
-    // すでに同名のスラッグがないか念のためチェック
-    foreach ( $categories as $cat ) {
-        if ( 'senpai-voice' === $cat['slug'] ) {
-            return $categories;
+    // すでに登録済みかチェックするヘルパー
+    $exists = function( $slug ) use ( $categories ) {
+        foreach ( $categories as $cat ) {
+            if ( $slug === $cat['slug'] ) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    // 追加したいカテゴリを定義
+    $new_cats = [
+        [
+            'slug'  => 'senpai-voice',
+            'title' => '先輩の声',
+            'icon'  => null,
+        ],
+        [
+            'slug'  => 'recruit-guidelines',
+            'title' => '募集要項',
+            'icon'  => null,
+        ],
+        [
+            'slug'  => 'information-cat',
+            'title' => 'お知らせ',
+            'icon'  => null,
+        ],
+        [
+            'slug'  => 'recruit-info',
+            'title' => '採用情報',
+            'icon'  => null,
+        ],
+    ];
+
+    // 存在しないものだけ末尾に追加
+    foreach ( $new_cats as $new ) {
+        if ( ! $exists( $new['slug'] ) ) {
+            $categories[] = $new;
         }
     }
 
-    // 新しいカテゴリを末尾に追加
-    $categories[] = [
-        'slug'  => 'senpai-voice',   // 小文字＋ダッシュのみ
-        'title' => '先輩の声',       // インサーターに表示される名前
-        'icon'  => null,             // 任意でアイコンスラッグ（Dashicon 名など）
-    ];
-
     return $categories;
 }, 10, 2 );
+
 
 ?>

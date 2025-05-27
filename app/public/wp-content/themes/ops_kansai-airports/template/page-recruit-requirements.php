@@ -1,8 +1,14 @@
+<?php
+/*
+Template Name:募集要項
+*/
+?>
 <?php get_template_part( 'inc/header' ); ?>
 
 <div id="main-content" class="single-recruit">
 	<div id="page">	
 		<div id="post">
+		
 			<!--HTMLここから-->
 			<div class="sub-page-header p-side-3-8">
 				<!-- パンくずリスト -->
@@ -15,55 +21,27 @@
 					<p class="page-header__subtitle">Recruit</p>
 				</div>
 			</div>
-
+			
 			<div id="single-recruit-page" class="bg-color-primary">
 				<div class="main-ounded-content bg-color-primary">
 					<div class="p-side-15-8">
 						<div class="max-128">
 							<h2 class="bottom-border-bulue-ttl">募集要項</h2>
-		
 							<div class="post_detail">
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-									<div class="post_detail-head">
-										<?php
-										global $post;
-										$post_id = $post->ID;
-
-										// 採用情報専用カテゴリを取得
-										$terms = get_the_terms( $post_id, 'recruit_category' );
-
-										// もしカテゴリがあれば出力
-										if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
-										<ul class="tags">
-											<?php foreach ( $terms as $term ) : ?>
-											<li><?php echo esc_html( $term->name ); ?></li>
-											<?php endforeach; ?>
-										</ul>
-										<?php endif; ?>
-										
-										<h1 class="title">
-										<?php the_title(); ?>
-										</h1>
-									</div>
-
-									<?php the_content(); ?>
-
-								<?php endwhile; else: ?>
-								<?php endif; ?>						
+								<?php the_content(); ?>
 							</div>
-		
 						</div>
 					</div>
 				</div>
+			</div>
+			
 			<!--リクルート共通パーツ-->
 			<?php get_template_part( 'parts/bnr_requruit' ); ?>
 			<!--/リクルート共通パーツ-->
-			</div>
-		<!--/HTMLここまで-->
 		</div>
-		<?php get_template_part('bloc/contact_box'); ?>
+	<!--/HTMLここまで-->
 	</div>
+	<?php get_template_part('bloc/contact_box'); ?>
 </div>
-	
-<?php get_template_part( 'inc/footer' ); ?>
 
+<?php get_template_part( 'inc/footer' ); ?>
