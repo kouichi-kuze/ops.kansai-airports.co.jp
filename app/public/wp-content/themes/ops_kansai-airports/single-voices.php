@@ -280,7 +280,7 @@
 		</div>
 		<div class="btn-bace-round">
 			<div class="btn-setting">
-			  <a href="<?php echo get_option('home'); ?>/voices/" class="back">先輩の声一覧</a>
+			  <a href="<?php echo get_option('home'); ?>//voices/" class="back">先輩の声一覧</a>
 		  </div>
 	  </div>
 	</div>

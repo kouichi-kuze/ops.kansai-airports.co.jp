@@ -3,6 +3,11 @@
 @use "../utils/mixin" as m;
 
 
+////後で消す
+//#page-top {
+//	padding-top: 100px;
+//}
+
 
 #page-top a{
 	text-decoration: none;
@@ -37,6 +42,110 @@
 .content-inner {
   padding: 0 30px;
 }
+//=======MV=======
+//-------スライダー---------
+section.top-mv{
+	position: sticky;
+	top: 0;
+	z-index: 0
+}
+section{
+	position: relative;
+	z-index: 1;
+}
+.mv-flex{
+	display: flex;
+	}
+#slider-right {
+	display: none;
+}
+#slider-left ,#slider-right{
+    width: 100%;
+	  height: 480px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		display: block;
+		width: 50%;
+		height: 550px;
+	}
+	@media only screen and (min-width: 960px){
+		height: 758px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		height: 800px;
+	}
+  }
+
+
+//=======お知らせ=======
+#page-top #top-news-page .p-side{
+	padding: 0 15px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding: 0 30px;
+	}
+	@media only screen and (min-width: 960px){
+		padding: 0 40px;
+	}
+}
+#page-top #top-news-page{
+	padding-top: 80px;
+	.information_list__tags{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			gap: 10px 10px;
+		}
+		li{
+			font-size: 12px;
+			font-weight: 700;
+			padding: 5px 15px;
+			width: auto;
+		}
+	} 
+	.information_list__caption{
+		flex: 1;
+	}
+	.information_list__thumb{
+		width: 45%;
+		max-width: 180px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			border-radius: 6px;
+			
+		}
+	}
+	.flex-container{
+		align-items: flex-start;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			flex-flow: wrap;
+			gap: 20px;
+		}
+	}
+	.flex-information_list{
+		gap: 20px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+			li{
+				width: 100%;
+			}
+	}
+}
+
+ 
+#page-top {
+	#information{
+		.main-ounded-content{
+			padding: 38px 0 30px;
+			border-radius: 0;
+		}
+	}
+}
+#page-top #top-news-page{}
+
+
+
+
+
+
 
 
 

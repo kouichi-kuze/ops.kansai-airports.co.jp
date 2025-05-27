@@ -241,6 +241,55 @@ $(window).on('load', function () {
 });
 	
 
+	
+	
+//mvのスライダー
+  var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+  let leftImages, rightImages;
+	
+  if (windowwidth > 768) {
+    // PC画像（左・右）
+    leftImages = [
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' }
+    ];
+    rightImages = [
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' }
+    ];
+  } else {
+    // SP画像（画面全体）
+    leftImages = [
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' }
+    ];
+    rightImages = [];
+  }
+
+  $('#slider-left').vegas({
+    slides: leftImages,
+    transition: 'fade',
+    animation: 'kenburns',
+    delay: 8000,
+    transitionDuration: 2000,
+    animationDuration: 10000,
+    timer: false
+  });
+
+  if (rightImages.length > 0) {
+    $('#slider-right').vegas({
+      slides: rightImages,
+      transition: 'fade',
+    animation: 'kenburns',
+      delay: 8000,
+      transitionDuration: 2000,
+      animationDuration: 10000,
+      timer: false
+    });
+  }
+	
 
 	
 	
