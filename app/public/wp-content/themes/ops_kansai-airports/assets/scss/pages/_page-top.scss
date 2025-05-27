@@ -3,10 +3,6 @@
 @use "../utils/mixin" as m;
 
 
-////後で消す
-//#page-top {
-//	padding-top: 100px;
-//}
 
 
 #page-top a{
@@ -45,9 +41,9 @@
 //=======MV=======
 //-------スライダー---------
 section.top-mv{
-	position: sticky;
-	top: 0;
-	z-index: 0
+//	position: sticky;
+//	top: 0;
+//	z-index: 0
 }
 section{
 	position: relative;
@@ -90,7 +86,31 @@ section{
 	}
 }
 #page-top #top-news-page{
-	padding-top: 80px;
+	position: relativer;
+	&::before{
+		content: "";
+		width: 100%;
+		height: 107px;
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.42) 100%);
+		position: absolute;
+		top: -107px;
+		left: 0;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			height: 275px;
+			top: -275px;
+		}
+			
+	}
+//	padding-top: 80px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding: 80px 30px 0;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		display: flex;
+		//padding-left: 0;
+		padding-right: 0;
+		gap:80px;
+	}
 	.information_list__tags{
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			gap: 10px 10px;
@@ -102,6 +122,12 @@ section{
 			width: auto;
 		}
 	} 
+	.nformation_list{
+		margin-bottom: 0;
+	}
+	.breadcrumb-wrap{
+		margin-bottom: 0;
+	}
 	.information_list__caption{
 		flex: 1;
 	}
@@ -128,6 +154,131 @@ section{
 				width: 100%;
 			}
 	}
+	.top-ttl-area{
+		margin-bottom: 0;
+	}
+	
+	.top-ttl-bg{
+		position: relative;
+		background-color:g.$white;
+		width: 173px;
+		height: 66px;
+		border-radius: 0 16px 0 0;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			border-radius: 16px 16px 0 0;
+			width: 232px;
+		}
+		&::before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			background: g.$white;
+			bottom: 0;
+			right: -40px;
+			margin: 0;
+			border-radius: 0;
+		}
+		&::after{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			background: g.$primary;
+			bottom: 0;
+			right: -40px;
+			margin: 0;
+			border-radius: 0;
+			border-radius: 0 0 0 16px;
+		}
+	}
+	.btn-bace-round{
+		margin: 0 30px 20px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			.btn-setting{
+				    padding: 12px 54px 12px 20px;
+				a:hover::before{
+					scale: 1.5;
+				    transform-origin: 50% 0;
+				}
+			}
+		}
+	}
+	.mv-ttl{
+		padding:0 15px;
+		img{
+			display: block;
+			&.mv-ttl_01{
+				width: 100%;
+				max-width: 380px;
+				height: auto;
+				margin-bottom: 30px;
+			}
+			&.mv-ttl_02_tate{
+				width: 75%;
+				max-width: 520px;
+				margin-bottom: 50px;
+			}
+			&.mv-ttl_02{
+				width: 75%;
+				max-width: 520px;
+				margin-bottom: 50px;
+			}
+		}
+		p{
+			font-size: 14px;
+			color: g.$white;
+			font-weight: 400;
+			line-height: 2;
+		}
+	}
+	.flex-box-left{
+		transform: translate(0, -90px);
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			transform: translate(0, -195px);
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			width: 50%;
+			transform: translate(0, -335px);
+		}
+	}
+	.flex-box-right{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			    margin-top: -100px;
+			}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			width: 50%;
+			margin-top: 0;
+		}
+	}
+}
+#page-top .ttl-2 {
+  font-size: 24px;
+	> span {
+	  font-size: 14px;
+	  display: block;
+	  margin-bottom: 7px;
+		&::before{
+		  content: "";
+		  display: inline-block;
+		  width: 8px;
+		  height: 8px;
+		  background-color: #EB008B;
+		  border-radius: 2px;
+		  vertical-align: middle;
+		  margin-right: 10px;
+		  margin-bottom: 3px;
+		}
+	}
+}
+#page-top #top-news-page .ttl-2{
+	padding-left: 15px;
+	padding-top: 15px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding-left: 30px;
+	}
 }
 
  
@@ -136,20 +287,17 @@ section{
 		.main-ounded-content{
 			padding: 38px 0 30px;
 			border-radius: 0;
+			position: relative;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				border-radius: 0 16px 0 0;
+			}
 		}
 	}
 }
-#page-top #top-news-page{}
 
 
 
-
-
-
-
-
-
-//===TOPスライダー=======
+//===お知らせ下のスライダー=======
 .top-slider-list{
 	img{
 		width:100%;//スライダー内の画像を横幅100%に
@@ -165,7 +313,7 @@ section{
 
 //======top-service=======
 .service-bg{
-	background-color: #ffffff;
+	background-color: g.$white;
 	padding: 60px 0 88px;
 	background-image: url("../img/top/bg_purple_diag.png");
 	background-size: 400px 383px;
@@ -212,12 +360,12 @@ section{
 		position: relative;
 		font-weight: 700;
 		padding: 18px 50px 18px 20px;
-		background-color: #f6f6f6;
+		background-color: g.$btn-white;
 		border-radius: 6px;
 		@media only screen and (min-width: g.$desktop-breakpoint-md) {
 			&:hover{
-				color: #ffffff;
-				background-color: #07185C;
+				color: g.$white;
+				background-color: g.$primary;
 				&::before{
 				  scale: 1.5;
 				  transform-origin: 50% 0;
@@ -228,7 +376,7 @@ section{
 			content: "";
 			display: inline-block;
 			position: absolute;
-			background-color: #ffffff;
+			background-color: g.$secondary;
 			width: 24px;
 			height: 24px;
 			border-radius: 50px;
@@ -241,9 +389,11 @@ section{
 		&::after{
 			content: "";
 			display: inline-block;
-			background: url("../img/common/icon_btn-bace-round-arrow.png") center/contain;
-			width: 11px;
-			height: 14px;
+//			background: url("../img/common/icon_btn-bace-round-arrow.png") center/contain;
+			background: url("../img/common/icon_menu_arrow.svg") center/contain;
+			background-repeat: no-repeat;
+			width: 9px;
+			height: 12px;
 			vertical-align: middle;
 			position: absolute;
 			top: 50%;
@@ -269,13 +419,17 @@ section{
 			background: url("../img/top/recruit_img.png") no-repeat center/cover;
 		}	
 		#top-recruit .recruit-bg{
-			background-color: #ffffff;
+			background-color: g.$white;
 			padding: 60px 0;
 			background-image: url(../img/top/bg_blue_diag.png);
 			background-size: 400px 383px;
 			background-repeat: no-repeat;
-			background-position: top 260px right -100px;
+			background-position: top 250px left -240px;
+			padding-bottom: 0;
 		}
+#top-recruit .content-inner{
+	margin-bottom: 80px;
+}
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			#top-recruit .padding-l{
 				padding-left: 60px;
@@ -326,12 +480,85 @@ section{
 			}
 		}
 		#top-recruit .recruit-info-item{
-			border-bottom: solid 1px #EFEFEF;
+			border-bottom: solid 1px g.$line-bk-gray;
 		}
 		#top-recruit .recruit-info-item:first-child .recruit-info-link{
 			padding-top: 0;
 		}
-		
+#page-top #page-recruit-voices-outline {
+			& .arrow_box{
+		  display: flex;
+		  align-items: center;
+		  justify-content: flex-end;
+			gap: 10px;
+		  margin: 0;
+				margin-right: 30px;
+		  position: relative;
+			& .prev-arrow,.next-arrow {
+			  display: block;
+			  width: 46px;
+			  height: 46px;
+			  background: rgba(0,18,94,0.10);
+			  border-radius: 50%;
+			  transition: all .3s ease;
+			  cursor: pointer;
+			  position:relative;
+			}
+			& .prev-arrow {
+			  transform: rotate(180deg);
+			}
+			& .prev-arrow::before,.next-arrow::before{
+				position:absolute;
+				content: "";
+				width: 12px;
+				height: 12px;
+				border-right: 1.5px solid;
+				border-top: 1.5px solid;
+				top:0;
+				bottom:0;
+				left:-5px;
+				right:0;
+				margin:auto;
+				transform:rotate(45deg);
+			}
+		}
+	.recruit-voices-list{
+		margin-bottom: 40px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			& .arrow_box{
+				gap: 20px;
+				& .prev-arrow,.next-arrow{
+					width: 60px;
+					height: 60px;
+				}
+			}
+	}
+	.bottom-border-bulue-ttl{
+		font-size: 28px;
+		display: flex;
+    flex-flow: column;
+		span{
+			font-size: 14px;
+		}
+	}
+	.slider-head{
+		align-items: flex-end;
+	}
+	.glay-box{
+		background-color: #F9F9F9;
+    padding: 60px 0;
+    margin-left: 30px;
+    border-radius: 40px 0 0 0;
+	}
+	.senior-other-voice-content{
+		padding: 0;
+	}
+	
+	
+	
+
+}
 
 
 

@@ -17,6 +17,26 @@ Template Name:トップページ
 	<div id="page" class="archive-news">
 		<div id="information">
 			<div id="top-news-page" class="bg-color-primary">
+				
+					<div class="flex-box-left">
+						<h1 class="mv-ttl">
+							<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_01.png" alt="空港の安全安心を守る" class="mv-ttl_01">
+							<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_02.png" alt="Kansai Areports Opereation Sarvice" class="mv-ttl_02 d-none d-md-block d-xl-none">
+							<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_02_tate.png" alt="Kansai Areports Opereation Sarvice" class="mv-ttl_02_tate d-md-none d-xl-block ">
+							<p>関西エアポートオペレーションサービス株式会社は、関西エアポート株式会社グループのオペレーション部門として安全安心の中核を担い、危機管理、安全性、セキュリティ、顧客サービスの観点から人的リソースの高度化・最適化により最高水準の空港オペレーション品質を提供します。</p>
+						</h1>
+					</div>				
+
+				
+					<div class="flex-box-right">
+						<div class="top-ttl-area">
+							<div class="top-ttl-bg">
+								<h2 class="ttl-2"><span>お知らせ</span>Information</h2>
+							</div>
+							<div class="btn-bace-round"><a class="btn-setting" href="/">事業紹介一覧</a></div>
+						</div>
+						
+						
 				<div class="main-ounded-content">
 					<div class="p-side">
 						<div class="max-128">
@@ -187,31 +207,13 @@ Template Name:トップページ
 						</div>
 					</div>
 				</div>
+						
+					</div>				
+				
 			</div>
 		</div>	
 	</div >
 </section>	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 <!--slide-->
 	<section>
@@ -297,136 +299,113 @@ Template Name:トップページ
 				</div>
 			</div>
 			
-		</div>
-			
-			
+<!--		</div>-->
+	
 <!--
-			<div class="content-inner">
-				<div class="flex-bok">
-					<div class="flex-box-right">
-						<div class="service-list-outer">
-							<ul class="service-list">
-								<li class="service-item"><a class="service_item_link_01" href="/">オペレーションマネジメント事業</a></li>
-								<li class="service-item"><a class="service_item_link_02"  href="/">警備事業</a></li>
-								<li class="service-item"><a class="service_item_link_03"  href="/">消防事業</a></li>
-								<li class="service-item"><a class="service_item_link_04"  href="/">ターミナルマネジメント事業</a></li>
-								<li class="service-item"><a class="service_item_link_05"  href="/">清掃・カート事業</a></li>
-								<li class="service-item"><a class="service_item_link_06"  href="/">駐車場運営事業</a></li>
-								<li class="service-item"><a class="service_item_link_07"  href="/">カーゴエリアオペレーション事業</a></li>
-								<li class="service-item"><a class="service_item_link_08"  href="/">給油運用事業</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
--->
-	
 	</section>
-	
-	
-	
-	
-	
-	
-	
-	
 	<section>
+-->
 		<div id="page-recruit-voices-outline">
 			<div class="senior-other-voice-content">
-				<!--slide-->
-				<div class="slider-head p-side-3-12">
-					<p class="title">他の先輩の声を見る</p>
-					<div class="arrow_box"><!--矢印--></div>
-				</div>
-				<div class="p-left-3-12">
-					<div class="senior-other-voice-slider">
-						<div class="recruit-voices-list-card">
-							<?php
-							// --- シングル記事本体 here ... ---
+				<div class="glay-box">
+					<!--slide-->
+					<div class="slider-head p-side-3-12">
+						<h2 class="bottom-border-bulue-ttl">先輩の声<span>Staff Voice</span></h2>
+					<div class="btn-bace-round">
+						<div class="btn-setting">
+							<a href="<?php echo get_option('home'); ?>/recruit/voices/" class="back">先輩の声一覧</a>
+						</div>
+					 </div>
 
-							// ここから「他の先輩の声」スライダー用クエリを用意
-							$args = [
-							'post_type'      => 'voices',
-							'posts_per_page' => 5,
-							'post__not_in'   => [ get_the_ID() ], // 今見ている記事は除外
-							'orderby'        => 'date',
-							'order'          => 'DESC',
-							];
-							$voices = new WP_Query( $args );
-							?>
-							<?php if ( $voices->have_posts() ) : ?>
-							<ul class="recruit-voices-list recruit-voices-slider">
-								<?php while ( $voices->have_posts() ) : $voices->the_post(); ?>
-								<li class="recruit-voices-item">
-									<a href="<?php the_permalink(); ?>">
-									<!-- サムネイル画像 -->
-										<div class="img">
-										<?php
-										if ( has_post_thumbnail() ) {
-											the_post_thumbnail( 'large' );
-										} elseif ( $thumb_id = get_field( 'voices_thumb_img' ) ) {
-											echo wp_get_attachment_image( $thumb_id, 'large' );
-										} else {
-											echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/voice/img_page-recruit-voices_01.png' ) . '" alt="' . esc_attr( get_the_title() ) . '">';
-										}
-										?>
-										</div>
+					</div>
+					<div class="p-left-3-12">
+						<div class="senior-other-voice-slider">
+							<div class="recruit-voices-list-card">
+								<?php
+								// --- シングル記事本体 here ... ---
 
-										<!-- テキスト部分 -->
-										<div class="text">
-
-											<!-- 先輩の声専用カテゴリ -->
+								// ここから「他の先輩の声」スライダー用クエリを用意
+								$args = [
+								'post_type'      => 'voices',
+								'posts_per_page' => 5,
+								'post__not_in'   => [ get_the_ID() ], // 今見ている記事は除外
+								'orderby'        => 'date',
+								'order'          => 'DESC',
+								];
+								$voices = new WP_Query( $args );
+								?>
+								<?php if ( $voices->have_posts() ) : ?>
+								<ul class="recruit-voices-list recruit-voices-slider">
+									<?php while ( $voices->have_posts() ) : $voices->the_post(); ?>
+									<li class="recruit-voices-item">
+										<a href="<?php the_permalink(); ?>">
+										<!-- サムネイル画像 -->
+											<div class="img">
 											<?php
-											$terms = get_the_terms( get_the_ID(), 'voices_category' );
-											if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-												echo '<span class="work">' . esc_html( $terms[0]->name ) . '</span>';
+											if ( has_post_thumbnail() ) {
+												the_post_thumbnail( 'large' );
+											} elseif ( $thumb_id = get_field( 'voices_thumb_img' ) ) {
+												echo wp_get_attachment_image( $thumb_id, 'large' );
+											} else {
+												echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/voice/img_page-recruit-voices_01.png' ) . '" alt="' . esc_attr( get_the_title() ) . '">';
 											}
 											?>
+											</div>
 
-											<!-- ボタンエリア -->
-											<ul class="button-area">
-												<li class="text">
-												<!-- 名前イニシャル -->
-												<?php if ( $val = get_field( 'voices_initial' ) ) : ?>
-													<span class="name"><?php echo esc_html( $val ); ?></span>
-												<?php endif; ?>
+											<!-- テキスト部分 -->
+											<div class="text">
 
-												<!-- 所属場所 -->
-												<?php if ( $val = get_field( 'voices_affiliation' ) ) : ?>
-													<span class="place"><?php echo esc_html( $val ); ?> /</span>
-												<?php endif; ?>
+												<!-- 先輩の声専用カテゴリ -->
+												<?php
+												$terms = get_the_terms( get_the_ID(), 'voices_category' );
+												if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+													echo '<span class="work">' . esc_html( $terms[0]->name ) . '</span>';
+												}
+												?>
 
-												<!-- 入社年 -->
-												<?php if ( $val = get_field( 'voices_joining' ) ) : ?>
-													<span class="Joining"><?php echo esc_html( $val ); ?></span>
-												<?php endif; ?>
-												</li>
-												<li class="btn"><span></span></li>
-											</ul>
-										</div>
-									</a>
-								</li>
-								<?php endwhile; ?>
-							</ul>
+												<!-- ボタンエリア -->
+												<ul class="button-area">
+													<li class="text">
+													<!-- 名前イニシャル -->
+													<?php if ( $val = get_field( 'voices_initial' ) ) : ?>
+														<span class="name"><?php echo esc_html( $val ); ?></span>
+													<?php endif; ?>
 
-							<?php
-								// ループ後は必ずリセット
-								wp_reset_postdata();
-							?>
+													<!-- 所属場所 -->
+													<?php if ( $val = get_field( 'voices_affiliation' ) ) : ?>
+														<span class="place"><?php echo esc_html( $val ); ?> /</span>
+													<?php endif; ?>
 
-							<?php else : ?>
-							<p>該当する投稿がありません。</p>
-							<?php endif; ?>
+													<!-- 入社年 -->
+													<?php if ( $val = get_field( 'voices_joining' ) ) : ?>
+														<span class="Joining"><?php echo esc_html( $val ); ?></span>
+													<?php endif; ?>
+													</li>
+													<li class="btn"><span></span></li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<?php endwhile; ?>
+								</ul>
+
+								<?php
+									// ループ後は必ずリセット
+									wp_reset_postdata();
+								?>
+
+								<?php else : ?>
+								<p>該当する投稿がありません。</p>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
+					<div class="arrow_box"><!--矢印--></div>
+
 				</div>
-				<div class="btn-bace-round">
-					<div class="btn-setting">
-						<a href="<?php echo get_option('home'); ?>/recruit/voices/" class="back">先輩の声一覧</a>
-					</div>
-				 </div>
 			</div>
 		 </div>
+		</div>
 	</section>
 </main >
 <?php get_template_part( 'inc/footer' ); ?>
