@@ -52,9 +52,9 @@ Template Name:清掃カート事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/img_cart-cleaning_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/img_cart-cleaning_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/img_cart-cleaning_03.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/003.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

@@ -51,11 +51,11 @@ Template Name:警備事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/img_kix-keibitai_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/img_kix-keibitai_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/img_kix-keibitai_03.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/img_kix-keibitai_04.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/img_kix-keibitai_05.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/kix/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/kix/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/kix/003.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/kix/004.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/kix/005.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -77,7 +77,7 @@ Template Name:警備事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/img_itm-unyoukanri_01.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>//assets/img/service/security/itm/001.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -87,7 +87,7 @@ Template Name:警備事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/img_itm-keibitai_01.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>//assets/img/service/security/itm/002.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

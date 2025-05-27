@@ -45,9 +45,9 @@ Template Name:駐車場運営事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/img_kix_unyou_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/img_kix_unyou_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/img_kix_unyou_03.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/kix/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/kix/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/kix/003.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -69,8 +69,9 @@ Template Name:駐車場運営事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/img_itm_unyou_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/img_itm_unyou_02.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/itm/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/itm/002.jpg" /></li>
+
 								</ul>
 							</li>
 						</ul>

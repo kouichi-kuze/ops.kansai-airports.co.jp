@@ -42,13 +42,12 @@ Template Name:カーゴエリアオペレーション事業
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/img_cargo_01.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/001.jpg" /></li>
 								</ul>
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/img_cargo_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/img_cargo_03.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/002.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

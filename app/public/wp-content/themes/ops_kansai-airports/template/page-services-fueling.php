@@ -58,7 +58,7 @@ Template Name:給油運用事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyukansei_01.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kyuu-kansei/image45.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -72,9 +72,8 @@ Template Name:給油運用事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyuhoshu_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyuhoshu_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyuhoshu_03.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kyuu-hoshu/image38.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kyuu-hoshu/image54.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -98,10 +97,10 @@ Template Name:給油運用事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyujigyo_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyujigyo_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyujigyo_03.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/img_kyuyujigyo_04.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kyuu-jigyo/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kyuu-jigyo/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kyuu-jigyo/003.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kyuu-jigyo/004.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

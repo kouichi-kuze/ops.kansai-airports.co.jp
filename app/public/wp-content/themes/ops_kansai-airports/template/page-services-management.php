@@ -48,10 +48,10 @@ Template Name:オペレーションマネジメント事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_toukatukanri_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_toukatukanri_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_toukatukanri_03.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_toukatukanri_04.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/003.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/004.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -65,11 +65,11 @@ Template Name:オペレーションマネジメント事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_jigyokaihatu_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_jigyokaihatu_02.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_jigyokaihatu_03.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_jigyokaihatu_04.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_jigyokaihatu_05.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/jigyo-kaihatu/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/jigyo-kaihatu/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/jigyo-kaihatu/003.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/jigyo-kaihatu/004.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/jigyo-kaihatu/005.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -113,8 +113,8 @@ Template Name:オペレーションマネジメント事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_kix_01.png" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_kix_02.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-coordination/kix/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-coordination/kix/002.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -129,7 +129,7 @@ Template Name:オペレーションマネジメント事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/img_itm_01.png" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-coordination/itm/001.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
