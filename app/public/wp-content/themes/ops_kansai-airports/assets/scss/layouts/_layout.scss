@@ -1157,9 +1157,12 @@ a{
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
 		& .btn-bace-round .btn-setting {
-			padding: 18px 94px 18px 30px;
+			padding: 0;
+//			padding: 18px 94px 18px 30px;
 			& a{
 				font-size: 16px;
+				padding: 18px 94px 18px 30px;
+				display: inline-block;
 			}
 		}
 	}

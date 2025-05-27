@@ -99,6 +99,7 @@
 														<div class="information_list__caption">
 															<span class="information_list__date"><?php echo get_the_date('Y.m.d'); ?></span>
 															<ul class="information_list__tags-name">
+<!--
 																<?php
 																$cats = get_the_category();
 																if ( ! empty( $cats ) ) {
@@ -113,6 +114,19 @@
 																	echo '<li>未分類</li>';
 																}
 																?>
+-->
+																
+																<?php
+																$cats = get_the_category();
+																if ( ! empty( $cats ) ) {
+																	foreach ( $cats as $cat ) {
+																		echo '<li>' . esc_html( $cat->name ) . '</li>';
+																	}
+																} else {
+																	echo '<li>未分類</li>';
+																}
+																?>
+																
 															</ul>
 															<p class="information_list__title"><?php the_title(); ?></p>
 														</div>
