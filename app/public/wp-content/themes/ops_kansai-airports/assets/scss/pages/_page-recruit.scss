@@ -953,25 +953,38 @@
 	.main-ounded-content{
 		background-color: g.$staffvoicebg;
 		padding-bottom: 0;
-		.bg-senior-voice-blue{
-			background-image: url("../img/voice/bg-senior-voice-blue.png");
-			background-repeat: no-repeat;
-			background-position: bottom -190px left -122px;
-			background-size: 339px;
-			padding-bottom: 123px;
+		position: relative;
+		background-image: url("../img/voice/bg-senior-voice-blue.png");
+		background-repeat: no-repeat;
+		background-position: bottom -190px left -122px;
+		background-size: 339px;
+		padding-bottom: 123px;
+		padding-bottom: 100px !important;
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			background-size: 686px;
+			background-position: bottom -100px left -242px;
+			padding-bottom: 100px !important;
 		}
+		
+		//.bg-senior-voice-blue{
+		//	background-image: url("../img/voice/bg-senior-voice-blue.png");
+		//	background-repeat: no-repeat;
+		//	background-position: bottom -190px left -122px;
+		//	background-size: 339px;
+		//	padding-bottom: 123px;
+		//}
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			padding-bottom: 0;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			padding-bottom: 0;
-			.bg-senior-voice-blue{
-				background-size: 56%;
-				background-position: top 30px left -242px;
-			}
+		//	.bg-senior-voice-blue{
+		//		background-size: 56%;
+		//		background-position: top 30px left -242px;
+		//	}
 		}
 	}
-	}
+}
 #page-recruit-voices-outline #single-recruit-voices-page .senior-voice{
 	margin-bottom: 60px;
 	@media only screen and (min-width: g.$desktop-breakpoint-md){

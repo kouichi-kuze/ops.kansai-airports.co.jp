@@ -82,85 +82,26 @@
                 endwhile;
                 endif;
             ?>
-			<!--<div class="p-side-3-6">
-				<div class="max-960">
-					<div class="senior-voice">
-						<div class="qa-ttl">
-							<h3>現在の主な仕事内容を教えてください。</h3>
-						</div>
-						<p>現在の主な業務内容は、案内カウンターやテレホンセンターで施設やフライトの案内を行っています。 <br>保安要員も兼ねており施設不備やお困りのお客様がいらっしゃらないか巡回を行ったりと、空港に関して どんなことでも知り尽くしておく必要があります。<br>様々なお客様からの問合せや要望を受け、多岐に渡る業務で大変なときもありますが、そのような対応を通して、自分の成長に繋がっているように思います。<br>また、お客様の声を一番身近で受ける立場であり、お叱りを受けることもありますが、「ありがとう」とお礼や感謝の言葉を述べて頂く場面が多くあります。その言葉を頂いたとき、自身のやる気にも繋がってきます。こんなにもたくさんの経験ができる素敵な仕事は他にはないと感じています。</p>
-						<img src="<?php bloginfo('template_url'); ?>/assets/img/voice/img-senior-voice-xl-01.png" alt="">
-						<div class="qa-ttl">
-							<h3>現在の主な仕事内容を教えてください。</h3>
-						</div>
-						<p>現在の主な業務内容は、案内カウンターやテレホンセンターで施設やフライトの案内を行っています。 <br>保安要員も兼ねており施設不備やお困りのお客様がいらっしゃらないか巡回を行ったりと、空港に関して どんなことでも知り尽くしておく必要があります。<br>様々なお客様からの問合せや要望を受け、多岐に渡る業務で大変なときもありますが、そのような対応を通して、自分の成長に繋がっているように思います。<br>また、お客様の声を一番身近で受ける立場であり、お叱りを受けることもありますが、「ありがとう」とお礼や感謝の言葉を述べて頂く場面が多くあります。その言葉を頂いたとき、自身のやる気にも繋がってきます。こんなにもたくさんの経験ができる素敵な仕事は他にはないと感じています。</p>
-						<div class="qa-ttl">
-							<h3>現在の主な仕事内容を教えてください。</h3>
-						</div>
-						<p>現在の主な業務内容は、案内カウンターやテレホンセンターで施設やフライトの案内を行っています。 <br>保安要員も兼ねており施設不備やお困りのお客様がいらっしゃらないか巡回を行ったりと、空港に関して どんなことでも知り尽くしておく必要があります。<br>様々なお客様からの問合せや要望を受け、多岐に渡る業務で大変なときもありますが、そのような対応を通して、自分の成長に繋がっているように思います。<br>また、お客様の声を一番身近で受ける立場であり、お叱りを受けることもありますが、「ありがとう」とお礼や感謝の言葉を述べて頂く場面が多くあります。その言葉を頂いたとき、自身のやる気にも繋がってきます。こんなにもたくさんの経験ができる素敵な仕事は他にはないと感じています。</p>
-						<img src="<?php bloginfo('template_url'); ?>/assets/img/voice/img-senior-voice-xl-02.png" alt="">
-
-					</div>
-                    
-				</div>
-			</div>-->
-            <!--
-			<div class="p-side-15-8">
-				<div class="max-120">
-					<div class="senior-message">
-						<h3 class="left-lightbulueline-ttl">入社を検討されている方への<br class="d-sm-none">メッセージ</h3>
-						<p>現在の主な業務内容は、案内カウンターやテレホンセンターで施設やフライトの案内を行っています。<br>保安要員も兼ねており施設不備やお困りのお客様がいらっしゃらないか巡回を行ったりと、空港に関して どんなことでも知り尽くしておく必要があります。<br>様々なお客様からの問合せや要望を受け、多岐に渡る業務で大変なときもありますが、そのような対応を通して、自分の成長に繋がっているように思います。</p>
-					</div>
-				</div>
-			</div>
-            -->
-            
-            <!--
-			<div class="bg-senior-voice-blue">
-				<div class="p-side-3-6">
-					<div class="max-960">
-						<div class="one-day-schedule">
-							<div class="diagonal-dot-ttl">
-								<h3>1日のスケジュール</h3>
-								<span class="annotation">※1日の流れは、一例です。</span>
-							</div>
-							<ul class="schedule-list">
-								<li class="schedule-item">
-									<p class="time">09:00</p>
-									<dl class="text">
-										<dt>業務開始</dt>
-										<dd>カウンターやテレホンセンターでの業務</dd>
-									</dl>
-								</li>
-								<li class="schedule-item">
-									<p class="time">12:00</p>
-									<dl class="text">
-										<dt>昼食</dt>
-										<dd></dd>
-									</dl>
-								</li>
-								<li class="schedule-item">
-									<p class="time">13:00</p>
-									<dl class="text">
-										<dt>業務再開</dt>
-										<dd>カウンターやテレホンセンターでの業務</dd>
-									</dl>
-								</li>
-								<li class="schedule-item">
-									<p class="time">13:00</p>
-									<dl class="text">
-										<dt>業務再開</dt>
-										<dd>カウンターやテレホンセンターでの業務</dd>
-									</dl>
-								</li>
-							</ul>
-
-						</div>
-					</div>
-				</div>
-			</div>
-            -->
 			
+            <?php
+            // ACF フィールドを取得
+            $display = get_field( 'recruit_link_display' );               // 真偽フィールド
+            $url     = get_field( 'voice_recruit_btn_detail_link' );     // URL フィールド
+
+            if ( $display ) :  // 表示する場合だけ出力
+            ?>
+            <div class="btn-wrap center recruit-detail">
+                <a class="hover-ani" href="<?php echo esc_url( $url ); ?>">
+                <div class="btn-bace-round">
+                    <div class="btn-setting pink btnico-link btn-md">
+                    この業種の採用情報はこちら
+                    </div>
+                </div>
+                </a>
+            </div>
+            <?php
+            endif;
+            ?>
 		</div>
 	</div>
 	

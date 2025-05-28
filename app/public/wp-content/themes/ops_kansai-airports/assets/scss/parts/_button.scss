@@ -27,6 +27,22 @@
   
     }
 }
+.btn-wrap {
+	width: 100%;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	&.recruit-detail {
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+		margin-top: 100px;
+		margin-bottom: 100px;
+		}
+		&.center {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
 .btn-bace-square .btn-setting ,
 .btn-bace-round .btn-setting{
 	display: inline-block;
@@ -37,6 +53,20 @@
 	color: #ffffff;
 	font-size: 14px;
 	font-weight: 700;
+
+	&.pink {
+		background-color: g.$tertiary;
+	}
+
+	&.btn-md {
+		padding: 20px 54px 20px 20px;
+		font-size: 14px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			width: 320px;
+			font-size: 16px;
+		}
+	}
+
 	&::before {
 		content: "";
 		display: inline-block;
@@ -67,6 +97,30 @@
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			scale: 1.5;
 			transform-origin: 50% 0;
+		}
+	}
+
+	&.btnico-link {
+		position: relative;
+		&::after{
+		content: "";
+		display: inline-block;
+		background: url(../img/common/ico_link.svg) ;
+		background-repeat: none;
+		background-size: cover;
+		background-position: center;
+		width: 13px;
+		height: 10px;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			&:hover {
+				&::before{
+					@media only screen and (min-width: g.$desktop-breakpoint-md){
+						scale: 1.5;
+						transform-origin: 50% 0;
+					}
+				}
+			}
 		}
 	}
 	
