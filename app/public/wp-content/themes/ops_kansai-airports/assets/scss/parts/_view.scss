@@ -1,0 +1,61 @@
+// 共通スタイル
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+
+.is-view {
+	opacity: 0;
+  //transition: opacity 1.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	transform: translateY(50px);
+	&.is-active {
+		opacity: 1;
+		//filter: none;
+		//transition: opacity 1.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	}
+}
+
+.is-fade-view {
+	opacity: 0;
+ 	&.is-active {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

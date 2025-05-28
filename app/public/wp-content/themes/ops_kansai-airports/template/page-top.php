@@ -5,24 +5,36 @@ Template Name:トップページ
 ?>
 <?php get_template_part( 'inc/header' ); ?>
 <main id="page-top">
-<section class="top-mv">
-
-<div class="mv-flex">
-	<div id="slider-left"></div>
-	<div id="slider-right"></div>
-</div>
+<section class="top-mv kv-fade-01">
+	<div class="mv-flex">
+		<div id="slider-left"></div>
+		<div id="slider-right"></div>
+	</div>
 </section>	
 	
 <section>
-	<div id="page" class="archive-news">
+	<div id="page" class="archive-news archive-contents-top">
+		<div class="kv-parts-block">
+			<div class="kv-parts-item kv-parts-item-01">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/top/kv_pink_part.svg">
+			</div>
+			<div class="kv-parts-item kv-parts-item-02">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/top/kv_blue_part.svg">
+			</div>
+		</div>
 		<div id="information">
 			<div id="top-news-page" class="bg-color-primary">
-				
 					<div class="flex-box-left">
 						<h1 class="mv-ttl">
-							<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_01.png" alt="空港の安全安心を守る" class="mv-ttl_01">
-							<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_02.png" alt="Kansai Areports Opereation Sarvice" class="mv-ttl_02 d-none d-md-block d-xl-none">
-							<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_02_tate.png" alt="Kansai Areports Opereation Sarvice" class="mv-ttl_02_tate d-md-none d-xl-block ">
+							<div class="kv-fade-02" >
+								<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_01.png" alt="空港の安全安心を守る" class="mv-ttl_01">
+							</div>
+							<div class="kv-fade-02" >
+								<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_02.png" alt="Kansai Areports Opereation Sarvice" class="mv-ttl_02 d-none d-md-block d-xl-none">
+							</div>
+							<div class="kv-fade-02" >
+								<img src="<?php bloginfo('template_url'); ?>/assets/img/top/mv-ttl_02_tate.png" alt="Kansai Areports Opereation Sarvice" class="mv-ttl_02_tate d-md-none d-xl-block ">
+							</div>
 							<p>関西エアポートオペレーションサービス株式会社は、関西エアポート株式会社グループのオペレーション部門として安全安心の中核を担い、危機管理、安全性、セキュリティ、顧客サービスの観点から人的リソースの高度化・最適化により最高水準の空港オペレーション品質を提供します。</p>
 						</h1>
 					</div>				
@@ -33,7 +45,7 @@ Template Name:トップページ
 							<div class="top-ttl-bg">
 								<h2 class="ttl-2"><span>お知らせ</span>Information</h2>
 							</div>
-							<div class="btn-bace-round"><a class="btn-setting" href="/">事業紹介一覧</a></div>
+							<div class="btn-bace-round"><a class="btn-setting" href="/information">お知らせ一覧</a></div>
 						</div>
 						
 						

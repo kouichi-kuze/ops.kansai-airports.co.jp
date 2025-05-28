@@ -72,7 +72,96 @@ section{
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		height: 800px;
 	}
-  }
+}
+
+.archive-contents-top {
+	position: relative;
+
+	.kv-parts-block {
+		position: absolute;
+		transform: rotate(-43deg);
+		left: -191px;
+		top: 0;
+		@media only screen and (min-width: g.$desktop-breakpoint-sm){
+			left: -425px;
+			top: 3%;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			left: -400px;
+			top: 0%;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-lg){
+			left: -400px;
+			top: -1%;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			left: -400px;
+			top: -15%;
+		}
+		.kv-parts-item {
+			display: block;
+			width: 433px;
+			height: 76px;
+			@media only screen and (min-width: g.$desktop-breakpoint-sm){
+				width: 886px;
+				height: 110px;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				width: 886px;
+				height: 110px;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-lg){
+				width: 886px;
+				height: 110px;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				width: 886px;
+				height: 110px;
+			}
+			&.kv-parts-item-01 {
+				//margin-left: -156px;
+				//margin-bottom: -110px;
+				margin-left: -10%;
+				@media only screen and (min-width: g.$desktop-breakpoint-sm){
+					margin-left: -5%;
+				}
+				
+			}
+
+			&.kv-parts-item-02 {
+				margin-top: -3px;
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					width: 886px;
+					height: 110px;
+				}
+			}
+
+			img {
+				vertical-align: bottom;
+				width: 511px;
+				height: auto;
+				@media only screen and (min-width: g.$desktop-breakpoint-sm){
+					width: 886px;
+					height: 110px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					width: 886px;
+					height: 110px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-lg){
+					width: 886px;
+					height: 110px;
+					
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					width: 886px;
+					height: 110px;
+				}
+			}
+			
+		}
+	}
+}
 
 
 //=======お知らせ=======
