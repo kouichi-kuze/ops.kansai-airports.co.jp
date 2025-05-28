@@ -596,6 +596,7 @@ section{
 		#top-recruit .recruit-info-item:first-child .recruit-info-link{
 			padding-top: 0;
 		}
+//=======top 先輩の声===================
 #page-top #page-recruit-voices-outline {
 			& .arrow_box{
 		  display: flex;
@@ -655,18 +656,61 @@ section{
 	}
 	.slider-head{
 		align-items: flex-end;
+		flex-flow: wrap;
+		.slider-head-text{
+			font-size: 14px;
+			width: 100%;
+			margin-top: 40px;
+			font-weight: 700;
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				margin-top: 0;
+			}
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			padding: 0;
+			min-width: 320px;
+			flex-flow: column;
+			align-items: flex-start;
+			justify-content: flex-end;
+			gap: 40px;
+			
+		}
 	}
 	.glay-box{
 		background-color: #F9F9F9;
-    padding: 60px 0;
-    margin-left: 30px;
-    border-radius: 40px 0 0 0;
+		padding: 60px 0;
+		margin-left: 30px;
+		border-radius: 40px 0 0 0;
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			    padding: 60px 0 100px;
+		}
+		.slider-content{
+			.p-left-3-12{
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					padding: 0;
+				}
+			}
+			.arrow_box{
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					justify-content: normal;
+					position: absolute;
+					right: 30px;
+					bottom: 60px;				
+				}
+			}
+		}
+		.xl-flex{
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				display: flex;
+				gap:80px;
+				padding-left: 80px;
+				
+			}
+		}
 	}
 	.senior-other-voice-content{
 		padding: 0;
 	}
-	
-	
 	
 
 }
