@@ -93,3 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+jQuery(document).ready(function($){
+  $('.top_recruit_img_fade').slick({
+    infinite: true,         // ループを有効に
+    slidesToShow: 1,        // 同時に表示するスライド数
+    slidesToScroll: 1,      // 同時にスクロールするスライド数
+    fade: true,             // フェード切り替えを有効に
+    cssEase: 'linear',      // イージング
+    autoplay: true,         // 自動再生を有効に
+    autoplaySpeed: 4000,    // 4秒ごとに切り替え
+    arrows: false,          // ← → 矢印ナビを非表示
+    dots: false              // ドットナビを表示
+  });
+});

@@ -505,7 +505,28 @@ section{
 		#top-recruit .recruit_img {
 			width: 	100%;
 			height: 250px;
-			background: url("../img/top/recruit_img.png") no-repeat center/cover;
+			//background: url("../img/top/recruit_img.png") no-repeat center/cover;
+			position: relative;
+			@media only screen and (min-width: g.$desktop-breakpoint-md) {
+				height: 380px;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl) {
+				height: 500px;
+			}
+
+			img  {
+				position: relative;
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				height: 250px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md) {
+					height: 380px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl) {
+					height: 500px;
+				}
+			}
 		}	
 		#top-recruit .recruit-bg{
 			background-color: g.$white;
@@ -515,6 +536,7 @@ section{
 			background-repeat: no-repeat;
 			background-position: top 250px left -240px;
 			padding-bottom: 0;
+			position: relative;
 		}
 #top-recruit .content-inner{
 	margin-bottom: 80px;

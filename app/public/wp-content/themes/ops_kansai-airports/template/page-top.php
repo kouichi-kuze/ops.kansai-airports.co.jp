@@ -238,6 +238,9 @@ Template Name:トップページ
 				<li class="top-slider-item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_04.png" alt=""></li>
 				<li class="top-slider-item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_05.png" alt=""></li>
 				<li class="top-slider-item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_06.png" alt=""></li>
+				<li class="top-slider-item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_07.png" alt=""></li>
+				<li class="top-slider-item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_08.png" alt=""></li>
+				<li class="top-slider-item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_09.png" alt=""></li>
 			</ul>		
 		</div>
 	</section>
@@ -271,7 +274,13 @@ Template Name:トップページ
 	</section>
 <!--recruit-->
 	<section id="top-recruit">
-		<div class="recruit_img"></div>
+		<div class="recruit_img ">
+			<div class="top_recruit_img_fade">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/top/recruit_img_01.png">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/top/recruit_img_02.png">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/top/recruit_img_03.png">
+			</div>	
+		</div>
 		<div class="recruit-bg">
 			<div class="content-inner">
 				<div class="padding-l">
