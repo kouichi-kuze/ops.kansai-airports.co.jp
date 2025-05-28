@@ -12,7 +12,7 @@
 				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a> </li>
 				</ul>
 			  </li>
-			  <li class=""> <a class="menu__item__link" href="">お知らせ <span>Information</span></a>
+			  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>information">お知らせ <span>Information</span></a>
 <!--
 				<ul class="submenu">
 				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>">サブメニュー</a> </li>
