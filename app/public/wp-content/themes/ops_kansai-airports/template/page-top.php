@@ -71,7 +71,7 @@ $categories = get_categories([
     <div class="max-128">
 
       <ul class="information_list__tags">
-        <li class="is-active">
+        <li class="">
           <p id="#all">ALL</p>
         </li>
         <?php foreach ( $categories as $cat ) : ?>
@@ -87,7 +87,7 @@ $categories = get_categories([
         <div class="information_list__wrap">
 
           <!-- ALL 表示領域 -->
-          <div class="tab-area is-active" id="all">
+          <div class="tab-area active" id="all">
             <ul class="flex-information_list">
               <?php
               $all_query = new WP_Query([
