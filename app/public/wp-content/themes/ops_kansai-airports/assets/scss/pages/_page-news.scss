@@ -28,6 +28,7 @@
 	}	
 }
 
+#top-news-page .information_list__tags > li > p,
 #top-news-page .information_list__tags > li > a{
 	display: inline-block;
 	padding: 5px 15px;
@@ -46,6 +47,7 @@
 	}
 }
 
+#top-news-page .information_list__tags > li.active > p,
 #top-news-page .information_list__tags > li.active > a{
 	//background-color: g.$primary;
 	//color: g.$white;
@@ -67,7 +69,7 @@
 		padding: 5px 0;
 		}
 		&.is-active {
-			a {
+			a,p {
 				background-color: g.$primary !important;
 				border-radius: 52px;
 				color: g.$white !important;
