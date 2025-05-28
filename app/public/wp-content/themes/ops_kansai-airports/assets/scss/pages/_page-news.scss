@@ -47,8 +47,8 @@
 }
 
 #top-news-page .information_list__tags > li.active > a{
-	background-color: g.$primary;
-	color: g.$white;
+	//background-color: g.$primary;
+	//color: g.$white;
 }
 #top-news-page .nformation_list{
 	margin: 30px 0 60px;
@@ -62,7 +62,10 @@
 
 .information_list__tags {
 	li {
-		padding: 5px 20px;
+		padding: 5px 0;
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		padding: 5px 0;
+		}
 		&.is-active {
 			a {
 				background-color: g.$primary !important;
