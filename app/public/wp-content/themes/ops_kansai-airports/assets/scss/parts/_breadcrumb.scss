@@ -1,0 +1,37 @@
+// 共通スタイル
+@use "../utils/variables" as g;
+@use "../utils/mixin" as m;
+
+//パンクズ
+.breadcrumb-wrap{
+	margin-bottom: 40px;
+}
+.breadcrumb,
+.breadcrumb a{
+	color: g.$white;
+	font-size: 10px;
+	font-weight: 400;
+}
+.breadcrumb{
+	opacity: 0.7;
+	display: flex;
+	align-items: center;
+
+	a{
+	opacity: 1;
+	}
+
+	.breadcrumb-diver {
+		width: 7px;
+		height: 1px;
+		background-color: g.$white;
+		margin: 0 5px;
+		display: block;
+	}
+}
+
+@media only screen and (min-width: g.$desktop-breakpoint-md){
+	.breadcrumb a:hover{
+		opacity: 0.7;
+	}
+}

@@ -198,27 +198,7 @@ a{
 		align-items: center;
 	}
 }
-//パンクズ
-.breadcrumb-wrap{
-	margin-bottom: 40px;
-}
-.breadcrumb,
-.breadcrumb a{
-	color: g.$white;
-	font-size: 10px;
-	font-weight: 400;
-}
-.breadcrumb{
-	opacity: 0.7;
-}
-.breadcrumb a{
-	opacity: 1;
-}
-@media only screen and (min-width: g.$desktop-breakpoint-md){
-	.breadcrumb a:hover{
-		opacity: 0.7;
-	}
-}
+
 //タイトル
 .page-header__subtitle,
 .page-header__title{
