@@ -1,0 +1,146 @@
+
+ーーーーーーーーーーーーーー
+
+１）以下のようにが複数行に分かれてメディアで処理している個所のものを１つにまとめてください
+※_page-services.scssを参照
+
+■204行目付近
+& .content-bg{
+	padding-bottom: 40px;
+	以下class が書かれてます
+	・
+	・
+	・
+}
+
+■246行目付近
+@media only screen and (min-width: g.$desktop-breakpoint-md){
+& .content-bg{
+	border-radius: 0 30px 30px 0;
+	padding-bottom: 60px;
+	以下class が書かれてます
+	・
+	・
+	・
+}
+■291行目付近
+@media only screen and (min-width: g.$desktop-breakpoint-xl){
+& .content-bg{
+	padding-bottom: 80px;
+	以下class が書かれてます
+	・
+	・
+	・
+}
+
+**************
+上記を下記のようにまとめる
+**************
+
+■204行付近
+& .content-bg{
+	padding-bottom: 40px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		border-radius: 0 30px 30px 0;
+		padding-bottom: 60px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		padding-bottom: 80px;
+	}
+}
+
+一旦子孫セレクタの書き方でもいいのでまとめて頂きたいです。
+ーーーーーーーーーーーーーー
+
+２）以下のようにclassで子孫セレクタなどで書かれているものをまとめてください
+※_page-outline.scss
+
+■１４３行目付近
+.company-location .title{
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+.company-location .text{
+	font-size: 14px;
+	font-weight: 400;
+}
+.company-location .text p{
+	margin-bottom: 15px;
+}
+.company-location .contact{
+	margin-bottom: 70px;
+	
+}
+.company-location .text p a{
+	display: block;
+	line-height: 1.7;
+}
+.company-location .contact .pdf a{
+	position: relative;
+
+}
+.company-location .contact .pdf a::after{
+	content: "";
+	background: url(../img/outline/icon_target_blank.svg) no-repeat center / contain;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	vertical-align: middle;
+	right: 0px;
+}
+
+**************
+上記を下記のようにまとめる
+**************
+
+.company-location {
+	 .title{
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+
+	 .text{
+		font-size: 14px;
+		font-weight: 400;
+
+		 p{
+			margin-bottom: 15px;
+
+			 a{
+				display: block;
+				line-height: 1.7;
+			}
+		}
+	}
+
+	.contact{
+		margin-bottom: 70px;
+
+		 .pdf{
+			a{
+				position: relative;
+
+				&::after{
+					content: "";
+					background: url(../img/outline/icon_target_blank.svg) no-repeat center / contain;
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+					position: absolute;
+					top: 50%;
+					transform: translate(0, -50%);
+					vertical-align: middle;
+					right: 0px;
+					
+					
+				}
+			}
+		}
+	}
+}
+ーーーーーーーーーーーーーー
