@@ -28,19 +28,19 @@
 				  <a class="nav-iink" href="">企業情報 <span>Company</span></a>
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
-					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>" style="pointer-events: none;">企業情報トップ</a> </li>
+					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>" >企業情報トップ</a> </li>
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a> </li>
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a> </li>
 					</ul>
 				  </div>
 			  </li>
 			  <li class="nav-item"> 
-				  <a class="nav-iink" href="">お知らせ <span>Information</span></a>
-				  <div class="secondmenu_outline">
+				  <a class="nav-iink" href="<?php echo home_url( '/' ); ?>information">お知らせ <span>Information</span></a>
+				  <!--<div class="secondmenu_outline">
 					<ul class="secondmenu">
 					  <li class="secondmenu-top_item one-link"> <a class="" href="<?php echo home_url( '/' ); ?>information">お知らせトップ</a> </li>
 					</ul>
-				  </div>
+				  </div>-->
 			  </li>
 			  <li class="nav-item"> 
 				  <a class="nav-iink" href="">事業紹介 <span>Service</span></a>
@@ -68,12 +68,12 @@
 				  </div>
 			  </li>
 			  <li class="nav-item"> 
-				  <a class="nav-iink" href="">お問い合わせ <span>Contact</span></a>
-				  <div class="secondmenu_outline righa-adj">
+				  <a class="nav-iink" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ <span>Contact</span></a>
+				  <!--<div class="secondmenu_outline righa-adj">
 					<ul class="secondmenu">
 					  <li class="secondmenu-top_item one-link"> <a class="" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせトップ</a> </li>
 					</ul>
-				  </div>
+				  </div>-->
 			  </li>
 			</ul>
 		  </nav>
@@ -91,7 +91,7 @@
 	  <nav class="nav-sp-menu">
 		<ul>
 		  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ</a> </li>
-		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="" style="pointer-events: none;">企業情報 <span>Company</span></a>
+		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">企業情報 <span>Company</span></a>
 			<ul class="submenu">
 			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a> </li>
 			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a> </li>

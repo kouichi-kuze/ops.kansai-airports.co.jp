@@ -125,7 +125,7 @@
 						</div>
 						
 						
-						<div class="footer-btn"><a href="https://www.kansai-airports.co.jp/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_en.svg" alt="関西エアポートエアポートオペレーションサービス株式会社"></a><span>関西エアポート株式会社</span></div>
+						<div class="footer-btn"><a href="https://www.kansai-airports.co.jp/" target="_blank" style="background: none; padding: 0; margin-bottom: 10px;"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_footer_02.svg" alt="関西エアポートエアポートオペレーションサービス株式会社" style="width: 100%;"></a><span>関西エアポート株式会社</span></div>
 					</div>
 				</div>
 				
