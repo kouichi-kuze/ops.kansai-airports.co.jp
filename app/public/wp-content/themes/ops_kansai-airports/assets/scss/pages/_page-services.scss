@@ -2,21 +2,59 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
-/*
-サンプル
-.test {
-    @include m.mx-auto //mixinの変数は @include m.xxxxx
-    color: g.secondary;
-    &:after {
-        content: "";
-    }
-    @media only screen and (min-width: g.$desktop-breakpoint-md) {
-        &:hover {
-            color: g.primary; //variablesの変数は g.$xxxx
-        }
-    }
+//フッター背景色
+#page-service-cargo + .site-footer ,
+#page-service-cart-cleaning + .site-footer ,
+#page-service-fire + .site-footer ,
+#page-service-fueling + .site-footer ,
+#page-service-management + .site-footer ,
+#page-service-parking + .site-footer ,
+#page-service-security + .site-footer ,
+#page-service-terminal + .site-footer ,
+#page-service + .site-footer,
+.page-sub-services + .site-footer{
+	background-color: g.$bg-blue;
 }
-*/
+
+//ヘッダー
+.sub-page-header.sub-services{
+	padding: calc(54px + 20px) 0 50px;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		padding: calc(68px + 30px) 0 50px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		padding: calc(77px + 30px) 0 60px;
+	}
+	.services-titles .place-list{
+		margin-bottom: 15px;
+		li{
+			font-size: 14px;
+			font-weight: 700;
+			padding: 2px 8px;
+			background-color: g.$white;
+			border-radius: 2px;
+			display: inline-block;
+			margin-right: 10px;
+			&:last-of-type{
+				margin-right: 0;
+			}
+		}
+	}
+	.page-header__title.blue-under-line-ttl{
+		font-size: 26px;
+		font-weight: 700;
+		margin-bottom: 0;
+		::before{
+			bottom: -15px;
+			left: 0;
+		}
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 36px;
+		}
+	}
+}
+
+
 #page-service-cargo ,
 #page-service-cart-cleaning ,
 #page-service-fire ,
@@ -26,245 +64,217 @@
 #page-service-security ,
 #page-service-terminal ,
 #page-service {
-.company-service a{
-		text-decoration: none;
-	}
-	.company-service .bottom-border-bulue-ttl{
-		margin-bottom: 40px;
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			margin-bottom: 60px;
+	
+	.company-service{
+		a{
+			text-decoration: none;
 		}
-	}
-	.company-service .glay-box{
-		margin-bottom: 30px;
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		.bottom-border-bulue-ttl{
 			margin-bottom: 40px;
-		}
-		&:hover .img-content .img {
 			@media only screen and (min-width: g.$desktop-breakpoint-md){
-				transform: scale(1.1);
+				margin-bottom: 60px;
 			}
 		}
-		&:hover .text-content .btn-bace-round .btn-setting::before {
-			scale: 1.5;
-			transform-origin: 50% 0;
-		}
-	}
-	.company-service .glay-box .text-content .btn-bace-round .btn-setting{
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			padding: 18px 100px 18px 30px;
-			font-size: 16px;
-		}
-		&::before{
-			@media only screen and (min-width: g.$desktop-breakpoint-xl){
-				width: 30px;
-			height: 30px;
-			}
-		}
-		&::after{
-			@media only screen and (min-width: g.$desktop-breakpoint-xl){
-				right: 20px;
-			}
-		}
-	}
-	.company-service .glay-box .img-content .img {
-		transition: transform .4s ease;
-	}
-	.company-service .glay-box .img-content{
-		width: 100%;
-		height: 100%;
-		aspect-ratio: 80 / 53;
-		border-radius: 8px;
-		overflow: hidden;
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			border-radius: 15px;
-		}
-	}
-	.company-service .glay-box .img{
-		background: url("../img/service/img_service_management.png") no-repeat center/cover;
-		width: 100%;
-		height: 100%;
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			aspect-ratio: 57 / 33;
-		}
-	}
-	.company-service .glay-box .img.--service_management{
-		background: url("../img/service/service_management.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .img.--img_service_security{
-		background: url("../img/service/img_service_security.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .img.--img_service_firefighting{
-		background: url("../img/service/img_service_firefighting.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .img.--img_service_terminalmana{
-		background: url("../img/service/img_service_terminalmana.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .img.--img_service_cleaning{
-		background: url("../img/service/img_service_cleaning.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .img.--img_service_operation{
-		background: url("../img/service/img_service_operation.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .img.--img_service_parking{
-		background: url("../img/service/img_service_parking.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .img.--img_service_refueling{
-		background: url("../img/service/img_service_refueling.png") no-repeat center/cover;
-	}
-	.company-service .glay-box .text-content .ttl{
-		font-size: 16px;
-		font-weight: 700;
-		margin-bottom: 8px;
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			font-size: 20px;
-			margin-bottom: 20px;
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			font-size: 24px;
-		}
-	}
-	.company-service .glay-box .text-content .text{
-		font-size: 14px;
-		font-weight: 400;
-		margin-bottom: 20px;
-		line-height: 1.7;
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
+		.glay-box{
 			margin-bottom: 30px;
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			margin-bottom: 40px;
-		}
-	}
-	.company-service .glay-box .btn-bace-round{
-		text-align: right;
-	}
-	.company-service .glay-box .content-item{
-		display: flex;
-		flex-flow: column;
-		gap: 20px;
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			flex-flow: row;
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			gap: 40px;
-			align-items: center;
-		}
-	}
-	.company-service .glay-box .content-item li{
-		flex: 1;
-	}
-
-	//-------事業紹介　下層ページ----------------
-	.page-sub-services + .site-footer{
-		background-color: g.$bg-blue;
-	}
-
-	//ヘッダー
-	.sub-page-header.sub-services{
-		padding: calc(54px + 20px) 0 40px;
-		& .services-titles .place-list{
-			margin-bottom: 15px;
-			& li{
-				font-size: 14px;
-				font-weight: 700;
-				padding: 2px 8px;
-				background-color: g.$white;
-				border-radius: 2px;
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				margin-bottom: 40px;
+			}
+			&:hover .img-content .img {
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					transform: scale(1.1);
+				}
+			}
+			&:hover .text-content .btn-bace-round .btn-setting::before {
+				scale: 1.5;
+				transform-origin: 50% 0;
+			}
+			.text-content .btn-bace-round .btn-setting{
 				display: inline-block;
-				margin-right: 10px;
-				&:last-of-type{
-					margin-right: 0;
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					padding: 18px 100px 18px 30px;
+					font-size: 16px;
 				}
-			}
-		}
-		& .page-header__title.blue-under-line-ttl{
-			font-size: 26px;
-			font-weight: 700;
-			margin-bottom: 0;
-			::before{
-				bottom: -15px;
-				left: 0;
-			}
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			padding: calc(68px + 30px) 0 40px;
-			& .page-header__title.blue-under-line-ttl{
-				font-size: 36px;
-			}
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			padding: calc(77px + 30px) 0 40px;
-		}
-	}
-
-	//main
-	.page-sub-services{
-		padding-top: 120px;
-		& .content-bg{
-			padding-bottom: 40px;
-			& .mv-img{
-				padding-right: 15px;
-				& img{
-					margin-top: -120px;
-					filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.2));
+				&::before{
+					@media only screen and (min-width: g.$desktop-breakpoint-xl){
+						width: 30px;
+					height: 30px;
+					}
 				}
-			}
-			& .description{
-				font-size: 14px;
-				font-weight: 700;
-				line-height: 2;
-				margin: 40px 0 60px;
-			}
-			& .btn-bace-round{
-				text-align: center;
-				padding-top: 40px;
-				border-top: solid 1px g.$primary;
-				margin: 0 15px;
-				& .btn-setting{
-					padding: 20px 116px 20px 30px;
-					& a{
-						color: g.$white;
+				&::after{
+					@media only screen and (min-width: g.$desktop-breakpoint-xl){
+						right: 20px;
 					}
 				}
 			}
+			.img-content{
+				width: 100%;
+				height: 100%;
+				aspect-ratio: 80 / 53;
+				border-radius: 8px;
+				overflow: hidden;
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					border-radius: 15px;
+				}
+				.img {
+					transition: transform .4s ease;
+				}
+			}
+			.img{
+				background: url("../img/service/img_service_management.png") no-repeat center/cover;
+				width: 100%;
+				height: 100%;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					aspect-ratio: 57 / 33;
+				}
+				&.--service_management{
+					background: url("../img/service/service_management.png") no-repeat center/cover;
+				}
+				&.--img_service_security{
+					background: url("../img/service/img_service_security.png") no-repeat center/cover;
+				}
+				&.--img_service_firefighting{
+					background: url("../img/service/img_service_firefighting.png") no-repeat center/cover;
+				}
+				&.--img_service_terminalmana{
+					background: url("../img/service/img_service_terminalmana.png") no-repeat center/cover;
+				}
+				&.--img_service_cleaning{
+					background: url("../img/service/img_service_cleaning.png") no-repeat center/cover;
+				}
+				&.--img_service_operation{
+					background: url("../img/service/img_service_operation.png") no-repeat center/cover;
+				}
+				&.--img_service_parking{
+					background: url("../img/service/img_service_parking.png") no-repeat center/cover;
+				}
+				&.--img_service_refueling{
+					background: url("../img/service/img_service_refueling.png") no-repeat center/cover;
+				}
+				
+				
+			}
+			.text-content .ttl{
+				font-size: 16px;
+				font-weight: 700;
+				margin-bottom: 8px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					font-size: 20px;
+					margin-bottom: 20px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					font-size: 24px;
+				}
+			}
+			.text-content .text{
+				font-size: 14px;
+				font-weight: 400;
+				margin-bottom: 20px;
+				line-height: 1.7;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					margin-bottom: 30px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					margin-bottom: 40px;
+				}
+			}
+			.btn-bace-round{
+				text-align: right;
+			}
+			.content-item{
+				display: flex;
+				flex-flow: column;
+				gap: 20px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					flex-flow: row;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					gap: 40px;
+					align-items: center;
+				}
+			}
+			.content-item li{
+				flex: 1;
+			}
 		}
-		& .services-contener{
-			margin-bottom: 140px;
-			position: relative;
-			&:last-of-type{
-				margin-bottom: 60px;
-			}
-			& .services-content-ttl{
-				left: 0;
-			}
-			& .glay-box{
-				padding: 67px 0 40px;
-				border-radius: 0 0 15px 15px;
-			}
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			& .content-bg{
+	} 
+	.btn-bace-round .btn-setting{
+		display: inline-block;
+	}
+	
+	//-------事業紹介　下層ページ----------------
+	//main
+	.page-sub-services{
+		padding-top: 120px;
+		.content-bg{
+			padding-bottom: 40px;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
 				border-radius: 0 30px 30px 0;
 				padding-bottom: 60px;
-				& .mv-img{
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				padding-bottom: 80px;
+				.description-outer{
+					max-width: 1120px;
+					margin: 0 auto;
+				}
+			}
+			.mv-img{
+				padding-right: 15px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					padding: 0 40px;
-					& img{
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					padding: 0 80px;
+				}
+				img{
+					margin-top: -120px;
+					filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.2));
+					@media only screen and (min-width: g.$desktop-breakpoint-md){
 						height: 430px;
 						object-fit: cover;
 						overflow: hidden;
 						border-radius: 20px;
 					}
+					@media only screen and (min-width: g.$desktop-breakpoint-xl){
+						height: 480px;
+					}
 				}
-				& .description{
+			}
+			.description{
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 2;
+				margin: 40px 0 60px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					font-size: 16px;
 					margin: 60px 0 80px;
 					padding: 0 40px;
 				}
-				& .btn-bace-round{
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					padding: 0;
+					margin: 60px auto 120px;
+				}
+			}
+			.btn-bace-round{
+				text-align: center;
+				padding-top: 40px;
+				border-top: solid 1px g.$primary;
+				margin: 0 15px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					padding-top: 60px;
 					margin: 0 40px;
-					& .btn-setting{
+				}
+				@media only screen and (min-width: 1280px){
+					margin: 0 auto;
+					max-width: 1280px;
+				}
+				.btn-setting{
+					padding: 20px 116px 20px 30px;
+					a{
+						color: g.$white;
+					}
+					@media only screen and (min-width: g.$desktop-breakpoint-md){
 						font-size: 16px;
 						padding: 0;
 						a{
@@ -277,45 +287,32 @@
 					}
 				}
 			}
-			& .services-contener{
+		}
+		.services-contener{
+			margin-bottom: 140px;
+			position: relative;
+			&:last-of-type{
+				margin-bottom: 60px;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
 				margin-bottom: 200px;
 				&:last-of-type{
 					margin-bottom: 80px;
 				}
-				& .glay-box{
+			}
+			.services-content-ttl{
+				left: 0;
+			}
+			.glay-box{
+				padding: 67px 0 40px;
+				border-radius: 0 0 15px 15px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					padding: 75px 0 60px;
 					border-radius: 0 0 20px 20px;
 				}
-			}
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			& .content-bg{
-				padding-bottom: 80px;
-				& .description-outer{
-					max-width: 1120px;
-					margin: 0 auto;
-				}
-				& .description{
-					padding: 0;
-					margin: 60px auto 120px;
-				}
-				& .mv-img{
-					padding: 0 80px;
-					& img{
-						height: 480px;
-					}
-				}
-			}
-		}
-		@media only screen and (min-width: 1280px){
-			& .services-contener{
-				& .glay-box{
+				@media only screen and (min-width: 1280px){
 					padding: 95px 0 60px;
 				}
-			}
-			& .content-bg .btn-bace-round{
-				margin: 0 auto;
-				max-width: 1280px;
 			}
 		}
 	}
@@ -337,8 +334,18 @@
 		left: 50%;
 		transform: translate(-50%, 0);
 		z-index: -1;
+		@media only screen and (min-width: calc(1280px + 80px) ){
+			margin: 0 auto;
+			display: block;
 		}
-		& span.sub-title{
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				width: calc(100% - 40px);
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				width: calc(100% - 60px);
+			}
+		}
+		span.sub-title{
 			font-size: 13px;
 			font-weight: 700;
 			color: g.$secondary;
@@ -353,8 +360,18 @@
 				vertical-align: middle;
 				margin-left: 10px;
 			}
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				font-size: 14px;
+				margin-bottom: 20px;
+				&::after{
+					width: 40px;
+				}
+			}
+			@media only screen and (min-width: calc(1280px + 80px) ){
+						padding-left: calc((100vw - 1280px) / 2);
+			}
 		}
-		& .main-title{
+		.main-title{
 			//add
 			max-width: none;
 			width: fit-content;
@@ -366,136 +383,155 @@
 			//width: 100%;
 			margin-right: 15px;
 			border-radius: 0 50px 50px 0;
-			& span{
+			span{
 				display: block;
-			}
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			&::after{
-				width: calc(100% - 40px);
-			}
-			& span.sub-title{
-				font-size: 14px;
-				margin-bottom: 20px;
-				&::after{
-					width: 40px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					padding: 0 80px 0 40px;
+				}
+				@media only screen and (min-width: calc(1280px + 80px) ){
+					padding-left: calc((100vw - 1280px) / 2);
 				}
 			}
-			& .main-title{
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
 				font-size: 32px;
 				padding: 15px 0;
 			}
 		}
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			&::after{
-				width: calc(100% - 60px);
-			}
-
-		}
-		@media only screen and (min-width: calc(1280px + 80px) ){
-			margin: 0 auto;
-			display: block;
-			& .main-title{
-				& span{
-					padding-left: calc((100vw - 1280px) / 2);
-				}
-			}
-			& span.sub-title{
-					padding-left: calc((100vw - 1280px) / 2);
-			}
-		}
 	}
+	
+	
+	
 	.page-sub-services .services-contener{
-		& .services-content-list{
+		.services-content-list{
 			margin-bottom: 60px;
-			& p{
+			p{
 				font-size: 14px;
 				line-height: 1.7;
 				margin-bottom: 10px;
 				padding-left: 10px;
 			}
-			& .left-pinkline-ttl{
+			.left-pinkline-ttl{
 				font-size: 18px;
 				margin-bottom: 10px;
 			}
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				margin-bottom: 30px;
+				p{
+					font-size: 16px;
+					margin-bottom: 20px;
+				}
+				.left-pinkline-ttl{
+					font-size: 24px;
+					margin-bottom: 20px;
+				}
+			}
 		}
-		& .services-content-item{
+		.services-content-item{
 			margin-bottom: 15px;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				margin-bottom: 0;
+			}
+			.left-pinkline-ttl{
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					font-size: 20px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					font-size: 24px;
+				}
+			}
+			.img-caption{
+				font-size: 14px;
+				margin-top: -10px;
+				margin-bottom: 0;
+				padding-left: 3px;
+			}
 		}
-		& .disc-list{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			.services-content-item.two-column{
+				width: calc(100% / 2 - 30px);
+			}
+			.services-content-item.one-column{
+				margin: 20px 0 60px;
+			}
+		}
+		.disc-list{
 			padding-left: 10px;
 			margin-bottom: 10px;
-			& .disc-item{
+			.disc-item{
 				font-size: 14px;
 				font-weight: 400;
 				line-height: 1.7;
 			}
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				margin-bottom: 20px;
+				.disc-item{
+					font-size: 16px;
+				}
+			}
 		}
-		& .white-radius-box{
+		.white-radius-box{
 			padding: 20px 30px;
-			& .dot-ttl{
+			.dot-ttl{
 				font-weight: 700;
 				margin-bottom: 20px;
 			}
-			& .left-border-ttl{
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				padding: 30px 40px;
+				.dot-ttl{
+					font-size: 16px;
+				}
+			}
+			.left-border-ttl{
 				font-size: 14px;
 				padding-left: 0;
 				margin-bottom: 5px;
 			}
-			& .tel{
+			.tel{
 				font-size: 20px;
 				font-weight: 700;
 				margin-bottom: 5px;
-				& span{
+				span{
 					font-size: 14px;
 					font-weight: 700;
 				}
-			}
-			& .text{
-				font-size: 12px;
-				font-weight: 400;
-			}
-		}
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			& .services-content-list{
-				margin-bottom: 30px;
-				& p{
-					font-size: 16px;
-					margin-bottom: 20px;
-				}
-				& .left-pinkline-ttl{
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					font-size: 24px;
-					margin-bottom: 20px;
-				}
-			}
-			& .services-content-item.two-column{
-				width: calc(100% / 2 - 30px);
-			}
-			& .services-content-item.one-column{
-				margin: 20px 0 60px;
-			}
-			& .services-content-item{
-				margin-bottom: 0;
-			}
-			& .disc-list{
-				margin-bottom: 20px;
-				& .disc-item{
-					font-size: 16px;
-				}
-			}
-			& .white-radius-box{
-				padding: 30px 40px;
-				& .dot-ttl{
-					font-size: 16px;
-				}
-				& .tel{
-					font-size: 24px;
-					& span{
+					span{
 						font-size: 16px;
 					}
 				}
 			}
+			.text{
+				font-size: 12px;
+				font-weight: 400;
+			}
 		}
+		
 	}
 
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

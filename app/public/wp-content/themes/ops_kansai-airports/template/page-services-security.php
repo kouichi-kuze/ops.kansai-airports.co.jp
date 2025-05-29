@@ -41,13 +41,16 @@ Template Name:警備事業
 			<div class="p-side-15-3">
 				<div class="glay-box">
 					<div class="p-side-3-8 max-128">
+<!--
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item w-100 one-column">
 								<h3 class="left-pinkline-ttl">運用管理グループ</h3>
 							</li>
 						</ul>
+-->
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item two-column">
+								<h3 class="left-pinkline-ttl">運用管理グループ</h3>
 								<h3 class="left-pinkline-ttl">第1警備隊、第２警備隊</h3>
 							</li>
 							<li class="services-content-item two-column">
@@ -72,6 +75,7 @@ Template Name:警備事業
 			<div class="p-side-15-3">
 				<div class="glay-box">
 					<div class="p-side-3-8 max-128">
+<!--
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item two-column">
 								<h3 class="left-pinkline-ttl">運用管理グループ</h3>
@@ -82,8 +86,10 @@ Template Name:警備事業
 								</ul>
 							</li>
 						</ul>
+-->
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item two-column">
+								<h3 class="left-pinkline-ttl">運用管理グループ</h3>
 								<h3 class="left-pinkline-ttl">第1警備隊、第２警備隊</h3>
 							</li>
 							<li class="services-content-item two-column">
