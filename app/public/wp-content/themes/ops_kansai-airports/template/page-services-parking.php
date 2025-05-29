@@ -6,6 +6,7 @@ Template Name:駐車場運営事業
 <?php get_template_part( 'inc/header' ); ?>
 
 
+
 <div class="sub-page-header sub-services ">
 	<div class="p-side-3-8">
 	  <!-- パンくずリスト -->
@@ -22,8 +23,9 @@ Template Name:駐車場運営事業
 	  </div>
 	</div>
 </div>
-<main id="page-service-parking" class="page-sub-services bg-color-bg-blue">
-	<div class="content-bg bg-color-white">
+<main id="page-service-parking">
+	<div class="page-sub-services bg-color-bg-blue">
+		<div class="content-bg bg-color-white">
 		<div class="mv-img">
 			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/mv-sp.png" alt="駐車場運営事業" class="d-md-none">
 		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/mv.png" alt="駐車場運営事業" class="d-none d-inline-md-block">
@@ -86,6 +88,7 @@ Template Name:駐車場運営事業
 			  <a href="<?php echo home_url( '/' ); ?>services" class="back">事業紹介一覧</a>
 			</div>
 		</div>		
+	</div>
 	</div>
 <!--バナー共通パーツ-->
 <?php get_template_part( 'parts/bnr_services' ); ?>

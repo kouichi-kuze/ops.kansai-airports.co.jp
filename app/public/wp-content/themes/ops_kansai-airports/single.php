@@ -14,7 +14,7 @@
 </div>
 
 
-<div id="page" class="single-news">
+<div id="single-news">
 	<div id="information">
 		<div id="single-news-page" class="bg-color-primary">
 			<div class="main-ounded-content bg-color-primary">

@@ -6,6 +6,7 @@ Template Name:消防事業
 <?php get_template_part( 'inc/header' ); ?>
 
 
+
 <div class="sub-page-header sub-services ">
 	<div class="p-side-3-8">
 	  <!-- パンくずリスト -->
@@ -22,8 +23,9 @@ Template Name:消防事業
 	  </div>
 	</div>
 </div>
-<main id="page-service-fire" class="page-sub-services bg-color-bg-blue">
-	<div class="content-bg bg-color-white">
+<main id="page-service-fire" >
+	<div class="page-sub-services bg-color-bg-blue">
+		<div class="content-bg bg-color-white">
 		<div class="mv-img">
 			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/mv-sp.png" alt="消防事業" class="d-md-none">
 		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/mv.png" alt="消防事業" class="d-none d-inline-md-block">
@@ -149,6 +151,7 @@ Template Name:消防事業
 			  <a href="<?php echo home_url( '/' ); ?>services" class="back">事業紹介一覧</a>
 			</div>
 		</div>		
+	</div>		
 	</div>
 <!--バナー共通パーツ-->
 <?php get_template_part( 'parts/bnr_services' ); ?>

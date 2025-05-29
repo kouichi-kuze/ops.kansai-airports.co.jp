@@ -20,29 +20,29 @@
 //page message
 #page-company-message{
 	background-color: g.$bg-blue;
-}
-.ceo-message-content{
-	
-}
-.ceo-img{
-	margin-bottom: 40px;
-}
-.ceo-img img{
-	height: 260px;
-	height: 66.67vw;
-	width: 100%;
-	object-fit: cover;
-	object-position: center top;
-		border-radius: 12px;
-	  overflow: hidden;
 
-}
-.ceo-message p{
-	color: g.$primary;
-	font-size: 14px;
-	font-weight: 400;
-	margin-bottom: 32px;
-}
+	.ceo-message-content{
+	
+	}
+	.ceo-img{
+		margin-bottom: 40px;
+	}
+	.ceo-img img{
+		height: 260px;
+		height: 66.67vw;
+		width: 100%;
+		object-fit: cover;
+		object-position: center top;
+			border-radius: 12px;
+		overflow: hidden;
+
+	}
+	.ceo-message p{
+		color: g.$primary;
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 32px;
+	}
 @media only screen and (min-width: g.$desktop-breakpoint-md){
 	.ceo-img{
 		margin-bottom: 60px;
@@ -57,21 +57,23 @@
 		font-size: 16px;
 		margin-bottom: 35px;
 	}
-//	.ceo-message-content{
-//		max-width: 1280px;
-//    	margin: 0 auto;
-//	}
-}
-@media only screen and (min-width: g.$desktop-breakpoint-xl){
-	.ceo-img img{
-		width: 510px;
-		height: 562px;
+	//	.ceo-message-content{
+	//		max-width: 1280px;
+	//    	margin: 0 auto;
+	//	}
 	}
-	.ceo-message-content{
-		display: flex;
-		gap: 80px;
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		.ceo-img img{
+			width: 510px;
+			height: 562px;
+		}
+		.ceo-message-content{
+			display: flex;
+			gap: 80px;
+		}
 	}
 }
+
 
 
 

@@ -5,7 +5,6 @@ Template Name:事業紹介
 ?>
 <?php get_template_part( 'inc/header' ); ?>
 
-
 <div class="sub-page-header p-side-3-8">
   <!-- パンくずリスト -->
   <div class="breadcrumb-wrap">
@@ -18,8 +17,9 @@ Template Name:事業紹介
     <p class="page-header__subtitle">Service</p>
   </div>
 </div>
-<main id="page-company-service" class="company-service bg-color-primary">
-	<div class="main-ounded-content">
+<main id="page-service">
+	<div class="company-service bg-color-primary">
+		<div class="main-ounded-content">
 		<div class="p-side-15-8">
 			<div class="max-128">
 				<h2 class="bottom-border-bulue-ttl">関西エアポート<br class="d-md-none">オペレーションサービスの<br class="d-md-none">主な事業</h2>
@@ -170,6 +170,7 @@ Template Name:事業紹介
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 <!--バナー共通パーツ-->
 <?php get_template_part( 'parts/bnr_services' ); ?>

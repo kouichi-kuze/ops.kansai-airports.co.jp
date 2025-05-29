@@ -18,7 +18,7 @@ Template Name:代表メッセージ
     <p class="page-header__subtitle">CEO Message</p>
   </div>
 </div>
-<main  id="page-company-message">
+<main id="page-company-message">
 	<div class="sub-page-main">
 		<div class="p-side-3-8">
 			<div class="max-128">

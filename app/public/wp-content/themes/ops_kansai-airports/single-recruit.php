@@ -1,6 +1,6 @@
 <?php get_template_part( 'inc/header' ); ?>
 
-<div id="main-content" class="single-recruit">
+<div id="single-recruit">
 	<div id="page">	
 		<div id="post">
 			<!--HTMLここから-->

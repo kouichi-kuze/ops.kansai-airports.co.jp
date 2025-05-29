@@ -22,8 +22,9 @@ Template Name:警備事業
 	  </div>
 	</div>
 </div>
-<main id="page-service-security" class="page-sub-services bg-color-bg-blue">
-	<div class="content-bg bg-color-white">
+<main id="page-service-security">
+	<div class="page-sub-services bg-color-bg-blue">
+		<div class="content-bg bg-color-white">
 		<div class="mv-img">
 			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/security/mv-sp.png" alt="オペレーションマネジメント事業" class="d-md-none">
 		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/security/mv.png" alt="オペレーションマネジメント事業" class="d-none d-inline-md-block">
@@ -102,6 +103,7 @@ Template Name:警備事業
 			  <a href="<?php echo home_url( '/' ); ?>services" class="back">事業紹介一覧</a>
 			</div>
 		</div>		
+	</div>
 	</div>
 <!--バナー共通パーツ-->
 <?php get_template_part( 'parts/bnr_services' ); ?>

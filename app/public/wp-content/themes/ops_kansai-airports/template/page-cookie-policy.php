@@ -18,7 +18,7 @@ Template Name:クッキーポリシー
     <p class="page-header__subtitle">Cookie Policy</p>
   </div>
 </div>
-<main  id="page-cookie-policy">
+<main id="page-cookie-policy">
 	<div class="sub-page-main">
 		<div class="p-side-3-8">
 			<div class="max-112">

@@ -18,8 +18,7 @@ Template Name:企業概要
     <p class="page-header__subtitle">Corporate Overview</p>
   </div>
 </div>
-<main  id="page-company-outline">
-	
+<main id="page-company-outline">
 		<div class="sub-page-main bg-lightpurple">
 			<div class="p-side-3-16">
 				<div class="left-content">

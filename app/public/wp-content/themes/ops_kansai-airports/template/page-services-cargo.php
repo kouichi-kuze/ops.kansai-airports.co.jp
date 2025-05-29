@@ -22,8 +22,9 @@ Template Name:カーゴエリアオペレーション事業
 	  </div>
 	</div>
 </div>
-<main id="page-service-cargo" class="page-sub-services bg-color-bg-blue">
-	<div class="content-bg bg-color-white">
+<main id="page-service-cargo">
+	<div class="page-sub-services bg-color-bg-blue">
+		<div class="content-bg bg-color-white">
 		<div class="mv-img">
 			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/mv-sp.png" alt="カーゴエリアオペレーション事業" class="d-md-none">
 		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/mv.png" alt="カーゴエリアオペレーション事業" class="d-none d-inline-md-block">
@@ -63,6 +64,8 @@ Template Name:カーゴエリアオペレーション事業
 			</div>
 		</div>		
 	</div>
+	</div>
+	
 <!--バナー共通パーツ-->
 <?php get_template_part( 'parts/bnr_services' ); ?>
 <!--/バナー共通パーツ-->

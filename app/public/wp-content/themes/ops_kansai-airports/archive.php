@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div id="page" class="archive-news">
+<div id="archive-news">
 	<div id="information">
 		<div id="top-news-page" class="bg-color-primary">
 			<div class="main-ounded-content bg-color-primary">

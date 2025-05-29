@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<main id="main-content" class="archive-recruit">
+<main id="archive-recruit">
 	<div id="top-recruit-page" class="bg-color-primary">
 		<div class="main-ounded-content bg-color-primary">
 			<div class="p-side-15-8">
@@ -76,53 +76,3 @@ $btn_label   = '募集要項を見る';
 // パーマリンク取得（レンダラーコールバックで set していない場合はこちらでも可）
 // $permalink = get_permalink();
 ?>
-<li class="recruit-list">
-  <div class="recruit-item">
-    <h2 class="left-pinkline-ttl"><?php echo esc_html( $title ); ?></h2>
-    <ul class="text-contentouter">
-      <li class="recruit-icat-items">
-        <div class="recruit-icat">
-          <?php if ( $img_attr && ! empty( $img_attr['url'] ) ) : ?>
-            <img src="<?php echo esc_url( $img_attr['url'] ); ?>"
-                 alt="<?php echo esc_attr( $img_attr['alt'] ); ?>" />
-          <?php endif; ?>
-        </div>
-
-        <?php if ( ! empty( $infos ) ) : ?>
-          <?php foreach ( $infos as $info ) :
-            // サブフィールド名に合わせて取り出し
-            $type      = isset( $info['recruit_list_type'] ) ? $info['recruit_list_type'] : '';
-            $business  = isset( $info['recruit_list_business'] ) ? $info['recruit_list_business'] : '';
-            $workplace = isset( $info['recruit_list_workplace'] ) ? $info['recruit_list_workplace'] : '';
-            ?>
-            <div class="text-content">
-              <div class="text-item">
-                <?php if ( $type ) : ?>
-                  <span class="work-style"><?php echo esc_html( $type ); ?></span>
-                <?php endif; ?>
-
-                <?php if ( $business ) : ?>
-                  <p class="business-content"><?php echo esc_html( $business ); ?></p>
-                <?php endif; ?>
-
-                <?php if ( $workplace ) : ?>
-                  <div class="work-place-list">
-                    <span class="work-place">勤務地： </span>
-                    <span class="work-place-item"><?php echo esc_html( $workplace ); ?></span>
-                  </div>
-                <?php endif; ?>
-              </div>
-
-              <a href="<?php echo esc_url( get_permalink() ); ?>" class="hover-ani">
-                <div class="btn-bace-round">
-                  <div class="btn-setting"><?php echo esc_html( $btn_label ); ?></div>
-                </div>
-              </a>
-            </div>
-          <?php endforeach; ?>
-        <?php endif; ?>
-
-      </li>
-    </ul>
-  </div>
-</li>

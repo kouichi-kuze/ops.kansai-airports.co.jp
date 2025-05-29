@@ -2,8 +2,13 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
-#main-content.single-recruit + .site-footer, //ここだけ<main>タグのクラス名をおかないとスタイルが効かない。
-#main-content.archive-recruit + .site-footer{ //ここだけ<main>タグのクラス名をおかないとスタイルが効かない。
+#archive-recruit,
+#single-recruit,
+#archive-voices,
+#single-voices {
+
+ + .site-footer, //ここだけ<main>タグのクラス名をおかないとスタイルが効かない。
+ + .site-footer{ //ここだけ<main>タグのクラス名をおかないとスタイルが効かない。
 	background-color: g.$bg-blue;
 }
 #single-recruit-page .bottom-border-bulue-ttl,
@@ -757,6 +762,7 @@
 				justify-content: space-between;
 				gap: 30px;
 				align-items: flex-end;
+				flex-wrap: wrap;
 			}
 		}
 		.img {
@@ -1227,33 +1233,10 @@
 	}
 }
 
-.single-recruit {
-	.wp-block-lazyblock-recruirecruitlist {
+.wp-block-lazyblock-recruirecruitlist {
 		display: none;
 	}
+
+
+
 }
-
-
-//	<!--
-//				<?php
-//				$terms = get_the_terms( $post_id, 'recruit_category' );
-//				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
-//					<?php foreach ( $terms as $term ) : ?>
-//						<span class="work-style"><?php echo esc_html( $term->name ); ?></span>
-//					<?php endforeach; ?>
-//				<?php endif; ?>
-//					-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
