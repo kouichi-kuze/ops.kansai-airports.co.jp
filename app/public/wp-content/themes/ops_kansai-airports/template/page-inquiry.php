@@ -20,7 +20,7 @@ Template Name:お問い合わせ
 </div>
 
 
-<main  id="page-company-inquiry">
+<main id="page-company-inquiry">
 	<div class="sub-page-main bg-lightgreen">
 		<div class="p-side-3-16">
 			<div class="">
