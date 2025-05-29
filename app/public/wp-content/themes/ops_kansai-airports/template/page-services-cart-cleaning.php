@@ -34,7 +34,7 @@ Template Name:清掃カート事業
 		<section class="services-contener">
 			<div class="services-content-ttl">
 				<span class="sub-title p-side-3-8">Cleaning & Cart Group</span>
-				<h2 class="main-title"><span class="p-side-3-8">KIXターミナルエリアオペレーションセンター</span></h2>
+				<h2 class="main-title"><span class="p-side-3-8">サービスに関するお問い合わせ</span></h2>
 			</div>
 			<div class="p-side-15-3">
 				<div class="glay-box">
@@ -65,7 +65,10 @@ Template Name:清掃カート事業
 									<div class="dot-ttl">清掃・カートグループ</div>
 									<p class="left-border-ttl">総合案内（06:00～20:00）</p>
 									<div class="tel"><a href="tel:06-6856-6768"><span>Tel.</span>06-6856-6768</a></div>
-									<div class="text">緊急対応窓口：（20:00～22:00は別番号をご案内）</div>
+									<div class="text mb-3">緊急対応窓口：（20:00～22:00は別番号をご案内）</div>
+									<p class="left-border-ttl">緊急対応窓口</p>
+									<div class="tel"><a href="tel:XX-XXXX-XXXX"><span>Tel.</span>XX-XXXX-XXXX</a></div>
+									<div class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
 								</div>								
 							</li>
 						</ul>

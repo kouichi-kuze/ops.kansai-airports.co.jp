@@ -44,12 +44,18 @@ Template Name:カーゴエリアオペレーション事業
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/003.jpg" /></li>
 								</ul>
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/002.jpg" /></li>
+									<li>
+										<img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/004.jpg" />
+
+									</li>
 								</ul>
+								<p class="img-caption"><span class="text-left">CAOC訓練風景</span></p>
 							</li>
 						</ul>
 					</div>

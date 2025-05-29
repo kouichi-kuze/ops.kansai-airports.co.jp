@@ -43,29 +43,6 @@ Template Name:ターミナルマネジメント事業
 							<ul class="services-content-list d-md-flex justify-content-md-between">
 								<li class="services-content-item two-column">
 									<h3 class="left-pinkline-ttl">ターミナルマネジメントグループ</h3>
-								</li>
-								<li class="services-content-item two-column">
-									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/001.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/002.jpg" /></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="services-contener">
-				<div class="services-content-ttl">
-					<span class="sub-title p-side-3-8">Terminal Management Services</span>
-					<h2 class="main-title"><span class="p-side-3-8">ITM ターミナルエリアオペレーションセンター</span></h2>
-				</div>
-				<div class="p-side-15-3">
-					<div class="glay-box">
-						<div class="p-side-3-8 max-128">
-							<ul class="services-content-list d-md-flex justify-content-md-between">
-								<li class="services-content-item two-column">
-									<h3 class="left-pinkline-ttl">ターミナルマネジメントグループ</h3>
 									<ol class="disc-list">
 										<li class="disc-item">空港内の案内カウンターやテレホンセンターでの旅客案内業務や拾得遺失物対応</li>
 										<li class="disc-item">急患対応・要人対応業務等</li>
@@ -73,7 +50,8 @@ Template Name:ターミナルマネジメント事業
 								</li>
 								<li class="services-content-item two-column">
 									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/terminal-management/003.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/001.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/002.jpg" /></li>
 									</ul>
 								</li>
 							</ul>
@@ -122,6 +100,83 @@ Template Name:ターミナルマネジメント事業
 									</ul>
 								</li>
 							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="services-contener">
+				<div class="services-content-ttl">
+					<span class="sub-title p-side-3-8">Terminal Management Services</span>
+					<h2 class="main-title"><span class="p-side-3-8">ITM ターミナルエリアオペレーションセンター</span></h2>
+				</div>
+				<div class="p-side-15-3">
+					<div class="glay-box">
+						<div class="p-side-3-8 max-128">
+							<ul class="services-content-list d-md-flex justify-content-md-between">
+								<li class="services-content-item two-column">
+									<h3 class="left-pinkline-ttl">ターミナルマネジメントグループ</h3>
+									<ol class="disc-list">
+										<li class="disc-item">空港内の案内カウンターやテレホンセンターでの旅客案内業務や拾得遺失物対応</li>
+										<li class="disc-item">急患対応・要人対応業務等</li>
+									</ol>
+								</li>
+								<li class="services-content-item two-column">
+									<ul class="services-subpage-slider">
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/terminal-management/003.jpg" /></li>
+									</ul>
+								</li>
+							</ul>
+<!--
+							<ul class="services-content-list d-md-flex justify-content-md-between">
+								<li class="services-content-item two-column">
+									<h3 class="left-pinkline-ttl">パッセンジャーサポートグループ</h3>
+									<ol class="disc-list">
+										<li class="disc-item">チェックインカウンターや保安検査での旅客混雑対応やターミナル内全般の防災監視業務</li>
+									</ol>
+								</li>
+								<li class="services-content-item two-column">
+									<ul class="services-subpage-slider">
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/passenger-support/001.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/passenger-support/002.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/passenger-support/003.jpg" /></li>
+									</ul>
+								</li>
+							</ul>
+-->
+<!--
+							<ul class="services-content-list d-md-flex justify-content-md-between">
+								<li class="services-content-item two-column">
+									<h3 class="left-pinkline-ttl">オペレーションサポートグループ</h3>
+									<ol class="disc-list">
+										<li class="disc-item">KIX―ITMカードカウンターおよびコールセンター業務、保税手荷物一時預かり業務</li>
+										<li class="disc-item">空港内の制限エリアに入域する際に必要なIDカードの管理業務</li>
+									</ol>
+								</li>
+								<li class="services-content-item two-column">
+									<ul class="services-subpage-slider">
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/operation-support/001.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/operation-support/002.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/operation-support/003.jpg" /></li>
+									</ul>
+								</li>
+							</ul>
+-->
+<!--
+							<ul class="services-content-list d-md-flex justify-content-md-between">
+								<li class="services-content-item two-column">
+									<h3 class="left-pinkline-ttl">保安管理グループ</h3>
+									<ol class="disc-list">
+										<li class="disc-item">空港ターミナル内の従業員向けの保安検査場・旅客向けの保安検査場での業務</li>
+									</ol>
+								</li>
+								<li class="services-content-item two-column">
+									<ul class="services-subpage-slider">
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/hoan-kanari/001.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/hoan-kanari/002.jpg" /></li>
+									</ul>
+								</li>
+							</ul>
+-->
 						</div>
 					</div>
 				</div>
