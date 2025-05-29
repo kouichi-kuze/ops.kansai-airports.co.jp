@@ -2,6 +2,7 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
+#page-cookie-policy {
 .table-content{
   color: #696969;
 	p{
@@ -126,5 +127,4 @@
   }
 
 }
-
-
+}

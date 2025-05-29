@@ -18,7 +18,7 @@ Template Name:個人情報保護方針
     <p class="page-header__subtitle">Privacy Policy</p>
   </div>
 </div>
-<main  id="page-policy">
+<main id="page-policy">
 	<div class="sub-page-main">
 		<div class="p-side-3-8">
 			<div class="max-112">
