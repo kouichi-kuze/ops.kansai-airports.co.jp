@@ -143,4 +143,25 @@
 		}
 	}
 }
+
+
+※あくまでも例なのでここまでしなて大丈夫です
+.pdf a{
+	position: relative;
+
+}
+.pdf a::after{
+	content: "";
+	background: url(../img/outline/icon_target_blank.svg) no-repeat center / contain;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	vertical-align: middle;
+	right: 0px;
+}
+
+こういうのなどはそのままで大丈夫です。
 ーーーーーーーーーーーーーー
