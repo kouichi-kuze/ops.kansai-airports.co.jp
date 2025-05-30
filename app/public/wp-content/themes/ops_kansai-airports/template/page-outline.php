@@ -187,6 +187,15 @@ Template Name:企業概要
 										</ol>
 									</dd>
 								</dl>
+								<dl class="company-system-item">
+									<dt class="title">ノースエリアオペレーションセンター</dt>
+									<dd class="text">
+										<ol class="company-affi-list">
+											<li class="company-affi-item">特別災害隊</li>
+											<li class="company-affi-item">Sky View</li>
+										</ol>
+									</dd>
+								</dl>
 								<dl class="company-system-item single">
 									<dt class="title">ノースエリアオペレーションセンター</dt>
 								</dl>

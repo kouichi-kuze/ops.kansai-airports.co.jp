@@ -54,6 +54,7 @@ Template Name:消防事業
 								</ul>
 							</li>
 						</ul>
+<!--
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item w-100 one-column">
 								<h3 class="left-pinkline-ttl">第１消防隊</h3>
@@ -64,8 +65,11 @@ Template Name:消防事業
 								<h3 class="left-pinkline-ttl">第２消防隊</h3>
 							</li>
 						</ul>
+-->
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item two-column">
+								<h3 class="left-pinkline-ttl">第１消防隊</h3>
+								<h3 class="left-pinkline-ttl">第２消防隊</h3>
 								<h3 class="left-pinkline-ttl">第３消防隊</h3>
 							</li>
 							<li class="services-content-item two-column">
@@ -93,21 +97,30 @@ Template Name:消防事業
 					<div class="p-side-3-8 max-128">
 						<ul class="services-content-list d-md-flex justify-content-md-between">
 							<li class="services-content-item two-column">
-								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/001.jpg" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/002.jpg" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/003.jpg" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/004.jpg" /></li>
-								</ul>
-							</li>
-							<li class="services-content-item two-column">
 								<h3 class="left-pinkline-ttl">運用管理グループ</h3>
 								<ol class="disc-list">
 									<li class="disc-item">飛行場面点検業務、鳥獣駆除業務</li>
 								</ol>
+							</li>
+							<li class="services-content-item two-column">
+								<ul class="services-subpage-slider">
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/001.jpg" /></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="services-content-list d-md-flex justify-content-md-between">
+							<li class="services-content-item two-column">
 								<h3 class="left-pinkline-ttl">第１消防隊</h3>
 								<h3 class="left-pinkline-ttl">第２消防隊</h3>
 								<h3 class="left-pinkline-ttl">第３消防隊</h3>
+							</li>
+							<li class="services-content-item two-column">
+								<ul class="services-subpage-slider">
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/003.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/004.jpg" /></li>
+<!--									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/005.jpg" /></li>-->
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -137,6 +150,7 @@ Template Name:消防事業
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/003.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/004.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/005.jpg" /></li>
+<!--									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/006.jpg" /></li>-->
 								</ul>
 							</li>
 						</ul>

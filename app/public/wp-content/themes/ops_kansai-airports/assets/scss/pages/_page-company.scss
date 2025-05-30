@@ -1,22 +1,6 @@
 // 共通スタイル
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
-
-/*
-サンプル
-.test {
-    @include m.mx-auto //mixinの変数は @include m.xxxxx
-    color: g.secondary;
-    &:after {
-        content: "";
-    }
-    @media only screen and (min-width: g.$desktop-breakpoint-md) {
-        &:hover {
-            color: g.primary; //variablesの変数は g.$xxxx
-        }
-    }
-}
-*/
 //page message
 #page-company-message{
 	background-color: g.$bg-blue;
@@ -42,6 +26,7 @@
 		font-size: 14px;
 		font-weight: 400;
 		margin-bottom: 32px;
+		line-height: 1.8;
 	}
 @media only screen and (min-width: g.$desktop-breakpoint-md){
 	.ceo-img{
@@ -56,6 +41,7 @@
 	.ceo-message p{
 		font-size: 16px;
 		margin-bottom: 35px;
+		line-height: 2;
 	}
 	//	.ceo-message-content{
 	//		max-width: 1280px;
