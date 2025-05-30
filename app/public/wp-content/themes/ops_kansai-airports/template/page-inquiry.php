@@ -207,12 +207,14 @@ Template Name:お問い合わせ
 					</div>
 				</section>
 		</div>
+<!--
 			<div id="page-content-link_04" class="bnr_office_cleaning p-side-3-16 hidden-area">
 				<div class="margin-adjust">
 					<a class="pc d-md-block" href="https://www.ops.kansai-airports.co.jp/services/cart-cleaning/cleaning/"><img src="<?php bloginfo('template_url'); ?>/assets/img/inquiry/bnr_office_cleaning_pc.png" alt="オフィスクリーニング　詳しくはこちら"></a>
 					<a class="sp d-sm-none" href="https://www.ops.kansai-airports.co.jp/services/cart-cleaning/cleaning/"><img src="<?php bloginfo('template_url'); ?>/assets/img/inquiry/bnr_office_cleaning_sp.png" alt="オフィスクリーニング　詳しくはこちら"></a>
 				</div>
 			</div>
+-->
 	</div>
 	
 </main >
