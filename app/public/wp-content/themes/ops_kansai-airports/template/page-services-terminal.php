@@ -64,9 +64,11 @@ Template Name:ターミナルマネジメント事業
 								</li>
 								<li class="services-content-item two-column">
 									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/passenger-support/001.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/passenger-support/002.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/passenger-support/003.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/003.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/004.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/005.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/006.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/007.jpg" /></li>
 									</ul>
 								</li>
 							</ul>
@@ -80,9 +82,10 @@ Template Name:ターミナルマネジメント事業
 								</li>
 								<li class="services-content-item two-column">
 									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/operation-support/001.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/operation-support/002.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/operation-support/003.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/008.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/009.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/010.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/011.jpg" /></li>
 									</ul>
 								</li>
 							</ul>
@@ -95,8 +98,8 @@ Template Name:ターミナルマネジメント事業
 								</li>
 								<li class="services-content-item two-column">
 									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/hoan-kanari/001.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/hoan-kanari/002.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/012.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/013.jpg" /></li>
 									</ul>
 								</li>
 							</ul>
@@ -122,7 +125,8 @@ Template Name:ターミナルマネジメント事業
 								</li>
 								<li class="services-content-item two-column">
 									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/terminal-management/003.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/001.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/002.jpg" /></li>
 									</ul>
 								</li>
 							</ul>
