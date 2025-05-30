@@ -21,6 +21,9 @@
 							<li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_04.png" alt=""></li>
 							<li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_05.png" alt=""></li>
 							<li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_06.png" alt=""></li>
+							<li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_07.png" alt=""></li>
+							<li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_08.png" alt=""></li>
+							<li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_09.png" alt=""></li>
 							</ul>		
 						</div>
 					</a>
