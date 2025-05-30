@@ -81,7 +81,7 @@ Template Name:個人情報保護方針
 					<h3 class="left-pinkline-ttl">業員等の個人情報のグループ共同利用について</h3>
 					<div class="max-md40-xl58">
 						<ul class="pdf-list">
-							<li class="pdf-item"><a href="<?php echo home_url( '/' ); ?>/policy/files/jointuse.pdf" target="_blank"><span>従業員等の個人情報のグループ共同利用について<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+							<li class="pdf-item"><a href="<?php bloginfo('template_url'); ?>/assets/img/policy/files/jointuse.pdf" target="_blank"><span>従業員等の個人情報のグループ共同利用について<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 						</ul>
 					</div>
 				</section>
