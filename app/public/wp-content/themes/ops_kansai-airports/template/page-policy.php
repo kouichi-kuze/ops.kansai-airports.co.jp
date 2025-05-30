@@ -81,7 +81,7 @@ Template Name:個人情報保護方針
 					<h3 class="left-pinkline-ttl">業員等の個人情報のグループ共同利用について</h3>
 					<div class="max-md40-xl58">
 						<ul class="pdf-list">
-							<li class="pdf-item"><a href="<?php echo home_url( '/' ); ?>/policy/files/jointuse.pdf" target="_blank">従業員等の個人情報のグループ共同利用について<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></a></li>
+							<li class="pdf-item"><a href="<?php echo home_url( '/' ); ?>/policy/files/jointuse.pdf" target="_blank"><span>従業員等の個人情報のグループ共同利用について<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 						</ul>
 					</div>
 				</section>
@@ -114,7 +114,7 @@ Template Name:個人情報保護方針
 					<div class="dot-ttl">関西エアポートオペレーションサービス株式会社　相談窓口</div>
 					<div class="contact">
 						<p class="tel"><a href="tel:072-455-4980">072-455-4980</a></p>
-						<p class="mail"><a href="kikakukanri@ops.kansai-airports.co.jp" target="_blank">kikakukanri@ops.kansai-airports.co.jp</a></p>
+						<p class="mail"><a href="mailto:kikakukanri@ops.kansai-airports.co.jp" target="_blank">kikakukanri@ops.kansai-airports.co.jp</a></p>
 						<p class="address">〒549-0001　大阪府泉佐野市泉州空港北1番地　関西国際空港航空会社北ビル4F</p>
 					</div>
 				</section>

@@ -770,6 +770,9 @@ a{
     font-weight: 700;
     padding: 15px 0;
     text-decoration: none;
+      span{
+        transition: all 0.3s;
+      }
 
     img {
       width: 47px;
@@ -788,7 +791,24 @@ a{
       transform: translate(0, -50%);
       vertical-align: middle;
       right: 0px;
+        transition: all 0.3s;
     }
+    &:hover::after{
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            scale: 1.2;
+            transform-origin: 50% 0;
+        }
+    }
+    &:hover span{
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                opacity: .8;
+        }
+    }
+      
+      
+      
+      
+      
   }
 
   .pdf-item {

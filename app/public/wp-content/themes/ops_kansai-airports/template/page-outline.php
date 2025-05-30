@@ -227,8 +227,8 @@ Template Name:企業概要
 										</p>
 									</dd>
 									<dd class="contact">
-										<div class="contact-link"><a href="<?php echo home_url( '/' ); ?>">業務内容別のご連絡先はこちら</a></div>
-										<div class="pdf"><a href="<?php echo home_url( '/' ); ?>">鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>//assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></a></div>
+										<div class="contact-link"><a href="<?php echo home_url( '/' ); ?>"><span>業務内容別のご連絡先はこちら</span></a></div>
+										<div class="pdf"><a href="<?php echo home_url( '/' ); ?>"><span>鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>//assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></div>
 									</dd>
 								</dl>
 								<div class="maps-group digit visible">
@@ -245,7 +245,7 @@ Template Name:企業概要
 										</p>
 									</dd>
 									<dd class="contact">
-										<div class="pdf"><a href="<?php echo home_url( '/' ); ?>">鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>//assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></a></div>
+										<div class="pdf"><a href="<?php echo home_url( '/' ); ?>"><span>鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>//assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></div>
 									</dd>
 								</dl>
 							</div>

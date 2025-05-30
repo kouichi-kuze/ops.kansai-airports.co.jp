@@ -194,6 +194,10 @@
 					font-size: 14px;
 					font-weight: 700;
 					padding: 15px 0;
+					transition: all 0.3s;
+                      span{
+                        transition: all 0.3s;
+                      }
 					&::after{
 						content: "";
 						background: url(../img/outline/icon_target_blank.svg) no-repeat center / contain;
@@ -205,6 +209,18 @@
 						transform: translate(0, -50%);
 						vertical-align: middle;
 						right: 0px;
+                        transition: all 0.3s;
+					}
+					&:hover::after{
+						@media only screen and (min-width: g.$desktop-breakpoint-md){
+							scale: 1.2;
+							transform-origin: 50% 0;
+						}
+					}
+					&:hover span{
+						@media only screen and (min-width: g.$desktop-breakpoint-md) {
+								opacity: .8;
+						}
 					}
 					img{
 						width: 47px;
@@ -224,6 +240,10 @@
 					padding: 13px 0;
 					padding-right: 40px;
 					position: relative;
+                      span{
+                        transition: all 0.3s;
+                      }
+                    
 					@media only screen and (min-width: g.$desktop-breakpoint-xl){
 							padding-right:32px;
 					}
@@ -261,6 +281,11 @@
 								height: 7px;
 								top: 50%;
 								transform: translate(0, -50%);
+						}
+					}
+					&:hover span{
+						@media only screen and (min-width: g.$desktop-breakpoint-md) {
+								opacity: .8;
 						}
 					}
 					&:hover::before{
