@@ -35,7 +35,7 @@ Template Name:お問い合わせ
 						<li class="page-content-link"><a href="#page-content-link_01">受託警備業務</a></li>
 						<li class="page-content-link"><a href="#page-content-link_02">消火器の設置・<br class="d-xl-inline-block">法定点検等</a></li>
 						<li class="page-content-link"><a href="#page-content-link_03">事業別お問い合わせ先</a></li>
-						<li class="page-content-link"><a href="#page-content-link_04">オフィスクリーニング<br class="d-xl-inline-block">について</a></li>
+<!--						<li class="page-content-link"><a href="#page-content-link_04">オフィスクリーニング<br class="d-xl-inline-block">について</a></li>-->
 					</ul>
 				</div>
 			</div>
@@ -187,7 +187,7 @@ Template Name:お問い合わせ
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 										</div>
 									</div>
-									<div class="white-radius-box">
+									<div class="white-radius-box hidden-area">
 										<div class="dot-ttl">駐車場運営事業</div>
 										<div class="mb-2-4">
 											<p class="left-border-ttl">関西国際空港</p>
