@@ -94,7 +94,7 @@ Template Name:警備事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>//assets/img/service/security/itm/002.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/security/itm/001.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

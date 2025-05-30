@@ -79,7 +79,6 @@ Template Name:消防事業
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/004.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/005.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/006.jpg" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/007.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -119,7 +118,7 @@ Template Name:消防事業
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/002.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/003.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/004.jpg" /></li>
-<!--									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/005.jpg" /></li>-->
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/itm/005.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -150,7 +149,7 @@ Template Name:消防事業
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/003.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/004.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/005.jpg" /></li>
-<!--									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/006.jpg" /></li>-->
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/nos/006.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
