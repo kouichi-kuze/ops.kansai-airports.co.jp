@@ -23,8 +23,10 @@
 	
 	.sub-page-main{
 		padding-top: 60px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			padding-top: 120px;
+		}
 	}
-
 
 	.sub-page-main.bg-lightgreen {
 		background-color: #ffffff;
@@ -32,19 +34,11 @@
 		background-repeat: no-repeat;
 		background-position: top 40px left -20px;
 		background-size: 80%;
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-md){
-		.sub-page-main{
-			padding-top: 120px;
-		}
-		.sub-page-main.bg-lightgreen{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			background-position: top 70px left 0px;
 			background-size: 70%;
 		}
-
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-xl){
-		.sub-page-main.bg-lightgreen{
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			background-position: top 70px left 0px;
 			background-size: 40%;
 		}
@@ -55,18 +49,45 @@
 		font-size: 16px;
 		font-weight: 700;
 		margin-bottom: 15px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 20px;
+			margin-bottom: 9px;
+		}
 	}
+	
 	.read-ttl{
 		font-size: 22px;
 		font-weight: 700;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 40px;
+		}
 	}
-	.sub-page-main .text {
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 2;
+	
+	.sub-page-main{
+		.text {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 2;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				font-size: 16px;
+				margin-bottom: 60px;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				margin-bottom: 0;
+			}
+		}
+		.read{
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				margin-bottom: 80px;
+			}
+		}
+		
 	}
 	.margin-adjust{
 		margin-bottom: 40px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			margin-bottom: 60px;
+		}
 	}
 	.left-border-ttl{
 		margin-bottom: 20px;
@@ -76,9 +97,53 @@
 	}
 	.left-bulueline-ttl{
 		margin-bottom: 30px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			font-size: 18px;
+		}
 	}
 	.security .text{
 		margin-bottom: 40px;
+		
+	}
+	.white-radius-box{
+		.left-border-ttl{
+			margin-bottom: 5px;
+		}
+		.mb-2-4:last-of-type{
+			margin-bottom: 0;
+		}
+		.text{
+			font-size: 12px;
+			line-height: 1.5;
+			margin-bottom: 0;
+		}
+		.dot-ttl{
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			&::before{
+				margin: 0;
+				flex: none;
+			}
+		}
+		.tel{
+			margin-bottom: 5px;
+			a{
+				font-size: 24px;
+				font-weight: 700;
+				display: block;
+				span{
+					display: inline-block;
+					font-size: 12px;
+					font-weight: 700;
+					margin-right: 5px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					pointer-events: none;
+				}
+			}
+		}
 	}
 	.security .dot-ttl,
 	.white-radius-box .dot-ttl{
@@ -88,182 +153,94 @@
 	}
 	.pdf-list{
 		margin-bottom: 40px;
-	}
-	.white-radius-box .dot-ttl{
-		position: relative;
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
-	.white-radius-box .dot-ttl::before{
-		margin: 0;
-		flex: none;
-	}
-	.white-radius-box .tel{
-		margin-bottom: 5px;
-	}
-	.white-radius-box .tel a{
-		font-size: 24px;
-		font-weight: 700;
-		display: block;
-	}
-	.white-radius-box .tel a span{
-		display: inline-block;
-		font-size: 12px;
-		font-weight: 700;
-		margin-right: 5px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			margin-bottom: 60px;
+		}
 	}
 	.security-img{
 		margin-bottom: 40px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			margin-bottom: 60px;
+		}
 	}
 	#page-content-link_03 .white-radius-box{
 		margin: 15px;
 	}
-	.white-radius-box .left-border-ttl{
-		margin-bottom: 5px;
-	}
-	.white-radius-box .mb-2-4:last-of-type{
-		margin-bottom: 0;
-	}
-
-
-	@media only screen and (min-width: g.$desktop-breakpoint-xl){
-		.white-radius-box .tel a{
-			pointer-events: none;
-		}
-	}
-	.white-radius-box .text{
-		font-size: 12px;
-		line-height: 1.5;
-		margin-bottom: 0;
-	}
 	.sec-bulue-box{
 		padding-bottom: 40px;
 		padding-top: 60px;
-	}
-	.sub-page-main.bg-lightgreen div:last-of-type .sec-bulue-box{
-		margin-bottom: 60px;
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-md){
-		.sub-ttl{
-			font-size: 20px;
-			margin-bottom: 9px;
-		}
-		.read-ttl{
-			font-size: 40px;
-		}
-		.sub-page-main .text{
-			font-size: 16px;
-		}
-		.sub-page-main .read{
-			margin-bottom: 80px;
-		}
-		.margin-adjust{
-			margin-bottom: 60px;
-		}
-		.sub-page-main.bg-lightgreen div:last-of-type .sec-bulue-box{
-			margin-bottom: 74px;
-		}
-		.security-img{
-			margin-bottom: 60px;
-		}
-		.left-bulueline-ttl{
-			font-size: 18px;
-		}
-		.sub-page-main .text{
-			font-size: 16px;
-			margin-bottom: 60px;
-		}
-		.pdf-list{
-			margin-bottom: 60px;
+		.left-content{
+			max-width: 940px;
 		}
 		
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-xl){
-		.sec-bulue-box{
+		
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			padding-bottom: 40px;
 			padding-top: 60px;
 			max-width: 940px;
 		}
-			.left-content{
-				max-width: 940px;
-		}
-		.sub-page-main .text{
-			margin-bottom: 0;
+	}
+	.sub-page-main.bg-lightgreen div:last-of-type .sec-bulue-box{
+		margin-bottom: 60px;
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			margin-bottom: 74px;
 		}
 	}
-
 
 	//バナー
-	.bnr_office_cleaning .pc,
-	.bnr_office_cleaning .sp{
-		display: block;
-		position: relative;
-	}
-	.bnr_office_cleaning .pc{
-		display: none;
-		max-width: 940px;
-	}
-	.bnr_office_cleaning .pc::before{
-			content: "";
-			display: inline-block;
-			position: absolute;
-			background-color: g.$secondary;
-			border-radius: 50px;
-	//		background: url("../img/inquiry/icn_office_cleaning_circle.svg") no-repeat center/contain;
-			width: 26px;
-			height: 26px;
-			bottom: 18%;
-			left: 61%;
-			transition: all 0.3s;
-			transform-origin: 50% 50%;
-	}
-	.bnr_office_cleaning .pc::after{
-			content: "";
-			background: url("../img/inquiry/icn_office_cleaning_arrown.svg") no-repeat center/contain;
-			display: inline-block;
-			width: 11px;
-			height: 14px;
-			position: absolute;
-			bottom: 21%;
-			left: 62%;
-	}
-
-
-
-
-
-
 	.bnr_office_cleaning{
 		margin-bottom: 60px;
-	}
-	@media only screen and (min-width: g.$desktop-breakpoint-md){
-		.bnr_office_cleaning{
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			margin: 0 auto;
 			margin-bottom: 80px;
 		}
-		.bnr_office_cleaning .pc:hover::before{
-			scale: 1.5;
-			transform-origin: 50% 50%;
+		@media only screen and (min-width: 960px){
+			.pc::after{
+				bottom: 20.5%;
+				left: 61.9%;
+			}
 		}
-	}
-	@media only screen and (min-width: 960px){
-		.bnr_office_cleaning .pc::after{
-			bottom: 20.5%;
-			left: 61.9%;
+		.pc{
+			display: none;
+			max-width: 940px;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				&:hover::before{
+					scale: 1.5;
+					transform-origin: 50% 50%;
+				}
+			}
+			&::before{
+					content: "";
+					display: inline-block;
+					position: absolute;
+					background-color: g.$secondary;
+					border-radius: 50px;
+					width: 26px;
+					height: 26px;
+					bottom: 18%;
+					left: 61%;
+					transition: all 0.3s;
+					transform-origin: 50% 50%;
+			}
+			&::after{
+					content: "";
+					background: url("../img/inquiry/icn_office_cleaning_arrown.svg") no-repeat center/contain;
+					display: inline-block;
+					width: 11px;
+					height: 14px;
+					position: absolute;
+					bottom: 21%;
+					left: 62%;
+			}
+
+		}
+		.pc,.sp{
+			display: block;
+			position: relative;
 		}
 	}
 
 
-	#page-company-inquiry{
-		
-	}
-	#page-company-inquiry{
-		
-	}
-	#page-company-inquiry{
-		
-	}
 
 }
 
