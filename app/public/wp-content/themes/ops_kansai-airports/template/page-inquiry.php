@@ -77,11 +77,11 @@ Template Name:お問い合わせ
 
 										<div class="dot-ttl">契約に関する重要事項</div>
 										<ul class="pdf-list">
-											<li class="pdf-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>"><span>鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
-											<li class="pdf-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>"><span>交通誘導警備業務/雑踏警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
-											<li class="pdf-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>"><span>運搬警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
-											<li class="pdf-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>"><span>身辺警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
-											<li class="pdf-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>"><span>機械警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/01_shisetsu.pdf" target="_blank"><span>鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/02_koutsu.pdf" target="_blank"><span>交通誘導警備業務/雑踏警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/03_unpan.pdf" target="_blank"><span>運搬警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/04_shinpen.pdf" target="_blank"><span>身辺警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/05_kikai.pdf" target="_blank"><span>機械警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 										</ul>
 										<div class="white-radius-box">
 											<div class="dot-ttl">警備に関するお問い合わせ（担当：企画・管理部　総務人事グループ）</div>
@@ -118,7 +118,7 @@ Template Name:お問い合わせ
 
 										<div class="dot-ttl">契約に関する重要事項</div>
 										<ul class="pdf-list">
-											<li class="pdf-item"><a class="companyinfo-link" href="<?php echo home_url( '/' ); ?>"><span>消火器法定点検等業務契約約款<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/shoukaki.pdf" target="_blank"><span>消火器法定点検等業務契約約款<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 										</ul>
 										<div class="white-radius-box">
 											<div class="dot-ttl">警備に関するお問い合わせ（担当：企画・管理部　総務人事グループ）</div>
