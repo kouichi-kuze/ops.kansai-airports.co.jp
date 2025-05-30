@@ -184,7 +184,7 @@
 			.content-item{
 				display: flex;
 				flex-flow: column;
-				gap: 20px;
+				gap: 30px;
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					flex-flow: row;
 				}
@@ -511,6 +511,13 @@
 
 	
 	
+}
+
+#page-service {
+	.company-service .glay-box .text-content .ttl{
+			font-size: 18px;
+			margin-bottom: 15px;
+	}
 }
 
 
