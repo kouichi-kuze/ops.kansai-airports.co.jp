@@ -125,7 +125,7 @@ Template Name:クッキーポリシー
 				<section class="policy-content-box">
 					<div class="dot-ttl">関西エアポートオペレーションサービス株式会社　お問い合わせ窓口</div>
 					<div class="contact">
-						<p class="mail"><a href="kikakukanri@ops.kansai-airports.co.jp" target="_blank">kikakukanri@ops.kansai-airports.co.jp</a></p>
+						<p class="mail"><a href="mailto:kikakukanri@ops.kansai-airports.co.jp" target="_blank">kikakukanri@ops.kansai-airports.co.jp</a></p>
 					</div>
 				</section>
 			

@@ -2,21 +2,7 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
-/*
-サンプル
-.test {
-    @include m.mx-auto //mixinの変数は @include m.xxxxx
-    color: g.secondary;
-    &:after {
-        content: "";
-    }
-    @media only screen and (min-width: g.$desktop-breakpoint-md) {
-        &:hover {
-            color: g.primary; //variablesの変数は g.$xxxx
-        }
-    }
-}
-*/
+
 #page-company-inquiry {
 	background-color: g.$bg-blue;
 
@@ -156,6 +142,9 @@
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			margin-bottom: 60px;
 		}
+        .pdf-item a{
+            
+        }
 	}
 	.security-img{
 		margin-bottom: 40px;
@@ -184,10 +173,6 @@
 			@media only screen and (min-width: g.$desktop-breakpoint-xl){
 				padding: 0 60px;
 			}
-//			@media only screen and (min-width: 1800px){
-//				padding: 0 80px;
-//			}
-				
 				
 		}
 	}
