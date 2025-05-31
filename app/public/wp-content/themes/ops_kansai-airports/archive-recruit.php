@@ -17,17 +17,17 @@
 <main id="archive-recruit">
 	<div id="top-recruit-page" class="bg-color-primary">
 		<div class="main-ounded-content bg-color-primary">
-			<div class="p-side-15-8">
+			<div class="p-side-3-8">
 				<div class="max-128">
 					<h2 class="bottom-border-bulue-ttl">募集要項</h2>
 					<div class="max-md40-xl58">
 						<div class="new-recruit-link">
-						<a href="<?php echo esc_url( $link_url ); ?>">
-							2026年新卒採用
+						<a href="https://job.rikunabi.com/2026/company/r572772023/" target="_blank">
+							2026年新卒採用はこちら
 							</a>
             			</div>
 					<ul class="pdf-list">
-						<li class="pdf-item"><a href="xxxxxx">＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></a></li>
+						<li class="pdf-item"><a href="xxxxxx"><span>＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 					</ul>
 					<p class="annotation">※応募時、履歴書と一緒にこちらの同意書の郵送が必要です。</p>
 				</div>
@@ -49,8 +49,10 @@
 							}
 						?>
 						<?php endwhile; endif; ?>
+                        
 					</ul>
 					
+                    
 					<div class="breadcrumb-wrap">
 						<?php get_template_part( 'inc/breadcrumb' ); ?>
 					</div>
