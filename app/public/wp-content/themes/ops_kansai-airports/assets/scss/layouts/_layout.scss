@@ -1417,23 +1417,135 @@ a{
 		padding: 80px 0;
 	}
 }
-
-
-//ページネーション　クラスがわからないので、後でやる
-//.wp-pagenavi{
-//	text-align: center;
-//	font-size: 14px;
-//    font-weight: 700;
-//	color: g.$primary;
-//	& a{
-//		display: inline-block;
-//		width: 35px;
-//		height: 35px;
-//		background-color: g.$white;
-//	}
-//}
-
-
+// -----------------
+//　ページネーション
+//--------------------
+.navigation.pagination{
+    margin-top: 40px;
+    @media only screen and (min-width: g.$desktop-breakpoint-md){
+        margin-top: 80px;
+    }
+    .page-numbers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 700;
+        z-index: 1;
+        transition: all 0.3s;
+        &::after{
+            content: "";
+            background-color: rgba(255,255,255,0.00);
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            border-radius: 50px;
+            transition: all 0.3s;
+            z-index: -1;
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            &::after{
+                width: 40px;
+                height: 40px;
+            }
+            &.dots{
+                    pointer-events: none;
+            }
+            &:hover{
+                color: g.$white;
+                &::after{
+                    content: "";
+                    background-color: g.$primary;
+    //                background-color: g.$bg-light-gray;
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    border-radius: 50px;
+                    transition: all 0.3s;
+                    z-index: -1;
+                }
+            }
+        }
+        &.current{
+            color: g.$white;
+            &::after{
+                content: "";
+                background-color: g.$primary;
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                border-radius: 50px;
+                transition: all 0.3s;
+                z-index: -1;
+                @media only screen and (min-width: g.$desktop-breakpoint-md){
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    .nav-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .prev,.next{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        &::before{
+            content: "";
+            background: url(../img/common/icon_page_arrow.svg) no-repeat center / contain;
+            width: 6px;
+            height: 8px;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+        &::after{
+            content: "";
+            background-color: g.$bg-light-gray;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            position: relative;
+            border-radius: 50px;
+            transition: all 0.3s;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                width: 40px;
+                height: 40px;
+            }
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            &::before{
+                top: 54%;
+                left: 61%;
+            }
+            &:hover::after{
+                background-color: g.$bg-light-gray;
+                scale: 1.2;
+            }
+        }
+    }
+    .prev::before{
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+    
+}
 
 
 
