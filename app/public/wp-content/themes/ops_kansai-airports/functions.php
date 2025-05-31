@@ -403,5 +403,15 @@ add_filter( 'block_categories_all', function( $categories, $editor_context ) {
     return $categories;
 }, 10, 2 );
 
+//ページャーのh2タグ表示させない
+function cut_screen_reader_text($template) {
+	$template = '
+		<nav class="navigation %1$s" aria-label="%4$s">
+			<div class="nav-links">%3$s</div>
+		</nav>';
+	return $template;
+}
+add_filter('navigation_markup_template', 'cut_screen_reader_text');
+
 
 ?>
