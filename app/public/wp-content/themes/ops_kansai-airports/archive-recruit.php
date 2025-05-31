@@ -51,11 +51,16 @@
 						<?php endwhile; endif; ?>
                         
 					</ul>
-					
                     
+<!--ページネーション-->
+<?php get_template_part( 'parts/pagination' ); ?>
+<!--/ページネーション-->
+                    
+<!--
 					<div class="breadcrumb-wrap">
 						<?php get_template_part( 'inc/breadcrumb' ); ?>
 					</div>
+-->
 				</div>
 			</div>
 		</div>
