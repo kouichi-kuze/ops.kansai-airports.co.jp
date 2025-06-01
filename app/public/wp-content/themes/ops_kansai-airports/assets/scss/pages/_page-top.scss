@@ -15,12 +15,6 @@
 		text-decoration: none;
 	}
 
-
-	.content-inner {
-		padding: 0 30px;
-	}
-
-
 	.top-mv {
 		position: relative;
 		z-index: 1;
@@ -43,10 +37,6 @@
 			}
 		}
 
-		#slider-right {
-			//display: none;
-			//vegas anime
-		}
 
 		#slider-left ,#slider-right{
 			width: 100%;
@@ -70,14 +60,25 @@
 		#slider-left {
 			.vegas-slide, 
 			.vegas-slide-inner{
+				background-position: center !important;
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					background-position: center right !important;
+				}
 			}
 		}
 
 		#slider-right {
+			display: none;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				display: block;
+			}
 			.vegas-slide, 
 			.vegas-slide-inner{
+				background-position: center !important;
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					background-position: center left !important;
+				}
+				
 			}
 		}
 	}
@@ -85,32 +86,34 @@
 	.kv-parts-block {
 		position: absolute;
 		transform: rotate(-43deg);
-		left: -202px;
-		top: 2%;
+		left: -204px;
+		top: 17px;
 		z-index: 1;
 		@media only screen and (min-width: g.$desktop-breakpoint-sm){
-			left: -430px;
-			top: 2%;
+			left: -505px;
+			top: 38px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			left: -531px;
-			top: -1%;
+			left: -477px;
+			top: -3px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-lmd){
-			left: -475px;
-			top: -3%;
+			left: -470px;
+			top: -29px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			left: -348px;
-			top: -20%;
+			left: -458px;
+			top: -182px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xxl){
-			left: -389px;
-			top: -27%;
+			left: -339px;
+			top: -188px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
-			left: -288px;
-        	top: -22%;
+			//left: -305px;
+        	//top: -20%;
+			left: -296px;
+			top: -170px;
 		}
 		.kv-parts-item {
 			display: block;
@@ -135,15 +138,21 @@
 			&.kv-parts-item-01 {
 				//margin-left: -156px;
 				//margin-bottom: -110px;
-				margin-left: -10%;
+				margin-left: -60px;
 				@media only screen and (min-width: g.$desktop-breakpoint-sm){
-					margin-left: -5%;
+					margin-left: -60px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xxl){
+					margin-left: -60px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
+					margin-left: -60px;
 				}
 				
 			}
 
 			&.kv-parts-item-02 {
-				margin-top: -4px;
+				margin-top: -7px;
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					width: 886px;
 					height: 110px;
@@ -230,6 +239,7 @@
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-xl){
 				border-radius: 0 0 0 0;
+				padding: 30px 0 20px;
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
 				border-radius: 0 16px 0 0;
@@ -536,22 +546,30 @@
 			}
 			.top-ttl-area{
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 				justify-content: space-between;
 				padding-right: 15px;
 				width: 100%;
 				@media only screen and (min-width: 376px){
-					padding-right: 30px;
+					padding-right: 15px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					padding-right: 40px;
+				}
+
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					padding-right: 60px;
+				}
+
+				@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
 					padding-right: 0;
 				}
 			}
 			
-			.top-ttl-bg{
+			.top-ttl-bg {
 				position: relative;
 				background-color:g.$white;
-				width: 173px;
+				width: 175px;
 				height: 66px;
 				border-radius: 0 16px 0 0;
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
@@ -561,7 +579,7 @@
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					border-radius: 16px 16px 0 0;
 					width: 224px;
-					height: 88px;
+					height: 90px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
 					border-radius: 16px 16px 0 0;
@@ -673,12 +691,18 @@
 			
 			.ttl-2 {
 				padding-left: 15px;
-				padding-top: 15px;
+				padding-top: 0;
 				font-size: 24px;
 				line-height: 1;
+				padding-top: 20px;
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					padding-left: 30px;
 					font-size: 24px;
+					padding-top: 20px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					padding-top: 30px;	
+					padding-left: 40px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
 					font-size: 36px;
@@ -779,117 +803,188 @@
 	}
 
 
-//======top-service=======
-#top-service {
-	.service-bg{
-		background-color: g.$white;
-		padding: 60px 0 88px;
-		background-image: url("../img/top/bg_purple_diag.png");
-		background-size: 400px 383px;
-		background-repeat:no-repeat;
-		background-position: top 260px right -100px;
-	}
+	//======top-service=======
+	#top-service {
+		.service-bg {
+			background-color: g.$white;
+			background-image: url("../img/top/bg_purple_diag.svg");
+			background-size: 459.66px 443.9px;
+			background-repeat:no-repeat;
+			background-position: top 320px right -150px;
+			padding: 80px 0 65px;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				padding: 120px 0;
+				background-size: 563.05px 539.9px;
+				background-position: top 290px right 10px;
+				background-image: url("../img/top/bg_purple_diag_md.svg");
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-lmd){
+				padding: 160px 0;
+				background-size: 749.3px 713.58px;
+				background-position: top 195px right -165px;
+				background-image: url("../img/top/bg_purple_diag_lmd.svg");
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				padding: 160px 0;
+				background-size: 799.24px 766.22px;
+				background-position: top 150px right -180px;
+				background-image: url("../img/top/bg_purple_diag_xl.svg");
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xxl){
+				padding: 160px 0;
+				background-size: 927.37px 894.36px;
+				background-position: top 62px right -167px;
+				background-image: url("../img/top/bg_purple_diag_xxl.svg");
+			}
 
-	.top-ttl-area {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 40px;
-		padding-right: 0;
-		flex-wrap: wrap;
-		@media only screen and (min-width: g.$desktop-breakpoint-md) {
-			padding-right: 0;
-		}
-	}
-
-	.service_img{
-		display: none;
-		width: 50%;
-		height: 667px;
-		margin-right: 40px;
-		border-radius: 15px;
-		background-image: url(../img/top/service_img_01.png);
-		background-size: cover;
-		background-position: center;
-		transition: all 0.3s;
-		@media only screen and (min-width: g.$desktop-breakpoint-lmd){
-			display: block;
-		}
-	}
-	.service-list-outer{
-		width: 100%;
-	}
-
-	.service-item {
-		margin-bottom: 10px;
-		a{
-			display: block;
-			position: relative;
-			font-weight: 700;
-			padding: 18px 50px 18px 20px;
-			background-color: g.$btn-white;
-			border-radius: 6px;
-			@media only screen and (min-width: g.$desktop-breakpoint-md) {
-				&:hover{
-					color: g.$white;
-					background-color: g.$primary;
-					&::before{
-					scale: 1.5;
-					transform-origin: 50% 0;
-					}
+			.content-inner {
+				padding-left: 30px !important;
+				padding-right: 30px !important;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					padding-left: 30px !important;
+					padding-right: 30px !important;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-lmd){
+					padding-left: 40px !important;
+					padding-right: 40px !important;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					padding-left: 60px !important;
+					padding-right: 60px !important;
 				}
 			}
-			&::before{
-				content: "";
-				display: inline-block;
-				position: absolute;
-				background-color: g.$secondary;
-				width: 24px;
-				height: 24px;
-				border-radius: 50px;
-				top: 50%;
-				right: 20px;
-				transform: translate(0, -50%);
-				transition: all 0.3s;
-				transform-origin: 50% 0;
-			}
-			&::after{
-				content: "";
-				display: inline-block;
-				background: url("../img/common/icon_menu_arrow.svg") center/contain;
-				background-repeat: no-repeat;
-				width: 9px;
-				height: 12px;
-				vertical-align: middle;
-				position: absolute;
-				top: 50%;
-				right: 26px;
-				transform: translate(0, -50%);
-			}
 		}
-	}
 
-	@media only screen and (min-width: g.$desktop-breakpoint-lmd){
-		.flex-box-right{
-			width: 50%;
-		}
-		.flex-bok{
+		.top-ttl-area {
 			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 40px;
+			padding-right: 0;
+			flex-wrap: wrap;
+			@media only screen and (min-width: g.$desktop-breakpoint-md) {
+				padding-right: 0;
+			}
+		}
+
+		.service_img{
+			display: none;
+			width: 50%;
+			height: 667px;
+			margin-right: 40px;
+			border-radius: 15px;
+			background-image: url(../img/top/service_img_01.png);
+			background-size: cover;
+			background-position: center;
+			transition: all 0.3s;
+			@media only screen and (min-width: g.$desktop-breakpoint-lmd){
+				display: block;
+			}
+		}
+		.service-list-outer{
+			width: 100%;
+		}
+
+		.service-item {
+			margin-bottom: 10px;
+			font-size: 16px;
+			@media only screen and (min-width: g.$desktop-breakpoint-md) {
+				font-size: 18px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a{
+				display: block;
+				position: relative;
+				font-weight: 700;
+				padding: 18px 50px 18px 20px;
+				background-color: g.$btn-white;
+				border-radius: 6px;
+				@media only screen and (min-width: g.$desktop-breakpoint-md) {
+					&:hover{
+						color: g.$white;
+						background-color: g.$primary;
+						&::before{
+						scale: 1.5;
+						transform-origin: 50% 0;
+						}
+					}
+				}
+				&::before{
+					content: "";
+					display: inline-block;
+					position: absolute;
+					background-color: g.$secondary;
+					width: 24px;
+					height: 24px;
+					border-radius: 50px;
+					top: 50%;
+					right: 20px;
+					transform: translate(0, -50%);
+					transition: all 0.3s;
+					transform-origin: 50% 0;
+				}
+				&::after{
+					content: "";
+					display: inline-block;
+					background: url("../img/common/icon_menu_arrow.svg") center/contain;
+					background-repeat: no-repeat;
+					width: 9px;
+					height: 12px;
+					vertical-align: middle;
+					position: absolute;
+					top: 50%;
+					right: 26px;
+					transform: translate(0, -50%);
+				}
+			}
+		}
+
+		.flex-bok {
+			@media only screen and (min-width: g.$desktop-breakpoint-lmd){
+				display: flex;
+				//flex-wrap: wrap;
+				align-items: stretch;
+				justify-content: space-between;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		.service_img {
+			width: 47%;
+			display: block;
+			transition: background-image 0.3s ease, opacity 0.3s ease;
+			//transition: background-image 0s ease, opacity 0s ease;
+			opacity: 1;
+			padding: 0 !important;
+			margin: 0 !important;
+			height: auto;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				//flex: 0 0 50%;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				//padding: 0;
+				//margin: 0;
+				
+			}
+
+			&.fade {
+				//opacity: 0;
+				opacity: 1;
+			}
+		}
+
+		.flex-box-right {
+			@media only screen and (min-width: g.$desktop-breakpoint-lmd){
+				width: 50%;
+				display: block;
+			}
 		}
 	}
-}
-
-/////*画像切り替えのアニメーション*/
-#top-service .service_img {
-	transition: background-image 0.3s ease, opacity 0.3s ease;
-  	//transition: background-image 0s ease, opacity 0s ease;
-  	opacity: 1;
-}
-
-#top-service .service_img.fade {
-  //opacity: 0;
-  opacity: 1;
-}
 
 	//=======top recruit===================
 	#top-recruit {
@@ -946,8 +1041,10 @@
 			}
 		}
 
-		.content-inner{
+		.content-inner {
 			margin-bottom: 80px;
+			padding-left: 30px;
+			padding-right: 30px;
 
 			.recruit-top-contents {
 				width: 100%;

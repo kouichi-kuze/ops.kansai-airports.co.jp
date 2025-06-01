@@ -50,14 +50,14 @@ Template Name:トップページ
 						</div>
 					</div>
 					
-			<?php
-				// 投稿カテゴリを取得
-				$categories = get_categories([
-				'hide_empty' => true,
-				'orderby'    => 'name',
-				'order'      => 'ASC',
-				]);
-			?>
+					<?php
+						// 投稿カテゴリを取得
+						$categories = get_categories([
+						'hide_empty' => true,
+						'orderby'    => 'name',
+						'order'      => 'ASC',
+						]);
+					?>
 
 			<div class="main-ounded-content">
 				<div class="p-side p-side-information">
