@@ -122,13 +122,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	//recruit-voices-slider	
 	$('.recruit-voices-slider').slick({
 		infinite: false,
-		slidesToShow: 4.2,
-		slidesToScroll: 1,
+		//slidesToShow: 4.2,
+		//slidesToScroll: 1,
+		variableWidth: true,
 		arrows: true,
 		appendArrows: $('.arrow_box'),
 		prevArrow: '<div class="slide-arrow prev-arrow"></div>',
 		nextArrow: '<div class="slide-arrow next-arrow"></div>',
-		responsive: [
+		/*responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 4.2,
+				}
+			},
 			{
 				breakpoint: 960,
 				settings: {
@@ -147,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					slidesToShow: 1.2,
 				}
 			}
-		]		
+		]	*/	
 	});
 	
 	//topページ top-slider-list
@@ -193,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	]
 	});
+	
 	//services-subpage-slider  (page-services-xxxx)
 	$('.services-subpage-slider').slick({ //{}を入れる
 		autoplay: true, 
@@ -207,99 +215,123 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	
 	//任意のタブにURLからリンクするための設定
-function GethashID (hashIDName){
-	if(hashIDName){
-		//タブ設定
-		$('.information_list__tags li').find('p').each(function() { //タブ内のaタグ全てを取得
-			var idName = $(this).attr('id'); //タブ内のaタグのリンク名（例）#lunchの値を取得	
-			if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
-				var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
-				$('.information_list__tags li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
-				$(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
-				//表示させるエリア設定
-				$(".tab-area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
-				$(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
-			}
+	function GethashID (hashIDName){
+		if(hashIDName){
+			//タブ設定
+			$('.information_list__tags li').find('p').each(function() { //タブ内のaタグ全てを取得
+				var idName = $(this).attr('id'); //タブ内のaタグのリンク名（例）#lunchの値を取得	
+				if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
+					var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
+					$('.information_list__tags li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
+					$(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
+					//表示させるエリア設定
+					$(".tab-area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
+					$(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
+				}
+			});
+		}
+	}
+
+	//タブをクリックしたら
+	$('.information_list__tags p').on('click', function() {
+		var idName = $(this).attr('id'); //タブ内のリンク名を取得	
+		GethashID (idName);//設定したタブの読み込みと
+		return false;//aタグを無効にする
+	});
+
+
+	// 上記の動きをページが読み込まれたらすぐに動かす
+	$(window).on('load', function () {
+		$('.information_list__tags li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
+		$('.tab-area:first-of-type').addClass("is-active"); //最初の.tab-area-activeクラスを追加
+		var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+		GethashID (hashName);//設定したタブの読み込み
+	});
+	
+	//mvのスライダー
+	var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+	let leftImages, rightImages;
+		
+	if (windowwidth > 768) {
+		// PC画像（左・右）
+		leftImages = [
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
+		];
+		rightImages = [
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		];
+	} else {
+		// SP画像（画面全体）
+		leftImages = [
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		];
+		rightImages = [];
+	}
+
+	$('#slider-left').vegas({
+		slides: leftImages,
+		transition: 'fade',
+		animation: 'kenburns',
+		delay: 8000,
+		transitionDuration: 2000,
+		animationDuration: 10000,
+		timer: false
+	});
+
+	if (rightImages.length > 0) {
+		$('#slider-right').vegas({
+		slides: rightImages,
+		transition: 'fade',
+			animation: 'kenburns',
+		delay: 8000,
+		transitionDuration: 2000,
+		animationDuration: 10000,
+		timer: false
 		});
 	}
-}
 
-//タブをクリックしたら
-$('.information_list__tags p').on('click', function() {
-	var idName = $(this).attr('id'); //タブ内のリンク名を取得	
-	GethashID (idName);//設定したタブの読み込みと
-	return false;//aタグを無効にする
-});
+	$('.top_recruit_img_fade').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		cssEase: 'linear',
+		autoplay: true,
+		autoplaySpeed: 4000,
+		arrows: false,
+		dots: false,
+	});
 
-
-// 上記の動きをページが読み込まれたらすぐに動かす
-$(window).on('load', function () {
-    $('.information_list__tags li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
-    $('.tab-area:first-of-type').addClass("is-active"); //最初の.tab-area-activeクラスを追加
-	var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
-	GethashID (hashName);//設定したタブの読み込み
-});
-	
-
-	
-	
-//mvのスライダー
-  var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-  let leftImages, rightImages;
-	
-  if (windowwidth > 768) {
-    // PC画像（左・右）
-    leftImages = [
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
-    ];
-    rightImages = [
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
-    ];
-  } else {
-    // SP画像（画面全体）
-    leftImages = [
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-      { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
-	  { src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
-    ];
-    rightImages = [];
-  }
-
-  $('#slider-left').vegas({
-    slides: leftImages,
-    transition: 'fade',
-    animation: 'kenburns',
-    delay: 8000,
-    transitionDuration: 2000,
-    animationDuration: 10000,
-    timer: false
-  });
-
-  if (rightImages.length > 0) {
-    $('#slider-right').vegas({
-      slides: rightImages,
-      transition: 'fade',
-    animation: 'kenburns',
-      delay: 8000,
-      transitionDuration: 2000,
-      animationDuration: 10000,
-      timer: false
-    });
-  }
-	
-	
-	
+	$('.recruit-voices-contents-list').slick({
+		infinite: true,
+		variableWidth: true,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		autoplay: false,
+		//autoplaySpeed: 5000,
+		cssEase: 'linear',
+		//speed: 3000,
+		swipe: false, 
+		draggable: false,
+		touchMove: false,
+		prevArrow: '<button type="button" class="slick-prev recruit-voices-slide-prev"><span class="icon-prev"></span></button>',
+		nextArrow: '<button type="button" class="slick-next recruit-voices-slide-next"><span class="icon-next"></span></button>',
+		appendArrows: $('.recruit-voices-slide-arrow'),
+	});
 });
 
 
@@ -319,7 +351,96 @@ $(document).ready(function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+	gsap.registerPlugin(ScrollTrigger);
 
+	gsap.from('.kv-parts-item-01', {
+	x: -1000,
+		opacity: 0,
+		duration: 1,
+		delay: 0.4,           // 0.1秒遅延
+		ease: "power2.out",
+		scrollTrigger: {
+			trigger: '.top-mv',
+			start: "top 80%",
+			toggleActions: "play none none none"
+		}
+	});
 
+	gsap.from('.kv-parts-item-02', {
+	x: -1000,
+		opacity: 0,
+		duration: 1,
+		delay: 0.8,           // 0.4秒遅延
+		ease: "power2.out",
+		scrollTrigger: {
+			trigger: '.top-mv',
+			start: "top 80%",
+			toggleActions: "play none none none"
+		}
+	});
 
+	// kv-fade-01：0.1秒遅延でフェードイン（opacity: 0 → 1）
+	gsap.from('.kv-fade-01', {
+	opacity: 0,
+	duration: 0.8,
+	delay: 0,
+	ease: "power1.out",
+	scrollTrigger: {
+		trigger: '.kv-fade-01',
+		start: "top 80%",
+		toggleActions: "play none none none"
+	}
+	});
 
+	// kv-fade-02：0.3秒遅延で下から上へフェードイン（opacity + y 移動）
+	gsap.from('.kv-fade-02', {
+	opacity: 0,
+	y: 50,          // 下から 50px 手前にスタート
+	duration: 1,
+	//delay: 0.5,
+	delay: 0,
+	ease: "power2.out",
+	scrollTrigger: {
+		trigger: '.kv-fade-02',
+		start: "top 80%",
+		toggleActions: "play none none none"
+	}
+	});
+
+	gsap.utils.toArray('.is-view').forEach(function(element) {
+		ScrollTrigger.create({
+			trigger: element,
+			start: 'top bottom-=20%',
+			onEnter: function() {
+			// 遅延を挟んで、opacity:0→1, y:50→0 させる
+			gsap.to(element, {
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: "cubic-bezier(0.445, 0.05, 0.55, 0.95)",
+				delay: 0.3
+			});
+			},
+			markers: true
+		});
+	});
+
+	gsap.utils.toArray('.is-fade-view').forEach(function(element) {
+		ScrollTrigger.create({
+			trigger: element,
+			start: 'top bottom-=20%',
+			onEnter: function() {
+			// 遅延を挟んで、opacity:0→1, y:50→0 させる
+			gsap.to(element, {
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: "cubic-bezier(0.445, 0.05, 0.55, 0.95)",
+				delay: 0.3
+			});
+			},
+			markers: true
+		});
+	});
+});
