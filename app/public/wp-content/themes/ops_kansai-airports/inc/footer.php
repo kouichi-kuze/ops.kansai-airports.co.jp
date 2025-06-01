@@ -23,7 +23,9 @@
 			  </li>
 			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">事業紹介 <span>Service</span></a>
 				<ul class="submenu">
-					<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">事業紹介</a> </li>
+					<li class="submenu__item-top">
+						<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">事業紹介トップ</a>
+					</li>
 					<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/management/">オペレーションマネジメント事業</a> </li>
 					<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/security/">警備事業</a> </li>
 					<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/fire/">消防事業</a> </li>
@@ -36,8 +38,10 @@
 			  </li>
 			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">採用情報 <span>Recruit</span></a>
 				<ul class="submenu">
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報</a> </li>
-				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
+				  	<li class="submenu__item-top">
+						<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報トップ</a>
+					</li>
+				  	<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 				</ul>
 			  </li>
 			  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ <span>Contact</span></a>
@@ -125,7 +129,12 @@
 						</div>
 						
 						
-						<div class="footer-btn"><a href="https://www.kansai-airports.co.jp/" target="_blank" style="background: none; padding: 0; margin-bottom: 10px;"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_footer_02.svg" alt="関西エアポートエアポートオペレーションサービス株式会社" style="width: 100%;"></a><span>関西エアポート株式会社</span></div>
+						<div class="footer-btn">
+							<a class="footer-btn-link" href="https://www.kansai-airports.co.jp/" target="_blank">
+								<img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_footer_02.svg" alt="関西エアポートエアポートオペレーションサービス株式会社">
+							</a>
+							<span class="footer-btn-text">関西エアポート株式会社</span>
+						</div>
 					</div>
 				</div>
 				
@@ -136,11 +145,10 @@
 						<li class="footer-link-item"><a href="<?php echo home_url( '/' ); ?>cookie-policy/">クッキーポリシー</a></li>
 						<li class="footer-link-item"><a href="<?php echo home_url( '/' ); ?>policy/">個人情報保護方針</a></li>
 						<li class="footer-link-item icon_privacypolicy">
-							<p>
+							<a href="https://privacymark.jp/" target="_blank">
 								<img src="<?php bloginfo('template_url'); ?>/assets/img/common/icon_privacypolicy.png" alt="個人情報保護方針">
-							</p>
-					</li>
-<!--						<li class="footer-link-item icon_privacypolicy"><a href="<?php echo home_url( '/' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/icon_privacypolicy.png" alt="個人情報保護方針"></a></li>-->
+							</a>
+						</li>
 					</ul>
 					<div class="copyright">© Kansai Airports Operation Services</div>
 				</div>	

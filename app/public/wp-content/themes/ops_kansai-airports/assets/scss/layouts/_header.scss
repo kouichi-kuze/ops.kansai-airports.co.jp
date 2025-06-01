@@ -35,6 +35,7 @@
     margin-right: 10px;
     background-color: g.$secondary;
     border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.08);
 }
 @media only screen and (min-width: g.$desktop-breakpoint-md) {
 	.menu-bg{
@@ -68,18 +69,29 @@
    bottom: 0px;
 }
 
-.s-header-logo a{
-  display: block;
-  width: 315px;
-  height: 54px;
-  padding: 21px 20px;
-  background-color: g.$white;
-  border-radius: 0 0 20px 0;
+.s-header-logo {
+  a{
+    display: block;
+    width: 315px;
+    height: 54px;
+    padding: 21px 20px;
+    background-color: g.$white;
+    border-radius: 0 0 20px 0;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);
+
+    @media only screen and (min-width: g.$desktop-breakpoint-md) {
+      width: 540px;
+      height: 68px;
+      padding: 24px 40px;
+      box-shadow: none;
+    }
+    img{
+      display: block;
+    }
+  }
 }
-.s-header-logo a img{
-	display: block;
-}
-.header-flex{
+
+.header-flex {
   position: fixed;
   top: 0;
   width: 100%;
@@ -178,6 +190,42 @@
   //transition: all 0.3s;
 }
 
+.submenu__item-top {
+	position: relative;
+	display: block;
+	color: g.$white;
+	font-weight: 700;
+	margin-bottom: 0;
+	padding-right: 35px;
+	border-bottom: none !important;
+	padding: 40px 0 15px !important;
+	a {
+		padding-left: 0 !important;
+		display: inline-flex !important;
+		padding-right: 20px;
+		line-height: 1 !important;
+		align-items: center !important;
+		font-size: 14px !important;
+		&::after{
+		content: "";
+			width: 18px;
+			height: 18px;
+			background: url("../img/common/icon_secondmenu-top_item_arrow.svg") center / contain no-repeat;
+			position: absolute;
+			top: 50%;
+			right: -10px;
+			transform: translate(0, -50%);
+			font-size: 14px;
+		}
+
+		&::before {
+			display: none;
+			
+		}
+
+	}
+}
+
 // メニューopen
 #header-sm.open .menu-trigger{
   background-color: g.$primary;
@@ -208,11 +256,7 @@
   top: 0;
 }
 @media only screen and (min-width: g.$desktop-breakpoint-md) {
-  .s-header-logo a{
-    width: 540px;
-    height: 68px;
-    padding: 24px 40px;
-  }
+
   .menu-bg{
     width: 50px;
     height: 50px;
@@ -287,15 +331,16 @@
 .nav-pc-menu .nav-list{
   display: flex;
 }
-#header-md .header-bg{
-  display: flex;
-  justify-content: space-between;
-  background-color: g.$white;
-  border-radius: 0 0 20px 20px;
-  padding: 0 40px;
-}
-#header-md{
+#header-md {
   padding: 0 15px;
+  .header-bg{
+    display: flex;
+    justify-content: space-between;
+    background-color: g.$white;
+    border-radius: 0 0 20px 20px;
+    padding: 0 40px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);
+  }
 }
 .nav-pc-menu .nav-item{
   position: relative;
@@ -374,7 +419,8 @@
 }
 .nav-pc-menu .secondmenu_item a{
   display: block;
-  font-size: 12px;
+  //font-size: 12px;
+  font-size: 14px;
   color: g.$white;
   font-weight: 700;
   padding-bottom: 15px;

@@ -18,7 +18,7 @@
 <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo.svg" alt="関西エアポートオペレーションサービス株式会社"> -->
 
 	<!--pc　headerー-->
-	<div  id="header-md" >
+	<div  id="header-md">
 		<div class="header-bg">
 			<h1 class="s-header-logo"> <a href="<?php echo home_url( '/' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo.svg" alt="関西エアポートエアポートオペレーションサービス株式会社"></a> </h1>
 
@@ -101,25 +101,29 @@
 		  </li>
 		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">事業紹介 <span>Service</span></a>
 			<ul class="submenu">
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">事業紹介</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/management/">オペレーションマネジメント事業</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/security/">警備事業</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/fire/">消防事業</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/terminal/">ターミナルマネジメント事業</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/cart-cleaning/">清掃・カート事業</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/parking/">駐車場運営事業</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/cargo/">カーゴエリアオペレーション事業</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/fueling/">給油運用事業</a> </li>
+				<li class="submenu__item-top">
+					<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">事業紹介トップ</a>
+				</li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/management/">オペレーションマネジメント事業</a> </li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/security/">警備事業</a> </li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/fire/">消防事業</a> </li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/terminal/">ターミナルマネジメント事業</a> </li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/cart-cleaning/">清掃・カート事業</a> </li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/parking/">駐車場運営事業</a> </li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/cargo/">カーゴエリアオペレーション事業</a> </li>
+				<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/fueling/">給油運用事業</a> </li>
 			</ul>
 		  </li>
 		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">採用情報 <span>Recruit</span></a>
 			<ul class="submenu">
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報</a> </li>
-			  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
+			  	<li class="submenu__item-top">
+					<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">採用情報トップ</a>
+				</li>
+			  	<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 			</ul>
 		  </li>
 		  <li class="">
-			<a class="menu__item__link" href="<?php echo home_url( '/' ); ?>">お問い合わせ <span>Contact</span></a>
+			<a class="menu__item__link" href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ <span>Contact</span></a>
 		  </li>
 		</ul>
 	  </nav>
