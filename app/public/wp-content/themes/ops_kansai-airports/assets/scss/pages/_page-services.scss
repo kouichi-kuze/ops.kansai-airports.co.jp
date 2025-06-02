@@ -228,6 +228,9 @@
 					padding: 0 80px;
 				}
 				img{
+                    object-fit: cover;
+                    overflow: hidden;
+                    border-radius: 0 20px 20px 0;
 					margin-top: -120px;
 					filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.2));
 					@media only screen and (min-width: g.$desktop-breakpoint-md){

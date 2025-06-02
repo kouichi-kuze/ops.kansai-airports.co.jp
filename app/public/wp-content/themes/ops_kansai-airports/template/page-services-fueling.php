@@ -17,7 +17,7 @@ Template Name:給油運用事業
 	  <div class="page-header__titles services-titles">
 		<ul class="place-list">
 		  <li>関西国際空港</li>
-		  <li>大阪国際空港</li>
+<!--		  <li>大阪国際空港</li>-->
 		</ul>
 		<h1 class="page-header__title blue-under-line-ttl">給油事業</h1>
 	  </div>

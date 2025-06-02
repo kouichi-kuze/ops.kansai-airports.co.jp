@@ -159,24 +159,24 @@
 									-->
 								</ul>
 								<!-- ページネーション -->
-								<?php
-									echo paginate_links([
-									'total'   => $info_query->max_num_pages,
-									'current' => $paged,
-									]);
-									wp_reset_postdata();
-								?>
+                              <nav class="navigation pagination">
+                                  <div class="nav-links">
+                                        <?php
+                                            echo paginate_links([
+                                            'total'   => $info_query->max_num_pages,
+                                            'current' => $paged,
+                                             'prev_text' => __( '', 'textdomain' ),
+                                            'next_text' => __( '', 'textdomain' ),
+                                            ]);
+                                            wp_reset_postdata();
+                                        ?>
+                                  </div>
+                            </nav>                              
 								<?php else : ?>
-								<p>このカテゴリには投稿がありません。</p>
+								<p class="no-date">No date</p>
 								<?php endif; ?>
 							</div>
 
-							<!-- 表示内容：ページネーション（例：前へ / 次へ） -->
-						
-						</div>
-							
-						<div class="breadcrumb-wrap">
-							<?php get_template_part( 'inc/breadcrumb' ); ?>
 						</div>
 					</div>
 				</div>

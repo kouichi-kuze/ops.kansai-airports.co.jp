@@ -389,63 +389,65 @@
     }
 
     //バナー先輩の声
-    .bnr-voice .d-md-block{
-        display: none;
+    .bnr-voice {
+        .d-md-block{
+            display: none;
+        }
         position: relative;
         .bnr-voice-btn{
-        position: relative;
-        display: block;
-        &::before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            background-color: #3EB3FF;
-            width: 15vw;
-            height: 7.5vw;
-            border-radius: 80px;
-            bottom: 7%;
-            right: 12%;
-            transition: all 0.3s;
-        }
-        &::after{
-            content: "";
-            display: inline-block;
-            background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat center / contain;
-            width: 7.5vw;
-            height: 1.5vw;
-            position: absolute;
-            bottom: 10%;
-            right: 16%;
-        }
-            @media only screen and (min-width: g.$desktop-breakpoint-md){
-                &::before {
-                    background-color: #ffffff;
-                    z-index: 1;
-                    width: 5.2vw;
-                    height: 2.5vw;
-                    bottom: 17%;
-                    right: 4%;
-                }
-                &::after{
-                    background: url(../img/recruit/icon_one_arrow_blue.svg) no-repeat center / contain;
-                    bottom: 21%;
-                    right: 5.2%;
-                    z-index: 1;
-                    height: 0.7vw;
-                    width: 2.6vw;
-                }
+            position: relative;
+            display: block;
+            &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                background-color: #3EB3FF;
+                width: 15vw;
+                height: 7.5vw;
+                border-radius: 80px;
+                bottom: 7%;
+                right: 12%;
+                transition: all 0.3s;
             }
-            @media only screen and (min-width: g.$desktop-breakpoint-xl){
-                &::before {
-                    width: 58px;
-                    height: 29px;
-                }
-                &::after{
-                    width: 28px;
-                    height: 8px;
-                    bottom: 20.5%;
-                }
+            &::after{
+                content: "";
+                display: inline-block;
+                background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat center / contain;
+                width: 7.5vw;
+                height: 1.5vw;
+                position: absolute;
+                bottom: 10%;
+                right: 16%;
             }
+                @media only screen and (min-width: g.$desktop-breakpoint-md){
+                    &::before {
+                        background-color: #ffffff;
+                        z-index: 1;
+                        width: 5.2vw;
+                        height: 2.5vw;
+                        bottom: 17%;
+                        right: 4%;
+                    }
+                    &::after{
+                        background: url(../img/recruit/icon_one_arrow_blue.svg) no-repeat center / contain;
+                        bottom: 21%;
+                        right: 5.2%;
+                        z-index: 1;
+                        height: 0.7vw;
+                        width: 2.6vw;
+                    }
+                }
+                @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                    &::before {
+                        width: 58px;
+                        height: 29px;
+                    }
+                    &::after{
+                        width: 28px;
+                        height: 8px;
+                        bottom: 20.5%;
+                    }
+                }
         }
         a:hover .bnr-voice-btn::before{
             @media only screen and (min-width: g.$desktop-breakpoint-md){
@@ -457,6 +459,9 @@
     
 
     //リクルート詳細ページ
+    #single-recruit-page .lazyblock-recruirecruitlist-1OjhGM.wp-block-lazyblock-recruirecruitlist{
+        display: none;
+    }
     #single-recruit-page .post_detail .post_detail-head{
         margin-bottom: 40px;
         display: flex;

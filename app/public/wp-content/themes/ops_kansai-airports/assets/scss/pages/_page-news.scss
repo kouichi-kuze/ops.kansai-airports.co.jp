@@ -5,7 +5,21 @@
 
 #archive-news,
 #single-news {
-	
+    .no-date{
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .navigation.pagination{
+        margin-top: 60px;
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            margin-top: 80px;
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-xl){
+            margin-top: 120px;
+        }
+    }
+    
 	#top-news-page .main-ounded-content{
 		padding: 30px 0 60px 0;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
@@ -57,12 +71,12 @@
 		//color: g.$white;
 	}
 	#top-news-page .nformation_list{
-		margin: 30px 0 60px;
+		margin: 30px 0 0;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			margin: 40px 0 80px;
+			margin: 40px 0 0;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			margin: 60px 0 120px;
+			margin: 60px 0 0;
 		}
 	}
 
@@ -128,7 +142,7 @@
 		overflow: hidden;
 	//	flex: 1;
 		min-width: 130px;
-		max-width: 250px;
+		max-width: 150px;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			max-width: 100%;
 		}
@@ -208,8 +222,8 @@
 	//お知らせ詳細ページ
 
 	#information .main-ounded-content{
-		padding: 40px 0 56px;
-		border-radius: 20px 0 0 20px;
+		padding: 40px 0 60px;
+		border-radius: 20px 20px 0 0;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			padding: 60px 0 68px;
 		}
