@@ -122,63 +122,39 @@ Template Name:企業概要
 							</div>
 							<div class="company-system">
 								<dl class="company-system-item">
-									<dt class="title">管理部</dt>
+									<dt class="title">管理部/ 財務部</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
 											<li class="company-affi-item">総務人事グループ</li>
-										</ol>
-									</dd>
-								</dl>
-								<dl class="company-system-item">
-									<dt class="title">財務部</dt>
-									<dd class="text">
-										<ol class="company-affi-list">
 											<li class="company-affi-item">財務グループ</li>
 										</ol>
 									</dd>
 								</dl>
-								<dl class="company-system-item single">
-									<dt class="title">コンプライアンス安全 ・ 担当</dt>
-
-								</dl>
 								<dl class="company-system-item">
-									<dt class="title">オペレーションマネジメント部</dt>
+									<dt class="title">ビジネスプランニング部</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
 											<li class="company-affi-item">管理統括グループ</li>
-											<li class="company-affi-item">ターミナル運用統括グループ</li>
-											<li class="company-affi-item">安全・保安統括グループ</li>
-											<li class="company-affi-item">運用企画統括グループ</li>
-											<li class="company-affi-item">運用企画グループ</li>
 											<li class="company-affi-item">事業開発グループ</li>
-											<li class="company-affi-item">渉外・調査チーム</li>
+											<li class="company-affi-item">渉外調査チーム</li>
 										</ol>
 									</dd>
 								</dl>
 								<dl class="company-system-item">
-									<dt class="title">給油施設部</dt>
+									<dt class="title">ビジネスコーディネーション部</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
-											<li class="company-affi-item">給油管理グループ</li>
-											<li class="company-affi-item">給油保守グループ</li>
-											<li class="company-affi-item">給油運用グループ</li>
-											<li class="company-affi-item">給油管制グループ</li>
+											<li class="company-affi-item">CSサポートグループ</li>
+											<li class="company-affi-item">KIX運用調整グループ</li>
+											<li class="company-affi-item">ITM運用調整グループ</li>
 										</ol>
 									</dd>
 								</dl>
 								<dl class="company-system-item">
-									<dt class="title">(KIX ITM)<br>エアフィールドオペレーションセンター</dt>
+									<dt class="title">ターミナルエリアオペレーションセンター</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
-											<li class="company-affi-item">消防隊</li>
-											<li class="company-affi-item">警備隊</li>
-										</ol>
-									</dd>
-								</dl>
-								<dl class="company-system-item">
-									<dt class="title">(KIX ITM)<br>ターミナルエリアオペレーションセンター</dt>
-									<dd class="text">
-										<ol class="company-affi-list">
+											<li class="company-affi-item">保安管理グループ</li>
 											<li class="company-affi-item">ターミナルマネジメントグループ</li>
 											<li class="company-affi-item">パッセンジャーサポートグループ</li>
 											<li class="company-affi-item">駐車場運営グループ</li>
@@ -188,17 +164,61 @@ Template Name:企業概要
 									</dd>
 								</dl>
 								<dl class="company-system-item">
+									<dt class="title">ITM ターミナルエリアオペレーションセンター</dt>
+									<dd class="text">
+										<ol class="company-affi-list">
+											<li class="company-affi-item">ターミナルマネジメントグループ</li>
+											<li class="company-affi-item">駐車場運営グループ</li>
+											<li class="company-affi-item">清掃・カートグループ</li>
+										</ol>
+									</dd>
+								</dl>
+								<dl class="company-system-item">
+									<dt class="title">KIX エアフィールドオペレーションセンター</dt>
+									<dd class="text">
+										<ol class="company-affi-list">
+											<li class="company-affi-item">運用管理グループ</li>
+											<li class="company-affi-item">消防隊（第1・第2・第3）</li>
+											<li class="company-affi-item">警備隊（第1・第2）</li>
+										</ol>
+									</dd>
+								</dl>
+								<dl class="company-system-item">
+									<dt class="title">ITM エアフィールドオペレーションセンター</dt>
+									<dd class="text">
+										<ol class="company-affi-list">
+											<li class="company-affi-item">運用管理グループ</li>
+											<li class="company-affi-item">消防隊（第1・第2・第3）</li>
+											<li class="company-affi-item">警備隊（第1・第2）</li>
+										</ol>
+									</dd>
+								</dl>
+								<dl class="company-system-item">
 									<dt class="title">ノースエリアオペレーションセンター</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
 											<li class="company-affi-item">特別災害隊</li>
-											<li class="company-affi-item">Sky View</li>
+											<li class="company-affi-item">カーゴエリアオペレーションセンター</li>
 										</ol>
 									</dd>
 								</dl>
+								<dl class="company-system-item">
+									<dt class="title">給油施設部</dt>
+									<dd class="text">
+										<ol class="company-affi-list">
+											<li class="company-affi-item">給油事業グループ</li>
+											<li class="company-affi-item">給油管理グループ</li>
+											<li class="company-affi-item">給油保守グループ</li>
+											<li class="company-affi-item">給油運用グループ</li>
+											<li class="company-affi-item">給油管制グループ</li>
+										</ol>
+									</dd>
+								</dl>
+<!--
 								<dl class="company-system-item single">
 									<dt class="title">ノースエリアオペレーションセンター</dt>
 								</dl>
+-->
 							</div>
 						</div>
 					</div>
@@ -227,7 +247,7 @@ Template Name:企業概要
 										</p>
 									</dd>
 									<dd class="contact">
-										<div class="contact-link"><a href="<?php echo home_url( '/' ); ?>"><span>業務内容別のご連絡先はこちら</span></a></div>
+										<div class="contact-link"><a href="<?php echo home_url( '/' ); ?>/inquiry/"><span>業務内容別のご連絡先はこちら</span></a></div>
 										<div class="pdf"><a href="<?php bloginfo('template_url'); ?>/assets/img/outline/files/map_kaos_station_kix.pdf" target="_blank"><span>鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></div>
 									</dd>
 								</dl>

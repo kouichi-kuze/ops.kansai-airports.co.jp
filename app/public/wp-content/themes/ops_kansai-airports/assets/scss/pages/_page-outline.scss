@@ -68,6 +68,7 @@
 				min-width: 160px;
 				padding: 30px 0 30px 20px;
 				margin-bottom: 1px;
+                margin-top: 0;
 			}
 			.text{
 				padding: 30px 0 30px 20px;
@@ -102,12 +103,15 @@
 	}
 	.company-system{
 		margin-top: 40px;
-		margin-bottom: 60px;
+//		margin-bottom: 60px;
 	}
 	.company-system-item{
 		margin-bottom: 20px;
 		border-radius: 6px;
 		overflow: hidden;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
 		.title{
 			padding: 15px 30px;
 			background-color: g.$secondary;
