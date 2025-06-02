@@ -454,24 +454,6 @@
         }
     }
 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 
     //リクルート詳細ページ
@@ -630,53 +612,25 @@
     }
     
     
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     #page-recruit-voices-outline {
-        @media only screen and (min-width: g.$desktop-breakpoint-md){
-            padding: 80px 0 75px;
-        }
-        @media only screen and (min-width: g.$desktop-breakpoint-xl){
-            padding: 95px 0 95px;
-        }
-        @media only screen and (min-width: g.$desktop-breakpoint-xxxl){
-            padding: 75px 0 55px;
-        }
+//        @media only screen and (min-width: g.$desktop-breakpoint-md){
+////            padding: 80px 0 75px;
+//        }
+//        @media only screen and (min-width: g.$desktop-breakpoint-xl){
+//            padding: 95px 0 95px;
+//        }
+//        @media only screen and (min-width: g.$desktop-breakpoint-xxxl){
+//            padding: 75px 0 55px;
+//        }
         .main-ounded-content{
             border-radius: 0 0 0 0;
             @media only screen and (min-width: g.$desktop-breakpoint-md){
-                padding: 40px 0;
-            }
-            @media only screen and (min-width: g.$desktop-breakpoint-xl){
                 padding: 80px 0;
             }
+//            @media only screen and (min-width: g.$desktop-breakpoint-xl){
+//                padding: 80px 0;
+//            }
         }
     }
     #page-recruit-voices-outline .selectbox-blue-under {
@@ -784,7 +738,7 @@
                 display: inline-block;
                 font-size: 14px;
                 font-weight: 700;
-                color: g.$secondary;
+                color: g.$blue400;
                 margin-bottom: 15px;
                 padding: 4px 10px;
                 border-radius: 4px;
@@ -894,36 +848,21 @@
             background-position: bottom -190px left -122px;
             background-size: 339px;
             padding-bottom: 123px;
-            padding-bottom: 100px !important;
+            padding-bottom: 60px !important;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                padding-bottom: 80px !important;
+            }
             @media only screen and (min-width: g.$desktop-breakpoint-xl){
                 background-size: 686px;
                 background-position: bottom -100px left -242px;
-                padding-bottom: 100px !important;
             }
 
-            //.bg-senior-voice-blue{
-            //	background-image: url("../img/voice/bg-senior-voice-blue.png");
-            //	background-repeat: no-repeat;
-            //	background-position: bottom -190px left -122px;
-            //	background-size: 339px;
-            //	padding-bottom: 123px;
-            //}
-            @media only screen and (min-width: g.$desktop-breakpoint-md){
-                padding-bottom: 0;
-            }
-            @media only screen and (min-width: g.$desktop-breakpoint-xl){
-                padding-bottom: 0;
-            //	.bg-senior-voice-blue{
-            //		background-size: 56%;
-            //		background-position: top 30px left -242px;
-            //	}
-            }
         }
     }
     #page-recruit-voices-outline #single-recruit-voices-page .senior-voice{
         margin-bottom: 60px;
         @media only screen and (min-width: g.$desktop-breakpoint-md){
-            margin-bottom: 10px;
+            margin-bottom: 80px;
         }
         @media only screen and (min-width: g.$desktop-breakpoint-xl){
             margin-bottom: 100px;
@@ -1123,6 +1062,50 @@
 
     }
 
+    #page-recruit-voices-outline #single-recruit-voices-page{
+        .requruit-btn{
+            margin-top: 40px;
+            text-align: center;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                margin-top: 80px;
+            }
+            .btn-voice{
+                width: auto;
+                display: inline-block;
+                padding: 10px 50px 10px 20px;;
+                background-color: g.$tertiary;
+                @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                    padding: 20px 80px 20px 30px;
+                }
+                &::after{
+                    width: 10px;
+                    height: 13px;
+                    top: 52%;
+                    right: 18px;
+                    background: url(../img/recruit/icon_target_blank_pink.svg)no-repeat center / contain;
+                    @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                        width: 15px;
+                        height: 15px;
+                        top: 52%;
+                        right: 20px;
+                        
+                    }
+                    @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                        right: 24px;
+                    }
+                }
+                &::before{
+                    width: 24px;
+                    height: 24px;
+                    @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                }
+            }
+        }
+    }
     .btn-entry-link-block {
         width: 100%;
         display: flex;
@@ -1162,20 +1145,18 @@
         }
     }
 
-//    .wp-block-lazyblock-recruirecruitlist {
-//            display: none;
-//        }
 
 
     //=======top 先輩の声===================
-	.page-recruit-voices-outline {
-		padding: 0;
-	}
 
 	.senior-other-voice-content {
 		padding: 0;
 		width: 100%;
         background-color: g.$white;
+        margin-top: 60px;
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            margin-top: 80px;
+        }
 	}
 
 	.senior-other-voice-inner {
@@ -1260,8 +1241,10 @@
     .recruit-voices-list-card{
 		position: relative;
         overflow: hidden;
+        padding-left: 30px;
         @media only screen and (min-width: g.$desktop-breakpoint-md){
             padding-left: 40px;
+            overflow: unset;
         }
         @media only screen and (min-width: g.$desktop-breakpoint-xl){
             overflow: unset;
@@ -1350,7 +1333,7 @@
                         left: 0;
                         width: 45px;
                         height: 8px;
-                        background-color: g.$secondary;
+                        background-color: g.$blue400;
 
                     }
                 }
@@ -1359,7 +1342,7 @@
                     max-width: 202px;
                     font-size: 14px;
                     font-weight: 700;
-                    color: g.$secondary;
+                    color: g.$blue400;
                     padding: 5px 10px;
                     background-color: g.$line-bk-gray;
                     margin-bottom: 10px;
@@ -1390,7 +1373,7 @@
                         width: 58px;
                         height: 29px;
                         border-radius: 50px;
-                        background-color: g.$secondary;
+                        background-color: g.$blue400;
                         transition: all 0.3s;
                         &::after{
                             content: "";
@@ -1432,17 +1415,6 @@
 
     
 
-//	.recruit-voices-list-card {
-////		position: relative;
-////        overflow: hidden;
-////        @media only screen and (min-width: g.$desktop-breakpoint-md){
-////            padding-left: 40px;
-////        }
-////        @media only screen and (min-width: g.$desktop-breakpoint-xxl){
-////			width: 100%;
-////            padding-left: 120px;
-////		}
-//	}	
 
 	.recruit-voices-page-contents-list {
 		.slick-list {
@@ -1472,7 +1444,12 @@
 
 				.recruit-voices-page-contents-list-item {
 					width: 100%;
-					img {
+                    @media only screen and (min-width: g.$desktop-breakpoint-md){
+                        a:hover img,a:hover .voices-button-area-btn{
+                            scale: 1.1;
+                        }
+                    }
+					.voices-img {
 						//width: 280px;
 						width: 100%;
 						object-fit: cover;
@@ -1483,14 +1460,18 @@
 						margin: 0 0 10px;
 						padding: 0;
 						aspect-ratio: auto !important;
-						@media only screen and (min-width: g.$desktop-breakpoint-md){
-							height: 280px;
-						}
 						@media only screen and (min-width: g.$desktop-breakpoint-xl){
-							//width: 280px;
 							border-radius: 16px;
 							height: 280px;
 						}
+                        img{
+                            transition: all 0.3s;
+                            @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                                width: 280px;
+                                height: 280px;
+                                object-fit: cover;
+                            }
+                        }
 					}
 
 					.text-voice-slide {
@@ -1598,6 +1579,7 @@
 								transition: all 0.3s;
 								right: 0;
 								bottom: 3px;
+                            
 								&::after{
 									content: "";
 									display: inline-block;
