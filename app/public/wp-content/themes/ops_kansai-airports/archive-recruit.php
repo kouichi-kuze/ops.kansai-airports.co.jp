@@ -27,7 +27,7 @@
 							</a>
             			</div>
 					<ul class="pdf-list">
-						<li class="pdf-item"><a href="xxxxxx"><span>＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+						<li class="pdf-item"><a href="<?php bloginfo('template_url'); ?>/assets/img/common/files/privacy.pdf" target="_blank"><span>＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 					</ul>
 					<p class="annotation">※応募時、履歴書と一緒にこちらの同意書の郵送が必要です。</p>
 				</div>
@@ -52,15 +52,10 @@
                         
 					</ul>
                     
-<!--ページネーション-->
-<?php get_template_part( 'parts/pagination' ); ?>
-<!--/ページネーション-->
+                    <!--ページネーション-->
+                    <?php get_template_part( 'parts/pagination' ); ?>
+                    <!--/ページネーション-->
                     
-<!--
-					<div class="breadcrumb-wrap">
-						<?php get_template_part( 'inc/breadcrumb' ); ?>
-					</div>
--->
 				</div>
 			</div>
 		</div>
