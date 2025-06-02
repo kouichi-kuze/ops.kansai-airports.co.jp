@@ -18,6 +18,7 @@
                     <p class="page-header__subtitle">Staff Voice</p>
                 </div>
 
+<!--
                 <?php
                 // サムネイル画像 (voices_thumb_img)
                 $thumb_id = get_field('voices_thumb_img');
@@ -29,7 +30,20 @@
                     echo '</div>';
                 endif;
                 ?>
+-->
 
+                <?php
+                // 投稿にアイキャッチ画像 (voices_thumb_img)があるかチェック
+                if ( has_post_thumbnail() ) :
+                    echo '<div class="head-senior-img">';
+                    the_post_thumbnail( 'large', [
+                        'alt' => get_the_title(),
+                    ] );
+                    echo '</div>';
+                endif;
+                ?>                
+                
+                
                 <div class="head-senior-text p-side-15-8">
 
                 <!-- タイトル：投稿タイトル -->
@@ -58,7 +72,7 @@
 
                 <!-- 所属場所 -->
                 <?php if ( $val = get_field('voices_affiliation') ) :
-                    echo '<span class="place">' . esc_html( $val ) . '</span>';
+                    echo '<span class="place">' . esc_html( $val ) . ' /</span>';
                 endif; ?>
 
                 <!-- 入社年 -->
@@ -67,8 +81,10 @@
                 endif; ?>
 
                 </div>
+                
             </div>
             <?php endwhile; endif; ?>
+            
         </div>
     </div>
 
@@ -102,11 +118,25 @@
                 <?php
                 endif;
                 ?>
+                
+                
+            <div class="requruit-btn">
+                <a class="btn-voice" href="<?php echo get_option('home'); ?>/voices/" class="back">この業種の採用情報はこちら</a>
             </div>
+                
+                
+            </div>
+            
+            
+            
         </div>
+        
+        
+        
+        
+        
     </div>
 
-    <div id="page-recruit-voices-outline">
 		<div class="senior-other-voice-content">
 			<div class="senior-other-voice-inner">
                 <div class="slider-content">
@@ -136,7 +166,7 @@
                                 <li class="recruit-voices-page-contents-list-item">
                                     <a href="<?php the_permalink(); ?>">
                                     <!-- サムネイル画像 -->
-                                        <div>
+                                        <div class="voices-img">
                                             <?php
                                             if ( has_post_thumbnail() ) {
                                                 the_post_thumbnail( 'large' );
@@ -179,6 +209,10 @@
                                                     </div>
                                                 </li>
                                             </ul>
+                                            <div class="voices-button-area-btn"><span></span></div>
+                                            
+                                            
+                                            
                                         </div>
                                     </a>
                                 </li>
@@ -202,7 +236,6 @@
                 <a class="btn-voice" href="<?php echo get_option('home'); ?>/voices/" class="back">先輩の声一覧</a>
             </div>
 		</div>
-	</div>
     <!--/HTMLここまで-->
 </main>
 <?php get_template_part( 'inc/footer' ); ?>
