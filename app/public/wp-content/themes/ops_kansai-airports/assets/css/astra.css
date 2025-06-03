@@ -1,5 +1,6 @@
 .post-type-lazyblocks.ast-highlight-wpblock-onhover .block-editor-block-list__layout .block-editor-block-list__block.is-highlighted, .post-type-lazyblocks.ast-highlight-wpblock-onhover .block-editor-block-list__layout .block-editor-block-list__block:hover {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .post-type-lazyblocks.ast-separate-container .edit-post-visual-editor__content-area {
   padding: 0 !important;

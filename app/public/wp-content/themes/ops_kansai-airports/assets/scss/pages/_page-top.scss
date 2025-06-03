@@ -62,7 +62,7 @@
 			.vegas-slide-inner{
 				background-position: center !important;
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
-					background-position: center right !important;
+					//background-position: center right !important;
 				}
 			}
 		}
@@ -76,7 +76,7 @@
 			.vegas-slide-inner{
 				background-position: center !important;
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
-					background-position: center left !important;
+					//background-position: center left !important;
 				}
 				
 			}
@@ -102,18 +102,20 @@
 			top: -29px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			left: -458px;
-			top: -182px;
+			left: -320px;
+			top: -18%;
+			//left: -458px;
+			//top: -182px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xxl){
-			left: -339px;
-			top: -188px;
+			//left: -339px;
+			//top: -188px;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
-			//left: -305px;
-        	//top: -20%;
-			left: -296px;
-			top: -170px;
+			//left: -296px;
+			//top: -170px;
+			//left: -296px;
+			//top: -170px;
 		}
 		.kv-parts-item {
 			display: block;
@@ -291,21 +293,24 @@
 					width: calc(45% - 60px);
 					transform: none;
 					position: absolute;
-					top: -292px;
+					//top: -292px;
+					top: -250px;
 					left: 60px;
 					padding-right: 0;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xxl){
 					left: 60px;
 					width: calc(44% - 60px);
-					top: -330px;
+					//top: -330px;
+					top: -250px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
 					left: 80px;
 					//width: calc(100% - 50%);
 					width: calc(50% - 80px - 8%);
 					box-sizing: border-box;
-					top: -302px;
+					//top: -302px;
+					top: -250px;
 				}
 			}
 
@@ -405,6 +410,12 @@
 					padding: 5px 15px;
 					width: auto;
 					cursor: pointer;
+					transition: all 0.3s ease;
+					@media only screen and (min-width: g.$desktop-breakpoint-md){
+						&:hover {
+							color: g.$secondary;
+						}
+					}
 
 					&.active {
 						background-color: g.$primary !important;
@@ -491,6 +502,21 @@
 				}
 			}
 
+			.information_list__card {
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					transition: all 0.3s ease;
+					&:hover {
+						img {
+							aspect-ratio: 3 / 2;
+							object-fit: cover;
+							object-fit: center;
+							transition: all 0.5s;
+							scale: 1.2;
+						}
+					}
+				}
+			}
+
 			.information_list__date {
 				font-size: 12px;
 				font-weight: 400;
@@ -554,8 +580,9 @@
 					padding-right: 15px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
-					padding-right: 40px;
+					padding-right: 0;
 				}
+
 
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					padding-right: 60px;
@@ -587,6 +614,27 @@
 					height: 98px;
 				}
 			}
+
+			.top-ttl-bg-02 {
+				width: calc(100% - 175px);
+				height: 66px;
+				position: relative;
+				display: flex;
+				justify-content: flex-end;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					width: calc(100% - 232px);
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xl){
+					width: calc(100% - 224px);
+					height: 90px;
+				}
+				@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
+					width: calc(100% - 294px);
+					height: 98px;
+				}
+
+			}
+
 			.mv-ttl{
 				//padding:0 15px;
 				padding:0 0;
@@ -1197,6 +1245,7 @@
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			width: calc(100% - 160px);
 			padding: 75px 0 40px 75px;
+			border-radius: 100px 0 0 0;
 		}
 		@media only screen and (min-width: g.$desktop-breakpoint-xxl){
 			width: calc(100% - 180px);
@@ -1321,7 +1370,7 @@
 				color: g.$primary;
 				font-weight: 700;
 				font-size: 14px;
-				line-height: 1.8;
+				line-height: 2;
 				width: 100%;
 			}
 

@@ -45,8 +45,10 @@ Template Name:トップページ
 						<div class="top-ttl-bg">
 							<h2 class="ttl-2"><span>お知らせ</span>Information</h2>
 						</div>
-						<div class="btn-bace-round">
-							<a class="btn-setting btn-sm" href="/information">お知らせ一覧</a>
+						<div class="top-ttl-bg-02">
+							<div class="btn-bace-round">
+								<a class="btn-setting btn-sm" href="/information">お知らせ一覧</a>
+							</div>
 						</div>
 					</div>
 					

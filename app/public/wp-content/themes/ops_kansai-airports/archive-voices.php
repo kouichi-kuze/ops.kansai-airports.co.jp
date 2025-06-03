@@ -44,7 +44,7 @@ Template Name:先輩の声
                         // voices_category タクソノミーの全タームを取得
                         $terms_all = get_terms([
                           'taxonomy'   => 'voices_category',
-                          'hide_empty' => false,
+                          'hide_empty' => true,
                         ]);
                         // 現在選択中のスラッグ
                         $current = isset($_GET['vc']) ? $_GET['vc'] : '';
