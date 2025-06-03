@@ -46,6 +46,7 @@ a{
 .p-side-3-16{
 	padding: 0 30px;
 }
+.p-side-15-6,
 .p-side-15-3,
 .p-side-15-8{
 	padding: 0 15px;
@@ -60,6 +61,8 @@ a{
 	.p-side-3-6{
 		padding: 0 60px;
 	}
+    
+    .p-side-15-6,
 	.p-side-15-8,
 	.p-side-3-16,
 	.p-side-3-8{
@@ -84,7 +87,12 @@ a{
 	.p-side-3-8{
 		padding: 0 80px;
 	}
-	.p-side-15-3{
+    
+    .p-side-15-6{
+		padding: 0 60px;
+    }
+
+    .p-side-15-3{
 		padding: 0 30px;
 	}
 	.max-960{
