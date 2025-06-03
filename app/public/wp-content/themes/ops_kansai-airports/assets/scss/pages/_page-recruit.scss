@@ -1690,5 +1690,13 @@
 
 }
 
-
+#single-voices .recruit-voices-list-card{
+    padding-left: 30px;
+    @media only screen and (min-width: g.$desktop-breakpoint-md){
+        padding-left: 60px;
+    }
+    @media only screen and (min-width: g.$desktop-breakpoint-xl){
+        padding-left: 120px;
+    }
+}
 
