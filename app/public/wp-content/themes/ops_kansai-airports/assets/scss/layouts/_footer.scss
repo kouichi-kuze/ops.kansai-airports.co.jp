@@ -164,6 +164,9 @@
 	.nav-pc-menu{
 	display: none;
 	}
+    .submenu__item-top a::after{
+			background: url("../img/common/icon_secondmenu-footer_item_arrow.png") center / contain no-repeat;
+    }
 }
 
 .submenu__item-top {

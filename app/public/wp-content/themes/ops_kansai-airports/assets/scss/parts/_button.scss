@@ -232,6 +232,7 @@
 .btn-setting-floating-box {
 	display: flex;
 	align-items: center;
+    filter: drop-shadow(-1px 1px 20px rgba(0, 0, 0, 0.2));
 	
 	.floating-recruit-btn-close {
 		width: 28px;
