@@ -60,11 +60,11 @@
 					<div class="navigation">
 					
 					<!-- <?php previous_post_link( '%link', 'PREV', TRUE ) ?>-->
+					<div class="btn-center">
 						<div class="btn-bace-round">
-								<div class="btn-setting">
-								<a href="<?php echo get_option('home'); ?>/category/news/" class="back">お知らせ一覧</a>
-							</div>
+							<a class="btn-setting btn-sm" href="<?php echo get_option('home'); ?>/category/news/" class="back">お知らせ一覧</a>
 						</div>
+					</div>
 					
 					<!--      <?php next_post_link( '%link', 'NEXT', TRUE ) ?>-->
 						
