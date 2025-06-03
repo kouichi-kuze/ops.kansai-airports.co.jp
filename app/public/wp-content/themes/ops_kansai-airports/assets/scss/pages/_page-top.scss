@@ -513,6 +513,10 @@
 							transition: all 0.5s;
 							scale: 1.2;
 						}
+
+						.information_list__title {
+							color: g.$secondary;
+						}
 					}
 				}
 			}
@@ -1208,6 +1212,12 @@
 						font-size: 13px;
 						font-weight: 400;
 						width: auto;
+						transition: all 0.3s ease;
+						&:hover {
+							@media only screen and (min-width: g.$desktop-breakpoint-xl){
+								color: g.$secondary;
+							}
+						}
 					}
 
 					&:first-child {
@@ -1259,7 +1269,7 @@
 		flex-flow: column;
 		@media only screen and (min-width: g.$desktop-breakpoint-xl){
 			justify-content: space-between;
-			align-items: flex-end;
+			align-items: flex-start;
 			flex-flow: row;
 			height: 100%;
 		}
@@ -1424,8 +1434,8 @@
 						overflow: hidden;
 						border-radius: 12px;
 						height: 187px;
-						margin: 0 0 10px;
-						padding: 0;
+						margin: 0 0 0;
+						padding: 0 0 10px;
 						aspect-ratio: auto !important;
 						@media only screen and (min-width: g.$desktop-breakpoint-md){
 							height: 187px;
