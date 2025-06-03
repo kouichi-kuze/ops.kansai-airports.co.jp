@@ -427,6 +427,7 @@
 		}
         .news-paragraph-text{
             font-size: 14px;
+			line-height: 1.8;
             @media only screen and (min-width: g.$desktop-breakpoint-md){
                 font-size: 16px;
             }
