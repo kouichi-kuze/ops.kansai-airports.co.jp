@@ -861,32 +861,33 @@
 		.service-bg {
 			background-color: g.$white;
 			background-image: url("../img/top/bg_purple_diag.svg");
-			background-size: 459.66px 443.9px;
+			background-size: 408px 379px;
 			background-repeat:no-repeat;
-			background-position: top 320px right -150px;
+			background-position: top 387px right -172px;
 			padding: 80px 0 65px;
 			@media only screen and (min-width: g.$desktop-breakpoint-md){
 				padding: 120px 0;
-				background-size: 563.05px 539.9px;
-				background-position: top 290px right 10px;
+				background-size: 575px 545px;
+				background-position: top 278px right -198px;
 				background-image: url("../img/top/bg_purple_diag_md.svg");
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-lmd){
 				padding: 160px 0;
-				background-size: 749.3px 713.58px;
-				background-position: top 195px right -165px;
+				background-size: 763px 733px;
+				background-position: top 195px right -336px;
 				background-image: url("../img/top/bg_purple_diag_lmd.svg");
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-xl){
 				padding: 160px 0;
-				background-size: 799.24px 766.22px;
-				background-position: top 150px right -180px;
+				background-size: 799px 778px;
+				background-position: top 150px right -152px;
 				background-image: url("../img/top/bg_purple_diag_xl.svg");
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-xxl){
 				padding: 160px 0;
-				background-size: 927.37px 894.36px;
-				background-position: top 62px right -167px;
+				background-size: 816px 775px;
+				//background-position: top 180px right -152px;
+				background-position: top 185px right -232px;
 				background-image: url("../img/top/bg_purple_diag_xxl.svg");
 			}
 
@@ -1093,9 +1094,16 @@
 
 		.content-inner {
 			margin-bottom: 80px;
-			padding-left: 30px;
-			padding-right: 30px;
-
+			padding-left: 30px !important;
+			padding-right: 30px !important;
+			@media only screen and (min-width: g.$desktop-breakpoint-lmd) {
+				padding-left: 40px !important;
+				padding-right: 40px !important;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl) {
+				padding-left: 60px !important;
+				padding-right: 60px !important;
+			}
 			.recruit-top-contents {
 				width: 100%;
 				box-sizing: border-box;
@@ -1106,7 +1114,8 @@
 					padding-left: 180px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xl) {
-					padding-left: 230px;
+					//padding-left: 230px;
+					padding-left: 170px; //-60px
 				}
 
 				.top-ttl-area{
@@ -1424,7 +1433,8 @@
 
 				.recruit-voices-contents-list-item {
 					width: 100%;
-					img {
+					
+					.img-voice-slide-box {
 						//width: 280px;
 						width: 100%;
 						object-fit: cover;
@@ -1432,9 +1442,12 @@
 						overflow: hidden;
 						border-radius: 12px;
 						height: 187px;
-						margin: 0 0 0;
-						padding: 0 0 10px;
-						aspect-ratio: auto !important;
+						margin: 0 0 10px;
+						padding: 0;
+						//margin: 0 0 10px;
+						//padding: 0 0 10px;
+						//aspect-ratio: auto !important;
+						overflow: hidden;
 						@media only screen and (min-width: g.$desktop-breakpoint-md){
 							height: 187px;
 						}
@@ -1445,9 +1458,19 @@
 						}
 					}
 
+					img {
+						transition: all 0.3s ease;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+						transform: scale(1.1);
+					}
+
 					.text-voice-slide {
 						width: 100%;
 						position: relative;
+						min-height: 32px;
 						.work {
 							background-color: #EFEFEF;
 							color: #3EB3FF;
@@ -1486,6 +1509,7 @@
 								margin-bottom: 5px;
 								font-size: 16px;
 								line-height: 1;
+								transition: all 0.3s ease;
 								@media only screen and (min-width: g.$desktop-breakpoint-md){
 									font-size: 16px;
 									margin-bottom: 5px;
@@ -1503,6 +1527,7 @@
 								font-size: 12px;
 								line-height: 1;
 								position: relative;
+								transition: all 0.3s ease;
 								@media only screen and (min-width: g.$desktop-breakpoint-md){
 									font-size: 12px;
 									margin-bottom: 5px;
@@ -1528,6 +1553,7 @@
 								margin-bottom: 5px;
 								font-size: 12px;
 								line-height: 1;
+								transition: all 0.3s ease;
 								@media only screen and (min-width: g.$desktop-breakpoint-md){
 									font-size: 12px;
 									margin-bottom: 5px;
@@ -1541,36 +1567,53 @@
 						}
 
 						.voices-button-area-btn {
+							display: inline-block;
+							position: absolute;
+							width: 58px;
+							height: 29px;
+							border-radius: 50px;
+							background-color: #3EB3FF;
+							transition: all 0.3s;
+							right: 0;
+							bottom: 3px;
+							&::after{
+								content: "";
 								display: inline-block;
+								background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat center / contain;
+								width: 28px;
+								height: 5px;
 								position: absolute;
-								width: 58px;
-								height: 29px;
-								border-radius: 50px;
-								background-color: #3EB3FF;
-								transition: all 0.3s;
-								right: 0;
-								bottom: 3px;
-								&::after{
-									content: "";
-									display: inline-block;
-									background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat center / contain;
-									width: 28px;
-									height: 5px;
-									position: absolute;
-									top: 50%;
-									left: 50%;
-									transform: translate(-50%, -50%);
-								}
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+							}
+						}
+					}
 
-								&:hover {
-									@media only screen and (min-width: g.$desktop-breakpoint-md){
-										scale: 1.1;
-	
-									}
-								}
-								
+					&:hover {
+						img {
+							@media only screen and (min-width: g.$desktop-breakpoint-md){
+								transform: scale(1.2);
+								object-fit: cover;
+								object-position: center;
+							}
+						}
+						@media only screen and (min-width: g.$desktop-breakpoint-md){
+							.voices-desc-area {
+								//.name,
+								//.place,
+								//.Joining {
+								//	color: #3EB3FF;
+								//}
 							}
 
+							.voices-button-area-btn {
+								scale: 1.1;
+							}
+						}
+
+						
+						
 					}
 
 				}

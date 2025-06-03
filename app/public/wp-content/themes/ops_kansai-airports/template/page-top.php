@@ -368,7 +368,7 @@ Template Name:トップページ
 										<li class="recruit-voices-contents-list-item">
 										<a href="<?php the_permalink(); ?>">
 										<!-- サムネイル画像 -->
-											<div>
+											<div class="img-voice-slide-box">
 												<?php
 												if ( has_post_thumbnail() ) {
 													the_post_thumbnail( 'large' );
