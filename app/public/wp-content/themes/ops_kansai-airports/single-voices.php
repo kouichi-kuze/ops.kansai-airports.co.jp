@@ -5,7 +5,7 @@
         <div class="sub-page-lightbulule-header bg-color-lightblue-gradation">
         
         <!-- パンくずリスト -->
-        <div class="breadcrumb-wrap p-side-15-8">
+        <div class="breadcrumb-wrap p-side-15-6">
             <?php get_template_part( 'inc/breadcrumb' ); ?>
         </div>
 
@@ -13,7 +13,7 @@
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <div class="hero-voices">
-                <div class="blue-under-line-ttl p-side-15-8">
+                <div class="blue-under-line-ttl p-side-15-6">
                     <h1 class="page-header__title">先輩の声</h1>
                     <p class="page-header__subtitle">Staff Voice</p>
                 </div>
@@ -29,7 +29,7 @@
                 endif;
                 ?>
                 
-                <div class="head-senior-text p-side-15-8">
+                <div class="head-senior-text p-side-15-6">
 
                 <!-- タイトル：投稿タイトル -->
                 <h2 class="title"><?php the_title(); ?></h2>

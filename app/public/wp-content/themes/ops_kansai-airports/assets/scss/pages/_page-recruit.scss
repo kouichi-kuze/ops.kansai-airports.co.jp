@@ -619,23 +619,11 @@
     
 
     #page-recruit-voices-outline {
-//        @media only screen and (min-width: g.$desktop-breakpoint-md){
-////            padding: 80px 0 75px;
-//        }
-//        @media only screen and (min-width: g.$desktop-breakpoint-xl){
-//            padding: 95px 0 95px;
-//        }
-//        @media only screen and (min-width: g.$desktop-breakpoint-xxxl){
-//            padding: 75px 0 55px;
-//        }
         .main-ounded-content{
             border-radius: 0 0 0 0;
             @media only screen and (min-width: g.$desktop-breakpoint-md){
                 padding: 80px 0;
             }
-//            @media only screen and (min-width: g.$desktop-breakpoint-xl){
-//                padding: 80px 0;
-//            }
         }
     }
     #page-recruit-voices-outline .selectbox-blue-under {
@@ -725,24 +713,62 @@
                 bottom: -9px;
                 left: -2px;
                 transform: translate(50%, 0);
+                @media only screen and (min-width: g.$desktop-breakpoint-md){
+                    left: 23px;;
+                }
             }
         }
         .head-senior-img{
             margin-left: 15px;
             margin-bottom: 30px;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                position: absolute;
+                min-width: 320px;
+                max-width: 500px;
+//                max-width: 420px;
+                right: 40px;
+                width: 39.8vw;
+                bottom: 50px;
+            }
+            @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                right: 60px;
+//                right: 4vw;
+               // max-width: 600px;
+                width: 40.8vw;
+            }
+            @media only screen and (min-width: 1800px){
+                right: 120px;
+                max-width: 700px;
+                width: 40.8vw;
+                //top: 130px;
+            }
             img{
                 aspect-ratio: 3 / 2;
                 object-fit: cover;
                 border-radius: 20px 0 0 20px;
                 overflow: hidden;
+                @media only screen and (min-width: g.$desktop-breakpoint-md){
+                    border-radius: 15px;
+                }
             }
         }
         .head-senior-text{
             margin-bottom: 40px;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                max-width: calc(420px + 40px);
+            }
+            @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                max-width: calc(600px + 40px);
+                margin-bottom: 80px;
+            }
             .title{
                 font-size: 20px;
                 color: g.$white;
                 margin-bottom: 30px;
+                @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                    font-size: 40px;
+                    margin-bottom: 40px;
+                }
             }
             .work{
                 display: inline-block;
@@ -774,35 +800,15 @@
                 font-size: 14px;
             }
         }
-        @media only screen and (min-width: g.$desktop-breakpoint-md){
-            .sub-page-lightbulule-header{
+        .sub-page-lightbulule-header{
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
                 width: 85%;
                 min-height: 450px;
                 box-sizing: border-box;
             }
-            .head-senior-text{
-                max-width: calc(420px + 40px);
-
-            }
-            .blue-under-line-ttl::before{
-                left: 23px;;
-            }
-            .head-senior-img{
-                position: absolute;
-                max-width: 420px;
-                right: 40px;
-                width: 39.8vw;
-                bottom: 50px;
-                img{
-                    border-radius: 15px;
-                }
-            }
-
-        }
-        @media only screen and (min-width: g.$desktop-breakpoint-xl){
-            .sub-page-lightbulule-header{
+            @media only screen and (min-width: g.$desktop-breakpoint-xl){
                 min-height: 650px;
-                width: 67%;
+                width: 80%;
                 .breadcrumb-wrap{
                     margin-bottom: 40px;
                 }
@@ -821,29 +827,6 @@
                         margin-bottom: 8px;
                     }
                 }
-            }
-            .head-senior-text{
-                max-width: calc(600px + 40px);
-                margin-bottom: 80px;
-                .title{
-                    font-size: 40px;
-                    margin-bottom: 40px;
-                }
-
-            }
-            .head-senior-img{
-                right: 4vw;
-                max-width: 600px;
-                width: 40.8vw;
-            }
-        }
-        @media only screen and (min-width: 1800px){
-            .head-senior-img{
-                right: 15%;
-                //max-width: 770px;
-                max-width: 600px;
-                width: 40.8vw;
-                //top: 130px;
             }
         }
     }
@@ -872,7 +855,7 @@
     #page-recruit-voices-outline #single-recruit-voices-page .senior-voice{
         margin-bottom: 60px;
         @media only screen and (min-width: g.$desktop-breakpoint-md){
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
         @media only screen and (min-width: g.$desktop-breakpoint-xl){
             margin-bottom: 100px;
@@ -968,8 +951,16 @@
         margin-bottom: 60px;
         box-sizing: border-box;
         @media only screen and (min-width: g.$desktop-breakpoint-md){
-            padding: 80px 120px;
+            padding: 60px;
             margin-bottom: 100px;
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-xl){
+            padding: 80px;
+//            margin-bottom: 100px;
+        }
+        @media only screen and (min-width: 1800px){
+            padding: 80px 120px;
+//            margin-bottom: 100px;
         }
         .left-lightbulueline-ttl{
             margin-bottom: 30px;
@@ -989,8 +980,19 @@
         }
     }
     #page-recruit-voices-outline #single-recruit-voices-page .one-day-schedule{
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            display: flex;
+            gap:40px;
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-xl){
+            display: flex;
+            gap: 122px;
+        }
         .diagonal-dot-ttl{
             margin-bottom: 30px;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                width: 300px;
+            }
             h3 {
                 font-size: 24px;
                 font-weight: 700;
@@ -1010,6 +1012,14 @@
                     transform: translate(0, -50%) rotate(-45deg);
                     z-index: -1;
                 }
+                @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                    &::before{
+                        width: 66px;
+                        height: 35px;
+                    }
+                }
             }
             .annotation{
                 font-size: 12px;
@@ -1018,11 +1028,23 @@
             }
         }
         .schedule-list{
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                width: calc(100% - 300px - 40px);
+            }
+            @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                width: 550px;
+            }
             .schedule-item{
                 background-color: g.$line-bk-gray;
                 padding: 20px 15px;
                 border-radius: 6px;
                 margin-bottom: 10px;
+                @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    padding: 20px 30px;
+                }
                 .time{
                     font-size: 20px;
                     font-weight: 400;
@@ -1040,35 +1062,12 @@
                 .text dd{
                     font-size: 13px;
                     font-weight: 400;
+                    @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                        font-size: 14px;
+                    }
                 }
                 &:last-of-type{
                     margin-bottom: 0;
-                }
-            }
-        }
-        @media only screen and (min-width: g.$desktop-breakpoint-xl){
-            display: flex;
-            gap: 122px;
-            .diagonal-dot-ttl{
-                h3 {
-                    font-size: 32px;
-                    margin-bottom: 10px;
-                    &::before{
-                        width: 66px;
-                        height: 35px;
-                    }
-                }
-            }
-            .schedule-list{
-                width: 550px;
-                .schedule-item{
-                    display: flex;
-                    align-items: center;
-                    gap: 40px;
-                    padding: 20px 30px;
-                    .text dd{
-                        font-size: 14px;
-                    }
                 }
             }
         }
@@ -1692,6 +1691,32 @@
 	}
 
 }
-
-
+#single-voices{
+    .recruit-voices-list-card{
+        padding-left: 30px;
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            padding-left: 60px;
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-xl){
+            padding-left: 120px;
+        }
+    }
+    .p-side-15-6{
+        @media only screen and (min-width: 1800px){
+            padding: 0 120px;
+        }
+    }
+    .header-bg-half-color{
+        .sub-page-lightbulule-header{
+            .blue-under-line-ttl::before{
+                @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                    left: 44px;   
+                }
+                @media only screen and (min-width: 1800px){
+                    left: 104px; 
+                }
+            }
+        } 
+    }
+}
 

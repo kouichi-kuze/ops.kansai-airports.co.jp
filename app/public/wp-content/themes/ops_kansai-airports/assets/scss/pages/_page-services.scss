@@ -86,8 +86,10 @@
 				}
 			}
 			&:hover .text-content .btn-bace-round .btn-setting::before {
-				scale: 1.5;
-				transform-origin: 50% 0;
+                @media only screen and (min-width: g.$desktop-breakpoint-md){
+                    scale: 1.5;
+                    transform-origin: 50% 0;
+                }
 			}
 			.text-content .btn-bace-round .btn-setting{
 				display: inline-block;
