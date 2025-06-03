@@ -257,7 +257,9 @@ Template Name:トップページ
 		<div class="service-bg">
 			<div class="content-inner">
 				<div class="flex-bok">
-					<div class="service_img"></div>
+					<div class="service_img">
+					
+					</div>
 					<div class="flex-box-right">
 						<div class="top-ttl-area">
 						<h2 class="ttl-2"><span>事業紹介</span>Service</h2>

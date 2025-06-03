@@ -355,18 +355,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //======topページ servis======
-
 $(document).ready(function () {
+  const $container = $('.service_img');
+
   $('.service-item a').hover(function () {
-    const classList = $(this).attr('class'); // クラス名一覧を文字列で取得
-    const match = classList.match(/service_item_link_([0-9]+)/); // 番号だけ取得
+    const classList = $(this).attr('class');
+    const match = classList.match(/service_item_link_([0-9]+)/);
 
     if (match) {
-      const num = match[1].padStart(2, '0'); // 1 → 01 に変換
-      $('.service_img').css('background-image', `url(/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png)`);
+      const num = match[1].padStart(2, '0');
+      const newSrc = `/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png`;
+
+      const $currentImg = $container.find('img.active-img');
+
+      if ($currentImg.attr('src') === newSrc) return;
+
+      // 新しい画像（最初は非表示で DOM に追加）
+      const $newImg = $('<img>')
+        .attr('src', newSrc)
+        .css({
+          display: 'none', // ← チラつき防止のカギ
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        })
+        .appendTo($container);
+
+      // 読み込み完了後にフェードイン
+      $newImg.on('load', function () {
+        $currentImg.removeClass('active-img');
+
+        $newImg
+          .addClass('active-img')
+          .css({ display: 'block', opacity: 0 }) // ← フェード前にblock表示＆透明に
+          .animate({ opacity: 1 }, 200, function () {
+            $currentImg.remove(); // 前の画像を削除
+          });
+      });
     }
   });
 });
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
