@@ -1028,6 +1028,9 @@
                     font-weight: 400;
                     color: g.$blue400;
                     margin-bottom: 5px;
+                    @media only screen and (min-width: g.$desktop-breakpoint-xl){
+                        min-width: 91px;
+                    }                    
                 }
                 .text dt{
                     font-size: 16px;

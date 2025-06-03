@@ -105,11 +105,6 @@
                 ?>
                 
                 
-            <div class="requruit-btn">
-                <a class="btn-voice" href="<?php echo get_option('home'); ?>/voices/" class="back">この業種の採用情報はこちら</a>
-            </div>
-                
-                
             </div>
             
             

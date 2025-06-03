@@ -255,28 +255,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (windowwidth > 768) {
 		// PC画像（左・右）
 		leftImages = [
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
 		];
 		rightImages = [
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
 		];
 	} else {
 		// SP画像（画面全体）
 		leftImages = [
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
+		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
 		];
 		rightImages = [];
 	}
@@ -363,7 +363,7 @@ $(document).ready(function () {
 
     if (match) {
       const num = match[1].padStart(2, '0'); // 1 → 01 に変換
-      $('.service_img').css('background-image', `url(/content/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png)`);
+      $('.service_img').css('background-image', `url(/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png)`);
     }
   });
 });
@@ -462,46 +462,62 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-    
- //フローティング
-const closeBtn = document.querySelector('.floating-recruit-btn-close');
-const floatingBtn = document.querySelector('.floating-recruit-btn');
-const target = document.querySelector('.flex-box-left .intro-text');
-const footer = document.querySelector('footer');
+	//フローティング
+	const closeBtn = document.querySelector('.floating-recruit-btn-close');
+	const floatingBtn = document.querySelector('.floating-recruit-btn');
+	const target = document.querySelector('.flex-box-left .intro-text');
 
-// 閉じるボタン処理
-if (closeBtn && floatingBtn) {
-	closeBtn.addEventListener('click', function () {
+	// 閉じるボタン処理
+	if (closeBtn && floatingBtn) {
+		closeBtn.addEventListener('click', function () {
 		floatingBtn.classList.remove('is-visible');
-	});
-}
+		});
+	}
 
-// IntersectionObserverでスクロール位置に応じて表示制御
-if (floatingBtn && target && footer) {
-	const observer = new IntersectionObserver(
+	// IntersectionObserverでフェードイン制御
+	if (floatingBtn && target) {
+		const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
-				if (entry.target === target && entry.isIntersecting) {
-					floatingBtn.classList.add('is-visible');
-				}
-				if (entry.target === footer && entry.isIntersecting) {
-					floatingBtn.classList.remove('is-visible');
-				}
+			if (entry.isIntersecting) {
+				floatingBtn.classList.add('is-visible');
+			}
 			});
 		},
 		{
 			root: null,
 			threshold: 0.1,
 		}
-	);
+		);
 
-	observer.observe(target);
-	observer.observe(footer);
-}
-    
-    
-    
-    
-    
-    
+		observer.observe(target);
+	}
+
+	const tabAreas = document.querySelectorAll('.tab-area');
+	let maxHeight = 0;
+
+	// 各タブを一時的に表示して高さを取得
+	tabAreas.forEach(tab => {
+		const originalStyle = tab.getAttribute('style') || '';
+
+		// 一時的に表示状態にする（display: block にして position: absolute で影響を避ける）
+		tab.style.visibility = 'hidden';
+		tab.style.display = 'block';
+		tab.style.position = 'absolute';
+		tab.style.height = 'auto';
+
+		const height = tab.offsetHeight;
+		if (height > maxHeight) {
+		maxHeight = height;
+		}
+
+		// 元のスタイルに戻す
+		tab.setAttribute('style', originalStyle);
+	});
+
+	// 全タブの親要素に最大高さを設定
+	const wrapper = document.querySelector('.information_list__wrap');
+	if (wrapper) {
+		wrapper.style.minHeight = maxHeight + 'px';
+	}
 });
