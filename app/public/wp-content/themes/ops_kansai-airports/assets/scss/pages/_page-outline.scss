@@ -11,6 +11,14 @@
 			margin-bottom: 140px;
 		}
 	}
+    .read{
+        .text{
+            line-height: 1.8;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                line-height: 2;
+            }
+        }
+    }
 	.page-content-link-list{
 		margin-bottom: 80px;
 	}
