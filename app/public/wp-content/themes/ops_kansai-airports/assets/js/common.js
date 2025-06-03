@@ -462,34 +462,46 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	//フローティング
-	const closeBtn = document.querySelector('.floating-recruit-btn-close');
-	const floatingBtn = document.querySelector('.floating-recruit-btn');
-	const target = document.querySelector('.flex-box-left .intro-text');
+    
+ //フローティング
+const closeBtn = document.querySelector('.floating-recruit-btn-close');
+const floatingBtn = document.querySelector('.floating-recruit-btn');
+const target = document.querySelector('.flex-box-left .intro-text');
+const footer = document.querySelector('footer');
 
-	// 閉じるボタン処理
-	if (closeBtn && floatingBtn) {
-		closeBtn.addEventListener('click', function () {
+// 閉じるボタン処理
+if (closeBtn && floatingBtn) {
+	closeBtn.addEventListener('click', function () {
 		floatingBtn.classList.remove('is-visible');
-		});
-	}
+	});
+}
 
-	// IntersectionObserverでフェードイン制御
-	if (floatingBtn && target) {
-		const observer = new IntersectionObserver(
+// IntersectionObserverでスクロール位置に応じて表示制御
+if (floatingBtn && target && footer) {
+	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				floatingBtn.classList.add('is-visible');
-			}
+				if (entry.target === target && entry.isIntersecting) {
+					floatingBtn.classList.add('is-visible');
+				}
+				if (entry.target === footer && entry.isIntersecting) {
+					floatingBtn.classList.remove('is-visible');
+				}
 			});
 		},
 		{
 			root: null,
 			threshold: 0.1,
 		}
-		);
+	);
 
-		observer.observe(target);
-	}
+	observer.observe(target);
+	observer.observe(footer);
+}
+    
+    
+    
+    
+    
+    
 });

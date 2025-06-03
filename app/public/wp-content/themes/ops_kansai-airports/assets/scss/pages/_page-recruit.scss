@@ -642,6 +642,10 @@
         display: inline-flex;
         align-items: center;
         position: relative;
+        width: calc(100% - 52px);
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            width: auto;
+        }
         &::after{
             position: absolute;
             right: 15px;
@@ -658,10 +662,8 @@
         select{
             appearance: none;
             padding: 15px 30px 15px 15px;
-            width: 278px;
+            width: 100%;
             min-width: 230px;
-    //		height: 2.8em;
-    //		padding: .4em calc(.8em + 30px) .4em .8em;
             border: none;
             border-bottom: 2px solid g.$primary;
             background-color: g.$white;
@@ -669,6 +671,9 @@
             font-size: 14px;
             font-weight: 700;
             cursor: pointer;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                width: 278px;
+            }
             &:focus{
                 outline: none;
             }
@@ -1241,14 +1246,14 @@
     
  //先輩の声一覧ページ
     .page-header__subtext{
-        line-height: 2;
+        line-height: 200%;
     }
     .recruit-voices-list-card{
 		position: relative;
         overflow: hidden;
-        padding-left: 30px;
+       // padding-left: 30px;
         @media only screen and (min-width: g.$desktop-breakpoint-md){
-            padding-left: 40px;
+            //padding-left: 40px;
             overflow: unset;
         }
         @media only screen and (min-width: g.$desktop-breakpoint-xl){
@@ -1256,7 +1261,7 @@
         }
         @media only screen and (min-width: g.$desktop-breakpoint-xxl){
 			width: 100%;
-            padding-left: 120px;
+           // padding-left: 120px;
 		}
         
            .recruit-voices-list{

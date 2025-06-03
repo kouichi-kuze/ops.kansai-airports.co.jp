@@ -171,6 +171,7 @@ Template Name:先輩の声
                       </a>
                     </li>-->
                   </ul>
+<!--
                   <?php
                       // ページネーション
                       echo paginate_links([
@@ -182,6 +183,7 @@ Template Name:先輩の声
                   <?php else : ?>
                     <p>該当する先輩の声はありません。</p>
                   <?php endif; ?>
+-->
                 </div>
               </div>
             </div>
