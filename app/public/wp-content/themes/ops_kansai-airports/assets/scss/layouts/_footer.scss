@@ -186,7 +186,7 @@
 		content: "";
 			width: 18px;
 			height: 18px;
-			background: url("../img/common/icon_secondmenu-top_item_primary_arrow.svg") center / contain no-repeat;
+			background: url("../img/common/icon_secondmenu-top_item_arrow.png") center / contain no-repeat;
 			position: absolute;
 			top: 50%;
 			right: -10px;
@@ -225,14 +225,25 @@
 		align-items: flex-end;
 	}
 }
+
+
+.site-footer .nav-pc-menu{
+	display: none;	
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		display: flex;
+		gap: 30px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xl){
+		gap: 50px;
+	}
+	@media only screen and (min-width: g.$desktop-breakpoint-xxxl){
+		gap: 80px;
+	}
+}
+
 @media only screen and (min-width: g.$desktop-breakpoint-xl){
 	.site-footer .nav-sp-menu{
 		display: none;
-	}
-	.site-footer .nav-pc-menu{
-		display: block;
-		display: flex;
-        gap: 30px;
 	}
 	.footer-pc-nav-area{
 		padding: 80px 30px 0 30px;
@@ -308,6 +319,25 @@
 	}
 	.site-footer .nav-pc-menu{
 		
+	}
+	
+}
+
+.floating-recruit-btn {
+	position: fixed;
+	right: 0;
+	bottom: 10px;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+	@media only screen and (min-width: g.$desktop-breakpoint-md){
+		display: none !important;
+	}
+
+	&.is-visible {
+	opacity: 1;
+	visibility: visible;
 	}
 	
 }

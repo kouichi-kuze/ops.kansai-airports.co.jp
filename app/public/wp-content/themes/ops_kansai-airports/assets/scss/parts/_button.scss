@@ -229,6 +229,69 @@
 	}
 }
 
+.btn-setting-floating-box {
+	display: flex;
+	align-items: center;
+	
+	.floating-recruit-btn-close {
+		width: 28px;
+		height: 50px;
+		background-color: g.$white;
+		border-radius: 6px 0 0 6px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			width: 8px !important;
+			height: 7px !important;
+		}
+	}
+}
+
+.btn-setting-floating {
+	background-color: #EB008B;
+	box-sizing: border-box;
+	max-width: 196px;
+	height: 50px;
+	width: 100%;
+	display: block;
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 15px 45px 15px 24px;
+	font-size: 15px;
+	border-radius: 0;
+	color: g.$white;
+	&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		background-color: #ffffff;
+		width: 18px;
+		height: 18px;
+		border-radius: 50px;
+		top: 50%;
+		right: 20px;
+		transform: translate(0, -50%);
+		transition: all 0.3s;
+		transform-origin: 50% 0;
+	}
+
+	&::after {
+		content: "";
+		background: url("../img/common/icon_btn-bace-square-arrow.png") no-repeat center/contain;
+		display: inline-block;
+		width: 14px;
+		height: 9px;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		vertical-align: middle;
+		right: 23px;
+	}
+}
+
 .companyinfo-box {
 	.companyinfo-link{
 		position: relative;

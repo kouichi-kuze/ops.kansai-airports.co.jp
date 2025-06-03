@@ -159,7 +159,16 @@
 	
 
 
-
+<div class="floating-recruit-btn">
+	<div class="btn-setting-floating-box">
+		<div class="floating-recruit-btn-close">
+			<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M8.76416 1.78705L5.70654 4.84369L9.07568 8.21283L8.36865 8.91986L4.99951 5.55072L1.63135 8.91986L0.924316 8.21283L4.29248 4.84369L1.23584 1.78705L1.94287 1.08002L4.99951 4.13666L8.05713 1.08002L8.76416 1.78705Z" fill="#EB008B"/>
+			</svg>
+		</div>	
+		<a class="btn-setting-floating" href="/services/">採用情報はこちら</a>
+	</div>
+</div>
 
 
 
