@@ -189,7 +189,7 @@
 		content: "";
 			width: 18px;
 			height: 18px;
-			background: url("../img/common/icon_secondmenu-top_item_arrow.png") center / contain no-repeat;
+			background: url("../img/common/icon_secondmenu-footer_item_arrow.png") center / contain no-repeat;
 			position: absolute;
 			top: 50%;
 			right: -10px;
@@ -334,6 +334,7 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.5s ease, visibility 0.5s ease;
+	box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.20);
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
 		display: none !important;
 	}

@@ -462,36 +462,67 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	//フローティング
+	// フローティング
 	const closeBtn = document.querySelector('.floating-recruit-btn-close');
 	const floatingBtn = document.querySelector('.floating-recruit-btn');
 	const target = document.querySelector('.flex-box-left .intro-text');
+	const footer = document.querySelector('.site-footer');
+
+	let introShown = false; // intro-text に一度入ったことがあるか
+	let isFooterVisible = false; // footer が現在表示中かどうか
 
 	// 閉じるボタン処理
 	if (closeBtn && floatingBtn) {
 		closeBtn.addEventListener('click', function () {
-		floatingBtn.classList.remove('is-visible');
+			floatingBtn.classList.remove('is-visible');
 		});
 	}
 
-	// IntersectionObserverでフェードイン制御
+	// intro-text が表示されたら記録し、footer外なら表示
 	if (floatingBtn && target) {
 		const observer = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				floatingBtn.classList.add('is-visible');
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						introShown = true;
+						if (!isFooterVisible) {
+							floatingBtn.classList.add('is-visible');
+						}
+					}
+				});
+			},
+			{
+				root: null,
+				threshold: 0.1,
 			}
-			});
-		},
-		{
-			root: null,
-			threshold: 0.1,
-		}
 		);
-
 		observer.observe(target);
 	}
+
+	// footer が入ったら非表示、出たら introShown が true なら再表示
+	if (floatingBtn && footer) {
+		const footerObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					isFooterVisible = entry.isIntersecting;
+
+					if (isFooterVisible) {
+						floatingBtn.classList.remove('is-visible');
+					} else {
+						if (introShown) {
+							floatingBtn.classList.add('is-visible');
+						}
+					}
+				});
+			},
+			{
+				root: null,
+				threshold: 0,
+			}
+		);
+		footerObserver.observe(footer);
+	}
+
 
 	const tabAreas = document.querySelectorAll('.tab-area');
 	let maxHeight = 0;
