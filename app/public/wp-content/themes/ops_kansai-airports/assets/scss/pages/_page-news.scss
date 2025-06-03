@@ -155,17 +155,15 @@
 		transition: all 0.3s;
 	}
     #top-news-page .information_list__card a{
-        &:hover .information_list__thumb img{
-            scale: 1.1;
-        }
-        &:hover .information_list__title{
-            color: g.$secondary;
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            &:hover .information_list__thumb img{
+                scale: 1.1;
+            }
+            &:hover .information_list__title{
+                color: g.$secondary;
+            }
         }
     }
-//	#top-news-page .information_list__card a:hover .information_list__thumb img{
-//		scale: 1.1;
-//		
-//	}
 	#top-news-page .flex-container{
 		display: flex;
 		gap: 30px 20px;
