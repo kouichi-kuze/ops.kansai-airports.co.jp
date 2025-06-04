@@ -177,14 +177,23 @@
                                                     <?php endif; ?>
 
                                                     <div class="voices-button-area-text-bottom">
+                                                        <?php
+                                                        $affiliation = get_field('voices_affiliation');
+                                                        $joining = get_field('voices_joining');
+                                                        ?>
+
                                                         <!-- 所属場所 -->
-                                                        <?php if ( $val = get_field( 'voices_affiliation' ) ) : ?>
-                                                            <span class="place"><?php echo esc_html( $val ); ?></span>
+                                                        <?php if ( $affiliation ) : ?>
+                                                            <span class="place"><?php echo esc_html( $affiliation ); ?></span>
+                                                        <?php endif; ?>
+
+                                                        <?php if ( $affiliation && $joining ) : ?>
+                                                            <span class="slash-display">/</span>
                                                         <?php endif; ?>
 
                                                         <!-- 入社年 -->
-                                                        <?php if ( $val = get_field( 'voices_joining' ) ) : ?>
-                                                            <span class="Joining"><?php echo esc_html( $val ); ?></span>
+                                                        <?php if ( $joining ) : ?>
+                                                            <span class="Joining"><?php echo esc_html( $joining ); ?></span>
                                                         <?php endif; ?>
                                                     </div>
                                                 </li>

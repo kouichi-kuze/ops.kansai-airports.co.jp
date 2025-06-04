@@ -1495,6 +1495,7 @@
           .text-voice-slide {
             width: 100%;
             position: relative;
+            min-height: 32px;
             .work {
               background-color: #efefef;
               color: #3eb3ff;
@@ -1560,11 +1561,11 @@
                 }
 
                 &:after {
-                  content: "/";
-                  padding: 0 0 0 5px;
+                  //content: "/";
+                  //padding: 0 0 0 5px;
                   @media only screen and (min-width: g.$desktop-breakpoint-xl) {
-                    content: "";
-                    padding: 0;
+                    //  content: "";
+                    //  padding: 0;
                   }
                 }
               }

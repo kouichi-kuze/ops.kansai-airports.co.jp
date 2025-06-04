@@ -104,7 +104,7 @@ function theme_enqueue_scripts() {
  * パンくずリストを出力する関数
  */
 function mytheme_breadcrumb() {
-    $home = '<a href="' . home_url() . '">HOME</a>';
+    $home = '<a href="' . home_url() . '">TOP</a>';
     $breadcrumb = $home;
 
     if ( is_singular('post') ) {
