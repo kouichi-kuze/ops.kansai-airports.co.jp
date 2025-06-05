@@ -117,7 +117,7 @@
 		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">採用情報 <span>Recruit</span></a>
 			<ul class="submenu">
 			  	<li class="submenu__item-top">
-					<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">採用情報トップ</a>
+					<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報トップ</a>
 				</li>
 			  	<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 			</ul>

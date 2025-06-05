@@ -413,5 +413,5 @@ function cut_screen_reader_text($template) {
 }
 add_filter('navigation_markup_template', 'cut_screen_reader_text');
 
-
+add_image_size( 'wide-thumb', 640, 427, true );
 ?>

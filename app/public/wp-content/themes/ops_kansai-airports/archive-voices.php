@@ -69,7 +69,7 @@ Template Name:先輩の声
                     // WP_Query 用引数
                     $args = [
                       'post_type'      => 'voices',
-                      'posts_per_page' => 10,
+                      'posts_per_page' => 100,
                       'paged'          => get_query_var('paged', 1),
                     ];
 
@@ -95,15 +95,11 @@ Template Name:先輩の声
                             <!-- サムネイル画像 -->
                             <div class="img archive">
                               <?php
-                              if ( has_post_thumbnail() ) {
-                                the_post_thumbnail( 'large' );
-                              } elseif ( $thumb_id = get_field( 'voices_thumb_img' ) ) {
-                                // ACF Image フィールド（ID 返却設定）の場合
-                                echo wp_get_attachment_image( $thumb_id, 'large' );
-                              } else {
-                                // デフォルト画像
-                                echo '<img src="' . esc_url( get_template_directory_uri() . '/assets/img/voice/img_page-recruit-voices_01.png' ) . '" alt="">';
-                              }
+                                $thumb_id = get_field( 'voices_thumb_img' );
+                                if ( $thumb_id ) {
+                                  $image = wp_get_attachment_image_src( $thumb_id, 'large' );
+                                  echo '<img src="' . esc_url( $image[0] ) . '" alt="">';
+                                }
                               ?>
 
                             </div>
@@ -160,25 +156,7 @@ Template Name:先輩の声
                         </a>
                       </li>
                     <?php endwhile; ?>
-                    <!--<li class="recruit-voices-item">
-                      <a href="<?php the_permalink(); ?>">
-                        <div class="flex">
-                          <div class="img"><img src="<?php bloginfo('template_url'); ?>/assets/img/voice/img_page-recruit-voices_01.png" alt=""></div>
-                          <div class="text">
-                            <h3 class="title">新しい出会いと発見、世界と繋がるおもしろさを感じます。</h3>
-                            <span class="work">空港インフォメーション業務</span>
-                            <ul class="button-area">
-                              <li class="text">
-                                <span class="name">M.N</span>
-                                <span class="place">関西国際空港 / </span>
-                                <span class="Joining">●年目（●●●●年入社）</span>
-                              </li>
-                              <li class="btn"><span></span></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </a>
-                    </li>-->
+                    
                   </ul>
 <!--
                   <?php

@@ -85,13 +85,13 @@
 															if ( $thumb_id = get_field( 'thumb_infomation' ) ) {
 																echo wp_get_attachment_image(
 																	$thumb_id,
-																	'thumbnail',
+																	'large',
 																	false,
 																	[ 'alt' => get_the_title() ]  // 必要に応じて alt 属性を追加
 																);
 															} else {
 																if ( has_post_thumbnail() ) {
-																	the_post_thumbnail( 'thumbnail' );
+																	the_post_thumbnail( 'large' );
 																}
 															}
 															?>	

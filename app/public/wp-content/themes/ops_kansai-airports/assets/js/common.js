@@ -255,28 +255,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (windowwidth > 768) {
 		// PC画像（左・右）
 		leftImages = [
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
 		];
 		rightImages = [
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
 		];
 	} else {
 		// SP画像（画面全体）
 		leftImages = [
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
 		];
 		rightImages = [];
 	}
@@ -324,8 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplay: false,
 		//autoplaySpeed: 5000,
 		cssEase: 'linear',
-		speed: 500,
-		swipe: false, 
+		speed: 300,
+		swipe: true, 
 		draggable: false,
 		touchMove: false,
 		prevArrow: '<button type="button" class="slick-prev recruit-voices-slide-prev"><span class="icon-prev"></span></button>',
@@ -342,8 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplay: false,
 		//autoplaySpeed: 5000,
 		cssEase: 'linear',
-		speed: 500,
-		swipe: false, 
+		speed: 300,
+		swipe: true, 
 		draggable: false,
 		touchMove: false,
 		prevArrow: '<button type="button" class="slick-prev recruit-voices-slide-prev"><span class="icon-prev"></span></button>',
@@ -364,7 +364,7 @@ $(document).ready(function () {
 
     if (match) {
       const num = match[1].padStart(2, '0');
-      const newSrc = `/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png`;
+      const newSrc = `/content/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png`;
 
       const $currentImg = $container.find('img.active-img');
 
@@ -391,7 +391,7 @@ $(document).ready(function () {
         $newImg
           .addClass('active-img')
           .css({ display: 'block', opacity: 0 }) // ← フェード前にblock表示＆透明に
-          .animate({ opacity: 1 }, 200, function () {
+          .animate({ opacity: 1 }, 100, function () {
             $currentImg.remove(); // 前の画像を削除
           });
       });
