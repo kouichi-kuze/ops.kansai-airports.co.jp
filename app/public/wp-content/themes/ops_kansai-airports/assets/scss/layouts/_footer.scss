@@ -160,6 +160,10 @@
   padding-bottom: 30px;
 }
 .site-footer {
+  border-radius: 0 30px 0 0;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    border-radius: 30px 30px 0 0;
+  }
   .nav-pc-menu {
     display: none;
   }
@@ -326,7 +330,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
-  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 1px 12px rgba(0, 0, 0, 0.15);
   @media only screen and (min-width: g.$desktop-breakpoint-md) {
     display: none !important;
   }

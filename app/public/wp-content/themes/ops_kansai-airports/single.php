@@ -17,7 +17,7 @@
 <div id="single-news">
 	<div id="information">
 		<div id="single-news-page" class="bg-color-primary">
-			<div class="main-ounded-content bg-color-primary">
+			<div class="main-ounded-content single bg-color-primary">
 				<div class="p-side-3-8">
 					<div class="max-128">
 						

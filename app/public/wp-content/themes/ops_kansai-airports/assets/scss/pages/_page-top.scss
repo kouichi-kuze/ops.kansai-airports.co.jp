@@ -235,7 +235,7 @@
       }
       @media only screen and (min-width: g.$desktop-breakpoint-xl) {
         border-radius: 0 0 0 0;
-        padding: 30px 0 20px;
+        padding: 30px 0 30px;
       }
       @media only screen and (min-width: g.$desktop-breakpoint-xxxl) {
         border-radius: 0 16px 0 0;
@@ -469,6 +469,7 @@
         height: 93px;
         overflow: hidden;
         border-radius: 6px;
+        border: solid #EFEFEF 1px;
         @media only screen and (min-width: g.$desktop-breakpoint-md) {
           height: 120px;
           //width: 17%;
@@ -1557,7 +1558,7 @@
               background-color: #3eb3ff;
               transition: all 0.3s;
               right: 0;
-              bottom: 3px;
+              bottom: -5px;
               &::after {
                 content: "";
                 display: inline-block;

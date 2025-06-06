@@ -55,13 +55,13 @@
 								<?php endforeach; ?>
 								</ul>
 													
-														<div class="nformation_list">
+														<div class="information_list">
 															<div class="information_list__wrap">
 								<?php
 								$paged = max( 1, get_query_var('paged') );
 								$args  = [
 								'post_type'      => 'post',
-								'posts_per_page' => 10,
+								'posts_per_page' => 3,
 								'paged'          => $paged,
 								];
 								// 絞り込み用のカテゴリ slug があればセット

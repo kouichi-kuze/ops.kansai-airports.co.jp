@@ -2,6 +2,11 @@
 @use "../utils/variables" as g;
 @use "../utils/mixin" as m;
 
+#archive-recruit-voices,
+#page-recruit-voices-outline {
+  background-color: red;
+}
+
 #archive-recruit,
 #single-recruit,
 #archive-recruit-voices,
@@ -780,7 +785,7 @@
         font-size: 24px;
         color: g.$white;
         margin-bottom: 30px;
-        @media only screen and (min-width: g.$desktop-breakpoint-xl) {
+        @media only screen and (min-width: g.$desktop-breakpoint-md) {
           font-size: 28px;
         }
         @media only screen and (min-width: g.$desktop-breakpoint-xl) {
@@ -1137,12 +1142,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     @media only screen and (min-width: g.$desktop-breakpoint-md) {
-      margin-bottom: 100px;
+      margin-bottom: 60px;
     }
     .btn-entry-link {
-      background-color: g.$primary;
+      background-color: g.$tertiary;
       color: g.$white;
       border-radius: 8px;
       font-size: 18px;
@@ -1159,6 +1164,10 @@
       }
       &:hover {
         text-decoration: none;
+      }
+
+      &.navy {
+        background-color: g.$primary;
       }
 
       svg {
@@ -1360,8 +1369,10 @@
         }
       }
       .work {
-        display: block;
-        max-width: 202px;
+        //display: block;
+        display: inline-block;
+        vertical-align: top;
+        //max-width: 202px;
         font-size: 14px;
         font-weight: 700;
         color: g.$blue400;
@@ -1418,7 +1429,7 @@
         .work {
           font-size: 16px;
           margin-bottom: 20px;
-          max-width: 228px;
+          //max-width: 228px;
         }
         .name {
           font-size: 18px;
@@ -1599,7 +1610,7 @@
               background-color: #3eb3ff;
               transition: all 0.3s;
               right: 0;
-              bottom: 3px;
+              bottom: -5px;
 
               &::after {
                 content: "";

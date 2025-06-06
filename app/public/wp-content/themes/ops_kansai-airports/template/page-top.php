@@ -101,13 +101,13 @@ Template Name:トップページ
 												if ( $thumb_id = get_field( 'thumb_infomation' ) ) {
 												echo wp_get_attachment_image(
 												$thumb_id,
-												'thumbnail',
+												'large',
 												false,
 												[ 'alt' => get_the_title() ]
 												);
 												} else {
 												if ( has_post_thumbnail() ) {
-												the_post_thumbnail( 'thumbnail' );
+												the_post_thumbnail( 'large' );
 												}
 												}
 												?>
@@ -166,13 +166,13 @@ Template Name:トップページ
 										if ( $thumb_id = get_field( 'thumb_infomation' ) ) {
 										echo wp_get_attachment_image(
 											$thumb_id,
-											'thumbnail',
+											'large',
 											false,
 											[ 'alt' => get_the_title() ]
 										);
 										} else {
 										if ( has_post_thumbnail() ) {
-											the_post_thumbnail( 'thumbnail' );
+											the_post_thumbnail( 'large' );
 										}
 										}
 										?>
@@ -370,13 +370,11 @@ Template Name:トップページ
 										<!-- サムネイル画像 -->
 											<div class="img-voice-slide-box">
 												<?php
-												if ( has_post_thumbnail() ) {
-													the_post_thumbnail( 'large' );
-												} elseif ( $thumb_id = get_field( 'voices_thumb_img' ) ) {
-													echo wp_get_attachment_image( $thumb_id, 'large' );
-												} else {
-													echo '<img clss="img-voice-slide" src="' . esc_url( get_template_directory_uri() . '/assets/img/voice/img_page-recruit-voices_01.png' ) . '" alt="' . esc_attr( get_the_title() ) . '">';
-												}
+													$thumb_id = get_field( 'voices_thumb_img' );
+													if ( $thumb_id ) {
+													$image = wp_get_attachment_image_src( $thumb_id, 'large' );
+													echo '<img src="' . esc_url( $image[0] ) . '" alt="">';
+													}
 												?>
 											</div>
 
