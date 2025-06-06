@@ -148,6 +148,13 @@ function mytheme_breadcrumb() {
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . post_type_archive_title('', false);
     }
 
+    elseif ( is_singular('recruit') ) {
+        // ① 採用情報 固定ページへのリンク
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報</a>';
+        // ③ 現在の投稿タイトル
+        $breadcrumb  .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
+    }
+
     elseif ( is_singular('voices') ) {
         // ① 採用情報 固定ページへのリンク
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報</a>';
@@ -157,6 +164,7 @@ function mytheme_breadcrumb() {
         // ③ 現在の投稿タイトル
         $breadcrumb  .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }
+
 
     elseif ( is_tax() ) {
         $term = get_queried_object();
