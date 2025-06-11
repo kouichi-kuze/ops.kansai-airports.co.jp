@@ -61,7 +61,7 @@
 								$paged = max( 1, get_query_var('paged') );
 								$args  = [
 								'post_type'      => 'post',
-								'posts_per_page' => 3,
+								'posts_per_page' => 10,
 								'paged'          => $paged,
 								];
 								// 絞り込み用のカテゴリ slug があればセット

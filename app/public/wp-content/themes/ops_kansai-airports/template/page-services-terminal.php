@@ -199,4 +199,6 @@ Template Name:ターミナルマネジメント事業
 <?php get_template_part( 'parts/bnr_services' ); ?>
 <!--/バナー共通パーツ-->
 </main >
-<?php get_template_part( 'inc/footer' ); ?>
+<div class="service-detail-footer">
+	<?php get_template_part( 'inc/footer' ); ?>
+</div>

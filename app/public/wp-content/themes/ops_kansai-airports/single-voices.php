@@ -91,7 +91,7 @@
 
                 if ( $display ) :  // 表示する場合だけ出力
                 ?>
-                <div class="btn-wrap center recruit-detail">
+                <div class="btn-wrap center recruit-detail d-none">
                     <a class="hover-ani" href="<?php echo esc_url( $url ); ?>">
                     <div class="btn-bace-round">
                         <div class="btn-setting pink btnico-link btn-md">

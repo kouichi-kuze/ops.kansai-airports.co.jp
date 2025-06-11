@@ -150,7 +150,7 @@ function mytheme_breadcrumb() {
 
     elseif ( is_singular('recruit') ) {
         // ① 採用情報 固定ページへのリンク
-        $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報</a>';
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報のお知らせ</a>';
         // ③ 現在の投稿タイトル
         $breadcrumb  .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }

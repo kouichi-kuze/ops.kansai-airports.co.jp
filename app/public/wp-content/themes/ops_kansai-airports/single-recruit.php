@@ -70,5 +70,7 @@
 	</div>
 </div>
 	
-<?php get_template_part( 'inc/footer' ); ?>
+<div class="single-recruit-footer">
+	<?php get_template_part( 'inc/footer' ); ?>
+</div>
 

@@ -1417,7 +1417,8 @@
 
         .recruit-voices-contents-list-item {
           width: 100%;
-
+          position: relative;
+          overflow: visible;
           .img-voice-slide-box {
             //width: 280px;
             width: 100%;
@@ -1455,6 +1456,10 @@
             width: 100%;
             position: relative;
             min-height: 32px;
+            padding-bottom: 10px;
+            @media only screen and (min-width: g.$desktop-breakpoint-md) {
+              padding-bottom: 10px;
+            }
             .work {
               background-color: #efefef;
               color: #3eb3ff;
@@ -1558,7 +1563,7 @@
               background-color: #3eb3ff;
               transition: all 0.3s;
               right: 0;
-              bottom: -5px;
+              bottom: 7px;
               &::after {
                 content: "";
                 display: inline-block;

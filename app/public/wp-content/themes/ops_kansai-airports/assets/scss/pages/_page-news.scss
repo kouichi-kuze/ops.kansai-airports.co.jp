@@ -239,9 +239,13 @@
     }
 
     &.single {
-      border-radius: 20px 0 0 0;
+      border-radius: 20px 0 0 20px;
       @media only screen and (min-width: g.$desktop-breakpoint-md) {
         padding: 60px 0 68px;
+        border-radius: 30px 0 0 30px;
+      }
+      @media only screen and (min-width: g.$desktop-breakpoint-xxl) {
+        border-radius: 40px 0 0 40px;
       }
     }
   }

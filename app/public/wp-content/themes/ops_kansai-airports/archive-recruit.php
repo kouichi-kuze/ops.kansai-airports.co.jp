@@ -31,30 +31,36 @@
 					</ul>
 					<p class="annotation">※応募時、履歴書と一緒にこちらの同意書の郵送が必要です。</p>
 				</div>
+				<?php
+				$args = array(
+					'post_type'      => 'recruit',
+					'posts_per_page' => 100,
+					'paged'          => get_query_var('paged', 1),
+				);
+				$my_query = new WP_Query( $args );
+				?>
 
 					<ul>
-						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php if ( $my_query->have_posts() ) : ?>
+					<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
 						<?php
 							// 1) 本文からブロックをパース
-							$blocks = parse_blocks( get_the_content() );
-							// 2) 自分の Lazy Block スラッグに置き換えてください
+							$blocks    = parse_blocks( get_the_content() );
 							$my_blocks = array_filter( $blocks, function( $b ) {
 								return $b['blockName'] === 'lazyblock/recruirecruitlist';
 							});
-							// 3) レンダー
+							// 2) レンダー
 							foreach ( $my_blocks as $block ) {
-								echo '<div class="archive-lazyblock">';
+								echo '<li class="archive-lazyblock">';
 								echo render_block( $block );
-								echo '</div>';
+								echo '</li>';
 							}
 						?>
-						<?php endwhile; endif; ?>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
                         
 					</ul>
-                    
-                    <!--ページネーション-->
-                    <?php get_template_part( 'parts/pagination' ); ?>
-                    <!--/ページネーション-->
                     
 				</div>
 			</div>
@@ -67,7 +73,9 @@
 </main >
 <!--/HTMLここまで-->
 
-<?php get_template_part( 'inc/footer' ); ?>
+<div class="archive-recruit-footer">
+	<?php get_template_part( 'inc/footer' ); ?>
+</div>
 
 <?php
 // 値を取り出し

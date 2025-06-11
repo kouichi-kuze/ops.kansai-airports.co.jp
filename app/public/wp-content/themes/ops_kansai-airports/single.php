@@ -84,6 +84,6 @@
 	</div>	
 </div>
 
-
-
-<?php get_template_part( 'inc/footer' ); ?>
+<div class="single-footer">
+	<?php get_template_part( 'inc/footer' ); ?>
+</div>
