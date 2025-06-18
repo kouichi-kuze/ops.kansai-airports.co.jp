@@ -1242,7 +1242,7 @@
 		width: calc(100% - 30px);
 		background-color: #F9F9F9;
 		border-radius: 70px 0 0 0;
-		padding: 60px 0 60px 30px;
+		padding: 60px 0 40px 30px;
 		margin: 0 0 0 auto;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			width: calc(100% - 30px);
@@ -1310,6 +1310,7 @@
 				width: 100%;
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					align-items: flex-end;
+					align-items: self-end
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					flex-flow: column;
