@@ -41,8 +41,10 @@
 		gap: 10px 10px;
 		border-bottom: solid 1px g.$primary;
 		padding-bottom: 20px;
+		margin-bottom: 30px;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			gap: 30px 30px;
+			margin-bottom: 60px;
 		}	
 	}
 
@@ -493,18 +495,25 @@
 
 }
 
-#single-news #information #single-news-page{
-	.main-ounded-content{
-		border-radius: 20px 0 0 0;
-		@media only screen and (min-width: g.$desktop-breakpoint-md){
-			border-radius: 30px 0 0 0;
+#single-news #information{
+	#single-news-page{
+		.btn-setting{
+			width: 100%;
 		}
-		@media only screen and (min-width: g.$desktop-breakpoint-xl){
-			border-radius: 40px 0 0 0;
-		}
-	}
 
+		.main-ounded-content{
+			border-radius: 20px 0 0 0;
+			@media only screen and (min-width: g.$desktop-breakpoint-md){
+				border-radius: 30px 0 0 0;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl){
+				border-radius: 40px 0 0 0;
+			}
+		}
+
+	}
 }
+
 
 
 
