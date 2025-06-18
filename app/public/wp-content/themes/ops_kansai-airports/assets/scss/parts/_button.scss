@@ -32,15 +32,23 @@
 	margin-top: 60px;
 	margin-bottom: 60px;
 	&.recruit-detail {
+		padding: 0 30px;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
-		margin-top: 100px;
-		margin-bottom: 100px;
+		padding: 0 0;
+		margin-top: 80px;
+		margin-bottom: 80px;
 		}
 		&.center {
 			display: flex;
 			justify-content: center;
 		}
 	}
+}
+
+.btn-center {
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 .btn-bace-square,
@@ -72,6 +80,16 @@
 
 		&.pink {
 			background-color: g.$tertiary;
+		}
+
+		&.navy {
+			background-color: g.$primary;
+			&::after {
+				background-image: url(../img/common/icon_page_arrow.svg) !important;
+				width: 9px !important;
+				height: 10px !important;
+				right: 19px;
+			}
 		}
 
 		&.btn-sm {
@@ -142,7 +160,7 @@
 			&::after{
 			content: "";
 			display: inline-block;
-			background: url(../img/common/ico_link.svg) ;
+			background: url(../img/common/icon_btn-bace-square-arrow.png) ;
 			background-repeat: none;
 			background-size: cover;
 			background-position: center;

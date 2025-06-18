@@ -104,7 +104,7 @@ function theme_enqueue_scripts() {
  * パンくずリストを出力する関数
  */
 function mytheme_breadcrumb() {
-    $home = '<a href="' . home_url() . '">HOME</a>';
+    $home = '<a href="' . home_url() . '">TOP</a>';
     $breadcrumb = $home;
 
     // if ( is_singular('post') ) {
@@ -192,6 +192,13 @@ function mytheme_breadcrumb() {
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . post_type_archive_title('', false);
     }
 
+    elseif ( is_singular('recruit') ) {
+        // ① 採用情報 固定ページへのリンク
+        $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報のお知らせ</a>';
+        // ③ 現在の投稿タイトル
+        $breadcrumb  .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
+    }
+
     elseif ( is_singular('voices') ) {
         // ① 採用情報 固定ページへのリンク
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報</a>';
@@ -201,6 +208,7 @@ function mytheme_breadcrumb() {
         // ③ 現在の投稿タイトル
         $breadcrumb  .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }
+
 
     elseif ( is_tax() ) {
         $term = get_queried_object();
@@ -457,5 +465,5 @@ function cut_screen_reader_text($template) {
 }
 add_filter('navigation_markup_template', 'cut_screen_reader_text');
 
-
+add_image_size( 'wide-thumb', 640, 427, true );
 ?>

@@ -10,7 +10,19 @@
 <?php wp_head(); ?>
 <?php get_template_part( 'inc/css' ); ?>
 </head>
-<body>
+<?php
+  global $post;
+
+  if ( is_page() ) {
+    // 階層付きのスラッグを取得 (例: "parent/child")
+    $uri = get_page_uri( $post );
+    // "/" → "-" に置換して、末尾に "-pages" を付与
+    $body_id = esc_attr( str_replace( '/', '-', $uri ) . '-pages' );
+  } else {
+    $body_id = '';
+  }
+?>
+<body <?php body_class(); ?><?php if ( $body_id ) echo ' id="' . $body_id . '"'; ?>>
 <?php get_template_part( 'inc/g_tag_body' ); ?>
 <!-- wrapper -->
 <div id="wrapper">

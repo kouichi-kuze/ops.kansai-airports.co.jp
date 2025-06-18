@@ -101,13 +101,13 @@ Template Name:トップページ
 												if ( $thumb_id = get_field( 'thumb_infomation' ) ) {
 												echo wp_get_attachment_image(
 												$thumb_id,
-												'thumbnail',
+												'large',
 												false,
 												[ 'alt' => get_the_title() ]
 												);
 												} else {
 												if ( has_post_thumbnail() ) {
-												the_post_thumbnail( 'thumbnail' );
+												the_post_thumbnail( 'large' );
 												}
 												}
 												?>
@@ -166,13 +166,13 @@ Template Name:トップページ
 										if ( $thumb_id = get_field( 'thumb_infomation' ) ) {
 										echo wp_get_attachment_image(
 											$thumb_id,
-											'thumbnail',
+											'large',
 											false,
 											[ 'alt' => get_the_title() ]
 										);
 										} else {
 										if ( has_post_thumbnail() ) {
-											the_post_thumbnail( 'thumbnail' );
+											the_post_thumbnail( 'large' );
 										}
 										}
 										?>
@@ -257,7 +257,9 @@ Template Name:トップページ
 		<div class="service-bg">
 			<div class="content-inner">
 				<div class="flex-bok">
-					<div class="service_img"></div>
+					<div class="service_img">
+					
+					</div>
 					<div class="flex-box-right">
 						<div class="top-ttl-area">
 						<h2 class="ttl-2"><span>事業紹介</span>Service</h2>
@@ -366,15 +368,13 @@ Template Name:トップページ
 										<li class="recruit-voices-contents-list-item">
 										<a href="<?php the_permalink(); ?>">
 										<!-- サムネイル画像 -->
-											<div>
+											<div class="img-voice-slide-box">
 												<?php
-												if ( has_post_thumbnail() ) {
-													the_post_thumbnail( 'large' );
-												} elseif ( $thumb_id = get_field( 'voices_thumb_img' ) ) {
-													echo wp_get_attachment_image( $thumb_id, 'large' );
-												} else {
-													echo '<img clss="img-voice-slide" src="' . esc_url( get_template_directory_uri() . '/assets/img/voice/img_page-recruit-voices_01.png' ) . '" alt="' . esc_attr( get_the_title() ) . '">';
-												}
+													$thumb_id = get_field( 'voices_thumb_img' );
+													if ( $thumb_id ) {
+													$image = wp_get_attachment_image_src( $thumb_id, 'large' );
+													echo '<img src="' . esc_url( $image[0] ) . '" alt="">';
+													}
 												?>
 											</div>
 
@@ -398,14 +398,23 @@ Template Name:トップページ
 														<?php endif; ?>
 
 														<div class="voices-button-area-text-bottom">
+															<?php
+															$affiliation = get_field('voices_affiliation');
+															$joining = get_field('voices_joining');
+															?>
+
 															<!-- 所属場所 -->
-															<?php if ( $val = get_field( 'voices_affiliation' ) ) : ?>
-																<span class="place"><?php echo esc_html( $val ); ?></span>
+															<?php if ( $affiliation ) : ?>
+																<span class="place"><?php echo esc_html( $affiliation ); ?></span>
+															<?php endif; ?>
+
+															<?php if ( $affiliation && $joining ) : ?>
+																<span class="slash-display">/</span>
 															<?php endif; ?>
 
 															<!-- 入社年 -->
-															<?php if ( $val = get_field( 'voices_joining' ) ) : ?>
-																<span class="Joining"><?php echo esc_html( $val ); ?></span>
+															<?php if ( $joining ) : ?>
+																<span class="Joining"><?php echo esc_html( $joining ); ?></span>
 															<?php endif; ?>
 														</div>
 													</li>

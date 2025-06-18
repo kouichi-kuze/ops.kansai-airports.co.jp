@@ -17,7 +17,7 @@
 <div id="single-news">
 	<div id="information">
 		<div id="single-news-page" class="bg-color-primary">
-			<div class="main-ounded-content bg-color-primary">
+			<div class="main-ounded-content single bg-color-primary">
 				<div class="p-side-3-8">
 					<div class="max-128">
 						
@@ -60,11 +60,11 @@
 					<div class="navigation">
 					
 					<!-- <?php previous_post_link( '%link', 'PREV', TRUE ) ?>-->
+					<div class="btn-center">
 						<div class="btn-bace-round">
-								<div class="btn-setting">
-								<a href="<?php echo get_option('home'); ?>/category/news/" class="back">お知らせ一覧</a>
-							</div>
+							<a class="btn-setting btn-sm" href="<?php echo get_option('home'); ?>/category/news/" class="back">お知らせ一覧</a>
 						</div>
+					</div>
 					
 					<!--      <?php next_post_link( '%link', 'NEXT', TRUE ) ?>-->
 						
@@ -84,6 +84,6 @@
 	</div>	
 </div>
 
-
-
-<?php get_template_part( 'inc/footer' ); ?>
+<div class="single-footer">
+	<?php get_template_part( 'inc/footer' ); ?>
+</div>

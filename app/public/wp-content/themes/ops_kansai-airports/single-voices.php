@@ -91,7 +91,7 @@
 
                 if ( $display ) :  // 表示する場合だけ出力
                 ?>
-                <div class="btn-wrap center recruit-detail">
+                <div class="btn-wrap center recruit-detail d-none">
                     <a class="hover-ani" href="<?php echo esc_url( $url ); ?>">
                     <div class="btn-bace-round">
                         <div class="btn-setting pink btnico-link btn-md">
@@ -177,14 +177,23 @@
                                                     <?php endif; ?>
 
                                                     <div class="voices-button-area-text-bottom">
+                                                        <?php
+                                                        $affiliation = get_field('voices_affiliation');
+                                                        $joining = get_field('voices_joining');
+                                                        ?>
+
                                                         <!-- 所属場所 -->
-                                                        <?php if ( $val = get_field( 'voices_affiliation' ) ) : ?>
-                                                            <span class="place"><?php echo esc_html( $val ); ?></span>
+                                                        <?php if ( $affiliation ) : ?>
+                                                            <span class="place"><?php echo esc_html( $affiliation ); ?></span>
+                                                        <?php endif; ?>
+
+                                                        <?php if ( $affiliation && $joining ) : ?>
+                                                            <span class="slash-display">/</span>
                                                         <?php endif; ?>
 
                                                         <!-- 入社年 -->
-                                                        <?php if ( $val = get_field( 'voices_joining' ) ) : ?>
-                                                            <span class="Joining"><?php echo esc_html( $val ); ?></span>
+                                                        <?php if ( $joining ) : ?>
+                                                            <span class="Joining"><?php echo esc_html( $joining ); ?></span>
                                                         <?php endif; ?>
                                                     </div>
                                                 </li>

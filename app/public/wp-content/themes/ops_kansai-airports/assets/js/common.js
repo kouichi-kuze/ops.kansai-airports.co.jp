@@ -255,28 +255,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (windowwidth > 768) {
 		// PC画像（左・右）
 		leftImages = [
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
 		];
 		rightImages = [
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
 		];
 	} else {
 		// SP画像（画面全体）
 		leftImages = [
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
-		{ src: '/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
+		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
 		];
 		rightImages = [];
 	}
@@ -324,8 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplay: false,
 		//autoplaySpeed: 5000,
 		cssEase: 'linear',
-		speed: 500,
-		swipe: false, 
+		speed: 300,
+		swipe: true, 
 		draggable: false,
 		touchMove: false,
 		prevArrow: '<button type="button" class="slick-prev recruit-voices-slide-prev"><span class="icon-prev"></span></button>',
@@ -342,8 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplay: false,
 		//autoplaySpeed: 5000,
 		cssEase: 'linear',
-		speed: 500,
-		swipe: false, 
+		speed: 300,
+		swipe: true, 
 		draggable: false,
 		touchMove: false,
 		prevArrow: '<button type="button" class="slick-prev recruit-voices-slide-prev"><span class="icon-prev"></span></button>',
@@ -355,18 +355,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //======topページ servis======
-
 $(document).ready(function () {
+  const $container = $('.service_img');
+
   $('.service-item a').hover(function () {
-    const classList = $(this).attr('class'); // クラス名一覧を文字列で取得
-    const match = classList.match(/service_item_link_([0-9]+)/); // 番号だけ取得
+    const classList = $(this).attr('class');
+    const match = classList.match(/service_item_link_([0-9]+)/);
 
     if (match) {
-      const num = match[1].padStart(2, '0'); // 1 → 01 に変換
-      $('.service_img').css('background-image', `url(/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png)`);
+      const num = match[1].padStart(2, '0');
+      const newSrc = `/content/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png`;
+
+      const $currentImg = $container.find('img.active-img');
+
+      if ($currentImg.attr('src') === newSrc) return;
+
+      // 新しい画像（最初は非表示で DOM に追加）
+      const $newImg = $('<img>')
+        .attr('src', newSrc)
+        .css({
+          display: 'none', // ← チラつき防止のカギ
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        })
+        .appendTo($container);
+
+      // 読み込み完了後にフェードイン
+      $newImg.on('load', function () {
+        $currentImg.removeClass('active-img');
+
+        $newImg
+          .addClass('active-img')
+          .css({ display: 'block', opacity: 0 }) // ← フェード前にblock表示＆透明に
+          .animate({ opacity: 1 }, 100, function () {
+            $currentImg.remove(); // 前の画像を削除
+          });
+      });
     }
   });
 });
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -462,36 +495,67 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
-	//フローティング
+	// フローティング
 	const closeBtn = document.querySelector('.floating-recruit-btn-close');
 	const floatingBtn = document.querySelector('.floating-recruit-btn');
 	const target = document.querySelector('.flex-box-left .intro-text');
+	const footer = document.querySelector('.site-footer');
+
+	let introShown = false; // intro-text に一度入ったことがあるか
+	let isFooterVisible = false; // footer が現在表示中かどうか
 
 	// 閉じるボタン処理
 	if (closeBtn && floatingBtn) {
 		closeBtn.addEventListener('click', function () {
-		floatingBtn.classList.remove('is-visible');
+			floatingBtn.classList.remove('is-visible');
 		});
 	}
 
-	// IntersectionObserverでフェードイン制御
+	// intro-text が表示されたら記録し、footer外なら表示
 	if (floatingBtn && target) {
 		const observer = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				floatingBtn.classList.add('is-visible');
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						introShown = true;
+						if (!isFooterVisible) {
+							floatingBtn.classList.add('is-visible');
+						}
+					}
+				});
+			},
+			{
+				root: null,
+				threshold: 0.1,
 			}
-			});
-		},
-		{
-			root: null,
-			threshold: 0.1,
-		}
 		);
-
 		observer.observe(target);
 	}
+
+	// footer が入ったら非表示、出たら introShown が true なら再表示
+	if (floatingBtn && footer) {
+		const footerObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					isFooterVisible = entry.isIntersecting;
+
+					if (isFooterVisible) {
+						floatingBtn.classList.remove('is-visible');
+					} else {
+						if (introShown) {
+							floatingBtn.classList.add('is-visible');
+						}
+					}
+				});
+			},
+			{
+				root: null,
+				threshold: 0,
+			}
+		);
+		footerObserver.observe(footer);
+	}
+
 
 	const tabAreas = document.querySelectorAll('.tab-area');
 	let maxHeight = 0;

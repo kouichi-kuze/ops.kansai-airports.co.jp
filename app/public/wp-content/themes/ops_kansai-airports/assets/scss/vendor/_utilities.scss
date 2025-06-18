@@ -3,7 +3,7 @@
 @use "../utils/mixin" as m;
 
 .d-none {
-    display: none !important;
+  display: none !important;
 }
 
 .d-block {
@@ -16,7 +16,7 @@
 
 @media only screen and (min-width: g.$desktop-breakpoint-sm) {
   .d-sm-none {
-    display: none !important; 
+    display: none !important;
   }
 
   .d-sm-block {
@@ -24,14 +24,14 @@
   }
 
   .d-inline-sm-block,
-  .d-sm-inline-block  {
+  .d-sm-inline-block {
     display: inline-block !important;
   }
 }
 
 @media only screen and (min-width: g.$desktop-breakpoint-md) {
   .d-md-none {
-    display: none !important; 
+    display: none !important;
   }
 
   .d-md-block {
@@ -72,7 +72,7 @@
   .d-lg-none {
     display: none !important;
   }
-  
+
   .d-lg-block {
     display: block !important;
   }
@@ -99,7 +99,7 @@
   }
 
   .flex-lg-wrap {
-    flex-wrap: wrap;	
+    flex-wrap: wrap;
   }
 
   .just-content-lg-center {
@@ -111,13 +111,13 @@
   .d-xl-none {
     display: none !important;
   }
-  
+
   .d-xl-block {
     display: block !important;
   }
-	.d-xl-inline-block{
+  .d-xl-inline-block {
     display: inline-block !important;
-	}
+  }
 }
 
 .text-center {
@@ -158,22 +158,30 @@
 // Scale values in rem units mapped to safe class-name parts
 $margin-scales: (
   0.5: 1,
-  1:   2,
+  1: 2,
   1.5: 3,
-  2:   4,
+  2: 4,
   2.5: 5,
-  3:   6,
-  4:   7,
-  5:   8,
-  6:   9,
+  3: 6,
+  4: 7,
+  5: 8,
+  6: 9,
 );
 
 // Generate base margin classes
 @each $value, $name in $margin-scales {
-  .mt-#{$name} { margin-top: $value * 1rem !important; }
-  .mb-#{$name} { margin-bottom: $value * 1rem !important; }
-  .ml-#{$name} { margin-left: $value * 1rem !important; }
-  .mr-#{$name} { margin-right: $value * 1rem !important; }
+  .mt-#{$name} {
+    margin-top: $value * 1rem !important;
+  }
+  .mb-#{$name} {
+    margin-bottom: $value * 1rem !important;
+  }
+  .ml-#{$name} {
+    margin-left: $value * 1rem !important;
+  }
+  .mr-#{$name} {
+    margin-right: $value * 1rem !important;
+  }
 }
 
 // Responsive breakpoints
@@ -183,45 +191,49 @@ $desktop-breakpoint-lg: 992px;
 $desktop-breakpoint-xl: 1200px;
 
 // Generate responsive margin classes for each breakpoint
-@each $bp, $min in (
-  sm: $desktop-breakpoint-sm,
-  md: $desktop-breakpoint-md,
-  lg: $desktop-breakpoint-lg,
-  xl: $desktop-breakpoint-xl
-) {
+@each $bp,
+  $min
+    in (
+      sm: $desktop-breakpoint-sm,
+      md: $desktop-breakpoint-md,
+      lg: $desktop-breakpoint-lg,
+      xl: $desktop-breakpoint-xl
+    )
+{
   @media only screen and (min-width: $min) {
     @each $value, $name in $margin-scales {
-      .mt-#{$bp}-#{$name} { margin-top: $value * 1rem !important; }
-      .mb-#{$bp}-#{$name} { margin-bottom: $value * 1rem !important; }
-      .ml-#{$bp}-#{$name} { margin-left: $value * 1rem !important; }
-      .mr-#{$bp}-#{$name} { margin-right: $value * 1rem !important; }
+      .mt-#{$bp}-#{$name} {
+        margin-top: $value * 1rem !important;
+      }
+      .mb-#{$bp}-#{$name} {
+        margin-bottom: $value * 1rem !important;
+      }
+      .ml-#{$bp}-#{$name} {
+        margin-left: $value * 1rem !important;
+      }
+      .mr-#{$bp}-#{$name} {
+        margin-right: $value * 1rem !important;
+      }
     }
   }
 }
- a{
-	text-decoration: none;
-    transition: all 0.3s ease-out;
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-out;
 }
 @media only screen and (min-width: g.$desktop-breakpoint-md) {
-	a{
-		cursor: pointer;
-	} 
+  a {
+    cursor: pointer;
+  }
 }
-*, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.slash-display {
+  font-size: 12px;
+}

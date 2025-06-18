@@ -119,7 +119,11 @@ Template Name:個人情報保護方針
 					</div>
 				</section>
 				<section class="policy-content-box flex">
-					<div class="flex-item p-mark"><img src="<?php bloginfo('template_url'); ?>/assets/img/privacy-policy/p-mark.png" alt="プライバシーポリシー" class=""></div>
+					<div class="flex-item p-mark">
+						<a href="https://privacymark.jp/" target="_blank">
+							<img src="<?php bloginfo('template_url'); ?>/assets/img/privacy-policy/p-mark.png" alt="プライバシーポリシー" class="">
+						</a>	
+					</div>
 					<div class="flex-item">
 						<p>関西エアポートオペレーションサービス株式会社はプライバシーマーク付与事業者です。</p>
 						<p>当社は2021年9月7日に一般社団法人日本情報経済社会推進協会（JIPDEC）からプライバシーマークの認定を受けました。<br>「プライバシーマーク制度」とは、一般財団法人日本情報経済社会推進協会（JIPDEC）が、個人情報の取り扱いについて適切な保護措置を講ずる体制を整備している民間事業者等に対し、その旨を示すマークとしてプライバシーマークを付与し、事業活動に関してプライバシーマークの使用を認証する制度です。</p>
