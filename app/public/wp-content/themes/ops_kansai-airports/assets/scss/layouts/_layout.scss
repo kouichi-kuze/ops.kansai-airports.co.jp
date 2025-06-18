@@ -1474,9 +1474,11 @@ a{
 	padding: 40px 0;
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
 		padding: 60px 0;
+    border-radius: 30px;
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		padding: 80px 0;
+    border-radius: 40px;
 	}
 }
 // -----------------

@@ -1169,9 +1169,56 @@
         background-color: g.$primary;
       }
 
+
+    //リクルート詳細ページ
+    #single-recruit-page .lazyblock-recruirecruitlist-1OjhGM.wp-block-lazyblock-recruirecruitlist{
+        display: none;
+    }
+    #single-recruit-page .post_detail .post_detail-head{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 5px;
+
+
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            flex-flow: row;
+            align-items: center;
+            gap: 0;
+
+        }
+
+        .tags{
+            display: inline-block;
+        }
+        .tags li{
+            font-size: 15px;
+            font-weight: 700;
+            padding: 4px 7px;
+            background-color: g.$bg-light-gray;
+            margin-right: 15px;
+        }
+        .title{
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            margin-bottom: 60px;
+            .tags li{
+                font-size: 20px;
+                padding: 6px 10px;
+                margin-right: 25px;
+            }
+        .title{
+            font-size: 40px;
+
       svg {
         &.ico-link {
           margin-left: 10px;
+
         }
         path {
           fill: g.$white;
@@ -1739,3 +1786,52 @@
     }
   }
 }
+
+
+// #archive-recruit .btn-entry-link-block .btn-entry-link, 
+// #single-recruit .btn-entry-link-block .btn-entry-link, 
+// #archive-recruit-voices .btn-entry-link-block .btn-entry-link, 
+// #single-voices .btn-entry-link-block .btn-entry-link
+
+
+//採用情報詳細の下部ボタン
+#single-recruit #single-recruit-page .btn-entry-link-block{
+
+    .btn-entry-link{
+        position: relative;
+        padding: 10px 0;
+        padding-right: 40px;
+        padding-left: 20px;
+        height: auto;
+        min-height: 70px;
+        @media only screen and (min-width: g.$desktop-breakpoint-md){
+            min-height: 90px;
+            padding: 20px 0;
+            padding-right: 60px;
+            padding-left: 30px;
+        }
+
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cg id='open_in_new' transform='translate(-2 -2.6)'%3E%3Cpath d='M3.211,11.343V4.6H2v8h9V11.343Z' fill='%23ffffff' fill-rule='evenodd'/%3E%3Cpath d='M5,2.6h9v6H5ZM6.311,3.739V7.46h6.379V3.739Z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E");            background-repeat: no-repeat;
+            background-size: contain;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translate(0, -50%);
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                right: 24px;
+            }
+        }
+
+        .ico-link{
+            display: none;
+        }
+    }
+
+} 
+

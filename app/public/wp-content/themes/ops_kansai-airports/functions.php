@@ -107,6 +107,26 @@ function mytheme_breadcrumb() {
     $home = '<a href="' . home_url() . '">TOP</a>';
     $breadcrumb = $home;
 
+    // if ( is_singular('post') ) {
+    //     // 投稿のカテゴリー階層を取得
+    //     $categories = get_the_category();
+    //     if ($categories) {
+    //         $cat = $categories[0];
+    //         $parent_cats = [];
+    //         while ($cat->parent != 0) {
+    //             $cat = get_category($cat->parent);
+    //             array_unshift($parent_cats, $cat);
+    //         }
+    //         foreach ($parent_cats as $parent) {
+    //             $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($parent->term_id) . '">' . esc_html($parent->name) . '</a>';
+    //         }
+    //         $current_cat = $categories[0];
+    //         $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a>';
+    //     }
+    //     $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
+    // }
+
+
     if ( is_singular('post') ) {
         // 投稿のカテゴリー階層を取得
         $categories = get_the_category();
@@ -120,9 +140,18 @@ function mytheme_breadcrumb() {
             foreach ($parent_cats as $parent) {
                 $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($parent->term_id) . '">' . esc_html($parent->name) . '</a>';
             }
+
             $current_cat = $categories[0];
-            $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a>';
+            $category_slug = $current_cat->slug;
+
+            // ▼ スラッグが recruit-info のときだけ表示名を変更
+            if ( $category_slug === 'recruit-info' ) {
+                $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($current_cat->term_id) . '">採用情報のお知らせ</a>';
+            } else {
+                $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($current_cat->term_id) . '">' . esc_html($current_cat->name) . '</a>';
+            }
         }
+
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }
 
@@ -143,6 +172,21 @@ function mytheme_breadcrumb() {
         }
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . esc_html($cat->name);
     }
+
+// elseif ( is_category() ) {
+//     $cat = get_queried_object();
+//     $ancestors = array_reverse(get_ancestors($cat->term_id, 'category'));
+//     foreach ( $ancestors as $ancestor_id ) {
+//         $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . get_category_link($ancestor_id) . '">' . get_cat_name($ancestor_id) . '</a>';
+//     }
+
+//     // ▼ 採用情報カテゴリだけ表示を変える
+//     if ( $cat->slug === 'recruit-info' ) {
+//         $breadcrumb .= ' <span class="breadcrumb-diver"></span> 採用情報のお知らせ';
+//     } else {
+//         $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . esc_html($cat->name);
+//     }
+// }
 
     elseif ( is_post_type_archive() ) {
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . post_type_archive_title('', false);
