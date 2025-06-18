@@ -1079,11 +1079,13 @@
 			@media only screen and (min-width: g.$desktop-breakpoint-md) {
 				background-size: 571px 566px;
 				background-position: top 175px left -170px;
-				padding-top: 60px;
+					padding-top: 60px;
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-lmd) {
-				background-size: 571px 642px;
-				background-position: top 175px left -170px;
+				// background-size: 571px 642px;
+				// background-position: top 175px left -170px;
+				background-size: 702px 676px;
+				background-position: top 170px left -300px;
 				padding-top: 80px;
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-xl) {
@@ -1306,6 +1308,9 @@
 				flex-flow: row;
 				justify-content: space-between;
 				width: 100%;
+				@media only screen and (min-width: g.$desktop-breakpoint-md){
+					align-items: flex-end;
+				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					flex-flow: column;
 				}
@@ -1585,7 +1590,7 @@
 		justify-content: flex-end;
 		gap: 15px;
 		position: relative;
-		margin: 60px 30px 0 0;
+		margin: 40px 30px 0 0;
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			//right: 30px;
 			margin: 60px 30px 0 0;
