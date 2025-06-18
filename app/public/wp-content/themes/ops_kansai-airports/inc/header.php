@@ -28,7 +28,7 @@
 				  <a class="nav-iink" href="">企業情報 <span>Company</span></a>
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
-					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>" >企業情報トップ</a> </li>
+					  <!-- <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>" >企業情報トップ</a> </li> -->
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a> </li>
 					  <li class="secondmenu_item"> <a class="" href="<?php echo home_url( '/' ); ?>outline/">会社概要</a> </li>
 					</ul>
@@ -117,7 +117,7 @@
 		  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">採用情報 <span>Recruit</span></a>
 			<ul class="submenu">
 			  	<li class="submenu__item-top">
-					<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>services/">採用情報トップ</a>
+					<a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>recruit/">採用情報トップ</a>
 				</li>
 			  	<li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>voices/">先輩の声</a> </li>
 			</ul>
