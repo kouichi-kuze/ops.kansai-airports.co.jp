@@ -21,7 +21,7 @@ Template Name:先輩の声
         <h1 class="page-header__title">先輩の声</h1>
         <p class="page-header__subtitle">Staff Voice</p>
         </div>
-        <p class="page-header__subtext">関西エアポートオペレーションサービスで働く先輩社員から、<br class="d-md-none d-xl-block">担当業務や入社動機などをご紹介させて頂きます。</p>
+        <p class="page-header__subtext">関西エアポートオペレーションサービスで働く先輩社員から、担当業務や入社動機などをご紹介させて頂きます。</p>
       </div>
     </div>
   </div>
