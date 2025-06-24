@@ -326,7 +326,7 @@ function register_custom_post_types() {
 }
 
 // 採用情報専用カテゴリ
-
+/*
 register_taxonomy('recruit_category', 'recruit', [
   'label'        => '採用カテゴリ',
   'hierarchical' => true,
@@ -335,7 +335,7 @@ register_taxonomy('recruit_category', 'recruit', [
   'show_in_rest' => true,
   'show_ui'      => true,
 ]);
-
+*/
 
 // 先輩の声専用カテゴリ
 register_taxonomy('voices_category', 'voices', [

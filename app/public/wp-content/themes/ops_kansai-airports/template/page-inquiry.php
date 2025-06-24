@@ -196,7 +196,7 @@ Template Name:お問い合わせ
 										</div>
 										<div class="mb-2-4">
 											<p class="left-border-ttl">大阪国際空港</p>
-											<div class="tel"><a href="tel:06-6856-7300"><span>Tel.</span>006-6856-7300</a></div>
+											<div class="tel"><a href="tel:06-6856-7300"><span>Tel.</span>06-6856-7300</a></div>
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 										</div>
 									</div>

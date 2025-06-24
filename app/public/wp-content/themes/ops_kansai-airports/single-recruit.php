@@ -24,7 +24,8 @@
 		
 							<div class="post_detail">
 								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-									<div class="post_detail-head">
+									
+									<div class="post_detail-head" style="display: none;">
 										<?php
 										global $post;
 										$post_id = $post->ID;

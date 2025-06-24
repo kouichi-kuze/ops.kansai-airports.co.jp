@@ -262,7 +262,10 @@
     }
     #top-recruit-page .archive-lazyblock:last-of-type{
         .text-content{
-            margin-bottom: 0;
+            margin-bottom: 20px;
+            @media only screen and (min-width: g.$desktop-breakpoint-md){
+                margin-bottom: 30px;
+            }
         }
         .recruit-list{
             margin-bottom: 0;
@@ -475,7 +478,6 @@
             flex-flow: row;
             align-items: center;
             gap: 0;
-
         }
 
         .tags{
@@ -487,6 +489,10 @@
             padding: 4px 7px;
             background-color: g.$bg-light-gray;
             margin-right: 15px;
+            //margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
         .title{
             display: inline-block;
@@ -500,6 +506,7 @@
                 padding: 6px 10px;
                 margin-right: 25px;
             }
+            
         .title{
             font-size: 40px;
         }
@@ -1152,6 +1159,11 @@
                 font-size: 20px;
                 height: 90px;
             }
+
+            &.pink {
+                background-color: g.$tertiary !important;
+            }
+
             &:hover {
                 text-decoration: none;
             }
@@ -1730,16 +1742,10 @@
     }
 }
 
-// #archive-recruit .btn-entry-link-block .btn-entry-link, 
-// #single-recruit .btn-entry-link-block .btn-entry-link, 
-// #archive-recruit-voices .btn-entry-link-block .btn-entry-link, 
-// #single-voices .btn-entry-link-block .btn-entry-link
-
-
 //採用情報詳細の下部ボタン
 #single-recruit #single-recruit-page .btn-entry-link-block{
 
-    .btn-entry-link{
+    .btn-entry-link {
         position: relative;
         padding: 10px 0;
         padding-right: 40px;
@@ -1772,6 +1778,10 @@
 
         .ico-link{
             display: none;
+        }
+
+        &.pink {
+            background-color: g.$tertiary !important;
         }
     }
 

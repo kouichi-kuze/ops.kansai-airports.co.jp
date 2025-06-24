@@ -23,17 +23,17 @@ Template Name:企業概要
 			<div class="p-side-3-16">
 				<div class="left-content">
 					<div class="read">
-						<p class="read-ttl"><img src="<?php bloginfo('template_url'); ?>//assets/img/outline/outline_read_ttl.png" alt="空港の安全　安心を守る"></p>
+						<p class="read-ttl"><img src="<?php bloginfo('template_url'); ?>/assets/img/outline/outline_read_ttl.png" alt="空港の安全　安心を守る"></p>
 						<p class="text fixed-area">関西エアポートオペレーションサービス株式会社は、関西エアポート株式会社グループとして、様々な空港運用に関するオペレーション業務で関西国際空港、大阪国際空港の高品質なオペレーションサービスを提供しています。</p>
 					</div>
 					<ul class="page-content-link-list">
-						<li class="page-content-link"><a href="#page-content-link_01">消火器の設置・法定点検等</a></li>
+						<li class="page-content-link"><a href="#page-content-link_01">企業情報</a></li>
 						<li class="page-content-link"><a href="#page-content-link_02">組織体制</a></li>
 						<li class="page-content-link"><a href="#page-content-link_03">所在地</a></li>
 					</ul>
 					<div id="page-content-link_01" class="content">
 						<div class="margin-adjust">
-							<h2 class="left-pinkline-ttl">消火器の設置・法定点検等</h2>
+							<h2 class="left-pinkline-ttl">企業情報</h2>
 						</div>
 						<div class="company-profile">
 							<dl class="company-profile-item">
@@ -151,7 +151,7 @@ Template Name:企業概要
 									</dd>
 								</dl>
 								<dl class="company-system-item">
-									<dt class="title">ターミナルエリアオペレーションセンター</dt>
+									<dt class="title">KIXターミナルエリアオペレーションセンター</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
 											<li class="company-affi-item">保安管理グループ</li>
@@ -164,7 +164,7 @@ Template Name:企業概要
 									</dd>
 								</dl>
 								<dl class="company-system-item">
-									<dt class="title">ITM ターミナルエリアオペレーションセンター</dt>
+									<dt class="title">ITMターミナルエリアオペレーションセンター</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
 											<li class="company-affi-item">ターミナルマネジメントグループ</li>
