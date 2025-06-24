@@ -154,12 +154,12 @@ Template Name:企業概要
 									<dt class="title">KIXターミナルエリアオペレーションセンター</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
-											<li class="company-affi-item">保安管理グループ</li>
 											<li class="company-affi-item">ターミナルマネジメントグループ</li>
 											<li class="company-affi-item">パッセンジャーサポートグループ</li>
+											<li class="company-affi-item">オペレーションサポートグループ</li>
+											<li class="company-affi-item">保安管理グループ</li>
 											<li class="company-affi-item">駐車場運営グループ</li>
 											<li class="company-affi-item">清掃・カートグループ</li>
-											<li class="company-affi-item">オペレーションサポートグループ</li>
 										</ol>
 									</dd>
 								</dl>
@@ -192,15 +192,18 @@ Template Name:企業概要
 											<li class="company-affi-item">警備隊（第1・第2）</li>
 										</ol>
 									</dd>
+								
 								</dl>
 								<dl class="company-system-item">
 									<dt class="title">ノースエリアオペレーションセンター</dt>
 									<dd class="text">
 										<ol class="company-affi-list">
 											<li class="company-affi-item">特別災害隊</li>
-											<li class="company-affi-item">カーゴエリアオペレーションセンター</li>
 										</ol>
 									</dd>
+								</dl>
+								<dl class="company-system-item single">
+									<dt class="title">カーゴエリアオペレーションセンター</dt>
 								</dl>
 								<dl class="company-system-item">
 									<dt class="title">給油施設部</dt>
