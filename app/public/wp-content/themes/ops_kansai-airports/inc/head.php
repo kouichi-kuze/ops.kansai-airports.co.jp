@@ -11,12 +11,42 @@ $meta_description = get_post_meta( $post_id, 'meta_description', true );
 if ( is_post_type_archive('voices') ) {
   $default_title = '先輩の声｜採用情報｜関西エアポートオペレーションサービス株式会社';
   $default_description = '関西エアポートオペレーションサービス(株)で働く先輩方の声をご紹介します。';
+
 } elseif ( is_post_type_archive('recruit') ) {
   $default_title = '採用情報｜関西エアポートオペレーションサービス株式会社';
   $default_description = '関西エアポートオペレーションサービス株式会社の新卒/その他採用の募集要項や、先輩社員の声などを掲載しています。';
+
+} elseif ( is_category() || ( is_archive() && get_query_var('cat') ) || ( isset($_GET['cat']) ) ) {
+  if ( is_category() ) {
+    $category = get_queried_object();
+  } elseif ( get_query_var('cat') ) {
+    $cat_id = get_query_var('cat');
+    $category = get_category( $cat_id );
+  } elseif ( isset($_GET['cat']) ) {
+    $cat_slug = sanitize_text_field( $_GET['cat'] );
+    $category = get_category_by_slug( $cat_slug );
+  }
+
+  if ( isset($category->name) ) {
+    $default_title = $category->name . '｜お知らせ｜関西エアポートオペレーションサービス株式会社';
+    $default_description = '関西エアポートオペレーションサービス株式会社の「' . $category->name . '」に関するお知らせ一覧です。';
+  } else {
+    $default_title = 'お知らせ｜関西エアポートオペレーションサービス株式会社';
+    $default_description = '関西エアポートオペレーションサービス株式会社からの「お知らせ」一覧です。';
+  }
+
+} elseif ( is_singular('post') ) {
+  global $post;
+  $default_title = get_the_title( $post_id ) . '｜お知らせ｜関西エアポートオペレーションサービス株式会社';
+
+  // 本文を取得して整形し、タグ除去＋先頭100語へ
+  $raw_content = apply_filters( 'the_content', $post->post_content );
+  $default_description = wp_strip_all_tags( wp_trim_words( $raw_content, 100 ) );
+  
 } elseif ( is_archive() ) {
   $default_title = 'お知らせ｜関西エアポートオペレーションサービス株式会社';
   $default_description = '関西エアポートオペレーションサービス株式会社からの「お知らせ」一覧です。';
+
 } else {
   $default_title = is_front_page()
     ? get_bloginfo( 'name' )

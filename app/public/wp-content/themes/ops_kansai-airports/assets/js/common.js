@@ -497,65 +497,79 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// フローティング
-	const closeBtn = document.querySelector('.floating-recruit-btn-close');
-	const floatingBtn = document.querySelector('.floating-recruit-btn');
-	const target = document.querySelector('.flex-box-left .intro-text');
-	const footer = document.querySelector('.site-footer');
+const closeBtn = document.querySelector('.floating-recruit-btn-close');
+const floatingBtn = document.querySelector('.floating-recruit-btn');
+const target = document.querySelector('.flex-box-left .intro-text');
+const footer = document.querySelector('.site-footer');
 
-	let introShown = false; // intro-text に一度入ったことがあるか
-	let isFooterVisible = false; // footer が現在表示中かどうか
+let introShown = false;
+let isFooterVisible = false;
+let wasClosed = false; // 閉じた後は true にして再表示を防ぐ
 
-	// 閉じるボタン処理
-	if (closeBtn && floatingBtn) {
-		closeBtn.addEventListener('click', function () {
-			floatingBtn.classList.remove('is-visible');
-		});
-	}
+// ▼ 閉じるボタン処理
+if (closeBtn && floatingBtn) {
+	closeBtn.addEventListener('click', function () {
+		floatingBtn.classList.remove('is-visible');
+		wasClosed = true; // 今後一切表示させない
+	});
+}
 
-	// intro-text が表示されたら記録し、footer外なら表示
-	if (floatingBtn && target) {
+// ▼ トップページ判定
+const isTopPage = document.body.classList.contains('home');
+
+if (floatingBtn) {
+	if (isTopPage && target) {
+		// トップページ：intro-text 表示で is-visible（ただし閉じてなければ）
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						introShown = true;
-						if (!isFooterVisible) {
+						if (!isFooterVisible && !wasClosed) {
 							floatingBtn.classList.add('is-visible');
 						}
 					}
 				});
 			},
-			{
-				root: null,
-				threshold: 0.1,
-			}
+			{ root: null, threshold: 0.1 }
 		);
 		observer.observe(target);
-	}
-
-	// footer が入ったら非表示、出たら introShown が true なら再表示
-	if (floatingBtn && footer) {
-		const footerObserver = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					isFooterVisible = entry.isIntersecting;
-
-					if (isFooterVisible) {
-						floatingBtn.classList.remove('is-visible');
-					} else {
-						if (introShown) {
-							floatingBtn.classList.add('is-visible');
-						}
-					}
-				});
-			},
-			{
-				root: null,
-				threshold: 0,
+	} else {
+		// トップ以外：スクロールで表示（100px以上、閉じてなければ）
+		window.addEventListener('scroll', () => {
+			if (!introShown && window.scrollY > 100) {
+				introShown = true;
+				if (!isFooterVisible && !wasClosed) {
+					floatingBtn.classList.add('is-visible');
+				}
 			}
-		);
-		footerObserver.observe(footer);
+		});
 	}
+}
+
+// ▼ フッターとの干渉
+if (floatingBtn && footer) {
+	let wasVisible = false;
+
+	const footerObserver = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				const isNowVisible = entry.isIntersecting;
+
+				if (isNowVisible) {
+					wasVisible = floatingBtn.classList.contains('is-visible');
+					floatingBtn.classList.remove('is-visible');
+				} else {
+					if (wasVisible && !wasClosed) {
+						floatingBtn.classList.add('is-visible');
+					}
+				}
+			});
+		},
+		{ root: null, threshold: 0 }
+	);
+	footerObserver.observe(footer);
+}
 
 
 	const tabAreas = document.querySelectorAll('.tab-area');

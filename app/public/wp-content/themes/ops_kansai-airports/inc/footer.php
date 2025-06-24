@@ -159,7 +159,7 @@
 	</div>
 	
 
-
+<?php if ( !is_post_type_archive('recruit') && !is_singular('recruit') ) : ?>
 <div class="floating-recruit-btn">
 	<div class="btn-setting-floating-box">
 		<div class="floating-recruit-btn-close">
@@ -170,16 +170,20 @@
 		<a class="btn-setting-floating" href="/recruit/">採用情報はこちら</a>
 	</div>
 </div>
-
+<?php endif; ?>
 
 
 </footer>
 </div>
 <!-- /wrapper -->
+<!-- OneTrust Cookie 設定ボタンの始点 -->
+<button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie 設定</button>
+<!-- OneTrust Cookie 設定ボタンの終点 -->
+<!-- OneTrust Cookie リストの始点 -->
+<div id="ot-sdk-cookie-policy"></div>
+<!-- OneTrust Cookie リストの終点 -->
+
 <?php get_template_part( 'inc/script' ); ?>
-
-
-
 <?php wp_footer(); ?>
 </body>
 </html>
