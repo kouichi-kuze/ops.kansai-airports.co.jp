@@ -1097,20 +1097,28 @@
 
 		.content-inner {
 			margin-bottom: 80px;
-			padding-left: 30px;
-			padding-right: 30px;
-
+			padding-left: 30px !important;
+			padding-right: 30px !important;
+			@media only screen and (min-width: g.$desktop-breakpoint-lmd) {
+				padding-left: 40px !important;
+				padding-right: 40px !important;
+			}
+			@media only screen and (min-width: g.$desktop-breakpoint-xl) {
+				padding-left: 60px !important;
+				padding-right: 60px !important;
+			}
 			.recruit-top-contents {
 				width: 100%;
 				box-sizing: border-box;
 				@media only screen and (min-width: g.$desktop-breakpoint-md) {
-					padding-left: 60px;
+				padding-left: 60px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-lmd) {
-					padding-left: 180px;
+				padding-left: 180px;
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xl) {
-					padding-left: 230px;
+				//padding-left: 230px;
+				padding-left: 170px; //-60px
 				}
 
 				.top-ttl-area{
