@@ -21,6 +21,9 @@
     }
 	.page-content-link-list{
 		margin-bottom: 80px;
+		@media only screen and (min-width: g.$desktop-breakpoint-xl){
+			width: 290px;
+		}
 	}
 	.sec-bulue-box{
 		padding: 80px 0;
