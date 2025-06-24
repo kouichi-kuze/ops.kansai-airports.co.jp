@@ -513,9 +513,11 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-bottom: 60px;
+        //margin-bottom: 60px;
+		margin-bottom: 40px;
         @media only screen and (min-width: g.$desktop-breakpoint-md){
-            margin-bottom: 100px;
+            //margin-bottom: 100px;
+			margin-bottom: 60px;
         }
         .btn-info-link {
             background-color: g.$primary;
