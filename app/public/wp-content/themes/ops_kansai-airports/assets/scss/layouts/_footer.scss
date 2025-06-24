@@ -158,7 +158,12 @@
   text-align: center;
 }
 .footer-copylink-area {
-  padding-bottom: 30px;
+  //padding-bottom: 30px;
+  padding-bottom: 80px;
+  @media only screen and (min-width: g.$desktop-breakpoint-md) {
+    //padding-bottom: 30px;
+    padding-bottom: 80px;
+  }
 }
 .site-footer {
   border-radius: 0 30px 0 0;
@@ -183,10 +188,9 @@
   }
 }
 
-#services-pages,
-.service-detail-footer,
-.archive-recruit-footer,
-.single-recruit-footer,
+//#services-pages,
+//.service-detail-footer,
+
 .single-footer {
   .site-footer {
     border-radius: 0 0 0 0;
@@ -202,6 +206,14 @@
       border-radius: 0 0 0 0;
     }
   }
+}
+
+//#services-pages,
+.service-list-footer,
+.service-detail-footer,
+.archive-recruit-footer,
+.single-recruit-footer {
+  background-color: #07185C;
 }
 
 

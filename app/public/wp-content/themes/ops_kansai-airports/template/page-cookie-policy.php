@@ -29,7 +29,16 @@ Template Name:クッキーポリシー
 				<section class="policy-content-box">
 					<h3 class="left-pinkline-ttl">当社が使用するクッキーの種類</h3>
 					<p>当社が使用するクッキーには、以下の種類があります。</p>
-					<div class="table-content">
+
+					<!-- OneTrust Cookie 設定ボタンの始点 -->
+					<button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie 設定</button>
+					<!-- OneTrust Cookie 設定ボタンの終点 -->
+					<br><br>
+					<!-- OneTrust Cookie リストの始点 -->
+					<div id="ot-sdk-cookie-policy"></div>
+					<!-- OneTrust Cookie リストの終点 -->
+					
+					<!--<div class="table-content">
 						<h4>クッキーリスト</h4>
 						<p>クッキーとは小さなデータファイル (テキストファイル) で、ユーザーがウェブサイトを訪問した際のユーザーの言語設定やログイン情報などを記憶するため、ウェブサイトがブラウザにデバイス上に保存するよう要求するものです。このようなクッキーは弊社が設定するもので、ファーストパーティークッキーと呼ばれます。弊社ではサードパーティクッキーも使用していますが、これは訪問したウェブサイトのドメインとは異なるドメインから来ているクッキーで、弊社の広告とマーケティング活動をサポートするためのものです。より具体的には、弊社では、以下のような利用目的のためにクッキーと他のトラッキング技術を使用しています。</p>
 						
@@ -119,7 +128,7 @@ Template Name:クッキーポリシー
 							  </tbody>
 	                      </table>
 						
-					</div>
+					</div>-->
 				</section>
 				
 				<section class="policy-content-box">

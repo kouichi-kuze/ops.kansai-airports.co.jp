@@ -176,16 +176,25 @@ a{
 }
 .page-header__title-flex{
 	margin-bottom: 20px;
-	.blue-under-line-ttl{
-		margin-bottom: 40px;
-	}
+	
 	@media only screen and (min-width: g.$desktop-breakpoint-md){
 		margin-bottom: 60px;
 	}
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		display: flex;
-		gap: 160px;
+		//gap: 160px;
 		align-items: center;
+    gap: 60px;
+	}
+  @media only screen and (min-width: g.$desktop-breakpoint-xxxl){
+    gap: 160px;
+  }
+
+  .blue-under-line-ttl{
+		margin-bottom: 40px;
+    @media only screen and (min-width: g.$desktop-breakpoint-xl){
+		min-width: 225px;
+	  }
 	}
 }
 

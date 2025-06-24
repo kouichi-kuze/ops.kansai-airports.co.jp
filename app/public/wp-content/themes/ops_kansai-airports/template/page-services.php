@@ -180,4 +180,7 @@ Template Name:事業紹介
 	
 
 </main >
+
+<div class="service-list-footer">
 <?php get_template_part( 'inc/footer' ); ?>
+</div>
