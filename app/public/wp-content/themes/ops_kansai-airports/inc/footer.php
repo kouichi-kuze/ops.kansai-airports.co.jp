@@ -132,8 +132,9 @@
 						<div class="footer-btn">
 							<a class="footer-btn-link" href="https://www.kansai-airports.co.jp/" target="_blank">
 								<img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_footer_02.svg" alt="関西エアポートエアポートオペレーションサービス株式会社">
+								<span class="footer-btn-text">関西エアポート株式会社</span>
 							</a>
-							<span class="footer-btn-text">関西エアポート株式会社</span>
+							<!-- <span class="footer-btn-text">関西エアポート株式会社</span> -->
 						</div>
 					</div>
 				</div>

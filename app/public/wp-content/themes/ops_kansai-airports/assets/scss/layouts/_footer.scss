@@ -73,11 +73,14 @@
 }
 .footer-btn {
   margin-bottom: 20px;
-  max-width: 400px;
+  //max-width: 400px;
+  max-width: 250px;
   @include m.mx-auto;
   display: block;
   @media only screen and (min-width: g.$desktop-breakpoint-md) {
-    width: 254px;
+    //width: 254px;
+    width: 290px;
+    max-width: none;
     margin-left: 0;
     margin-right: 0;
   }
@@ -111,6 +114,7 @@
     font-size: 12px;
     font-weight: 400;
     display: block;
+    color: g.$white;
 
     &::after {
       content: "";
@@ -338,14 +342,6 @@
   #footer-sm .logo-l {
     max-width: 326px;
   }
-  .site-footer .nav-pc-menu {
-  }
-  .site-footer .nav-pc-menu {
-  }
-  .site-footer .nav-pc-menu {
-  }
-  .site-footer .nav-pc-menu {
-  }
 }
 
 .floating-recruit-btn {
@@ -357,9 +353,9 @@
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
   box-shadow: -1px 1px 12px rgba(0, 0, 0, 0.15);
-  @media only screen and (min-width: g.$desktop-breakpoint-md) {
-    display: none !important;
-  }
+  // @media only screen and (min-width: g.$desktop-breakpoint-md) {
+  //   display: none !important;
+  // }
 
   &.is-visible {
     opacity: 1;
