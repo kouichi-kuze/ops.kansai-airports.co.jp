@@ -231,7 +231,7 @@
 
 	#information{
 		position: relative;
-		.main-ounded-content{
+		.main-ounded-content {
 			padding: 35px 0 30px;
 			border-radius: 0;
 			position: relative;
@@ -1315,10 +1315,10 @@
 				display: flex;
 				flex-flow: row;
 				justify-content: space-between;
+				align-items: flex-end;
 				width: 100%;
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					align-items: flex-end;
-					align-items: self-end
 				}
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					flex-flow: column;
