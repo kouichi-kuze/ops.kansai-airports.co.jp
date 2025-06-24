@@ -769,25 +769,50 @@
                 }
             }
         }
-        .head-senior-text{
+        .head-senior-text {
             margin-bottom: 40px;
-            @media only screen and (min-width: g.$desktop-breakpoint-md){
-                max-width: calc(420px + 40px);
+            @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                //max-width: calc(420px + 40px);
+                max-width: calc(100% - 245px);
+                padding-right: 30px;
             }
-            @media only screen and (min-width: g.$desktop-breakpoint-xl){
-                max-width: calc(600px + 40px);
+            @media only screen and (min-width: g.$desktop-breakpoint-lmd) {
+                max-width: calc(100% - 312px);
+                padding-right: 40px;
+            }
+            @media only screen and (min-width: g.$desktop-breakpoint-xl) {
+                //max-width: calc(600px + 40px);
+                max-width: calc(100% - 312px);
+                padding-right: 40px;
                 margin-bottom: 80px;
             }
-            .title{
-                font-size: 20px;
+            @media only screen and (min-width: g.$desktop-breakpoint-xxl) {
+                //max-width: 80%;
+                //max-width: 80%;
+                max-width: calc(100% - 270px);
+                padding-right: 60px;
+                margin-bottom: 80px;
+            }
+            @media only screen and (min-width: g.$desktop-breakpoint-xxxl) {
+                //max-width: 67%;
+                width: 100%;
+                //max-width: calc(100% - 28%);
+                max-width: calc(100% - 432px);
+                padding-right: 60px;
+            }
+            .title {
+                font-size: 24px;
                 color: g.$white;
                 margin-bottom: 30px;
-                @media only screen and (min-width: g.$desktop-breakpoint-xl){
-                    font-size: 40px;
-                    margin-bottom: 40px;
+                @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                font-size: 28px;
+                }
+                @media only screen and (min-width: g.$desktop-breakpoint-xl) {
+                font-size: 40px;
+                margin-bottom: 40px;
                 }
             }
-            .work{
+            .work {
                 display: inline-block;
                 font-size: 14px;
                 font-weight: 700;
@@ -797,26 +822,27 @@
                 border-radius: 4px;
                 background-color: g.$white;
             }
-            .name{
+            .name {
                 display: block;
                 font-size: 20px;
                 font-weight: 700;
                 margin-bottom: 10px;
             }
-            .department{
+            .department {
                 display: block;
                 font-size: 14px;
                 margin-bottom: 10px;
             }
-            .place{
+            .place {
                 display: inline-block;
                 font-size: 14px;
             }
-            .Joining{
+            .Joining {
                 display: inline-block;
                 font-size: 14px;
             }
         }
+
         .sub-page-lightbulule-header{
             @media only screen and (min-width: g.$desktop-breakpoint-md){
                 width: 85%;
@@ -1373,9 +1399,11 @@
 
                     }
                 }
-                .work{
-                    display: block;
-                    max-width: 202px;
+                .work {
+                    //display: block;
+                    display: inline-block;
+                    vertical-align: top;
+                    //max-width: 202px;
                     font-size: 14px;
                     font-weight: 700;
                     color: g.$blue400;
@@ -1384,68 +1412,69 @@
                     margin-bottom: 10px;
                     border-radius: 4px;
                 }
-                .name{
+                .name {
                     font-size: 16px;
                     font-weight: 700;
                     display: block;
                 }
-                .button-area{
+                .button-area {
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
-                    & .place{
-                        font-size: 12px;
-                        font-weight: 400;
-                        display: inline-block;
+                    & .place {
+                    font-size: 12px;
+                    font-weight: 400;
+                    display: inline-block;
                     }
-                    & .Joining{
-                        font-size: 12px;
-                        font-weight: 400;
-                        display: inline-block;
+                    & .Joining {
+                    font-size: 12px;
+                    font-weight: 400;
+                    display: inline-block;
                     }
-                    & .btn span{
+                    & .btn span {
+                    display: inline-block;
+                    position: relative;
+                    width: 58px;
+                    height: 29px;
+                    border-radius: 50px;
+                    background-color: g.$blue400;
+                    transition: all 0.3s;
+                    &::after {
+                        content: "";
                         display: inline-block;
-                        position: relative;
-                        width: 58px;
-                        height: 29px;
-                        border-radius: 50px;
-                        background-color: g.$blue400;
-                        transition: all 0.3s;
-                        &::after{
-                            content: "";
-                            display: inline-block;
-                            background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat center / contain;
-                            width: 28px;
-                            height: 5px;
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        }
+                        background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat
+                        center / contain;
+                        width: 28px;
+                        height: 5px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
                     }
                 }
-               @media only screen and (min-width: g.$desktop-breakpoint-xl){
-                    .title{
-                        font-size: 24px;
-                    }
-                    .work{
-                        font-size: 16px;
-                        margin-bottom: 20px;
-                        max-width: 228px;
-                    }
-                    .name{
-                        font-size: 18px;
-                        margin-bottom: 20px;
-                    }
-                    .button-area{
-                        .place{
-                            font-size: 14px;
-                        }
-                        .Joining{
-                            font-size: 14px;
-                        }
-                    }
-               }
+               @media only screen and (min-width: g.$desktop-breakpoint-xl) {
+                .title {
+                font-size: 24px;
+                }
+                .work {
+                font-size: 16px;
+                margin-bottom: 20px;
+                //max-width: 228px;
+                }
+                .name {
+                font-size: 18px;
+                margin-bottom: 20px;
+                }
+                .button-area {
+                .place {
+                    font-size: 14px;
+                }
+                .Joining {
+                    font-size: 14px;
+                }
+                }
+            }
             }
         }
 
@@ -1480,9 +1509,10 @@
 
 				.recruit-voices-page-contents-list-item {
 					width: 100%;
-                    @media only screen and (min-width: g.$desktop-breakpoint-md){
-                        a:hover img,a:hover .voices-button-area-btn{
-                            scale: 1.1;
+                    @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                        a:hover img,
+                        a:hover .voices-button-area-btn {
+                        scale: 1.1;
                         }
                     }
 					.voices-img {
@@ -1512,7 +1542,12 @@
 
 					.text-voice-slide {
 						width: 100%;
-						position: relative;
+                        position: relative;
+                        min-height: 32px;
+                        padding-bottom: 10px;
+                        @media only screen and (min-width: g.$desktop-breakpoint-md) {
+                        padding-bottom: 10px;
+                        }
 						.work {
 							background-color: #EFEFEF;
 							color: #3EB3FF;
@@ -1606,37 +1641,28 @@
 						}
 
 						.voices-button-area-btn {
-								display: inline-block;
-								position: absolute;
-								width: 58px;
-								height: 29px;
-								border-radius: 50px;
-								background-color: #3EB3FF;
-								transition: all 0.3s;
-								right: 0;
-								bottom: 3px;
-                            
-								&::after{
-									content: "";
-									display: inline-block;
-									background: url(../img/recruit/icon_one_arrow_white.svg) no-repeat center / contain;
-									width: 28px;
-									height: 5px;
-									position: absolute;
-									top: 50%;
-									left: 50%;
-									transform: translate(-50%, -50%);
-								}
-
-								&:hover {
-									@media only screen and (min-width: g.$desktop-breakpoint-md){
-										scale: 1.1;
-	
-									}
-								}
-								
-							}
-
+                            display: inline-block;
+                            position: absolute;
+                            width: 58px;
+                            height: 29px;
+                            border-radius: 50px;
+                            background-color: #3eb3ff;
+                            transition: all 0.3s;
+                            right: 0;
+                            bottom: 7px;
+                            &::after {
+                                content: "";
+                                display: inline-block;
+                                background: url(../img/recruit/icon_one_arrow_white.svg)
+                                no-repeat center / contain;
+                                width: 28px;
+                                height: 5px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
 					}
 
 				}

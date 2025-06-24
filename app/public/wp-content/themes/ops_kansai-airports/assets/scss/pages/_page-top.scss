@@ -1592,27 +1592,27 @@
 					}
 
 					.voices-button-area-btn {
-					display: inline-block;
-					position: absolute;
-					width: 58px;
-					height: 29px;
-					border-radius: 50px;
-					background-color: #3eb3ff;
-					transition: all 0.3s;
-					right: 0;
-					bottom: 7px;
-					&::after {
-						content: "";
 						display: inline-block;
-						background: url(../img/recruit/icon_one_arrow_white.svg)
-						no-repeat center / contain;
-						width: 28px;
-						height: 5px;
 						position: absolute;
-						top: 50%;
-						left: 50%;
-						transform: translate(-50%, -50%);
-					}
+						width: 58px;
+						height: 29px;
+						border-radius: 50px;
+						background-color: #3eb3ff;
+						transition: all 0.3s;
+						right: 0;
+						bottom: 7px;
+						&::after {
+							content: "";
+							display: inline-block;
+							background: url(../img/recruit/icon_one_arrow_white.svg)
+							no-repeat center / contain;
+							width: 28px;
+							height: 5px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
 					}
 				}
 
