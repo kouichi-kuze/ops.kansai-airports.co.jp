@@ -248,35 +248,36 @@ document.addEventListener('DOMContentLoaded', () => {
 		GethashID (hashName);//設定したタブの読み込み
 	});
 	
-	//mvのスライダー
+	// mvのスライダー
 	var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 	let leftImages, rightImages;
-		
+
+	// WordPressから渡されたテーマURL
+	const basePath = themeParams.templateUrl + '/assets/img/top/';
+
 	if (windowwidth > 768) {
-		// PC画像（左・右）
 		leftImages = [
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' }
+			{ src: basePath + 'mv_01.png' },
+			{ src: basePath + 'mv_03.png' },
+			{ src: basePath + 'mv_05.png' },
+			{ src: basePath + 'mv_07.png' }
 		];
 		rightImages = [
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+			{ src: basePath + 'mv_02.png' },
+			{ src: basePath + 'mv_04.png' },
+			{ src: basePath + 'mv_06.png' },
+			{ src: basePath + 'mv_08.png' }
 		];
 	} else {
-		// SP画像（画面全体）
 		leftImages = [
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_01.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_02.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_03.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_04.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_05.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_06.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_07.png' },
-		{ src: '/content/wp-content/themes/ops_kansai-airports/assets/img/top/mv_08.png' }
+			{ src: basePath + 'mv_01.png' },
+			{ src: basePath + 'mv_02.png' },
+			{ src: basePath + 'mv_03.png' },
+			{ src: basePath + 'mv_04.png' },
+			{ src: basePath + 'mv_05.png' },
+			{ src: basePath + 'mv_06.png' },
+			{ src: basePath + 'mv_07.png' },
+			{ src: basePath + 'mv_08.png' }
 		];
 		rightImages = [];
 	}

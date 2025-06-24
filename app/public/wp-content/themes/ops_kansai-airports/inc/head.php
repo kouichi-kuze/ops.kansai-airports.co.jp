@@ -8,12 +8,23 @@ $meta_title       = get_post_meta( $post_id, 'meta_title', true );
 $meta_description = get_post_meta( $post_id, 'meta_description', true );
 
 // 2) フォールバック用タイトル・ディスクリプション
-$default_title = is_front_page()
-  ? get_bloginfo( 'name' )
-  : get_the_title( $post_id ) . '｜関西エアポートオペレーションサービス株式会社';
-$default_description = is_singular()
-  ? wp_strip_all_tags( get_the_excerpt( $post_id ) )
-  : get_bloginfo( 'description' );
+if ( is_post_type_archive('voices') ) {
+  $default_title = '先輩の声｜採用情報｜関西エアポートオペレーションサービス株式会社';
+  $default_description = '関西エアポートオペレーションサービス(株)で働く先輩方の声をご紹介します。';
+} elseif ( is_post_type_archive('recruit') ) {
+  $default_title = '採用情報｜関西エアポートオペレーションサービス株式会社';
+  $default_description = '関西エアポートオペレーションサービス株式会社の新卒/その他採用の募集要項や、先輩社員の声などを掲載しています。';
+} elseif ( is_archive() ) {
+  $default_title = 'お知らせ｜関西エアポートオペレーションサービス株式会社';
+  $default_description = '関西エアポートオペレーションサービス株式会社からの「お知らせ」一覧です。';
+} else {
+  $default_title = is_front_page()
+    ? get_bloginfo( 'name' )
+    : get_the_title( $post_id ) . '｜関西エアポートオペレーションサービス株式会社';
+  $default_description = is_singular()
+    ? wp_strip_all_tags( get_the_excerpt( $post_id ) )
+    : get_bloginfo( 'description' );
+}
 
 // 3) OGP画像の取得
 $ogp_id = get_post_meta( $post_id, 'img_ogp', true );

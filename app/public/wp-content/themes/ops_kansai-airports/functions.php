@@ -75,6 +75,17 @@ add_filter( 'next_post_link', 'add_next_post_link_class' );
 //アイキャッチ画像を有効化
 add_theme_support( 'post-thumbnails' );
 
+function my_theme_enqueue_scripts() {
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/custom.js', array(), null, true);
+
+    // JS側にテーマURLを渡す
+    wp_localize_script('custom-script', 'themeParams', array(
+        'templateUrl' => get_template_directory_uri()
+    ));
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
+
+
 
 
 //固定ページのみクラシックエディタに変更
@@ -173,6 +184,8 @@ function mytheme_breadcrumb() {
         $breadcrumb .= ' <span class="breadcrumb-diver"></span> ' . esc_html($cat->name);
     }
 
+
+    
 // elseif ( is_category() ) {
 //     $cat = get_queried_object();
 //     $ancestors = array_reverse(get_ancestors($cat->term_id, 'category'));
