@@ -13,7 +13,7 @@
 	}
 	.ceo-img img{
 		height: 260px;
-		height: 66.67vw;
+		height: auto;
 		width: 100%;
 		object-fit: cover;
 		object-position: center top;
@@ -34,8 +34,9 @@
 	}
 
 	.ceo-img img{
-		height: 58.67vw;
-			border-radius: 15px;
+		//height: 58.67vw;
+		height: auto;
+		border-radius: 15px;
 
 	}
 	.ceo-message p{
@@ -51,7 +52,7 @@
 	@media only screen and (min-width: g.$desktop-breakpoint-xl){
 		.ceo-img img{
 			width: 510px;
-			height: 562px;
+			height: auto;
 		}
 		.ceo-message-content{
 			display: flex;

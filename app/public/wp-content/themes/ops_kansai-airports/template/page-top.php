@@ -257,8 +257,8 @@ Template Name:トップページ
 		<div class="service-bg">
 			<div class="content-inner">
 				<div class="flex-bok">
-					<div class="service_img">
-					
+					<div class="service_img" style="position: relative;">
+					<img src="" class="active-img">
 					</div>
 					<div class="flex-box-right">
 						<div class="top-ttl-area">

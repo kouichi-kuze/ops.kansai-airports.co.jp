@@ -86,7 +86,7 @@ Template Name:企業概要
 							<dl class="company-profile-item">
 								<dt class="title">従業員数</dt>
 								<dd class="text">
-									841名(2024年4月1日現在)
+									712名（2025年7月1日時点）
 									<div class="blank-hiringratio-head">
 										<h3 class="dot-ttl">労働施策総合推進法に基づく中途採用比率の公開</h3>
 										<p class="date">公表日：2025年4月1日</p>

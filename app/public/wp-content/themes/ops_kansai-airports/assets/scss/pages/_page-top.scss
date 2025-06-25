@@ -490,6 +490,7 @@
 				height: 93px;
 				overflow: hidden;
 				border-radius: 6px;
+				border: solid #EFEFEF 1px;
 				@media only screen and (min-width: g.$desktop-breakpoint-md){
 					height: 120px;
 					//width: 17%;
@@ -511,7 +512,7 @@
 					object-fit: cover;
 					object-fit: center;
 					transition: all 0.3s;
-					scale: 1.1;
+					scale: 1;
 					
 				}
 			}
@@ -525,7 +526,7 @@
 							object-fit: cover;
 							object-fit: center;
 							transition: all 0.5s;
-							scale: 1.2;
+							scale: 1.1;
 						}
 
 						.information_list__title {
@@ -943,6 +944,7 @@
 			background-size: cover;
 			background-position: center;
 			transition: all 0.3s;
+			overflow: hidden;
 			@media only screen and (min-width: g.$desktop-breakpoint-lmd){
 				display: block;
 			}

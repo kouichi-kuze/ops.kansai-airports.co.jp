@@ -24,8 +24,8 @@ Template Name:代表メッセージ
 			<div class="max-128">
 				<div class="ceo-message-content">
 					<figure class="ceo-img">
-						<img class="d-none d-md-block" src="<?php bloginfo('template_url'); ?>/assets/img/company/ceo_img_pc.png" alt="代表取締役社長　石川 浩司">
-						<img class="d-md-none" src="<?php bloginfo('template_url'); ?>/assets/img/company/ceo_img_sp.png" alt="代表取締役社長　石川 浩司">
+						<img class="d-none d-xl-block" src="<?php bloginfo('template_url'); ?>/assets/img/company/ceo_img_pc.png" alt="代表取締役社長　石川 浩司">
+						<img class="d-xl-none" src="<?php bloginfo('template_url'); ?>/assets/img/company/ceo_img_sp.png" alt="代表取締役社長　石川 浩司">
 					</figure>
 					<div class="ceo-message">
 						<p class="text-left">関西エアポートオペレーションサービス株式会社のホームページをご覧いただき、ありがとうございます。</p>

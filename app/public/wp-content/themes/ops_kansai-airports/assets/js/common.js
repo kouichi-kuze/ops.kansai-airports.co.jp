@@ -358,49 +358,52 @@ document.addEventListener('DOMContentLoaded', () => {
 //======topページ servis======
 $(document).ready(function () {
   const $container = $('.service_img');
+  // 絶対パスは themeParams から
+  const basePath = themeParams.templateUrl + '/assets/img/top/';
 
   $('.service-item a').hover(function () {
-    const classList = $(this).attr('class');
-    const match = classList.match(/service_item_link_([0-9]+)/);
+    const match = this.className.match(/service_item_link_([0-9]+)/);
+    if (!match) return;
 
-    if (match) {
-      const num = match[1].padStart(2, '0');
-      const newSrc = `/content/wp-content/themes/ops_kansai-airports/assets/img/top/service_img_${num}.png`;
+    const num = match[1].padStart(2, '0');
+    const newSrc = basePath + `service_img_${num}.png`;
 
-      const $currentImg = $container.find('img.active-img');
-
-      if ($currentImg.attr('src') === newSrc) return;
-
-      // 新しい画像（最初は非表示で DOM に追加）
-      const $newImg = $('<img>')
-        .attr('src', newSrc)
-        .css({
-          display: 'none', // ← チラつき防止のカギ
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        })
-        .appendTo($container);
-
-      // 読み込み完了後にフェードイン
-      $newImg.on('load', function () {
-        $currentImg.removeClass('active-img');
-
-        $newImg
-          .addClass('active-img')
-          .css({ display: 'block', opacity: 0 }) // ← フェード前にblock表示＆透明に
-          .animate({ opacity: 1 }, 100, function () {
-            $currentImg.remove(); // 前の画像を削除
-          });
-      });
+    // 切り替え元 img を取得
+    let $currentImg = $container.find('img.active-img');
+    if (!$currentImg.length) {
+      // もし存在しなければ最初の img として作る
+      $currentImg = $('<img class="active-img">').appendTo($container);
     }
+
+    // すでに同じ src なら何もしない
+    if ($currentImg.attr('src') === newSrc) return;
+
+    // 切り替え先 img を非表示で追加
+    const $newImg = $('<img>')
+      .attr('src', newSrc)
+      .css({
+        display: 'none',
+        position: 'absolute',
+        top: 0, left: 0,
+        width: '100%', height: '100%',
+        objectFit: 'cover'
+      })
+      .appendTo($container);
+
+    $newImg.on('load', function () {
+      $currentImg.removeClass('active-img');
+      $newImg
+        .addClass('active-img')
+        .css({ display: 'block', opacity: 0 })
+        .animate({ opacity: 1 }, 200, function () {
+          $currentImg.remove();
+        });
+    });
+
+  }, function () {
+    // mouseleave 時に元に戻したければここに処理を追加
   });
 });
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -536,14 +539,10 @@ if (floatingBtn) {
 		observer.observe(target);
 	} else {
 		// トップ以外：スクロールで表示（100px以上、閉じてなければ）
-		window.addEventListener('scroll', () => {
-			if (!introShown && window.scrollY > 100) {
-				introShown = true;
-				if (!isFooterVisible && !wasClosed) {
-					floatingBtn.classList.add('is-visible');
-				}
-			}
-		});
+		introShown = true;
+		if (!isFooterVisible && !wasClosed) {
+			floatingBtn.classList.add('is-visible');
+		}
 	}
 }
 
