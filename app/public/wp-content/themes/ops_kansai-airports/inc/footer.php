@@ -115,7 +115,7 @@
 					<div class="office-info d-md-flex justify-content-md-between">
 						
 						<div>
-							<div class="logo-l"><a href="https://www.ops.kansai-airports.co.jp/"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_l.svg" alt="関西エアポートエアポートオペレーションサービス株式会社"></a></div>							
+							<div class="logo-l"><a href="<?php echo home_url( '/' ); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_l.svg" alt="関西エアポートエアポートオペレーションサービス株式会社"></a></div>							
 							<ul class="office-list">
 								<li class="offis-item">
 									<p class="office-name">関西エアポートオペレーションサービス株式会社</p>

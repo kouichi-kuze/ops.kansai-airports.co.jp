@@ -226,26 +226,28 @@ Template Name:トップページ
 			<div class="scroll-infinity-top-slide">
 				<div class="scroll-infinity-top-slide__wrap">
 					<ul class="scroll-infinity-top-slide__list scroll-infinity-top-slide__list--left">
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_01.png" /></li>                        
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_02.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_03.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_04.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_05.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_06.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_07.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_08.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_09.png" /></li>
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_01.jpg" /></li>                        
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_02.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_03.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_04.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_05.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_06.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_07.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_08.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_09.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_10.jpg" /></li>
 					</ul>
 					<ul class="scroll-infinity-top-slide__list scroll-infinity-top-slide__list--left">
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_01.png" /></li>                        
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_02.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_03.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_04.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_05.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_06.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_07.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_08.png" /></li>
-						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_09.png" /></li>
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_01.jpg" /></li>                        
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_02.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_03.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_04.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_05.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_06.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_07.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_08.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_09.jpg" /></li>   
+						<li class="scroll-infinity-top-slide__item"><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_10.jpg" /></li>
 					</ul>
 				</div>
 			</div>

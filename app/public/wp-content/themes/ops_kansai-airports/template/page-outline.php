@@ -26,7 +26,12 @@ Template Name:企業概要
 						<p class="read-ttl"><img src="<?php bloginfo('template_url'); ?>/assets/img/outline/outline_read_ttl.png" alt="空港の安全　安心を守る"></p>
 						<p class="text fixed-area">関西エアポートオペレーションサービス株式会社は、関西エアポート株式会社グループとして、様々な空港運用に関するオペレーション業務で関西国際空港、大阪国際空港の高品質なオペレーションサービスを提供しています。</p>
 					</div>
-					<ul class="page-content-link-list">
+					<ul class="page-content-link-list fix-page-content-link-list d-none d-xl-block">
+						<li class="page-content-link"><a href="#page-content-link_01">企業情報</a></li>
+						<li class="page-content-link"><a href="#page-content-link_02">組織体制</a></li>
+						<li class="page-content-link"><a href="#page-content-link_03">所在地</a></li>
+					</ul>
+					<ul class="page-content-link-list d-xl-none">
 						<li class="page-content-link"><a href="#page-content-link_01">企業情報</a></li>
 						<li class="page-content-link"><a href="#page-content-link_02">組織体制</a></li>
 						<li class="page-content-link"><a href="#page-content-link_03">所在地</a></li>

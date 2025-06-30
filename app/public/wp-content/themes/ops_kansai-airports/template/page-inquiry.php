@@ -31,7 +31,14 @@ Template Name:お問い合わせ
 
 						<p class="text fixed-area">関西エアポートオペレーションサービス株式会社は関西エアポート株式会社グループとして空港の「安全・安心」を守ってまいりました。弊社は長年の経験から培ったノウハウを活かし、お客様のご依頼にお応えします。<br>詳しくは、電話でお問い合わせください。</p>
 					</div>
-					<ul class="page-content-link-list">
+					<ul class="page-content-link-list d-none d-xl-block fix-page-content-link-list">
+						<li class="page-content-link"><a href="#page-content-link_01">受託警備業務</a></li>
+						<li class="page-content-link"><a href="#page-content-link_02">消火器の設置・<br class="d-xl-inline-block">法定点検等</a></li>
+						<li class="page-content-link"><a href="#page-content-link_03">事業別お問い合わせ先</a></li>
+<!--						<li class="page-content-link"><a href="#page-content-link_04">オフィスクリーニング<br class="d-xl-inline-block">について</a></li>-->
+					</ul>
+
+					<ul class="page-content-link-list d-xl-none">
 						<li class="page-content-link"><a href="#page-content-link_01">受託警備業務</a></li>
 						<li class="page-content-link"><a href="#page-content-link_02">消火器の設置・<br class="d-xl-inline-block">法定点検等</a></li>
 						<li class="page-content-link"><a href="#page-content-link_03">事業別お問い合わせ先</a></li>
@@ -133,7 +140,7 @@ Template Name:お問い合わせ
 										<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 									</div>
 
-									<div class="white-radius-box white-radius-box-mb">
+									<div class="white-radius-box">
 										<div class="dot-ttl">清掃事業</div>
 										<div class="mb-2-4">
 											<p class="left-border-ttl">関西国際空港</p>
@@ -148,21 +155,50 @@ Template Name:お問い合わせ
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 										</div>
 									</div>
-									
-									<div class="security">
-										<div class="dot-ttl">案内業務</div>
-										<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
-										<ul class="pdf-list">
-											<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/service/general/01.html" target="_blank"><span>詳しくはこちら</span></a></li>
-										</ul>
+									<div class="white-radius-box">
+										<div class="security">
+											<div class="dot-ttl">案内業務</div>
+											<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
+											<ul class="pdf-list mb-0">
+												<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/service/general/01.html" target="_blank"><span>詳しくはこちら</span></a></li>
+											</ul>
+										</div>
 									</div>
-
-									<div class="security">
-										<div class="dot-ttl">保税手荷物一時預り業務</div>
-										<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
-										<ul class="pdf-list">
-											<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/service/delivery/07.html" target="_blank"><span>詳しくはこちら</span></a></li>
-										</ul>
+									<div class="white-radius-box">
+										<div class="security">
+											<div class="dot-ttl">保税手荷物一時預り業務</div>
+											<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
+											<ul class="pdf-list mb-0">
+												<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/service/delivery/07.html" target="_blank"><span>詳しくはこちら</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="white-radius-box">
+										<div class="security">
+											<div class="dot-ttl">特別待合室業務</div>
+											<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
+											<ul class="pdf-list mb-0">
+												<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/service/business/04.html" target="_blank"><span>詳しくはこちら</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="white-radius-box">
+										<div class="security">
+											<div class="dot-ttl">KIX-ITMカード業務</div>
+											<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
+											<ul class="pdf-list mb-0">
+												<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/kc/" target="_blank"><span>詳しくはこちら</span></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="white-radius-box">
+										<div class="security">
+											<div class="dot-ttl">KIX-ITM Global Business Club 業務</div>
+											<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
+											<ul class="pdf-list mb-0">
+												<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/kix-gbc/" target="_blank"><span>詳しくはこちら</span></a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -170,20 +206,7 @@ Template Name:お問い合わせ
 					</div>
 				</section>
 		</div>
-		<div class="pl-4-16">
-			<section class="sec-bulue-box pt-common">
-				<div class="content">
-					<div class="p-side-3-8">
-						<div class="left-content">
-							<div class="security-outer">
-							
-									
-								</div>
-							</div>
-						</div>
-					</div>
-			</section>
-		</div>
+		
 	</div>
 	<div class="hidden-area"></div>
 </main >

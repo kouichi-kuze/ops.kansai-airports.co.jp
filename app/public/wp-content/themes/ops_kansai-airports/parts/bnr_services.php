@@ -16,26 +16,28 @@
 							<!--/slider-->
                             <div class="recruit-bnr-slide_list">
                                 <ul class="recruit-bnr-slide_item recruit-bnr-slide-slide__list--left">
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_01.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_02.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_03.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_04.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_05.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_06.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_07.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_08.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_09.png" alt=""></li>
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_01.jpg" /></li>                        
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_02.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_03.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_04.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_05.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_06.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_07.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_08.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_09.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_10.jpg" /></li>
                                 </ul>		
                                 <ul class="recruit-bnr-slide_item recruit-bnr-slide-slide__list--left">
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_01.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_02.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_03.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_04.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_05.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_06.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_07.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_08.png" alt=""></li>
-                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/common/slide_09.png" alt=""></li>
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_01.jpg" /></li>                        
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_02.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_03.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_04.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_05.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_06.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_07.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_08.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_09.jpg" /></li>   
+                                    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/top/slide_10.jpg" /></li>
                                 </ul>		
                             </div>
 						</div>

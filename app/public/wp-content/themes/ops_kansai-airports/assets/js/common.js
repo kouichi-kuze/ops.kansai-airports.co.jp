@@ -577,7 +577,7 @@ if (floatingBtn && footer) {
 }
 
 
-const list   = document.querySelector('.page-content-link-list');
+const list   = document.querySelector('.fix-page-content-link-list');
 const end    = document.querySelector('.hidden-area');
 
 if (!list || !end) return;
