@@ -58,34 +58,21 @@ Template Name:お問い合わせ
 											<li class="disc-item">各種イベント等における警備業務</li>
 											<li class="disc-item">その他警備業務全般</li>
 										</ol>
-										<div class="security-img">
-											<div id="slick-slider" class="slick-slider">
-												<div class="slick-item">
-													<div class="slick-item-inner">
-														<img src="<?php bloginfo('template_url'); ?>/assets/img/inquiry/img_security01.png" alt="警備をしている様子">
-													</div>
-												</div>
-												<div class="slick-item">
-													<div class="slick-item-inner">
-														<img src="<?php bloginfo('template_url'); ?>/assets/img/inquiry/img_security02.png" alt="車から警備の連絡を無線でしている様子">
-													</div>
-												</div>
-											</div>
-										</div>
+										
 										<h3 class="left-bulueline-ttl">ご契約にあたって</h3>
 										<p class="text fixed-area">警備業法第19条に基づき、契約に関する重要事項について、以下のファイル（PDF）に記載しておりますので、よくお読みいただいた上でご契約下さい。 <br>なお、ダウンロードできない場合や書面による説明を希望される方は、電話でお問い合わせ下さい。</p>
 
 										<div class="dot-ttl">契約に関する重要事項</div>
 										<ul class="pdf-list">
-											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/01_shisetsu.pdf" target="_blank"><span>鉄道駅からの案内図<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/01_shisetsu.pdf" target="_blank"><span>施設警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/02_koutsu.pdf" target="_blank"><span>交通誘導警備業務/雑踏警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/03_unpan.pdf" target="_blank"><span>運搬警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/04_shinpen.pdf" target="_blank"><span>身辺警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/05_kikai.pdf" target="_blank"><span>機械警備業務<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 										</ul>
 										<div class="white-radius-box">
-											<div class="dot-ttl">警備に関するお問い合わせ（担当：企画・管理部　総務人事グループ）</div>
-											<div class="tel"><a href="tel:072-455-2794"><span>Tel.</span>072-455-2794</a></div>
+											<div class="dot-ttl">上記に関するお問い合わせ<br>（担当：KIXターミナルエリアオペレーションセンター保安管理グループ）</div>
+											<div class="tel"><a href="tel:072-455-2406"><span>Tel.</span>072-455-2406</a></div>
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 										</div>
 
@@ -121,7 +108,7 @@ Template Name:お問い合わせ
 											<li class="pdf-item"><a class="companyinfo-link" href="<?php bloginfo('template_url'); ?>/assets/img/inquiry/files/shoukaki.pdf" target="_blank"><span>消火器法定点検等業務契約約款<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
 										</ul>
 										<div class="white-radius-box">
-											<div class="dot-ttl">警備に関するお問い合わせ（担当：企画・管理部　総務人事グループ）</div>
+											<div class="dot-ttl">上記に関するお問い合わせ（担当：特別災害隊予防班） </div>
 											<div class="tel"><a href="tel:072-455-2794"><span>Tel.</span>072-455-2794</a></div>
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 										</div>
@@ -133,89 +120,73 @@ Template Name:お問い合わせ
 					</div>
 				</section>
 		</div>
-		<div class="pl-4-16">
-				<section class="sec-bulue-box">
-					<div id="page-content-link_03" class="content">
+		<div class="pl-4-16" id="page-content-link_03">
+				<section class="sec-bulue-box pt-common">
+					<div class="content">
 						<div class="p-side-3-8">
 							<div class="left-content">
 								<div class="security-outer">
-									<div class="margin-adjust">
-										<h2 class="left-pinkline-ttl">事業別お問い合わせ先</h2>
-									</div>
 									<div class="white-radius-box">
-										<div class="dot-ttl">オペレーションマネジメント事業</div>
-										<p class="left-border-ttl">関西国際空港</p>
-										<div class="tel"><a href="tel:072-455-2406"><span>Tel.</span>072-455-2406</a></div>
+										<div class="dot-ttl">居室賃貸借事業（関西国際空港航空機給油施設給油センター内車両整備場） </div>
+										<p class="dot-text-01">上記に関するお問い合わせ（担当：給油施設部給油事業グループ） </p>
+										<div class="tel"><a href="tel:072-455-2978"><span>Tel.</span>072-455-2978</a></div>
 										<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 									</div>
-									<div class="white-radius-box">
-										<div class="dot-ttl">警備事業</div>
+
+									<div class="white-radius-box white-radius-box-mb">
+										<div class="dot-ttl">清掃事業</div>
 										<div class="mb-2-4">
 											<p class="left-border-ttl">関西国際空港</p>
-											<div class="tel"><a href="tel:072-455-2421"><span>Tel.</span>072-455-2421</a></div>
-											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
-										</div>
-										<div class="mb-2-4">
-											<p class="left-border-ttl">大阪国際空港</p>
-											<div class="tel"><a href="tel:06-6856-7437"><span>Tel.</span>06-6856-7437</a></div>
-											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
-										</div>
-									</div>
-									<div class="white-radius-box">
-										<div class="dot-ttl">消防事業</div>
-										<div class="mb-2-4">
-											<p class="left-border-ttl">関西国際空港</p>
-											<div class="tel"><a href="tel:072-455-2404"><span>Tel.</span>072-455-2404</a></div>
-											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
-										</div>
-										<div class="mb-2-4">
-											<p class="left-border-ttl">大阪国際空港</p>
-											<div class="tel"><a href="tel:06-4865-9631"><span>Tel.</span>06-4865-9631</a></div>
-											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
-										</div>
-									</div>
-									<div class="white-radius-box">
-										<div class="dot-ttl">デイリーメンテナンス事業</div>
-										<div class="mb-2-4">
-											<p class="left-border-ttl">関西国際空港</p>
+											<p class="dot-text-02">オフィスクリーニング総合受付</p>
 											<div class="tel"><a href="tel:072-455-4920"><span>Tel.</span>072-455-4920</a></div>
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 										</div>
 										<div class="mb-2-4">
 											<p class="left-border-ttl">大阪国際空港</p>
+											<p class="dot-text-02">オフィスクリーニング総合受付</p>
 											<div class="tel"><a href="tel:06-6856-6768"><span>Tel.</span>06-6856-6768</a></div>
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
 										</div>
 									</div>
-									<div class="white-radius-box hidden-area">
-										<div class="dot-ttl">駐車場運営事業</div>
-										<div class="mb-2-4">
-											<p class="left-border-ttl">関西国際空港</p>
-											<div class="tel"><a href="tel:072-455-2336"><span>Tel.</span>072-455-2336</a></div>
-											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
-										</div>
-										<div class="mb-2-4">
-											<p class="left-border-ttl">大阪国際空港</p>
-											<div class="tel"><a href="tel:06-6856-7300"><span>Tel.</span>06-6856-7300</a></div>
-											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
-										</div>
+									
+									<div class="security">
+										<div class="dot-ttl">案内業務</div>
+										<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
+										<ul class="pdf-list">
+											<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/service/general/01.html" target="_blank"><span>詳しくはこちら</span></a></li>
+										</ul>
 									</div>
 
+									<div class="security">
+										<div class="dot-ttl">保税手荷物一時預り業務</div>
+										<p class="dot-text-03">詳細は以下リンク先よりご確認ください</p>
+										<ul class="pdf-list">
+											<li class="pdf-item"><a class="companyinfo-link" href="https://www.kansai-airport.or.jp/service/delivery/07.html" target="_blank"><span>詳しくはこちら</span></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 		</div>
-<!--
-			<div id="page-content-link_04" class="bnr_office_cleaning p-side-3-16 hidden-area">
-				<div class="margin-adjust">
-					<a class="pc d-md-block" href="https://www.ops.kansai-airports.co.jp/services/cart-cleaning/cleaning/"><img src="<?php bloginfo('template_url'); ?>/assets/img/inquiry/bnr_office_cleaning_pc.png" alt="オフィスクリーニング　詳しくはこちら"></a>
-					<a class="sp d-sm-none" href="https://www.ops.kansai-airports.co.jp/services/cart-cleaning/cleaning/"><img src="<?php bloginfo('template_url'); ?>/assets/img/inquiry/bnr_office_cleaning_sp.png" alt="オフィスクリーニング　詳しくはこちら"></a>
-				</div>
-			</div>
--->
+		<div class="pl-4-16">
+			<section class="sec-bulue-box pt-common">
+				<div class="content">
+					<div class="p-side-3-8">
+						<div class="left-content">
+							<div class="security-outer">
+							
+									
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+		</div>
 	</div>
-	
+	<div class="hidden-area"></div>
 </main >
+
+
 <?php get_template_part( 'inc/footer' ); ?>

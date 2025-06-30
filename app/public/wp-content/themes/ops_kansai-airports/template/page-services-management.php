@@ -52,7 +52,6 @@ Template Name:オペレーションマネジメント事業
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/001.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/002.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/003.jpg" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/management/business-planning/kanri-tokatu/004.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

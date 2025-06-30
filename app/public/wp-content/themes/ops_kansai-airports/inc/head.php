@@ -8,8 +8,42 @@ $meta_title       = get_post_meta( $post_id, 'meta_title', true );
 $meta_description = get_post_meta( $post_id, 'meta_description', true );
 
 // 2) フォールバック用タイトル・ディスクリプション
-if ( is_post_type_archive('voices') ) {
-  $default_title = '先輩の声｜採用情報｜関西エアポートオペレーションサービス株式会社';
+if ( is_singular('voices') ) {
+  $initial     = get_post_meta( $post_id, 'voices_initial', true );
+  $affiliation = get_post_meta( $post_id, 'voices_affiliation', true );
+
+  // initial と affiliation の両方がある場合
+  if ( $initial && $affiliation ) {
+    $name_part = "{$initial} - {$affiliation}";
+  }
+  // initial のみある場合
+  elseif ( $initial ) {
+    $name_part = $initial;
+  }
+  // affiliation のみある場合
+  elseif ( $affiliation ) {
+    $name_part = $affiliation;
+  }
+  // どちらもない場合は空文字
+  else {
+    $name_part = '';
+  }
+
+  // 「｜先輩の声｜会社名」は必ず付与
+  $default_title = trim( "{$name_part}｜先輩の声｜関西エアポートオペレーションサービス株式会社", "｜-" );
+
+  // 本文そのまま(description)に使う
+  $raw_content = get_post_field( 'post_content', $post_id );
+  // 必要なら the_content フィルタを通して整形、タグを落として先頭100語に絞る例
+  $default_description = wp_strip_all_tags(
+    wp_trim_words(
+      apply_filters( 'the_content', $raw_content ),
+      100
+    )
+  );
+}
+elseif ( is_post_type_archive('voices') ) {
+  $default_title = '先輩の声｜関西エアポートオペレーションサービス株式会社';
   $default_description = '関西エアポートオペレーションサービス(株)で働く先輩方の声をご紹介します。';
 
 } elseif ( is_post_type_archive('recruit') ) {

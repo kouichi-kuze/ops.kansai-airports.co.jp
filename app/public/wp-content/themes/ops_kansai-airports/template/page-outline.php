@@ -276,7 +276,8 @@ Template Name:企業概要
 					</div>
 				</div>
 			</section>
-			<section class="companyinfo-box hidden-area">
+			<div class="hidden-area"></div>
+			<section class="companyinfo-box">
 				<div class="companyinfo-content">
 				  <div class="page-header__titles">
 					<h1 class="page-header__title">企業情報</h1>

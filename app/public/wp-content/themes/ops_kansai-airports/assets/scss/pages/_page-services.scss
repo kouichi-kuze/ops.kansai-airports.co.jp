@@ -93,19 +93,24 @@
 			}
 			.text-content .btn-bace-round .btn-setting{
 				display: inline-block;
+				text-align: left;
 				@media only screen and (min-width: g.$desktop-breakpoint-xl){
 					padding: 18px 100px 18px 30px;
 					font-size: 16px;
+					text-align: right;
 				}
 				&::before{
+					right: 10px;
 					@media only screen and (min-width: g.$desktop-breakpoint-xl){
+						right: 14.5px;
 						width: 30px;
-					height: 30px;
+						height: 30px;
 					}
 				}
 				&::after{
+					right: 16px;
 					@media only screen and (min-width: g.$desktop-breakpoint-xl){
-						right: 20px;
+						right: 23px;
 					}
 				}
 			}
@@ -479,6 +484,9 @@
 			.dot-ttl{
 				font-weight: 700;
 				margin-bottom: 20px;
+				&.mb-0 {
+					margin-bottom: 0 !important;
+				}
 			}
 			@media only screen and (min-width: g.$desktop-breakpoint-md){
 				padding: 30px 40px;
@@ -486,6 +494,7 @@
 					font-size: 16px;
 				}
 			}
+			
 			.left-border-ttl{
 				font-size: 14px;
 				padding-left: 0;

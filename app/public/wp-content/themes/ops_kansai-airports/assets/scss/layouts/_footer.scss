@@ -160,11 +160,11 @@
   text-align: center;
 }
 .footer-copylink-area {
-  //padding-bottom: 30px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
+  //padding-bottom: 80px; クッキースペース
   @media only screen and (min-width: g.$desktop-breakpoint-md) {
-    //padding-bottom: 30px;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
+    //padding-bottom: 80px;
   }
 }
 .site-footer {
@@ -358,22 +358,3 @@
   }
 }
 
-.floating-recruit-btn {
-  position: fixed;
-  right: 0;
-  bottom: 10px;
-  //bottom: 90px;
-  z-index: 100;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  box-shadow: -1px 1px 12px rgba(0, 0, 0, 0.15);
-  // @media only screen and (min-width: g.$desktop-breakpoint-md) {
-  //   display: none !important;
-  // }
-
-  &.is-visible {
-    opacity: 1;
-    visibility: visible;
-  }
-}

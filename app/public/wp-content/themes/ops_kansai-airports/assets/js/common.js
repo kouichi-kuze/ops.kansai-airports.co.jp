@@ -30,41 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			return false;
 		});
 	});
-	//スクロール後非表示
-	$(function () {
-		const $list = $('.page-content-link-list');
-		const $end = $('.hidden-area');
-
-		$(window).on('scroll', function () {
-			// ウィンドウ幅をチェック
-			if ($(window).width() < 1200) {
-				// 1200px未満の場合は初期状態に戻す
-				$list.removeClass('fixed').show();
-				return;
-			}
-
-			const scrollTop = $(this).scrollTop();
-			const windowBottom = scrollTop + $(window).height();
-
-			// fixed クラスの付け外し（300px以上スクロールしたら）
-			if (scrollTop >= 300) {
-				$list.addClass('fixed');
-				} else {
-				$list.removeClass('fixed');
-			}
-
-			// hidden-area に差し掛かったら非表示
-			if ($list.length && $end.length) {
-				const endTop = $end.offset().top;
-
-				if (windowBottom >= endTop) {
-					$list.fadeOut();
-					} else {
-					$list.fadeIn();
-				}
-			}
-		});
-	});	
+	
 	
 	
 //=====================
@@ -257,27 +223,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (windowwidth > 768) {
 		leftImages = [
-			{ src: basePath + 'mv_01.png' },
-			{ src: basePath + 'mv_03.png' },
-			{ src: basePath + 'mv_05.png' },
-			{ src: basePath + 'mv_07.png' }
+			{ src: basePath + 'mv_01.jpg' },
+			{ src: basePath + 'mv_03.jpg' },
+			{ src: basePath + 'mv_05.jpg' },
+			{ src: basePath + 'mv_07.jpg' },
+			{ src: basePath + 'mv_09.jpg' },
+			{ src: basePath + 'mv_11.jpg' }
 		];
 		rightImages = [
-			{ src: basePath + 'mv_02.png' },
-			{ src: basePath + 'mv_04.png' },
-			{ src: basePath + 'mv_06.png' },
-			{ src: basePath + 'mv_08.png' }
+			{ src: basePath + 'mv_02.jpg' },
+			{ src: basePath + 'mv_04.jpg' },
+			{ src: basePath + 'mv_06.jpg' },
+			{ src: basePath + 'mv_08.jpg' },
+			{ src: basePath + 'mv_10.jpg' },
+			{ src: basePath + 'mv_12.jpg' }
 		];
 	} else {
 		leftImages = [
-			{ src: basePath + 'mv_01.png' },
-			{ src: basePath + 'mv_02.png' },
-			{ src: basePath + 'mv_03.png' },
-			{ src: basePath + 'mv_04.png' },
-			{ src: basePath + 'mv_05.png' },
-			{ src: basePath + 'mv_06.png' },
-			{ src: basePath + 'mv_07.png' },
-			{ src: basePath + 'mv_08.png' }
+			{ src: basePath + 'mv_01.jpg' },
+			{ src: basePath + 'mv_02.jpg' },
+			{ src: basePath + 'mv_03.jpg' },
+			{ src: basePath + 'mv_04.jpg' },
+			{ src: basePath + 'mv_05.jpg' },
+			{ src: basePath + 'mv_06.jpg' },
+			{ src: basePath + 'mv_07.jpg' },
+			{ src: basePath + 'mv_08.jpg' },
+			{ src: basePath + 'mv_09.jpg' },
+			{ src: basePath + 'mv_10.jpg' },
+			{ src: basePath + 'mv_11.jpg' },
+			{ src: basePath + 'mv_12.jpg' }
 		];
 		rightImages = [];
 	}
@@ -499,6 +473,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+
+
+
+
 	// フローティング
 const closeBtn = document.querySelector('.floating-recruit-btn-close');
 const floatingBtn = document.querySelector('.floating-recruit-btn');
@@ -548,28 +526,97 @@ if (floatingBtn) {
 
 // ▼ フッターとの干渉
 if (floatingBtn && footer) {
-	let wasVisible = false;
+  let wasVisible = false;
 
-	const footerObserver = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-				const isNowVisible = entry.isIntersecting;
+  // SP/PC 判定用の MediaQueryList
+  const mq = window.matchMedia('(max-width: 767px)');
 
-				if (isNowVisible) {
-					wasVisible = floatingBtn.classList.contains('is-visible');
-					floatingBtn.classList.remove('is-visible');
-				} else {
-					if (wasVisible && !wasClosed) {
-						floatingBtn.classList.add('is-visible');
-					}
-				}
-			});
-		},
-		{ root: null, threshold: 0 }
-	);
-	footerObserver.observe(footer);
+  // マージンを返す関数
+  const getRootMargin = () => {
+    return mq.matches
+      ? '0px 0px -240px 0px'  // SP 用
+      : '0px 0px -400px 0px'; // PC 用
+  };
+
+  // IntersectionObserver のインスタンスを生成
+  const footerObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const isNowVisible = entry.isIntersecting;
+
+        if (isNowVisible) {
+          wasVisible = floatingBtn.classList.contains('is-visible');
+          floatingBtn.classList.remove('is-visible');
+        } else {
+          if (wasVisible && !wasClosed) {
+            floatingBtn.classList.add('is-visible');
+          }
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0,
+      rootMargin: getRootMargin()
+    }
+  );
+
+  footerObserver.observe(footer);
+
+  // ウィンドウ幅が変わったときに observer を再作成（必要なら）
+  mq.addEventListener('change', () => {
+    footerObserver.disconnect();
+    // 新しく生成し直し
+    const newObserver = new IntersectionObserver(footerObserver.callback, {
+      root: null,
+      threshold: 0,
+      rootMargin: getRootMargin()
+    });
+    newObserver.observe(footer);
+  });
 }
 
+
+const list   = document.querySelector('.page-content-link-list');
+const end    = document.querySelector('.hidden-area');
+
+if (!list || !end) return;
+
+// レスポンシブ対応判定
+function enabled() {
+  return window.innerWidth >= 1200;
+}
+// 2) 300px スクロールで .fixed クラスを付け外し
+ScrollTrigger.create({
+  trigger: document.body,
+  start: '300px top',
+  onEnter:     () => { if (enabled()) list.classList.add('fixed'); },
+  onLeaveBack: () => { list.classList.remove('fixed'); },
+});
+
+// 3) hidden-area へのぶつかりでフェードアウト、戻ったらフェードイン
+const fadeDuration = 0.3;
+ScrollTrigger.create({
+  trigger: end,
+  // list の下端が end の上端にぶつかるタイミング
+  // 「end.top が viewport bottom - listHeight に来たら」
+  start: () => {
+    const listHeight = list.offsetHeight;
+    //return `top top+=380`;
+	return `top top+=430`;
+  },
+  onEnter: () => {
+    if (enabled()) {
+      gsap.to(list, { autoAlpha: 0, duration: fadeDuration });
+    }
+  },
+  onLeaveBack: () => {
+    if (enabled()) {
+      gsap.to(list, { autoAlpha: 1, duration: fadeDuration });
+    }
+  },
+  markers: false
+});
 
 	const tabAreas = document.querySelectorAll('.tab-area');
 	let maxHeight = 0;

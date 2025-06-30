@@ -131,7 +131,8 @@
 			border-radius: 50px;
 			top: 50%;
 			//right: 12px;
-			right: 8px;
+			//right: 8px;
+			right: 10px;
 			transform: translate(0, -50%);
 			transition: all 0.3s;
 			transform-origin: 50% 0;
@@ -149,7 +150,8 @@
 			position: absolute;
 			top: 50%;
 			//right: 18px;
-			right: 14px;
+			//right: 14px;
+			right: 16px;
 			transform: translate(0, -50%);
 			@media only screen and (min-width: g.$desktop-breakpoint-xl){
 				right: 20px;
@@ -258,23 +260,50 @@
 	}
 }
 
+
+
+.floating-recruit-btn {
+  position: fixed;
+  right: 0;
+  top: 160px;
+  //bottom: 90px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  box-shadow: -1px 1px 12px rgba(0, 0, 0, 0.15);
+  // @media only screen and (min-width: g.$desktop-breakpoint-md) {
+  //   display: none !important;
+  // }
+  @media only screen and (min-width: g.$desktop-breakpoint-md){
+	top: 200px;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .btn-setting-floating-box {
-	display: flex;
-	align-items: center;
+	//display: flex;
+	//align-items: center;
+	display: block;
     filter: drop-shadow(-1px 1px 20px rgba(0, 0, 0, 0.2));
 	
 	.floating-recruit-btn-close {
-		width: 28px;
-		height: 50px;
+		width: 100%;
+		//height: 50px;
+		padding: 15px 0;
 		background-color: g.$white;
-		border-radius: 6px 0 0 6px;
+		border-radius: 0 0 0 6px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
 		svg {
-			width: 8px !important;
-			height: 7px !important;
+			width: 10px !important;
+			height: 10px !important;
 		}
 	}
 }
@@ -283,15 +312,16 @@
 	background-color: #EB008B;
 	box-sizing: border-box;
 	max-width: 196px;
-	height: 50px;
+	//height: 50px;
 	width: 100%;
 	display: block;
 	max-width: 100%;
 	display: flex;
 	align-items: center;
-	padding: 15px 45px 15px 24px;
-	font-size: 15px;
-	border-radius: 0;
+	padding: 15px 15px 15px 15px;
+	padding-top: calc(15px + 18px + 13px);
+	font-size: 14px;
+	border-radius: 6px 0 0 0;
 	color: g.$white;
 	&::before {
 		content: "";
@@ -301,24 +331,28 @@
 		width: 18px;
 		height: 18px;
 		border-radius: 50px;
-		top: 50%;
-		right: 20px;
-		transform: translate(0, -50%);
+		top: 15px;
+		left: 13px;
+		//top: 50%;
+		//right: 20px;
+		//transform: translate(0, -50%);
 		transition: all 0.3s;
-		transform-origin: 50% 0;
+		//transform-origin: 50% 0;
 	}
 
 	&::after {
 		content: "";
 		background: url("../img/common/icon_btn-bace-square-arrow.png") no-repeat center/contain;
 		display: inline-block;
-		width: 14px;
-		height: 9px;
+		width: 10px;
+		height: 18px;
 		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%);
+		top: 15px;
+		left: 17px;
+		//left: 50%;
+		//transform: translate(-50%, 0);
 		vertical-align: middle;
-		right: 23px;
+		//right: 23px;
 	}
 }
 

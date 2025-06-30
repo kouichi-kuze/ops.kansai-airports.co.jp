@@ -5,7 +5,7 @@
 	<!--sp　footer nav-->
 		  <nav class="nav-sp-menu">
 			<ul>
-			  <li class=""> <a class="menu__item__link js-menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ</a> </li>
+			  <li class=""> <a class="menu__item__link" href="<?php echo home_url( '/' ); ?>">トップページ</a> </li>
 			  <li class="menu-close"> <a class="menu__item__link js-menu__item__link" href="">企業情報 <span>Company</span></a>
 				<ul class="submenu">
 				  <li class="submenu__item"> <a class="nav-close-menu" href="<?php echo home_url( '/' ); ?>company/">代表メッセージ</a> </li>
@@ -115,7 +115,7 @@
 					<div class="office-info d-md-flex justify-content-md-between">
 						
 						<div>
-							<div class="logo-l"><a href="https://www.ops.kansai-airports.co.jp/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_l.svg" alt="関西エアポートエアポートオペレーションサービス株式会社"></a></div>							
+							<div class="logo-l"><a href="https://www.ops.kansai-airports.co.jp/"><img src="<?php bloginfo('template_url'); ?>/assets/img/common/logo_l.svg" alt="関西エアポートエアポートオペレーションサービス株式会社"></a></div>							
 							<ul class="office-list">
 								<li class="offis-item">
 									<p class="office-name">関西エアポートオペレーションサービス株式会社</p>
@@ -162,12 +162,12 @@
 <?php if ( !is_post_type_archive('recruit') && !is_singular('recruit') ) : ?>
 <div class="floating-recruit-btn">
 	<div class="btn-setting-floating-box">
+		<a class="btn-setting-floating" href="/recruit/">採<br>用<br>情<br>報<br>は<br>こ<br>ち<br>ら</a>
 		<div class="floating-recruit-btn-close">
 			<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M8.76416 1.78705L5.70654 4.84369L9.07568 8.21283L8.36865 8.91986L4.99951 5.55072L1.63135 8.91986L0.924316 8.21283L4.29248 4.84369L1.23584 1.78705L1.94287 1.08002L4.99951 4.13666L8.05713 1.08002L8.76416 1.78705Z" fill="#EB008B"/>
 			</svg>
-		</div>	
-		<a class="btn-setting-floating" href="/recruit/">採用情報はこちら</a>
+		</div>
 	</div>
 </div>
 <?php endif; ?>

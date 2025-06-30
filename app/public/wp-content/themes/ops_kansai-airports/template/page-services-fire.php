@@ -51,6 +51,7 @@ Template Name:消防事業
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/001_2.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

@@ -109,6 +109,16 @@
         flex: none;
       }
     }
+    .dot-text-01 {
+      font-size: 14px;
+    }
+    .dot-text-02 {
+      font-size: 14px;
+      margin-top: 15px;
+      @media only screen and (min-width: g.$desktop-breakpoint-md) {
+        margin-top: 15px;
+      } 
+    }
     .tel {
       margin-bottom: 5px;
       a {
@@ -126,7 +136,24 @@
         }
       }
     }
+
+    &.white-radius-box-mb {
+       margin-bottom: 40px !important;
+      @media only screen and (min-width: g.$desktop-breakpoint-md) {
+        margin-bottom: 60px !important;
+      }
+    }
   }
+  .dot-text-03 {
+      font-size: 14px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      display: block;
+      @media only screen and (min-width: g.$desktop-breakpoint-md) {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      } 
+    }
   .security .dot-ttl,
   .white-radius-box .dot-ttl {
     font-size: 16px;
@@ -169,6 +196,17 @@
     }
     @media only screen and (min-width: 1800px) {
       max-width: 940px;
+    }
+
+    &.pt-common {
+      padding-bottom: 40px;
+      padding-top: 40px;
+      .left-content {
+      }
+      @media only screen and (min-width: g.$desktop-breakpoint-xl) {
+        padding-bottom: 40px;
+        padding-top: 40px;
+      }
     }
 
     .p-side-3-8 {

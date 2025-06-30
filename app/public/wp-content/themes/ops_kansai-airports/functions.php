@@ -214,10 +214,10 @@ function mytheme_breadcrumb() {
 
     elseif ( is_singular('voices') ) {
         // ① 採用情報 固定ページへのリンク
-        $breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報</a>';
+        //$breadcrumb .= ' <span class="breadcrumb-diver"></span> <a href="' . home_url( '/recruit/' ) . '">採用情報</a>';
         // ② 先輩の声アーカイブへのリンク
         $archive_link = get_post_type_archive_link( 'voices' );
-        $breadcrumb  .= ' <span class="breadcrumb-diver"></span> <a href="' . esc_url( $archive_link ) . '">先輩の声一覧</a>';
+        $breadcrumb  .= ' <span class="breadcrumb-diver"></span> <a href="' . esc_url( $archive_link ) . '">先輩の声</a>';
         // ③ 現在の投稿タイトル
         $breadcrumb  .= ' <span class="breadcrumb-diver"></span> ' . get_the_title();
     }
@@ -253,20 +253,20 @@ function mytheme_breadcrumb() {
  * 投稿のスラッグを自動生成：news＋タイムスタンプ
  * 手動でスラッグを設定した場合は上書きしません。
  */
-add_filter( 'wp_insert_post_data', 'auto_news_slug', 99, 2 );
-function auto_news_slug( $data, $postarr ) {
-    // 投稿(post)のみ対象
-    if ( $data['post_type'] !== 'post' ) {
-        return $data;
-    }
+add_filter( 'wp_insert_post_data', 'auto_custom_slug', 99, 2 );
+function auto_custom_slug( $data, $postarr ) {
+    // 対象となる post_type と、それぞれの prefix をマッピング
+    $map = [
+      'post'    => 'news-',       // 投稿 → newsYYYYmmddHHMMSS
+      'recruit' => 'recruit-',    // 採用情報 → recruitYYYYmmddHHMMSS
+      'voices'  => 'voices-',     // 先輩の声 → voicesYYYYmmddHHMMSS
+    ];
 
-    // 管理画面で手動入力がない場合にのみ自動生成
-    if ( empty( $postarr['post_name'] ) ) {
-        // 数字部分は「年月日時分秒」などユニークになるものを使うのがおすすめ
-        $number = date( 'YmdHis' );
-        $slug   = 'news' . $number;
-
-        // 英数字のみのスラッグに整形
+    // post_type が対象外、または既にスラッグ指定があれば何もしない
+    if ( empty( $postarr['post_name'] ) && isset( $map[ $data['post_type'] ] ) ) {
+        $prefix    = $map[ $data['post_type'] ];
+        $timestamp = date( 'YmdHis' );
+        $slug      = $prefix . $timestamp;
         $data['post_name'] = sanitize_title( $slug );
     }
 

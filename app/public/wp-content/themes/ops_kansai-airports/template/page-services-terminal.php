@@ -50,8 +50,9 @@ Template Name:ターミナルマネジメント事業
 								</li>
 								<li class="services-content-item two-column">
 									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/001.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/002.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/001_1.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/001_2.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/kix/001_3.jpg" /></li>
 									</ul>
 								</li>
 							</ul>
@@ -125,8 +126,9 @@ Template Name:ターミナルマネジメント事業
 								</li>
 								<li class="services-content-item two-column">
 									<ul class="services-subpage-slider">
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/001.jpg" /></li>
-										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/002.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/001_1.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/001_2.jpg" /></li>
+										<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/itm/001_3.jpg" /></li>
 									</ul>
 								</li>
 							</ul>

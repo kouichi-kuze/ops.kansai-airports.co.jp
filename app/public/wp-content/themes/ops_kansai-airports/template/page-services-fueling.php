@@ -19,7 +19,7 @@ Template Name:給油運用事業
 		  <li>関西国際空港</li>
 <!--		  <li>大阪国際空港</li>-->
 		</ul>
-		<h1 class="page-header__title blue-under-line-ttl">給油事業</h1>
+		<h1 class="page-header__title blue-under-line-ttl">給油運用事業</h1>
 	  </div>
 	</div>
 </div>
@@ -27,8 +27,8 @@ Template Name:給油運用事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv-sp.png" alt="給油事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv.png" alt="給油事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv-sp.png" alt="給油運用事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv.png" alt="給油運用事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">関西国際空港の大動脈として、ハイドラントシステムを採用し、24時間絶え間なく飛来する航空機燃料を安全に供給できるよう、施設の運用及び維持管理を行っています。関西空港の給油施設では保管する航空燃料に係る品質等の管理や燃料の受入業務・航空燃料管理業務・運転監視業務・防災業務を行っています。</p>
@@ -51,7 +51,8 @@ Template Name:給油運用事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/001.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/001_1.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/001_2.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -80,7 +81,8 @@ Template Name:給油運用事業
 							</li>
 							<li class="services-content-item two-column">
 								<ul class="services-subpage-slider">
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/003.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/003_1.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/003_2.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -103,12 +105,17 @@ Template Name:給油運用事業
 							</li>
 						</ul>
 						<ul class="services-content-list d-md-flex justify-content-md-between">
-							<li class="services-content-item w-100 one-column">
-								<h3 class="left-pinkline-ttl">給油事業グループ</h3>
+							<li class="services-content-item w-100 two-column">
+								<h3 class="left-pinkline-ttl">給油運用事業グループ</h3>
 								<ol class="disc-list">
 									<li class="disc-item">給油施設の自社事業に関する業務</li>
 									<li class="disc-item">航空燃料品質に係る試験や給油サービスの派遣および車両整備場に関する調整・管理業務</li>
 								</ol>
+							</li>
+							<li class="services-content-item two-column">
+								<ul class="services-subpage-slider">
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/008_1.jpg" /></li>
+								</ul>
 							</li>
 						</ul>
 					</div>
