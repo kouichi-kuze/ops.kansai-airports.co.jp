@@ -22,15 +22,12 @@
 					<h2 class="bottom-border-bulue-ttl">募集要項</h2>
 					<div class="max-md40-xl58">
 						<div class="new-recruit-link">
-						<a href="https://job.rikunabi.com/2026/company/r572772023/" target="_blank">
-							2026年新卒採用はこちら
+						<a href="https://job.rikunabi.com/n/job_descriptions/7abff28a42835805/?betk=SoDJ6_I3xwlPX3QIlZ0NbzkdCdPP&jrtk=5-nrt1-0-1itgm269qi0vg800-7abff28a42835805---6NYlbfkN0BpvkinRYh7Igr3TQQJbWnpFbY7R1uj7IWjufj49bsUmaM9PHuZh94cnFVQ_hQRWEia1NvsuN6ygt6jSgxw8y34VNrLuBXtv7ph-MGPPH-vJfjUhUQbZsc_XUjPoW6CfWF9xtPV5t4crwZSi9eX-RkksIfkd13Wq9_DHp7-TSqyPR3vF9MhJaPbkey7i22fSGMMnbyR-3XL_VliePBoHNz7vygkpq2Yy3P81e9Zz0eOokwMQO8feLYOswV-Lfs7qD2Wc0hVExy9O2Psm5Ibw7lZ49bejjxs_PfWPpsKPYGrHn8COHy-z9DFc-9uHlh9raDUp2UAxuyGj6QxQ445XXTEyTjDOmzCTH3OLRRTF8nUQCNx5_8D18g-GocDkdeet9Fm-NSs2EBOcLVB9rymthiqQcdnZHqYJM3Q2j6A6fWC0Q_QlqA797OahlgE5yzBoFD95nPVAp9d2Sbsb6esUNUCDkcuKZXLjuzksAh2bGy1zii_QxR2zV7dqkA3mD2ch0TWD9Evl3g3GvZMCkcV47k4PkRz9MtxHyJeYMUC4fym-WqGnO80D9y_dwUm2RpWTJnGkGkyC1jGwo6RwQULwxFXW3ffHNCzVpW2fQJQNz5OWtmuAEFetx9iQU5V_JQhJ4qCJis4hZ1LAiDU6Qw-F0bIoKd2ca-mcTkjBOt39ghnLaS9DOlrsax8TVXTf6iVWaTXUcPIO3FnSABUZRy0xdjvgJNWh4Fr7TAv0n8evfW3oTIiekOY0KvVjhgPhrSI7ttqVltZl8Joag==&referrerId=030&seqNo=1&from=job_search" target="_blank">
+							2027年新卒採用はこちら
 							</a>
             			</div>
-					<ul class="pdf-list">
-						<li class="pdf-item"><a href="<?php bloginfo('template_url'); ?>/assets/img/common/files/privacy.pdf" target="_blank"><span>＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
-					</ul>
-					<p class="annotation">※応募時、履歴書と一緒にこちらの同意書の郵送が必要です。</p>
-				</div>
+
+					</div>
 				<?php
 				$args = array(
 					'post_type'      => 'recruit',
@@ -61,6 +58,13 @@
 				<?php endif; ?>
                         
 					</ul>
+
+					<div class="pdf-list-wrap">
+						<ul class="pdf-list">
+							<li class="pdf-item"><a href="<?php bloginfo('template_url'); ?>/assets/img/common/files/privacy.pdf" target="_blank"><span>＜応募時＞ <br class="d-lg-none">個人情報の利用に関する同意書<img src="<?php bloginfo('template_url'); ?>/assets/img/outline/icon_lightblue_pdf.png" alt="pdfアイコン"></span></a></li>
+						</ul>
+						<p class="annotation">※応募時、履歴書と一緒にこちらの同意書の郵送が必要です。</p>
+					</div>
                     
 				</div>
 			</div>

@@ -25,9 +25,9 @@
     }
     
     .new-recruit-link{
-        margin-bottom: 40px;
+        margin-bottom: 0;
         @media only screen and (min-width: g.$desktop-breakpoint-xl){
-            margin-bottom: 60px;
+            margin-bottom: 0;
         }
         a{
             display: block;
@@ -62,6 +62,13 @@
                 }
 
             }
+        }
+    }
+
+    .pdf-list-wrap {
+        margin-top: 40px;
+        @media only screen and (min-width: g.$desktop-breakpoint-xl){
+            margin-top: 60px;
         }
     }
 
@@ -1613,8 +1620,8 @@
 								}
 
 								&:after {
-									content: "/";
-									padding: 0 0 0 5px;
+									//content: "/";
+									//padding: 0 0 0 5px;
 									@media only screen and (min-width: g.$desktop-breakpoint-xl){
 										content: "";
 										padding: 0;

@@ -26,8 +26,8 @@ Template Name:ターミナルマネジメント事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 			<div class="mv-img">
-				<img src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/mv-sp.png" alt="ターミナルマネジメント事業" class="d-md-none">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/mv.png" alt="ターミナルマネジメント事業" class="d-none d-inline-md-block">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/mv-sp.jpg" alt="ターミナルマネジメント事業" class="d-md-none">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/terminal/mv.jpg" alt="ターミナルマネジメント事業" class="d-none d-inline-md-block">
 			</div>
 			<div class="p-side-3-8 description-outer">
 				<p class="description">ターミナルビル全体の管理運用、また旅客のニーズに応じたサービスの提供を行っています。<br>空港を利用される国内外からの様々なお客様の対応に加えて、保税手荷物一時預かり業務、KIX-ITMカード業務、IDカード管理業務、防災監視業務、要人対応業務など幅広い業務を担う他、急患発生時の初動対応などの業務も担当しています。また、空港内の旅客・従業員向けの保安検査業務も行っています。</p>

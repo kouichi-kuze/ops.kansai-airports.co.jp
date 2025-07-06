@@ -25,8 +25,8 @@ Template Name:清掃カート事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/mv-sp.png" alt="清掃・カート事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/mv.png" alt="清掃・カート事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/mv-sp.jpg" alt="清掃・カート事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cart-cleaning/mv.jpg" alt="清掃・カート事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">ターミナルビル内の清掃及びカートの回収点検を行い、空港を利用されるお客様が快適かつ安全に過ごすことができる環境を提供しています。館内テナントからの清掃依頼の受注、清掃機材・物品の管理に加えて、インスペクション業務も行っています。</p>

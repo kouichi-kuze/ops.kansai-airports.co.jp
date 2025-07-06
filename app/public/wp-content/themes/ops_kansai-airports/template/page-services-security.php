@@ -26,8 +26,8 @@ Template Name:警備事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/security/mv-sp.png" alt="オペレーションマネジメント事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/security/mv.png" alt="オペレーションマネジメント事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/security/mv-sp.jpg" alt="オペレーションマネジメント事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/security/mv.jpg" alt="オペレーションマネジメント事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">空港内の制限区域・保安区域の出入管理、スクリーニングを行っています。車両巡回や、管制監視業務で、空港の主要部へ不審者の侵入などを未然に防ぐ業務を24時間体制で実施し、空港の安全を守っています。</p>

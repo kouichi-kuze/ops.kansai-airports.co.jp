@@ -27,8 +27,8 @@ Template Name:消防事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/mv-sp.png" alt="消防事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/mv.png" alt="消防事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/mv-sp.jpg" alt="消防事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/mv.jpg" alt="消防事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">航空機や空港内での事故・災害時には、「人命救助を最優先」とした消火・救難活動を行うことが使命です。日頃から様々な想定で訓練を行い、24時間体制で緊急事態に備えています。また、災害時に備えた災害対応機材の管理・運用、特別訓練の実施などを行っています。滑走路や誘導路において、航空機が安全に離着陸できるために、路面剝離や燃料漏洩、落下物がないか点検する業務である、「飛行場面点検業務」を行っています。</p>

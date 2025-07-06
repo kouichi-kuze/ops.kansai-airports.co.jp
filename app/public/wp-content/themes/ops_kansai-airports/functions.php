@@ -253,24 +253,45 @@ function mytheme_breadcrumb() {
  * 投稿のスラッグを自動生成：news＋タイムスタンプ
  * 手動でスラッグを設定した場合は上書きしません。
  */
-add_filter( 'wp_insert_post_data', 'auto_custom_slug', 99, 2 );
-function auto_custom_slug( $data, $postarr ) {
-    // 対象となる post_type と、それぞれの prefix をマッピング
-    $map = [
-      'post'    => 'news-',       // 投稿 → newsYYYYmmddHHMMSS
-      'recruit' => 'recruit-',    // 採用情報 → recruitYYYYmmddHHMMSS
-      'voices'  => 'voices-',     // 先輩の声 → voicesYYYYmmddHHMMSS
-    ];
-
-    // post_type が対象外、または既にスラッグ指定があれば何もしない
-    if ( empty( $postarr['post_name'] ) && isset( $map[ $data['post_type'] ] ) ) {
-        $prefix    = $map[ $data['post_type'] ];
-        $timestamp = date( 'YmdHis' );
-        $slug      = $prefix . $timestamp;
-        $data['post_name'] = sanitize_title( $slug );
+add_action( 'save_post', 'auto_slug_with_post_id',  10, 3 );
+function auto_slug_with_post_id( $post_id, $post, $update ) {
+    // リビジョンやオートセーブは無視
+    if ( wp_is_post_revision( $post_id ) || wp_is_post_autosave( $post_id ) ) {
+        return;
     }
 
-    return $data;
+    // すでにスラッグがある場合は何もしない
+    if ( ! empty( $post->post_name ) ) {
+        return;
+    }
+
+    // 対象となる post_type と prefix のマッピング
+    $map = [
+        //'post'    => 'news-',
+        //'recruit' => 'recruit-',
+        //'voices'  => 'voices-',
+        'post'    => 'post-',
+        'recruit' => 'post-',
+        'voices'  => 'post-',
+    ];
+
+    if ( ! isset( $map[ $post->post_type ] ) ) {
+        return;
+    }
+
+    // フックのループを防ぐため一時的に外す
+    remove_action( 'save_post', 'auto_slug_with_post_id', 10 );
+
+    $prefix      = $map[ $post->post_type ];
+    $new_slug    = sanitize_title( $prefix . $post_id );
+
+    wp_update_post( [
+        'ID'        => $post_id,
+        'post_name' => $new_slug,
+    ] );
+
+    // フックを再登録
+    add_action( 'save_post', 'auto_slug_with_post_id',  10, 3 );
 }
 
 //投稿を追加

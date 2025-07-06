@@ -27,8 +27,8 @@ Template Name:駐車場運営事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/mv-sp.png" alt="駐車場運営事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/mv.png" alt="駐車場運営事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/mv-sp.jpg" alt="駐車場運営事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/parking/mv.jpg" alt="駐車場運営事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">空港内駐車場の運営全般を担っており、出庫・入庫の管理、精算時の補助や車両の監視、予約サービスにも対応しています。その他、不正駐車や不審車両の確認など、駐車場内で発生するイレギュラー事案の対応も行っています。</p>

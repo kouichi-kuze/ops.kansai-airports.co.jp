@@ -127,12 +127,16 @@ Template Name:お問い合わせ
 					</div>
 				</section>
 		</div>
-		<div class="pl-4-16" id="page-content-link_03">
-				<section class="sec-bulue-box pt-common">
-					<div class="content">
+		<div class="pl-4-16">
+				<section class="sec-bulue-box">
+					<div id="page-content-link_03" class="content">
 						<div class="p-side-3-8">
 							<div class="left-content">
 								<div class="security-outer">
+									<div class="margin-adjust">
+										<h2 class="left-pinkline-ttl">事業別お問い合わせ先</h2>
+									</div>
+
 									<div class="white-radius-box">
 										<div class="dot-ttl">居室賃貸借事業（関西国際空港航空機給油施設給油センター内車両整備場） </div>
 										<p class="dot-text-01">上記に関するお問い合わせ（担当：給油施設部給油事業グループ） </p>
@@ -147,6 +151,11 @@ Template Name:お問い合わせ
 											<p class="dot-text-02">オフィスクリーニング総合受付</p>
 											<div class="tel"><a href="tel:072-455-4920"><span>Tel.</span>072-455-4920</a></div>
 											<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
+										</div>
+										<div class="mb-2-4">
+											<p class="dot-text-02">清掃緊急対応窓口</p>
+											<div class="tel"><a href="tel:072-455-2947"><span>Tel.</span>072-455-2947</a></div>
+											<div class="text">（24時間受付）</div>
 										</div>
 										<div class="mb-2-4">
 											<p class="left-border-ttl">大阪国際空港</p>

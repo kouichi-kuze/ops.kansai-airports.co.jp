@@ -26,8 +26,8 @@ Template Name:オペレーションマネジメント事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/management/mv-sp.png" alt="オペレーションマネジメント事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/management/mv.png" alt="オペレーションマネジメント事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/management/mv-sp.jpg" alt="オペレーションマネジメント事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/management/mv.jpg" alt="オペレーションマネジメント事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">空港オペレーション業務全般に係る契約事務・支払い等に関する総合調整事業を行う事務系部門です。関西エアポート（株）から受託する業務に関する予算管理や契約業務の他に、警備・消防・旅客サービスにかかる各種調整を行います。社内外との業務運用調整を行う以外にも、空港内展望ホールの運営も行っています。</p>

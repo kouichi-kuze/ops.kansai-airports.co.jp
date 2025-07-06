@@ -27,8 +27,8 @@ Template Name:給油運用事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv-sp.png" alt="給油運用事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv.png" alt="給油運用事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv-sp.jpg" alt="給油運用事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/mv.jpg" alt="給油運用事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">関西国際空港の大動脈として、ハイドラントシステムを採用し、24時間絶え間なく飛来する航空機燃料を安全に供給できるよう、施設の運用及び維持管理を行っています。関西空港の給油施設では保管する航空燃料に係る品質等の管理や燃料の受入業務・航空燃料管理業務・運転監視業務・防災業務を行っています。</p>
@@ -83,6 +83,7 @@ Template Name:給油運用事業
 								<ul class="services-subpage-slider">
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/003_1.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/003_2.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fueling/kix/003_3.jpg" /></li>
 								</ul>
 							</li>
 						</ul>

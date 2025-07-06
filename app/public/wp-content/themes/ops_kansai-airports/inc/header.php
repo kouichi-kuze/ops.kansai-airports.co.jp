@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- www.ops.kansai-airports.co.jp に対する OneTrust Cookie 同意通知の始点 -->
+<script type="text/javascript" src="https://cdn-apac.onetrust.com/consent/c872c56e-ca6c-47b6-88c7-d4071251edbb/OtAutoBlock.js" ></script>
+<script src="https://cdn-apac.onetrust.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="c872c56e-ca6c-47b6-88c7-d4071251edbb" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,12 +14,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TZR2XMHR');</script>
 <!-- End Google Tag Manager -->
- <!-- www.ops.kansai-airports.co.jp に対する OneTrust Cookie 同意通知の始点 -->
-<script type="text/javascript" src="https://cdn-apac.onetrust.com/consent/c872c56e-ca6c-47b6-88c7-d4071251edbb/OtAutoBlock.js" ></script>
-<script src="https://cdn-apac.onetrust.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="c872c56e-ca6c-47b6-88c7-d4071251edbb" ></script>
-<script type="text/javascript">
-function OptanonWrapper() { }
-</script>
 <?php get_template_part( 'inc/g_tag_head' ); ?>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -26,8 +26,8 @@ Template Name:カーゴエリアオペレーション事業
 	<div class="page-sub-services bg-color-bg-blue">
 		<div class="content-bg bg-color-white">
 		<div class="mv-img">
-			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/mv-sp.png" alt="カーゴエリアオペレーション事業" class="d-md-none">
-		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/mv.png" alt="カーゴエリアオペレーション事業" class="d-none d-inline-md-block">
+			<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/mv-sp.jpg" alt="カーゴエリアオペレーション事業" class="d-md-none">
+		<img src="<?php bloginfo('template_url'); ?>/assets/img/service/cargo/mv.jpg" alt="カーゴエリアオペレーション事業" class="d-none d-inline-md-block">
 		</div>
 		<div class="p-side-3-8 description-outer">
 			<p class="description">国際貨物エリアの中での施設管理や連絡窓口としての役割を担っています。また各種災害や重大事案発生時には迅速な情報提供を行うなど、国際貨物エリア内での災害活動拠点として対応を行い、安全確保に努めています。</p>
