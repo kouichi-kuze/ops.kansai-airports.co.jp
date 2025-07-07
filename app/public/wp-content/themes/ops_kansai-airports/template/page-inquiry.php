@@ -34,14 +34,16 @@ Template Name:お問い合わせ
 					<ul class="page-content-link-list d-none d-xl-block fix-page-content-link-list">
 						<li class="page-content-link"><a href="#page-content-link_01">受託警備業務</a></li>
 						<li class="page-content-link"><a href="#page-content-link_02">消火器の設置・<br class="d-xl-inline-block">法定点検等</a></li>
-						<li class="page-content-link"><a href="#page-content-link_03">事業別お問い合わせ先</a></li>
+						<li class="page-content-link"><a href="#page-content-link_03">居室賃貸借事業</a></li>
+						<li class="page-content-link"><a href="#page-content-link_04">事業別お問い合わせ先</a></li>
 <!--						<li class="page-content-link"><a href="#page-content-link_04">オフィスクリーニング<br class="d-xl-inline-block">について</a></li>-->
 					</ul>
 
 					<ul class="page-content-link-list d-xl-none">
 						<li class="page-content-link"><a href="#page-content-link_01">受託警備業務</a></li>
 						<li class="page-content-link"><a href="#page-content-link_02">消火器の設置・<br class="d-xl-inline-block">法定点検等</a></li>
-						<li class="page-content-link"><a href="#page-content-link_03">事業別お問い合わせ先</a></li>
+						<li class="page-content-link"><a href="#page-content-link_03">居室賃貸借事業</a></li>
+						<li class="page-content-link"><a href="#page-content-link_04">事業別お問い合わせ先</a></li>
 <!--						<li class="page-content-link"><a href="#page-content-link_04">オフィスクリーニング<br class="d-xl-inline-block">について</a></li>-->
 					</ul>
 				</div>
@@ -134,14 +136,33 @@ Template Name:お問い合わせ
 							<div class="left-content">
 								<div class="security-outer">
 									<div class="margin-adjust">
-										<h2 class="left-pinkline-ttl">事業別お問い合わせ先</h2>
+										<h2 class="left-pinkline-ttl">営業のご案内</h2>
 									</div>
 
 									<div class="white-radius-box">
-										<div class="dot-ttl">居室賃貸借事業（関西国際空港航空機給油施設給油センター内車両整備場） </div>
-										<p class="dot-text-01">上記に関するお問い合わせ（担当：給油施設部給油事業グループ） </p>
+										<div class="dot-ttl">居室賃貸借事業（関西国際空港 航空機給油施設 給油センター内車両整備場）</div>
+										<p class="left-border-ttl">関西国際空港</p>
+										<p class="dot-text-02">上記に関するお問い合わせ（担当：給油施設部 給油事業グループ）</p>
 										<div class="tel"><a href="tel:072-455-2978"><span>Tel.</span>072-455-2978</a></div>
 										<div class="text">受付時間 09:00～17:30／※ 土・日・祝日・年末年始をのぞく</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+		</div>
+
+		<div class="pl-4-16">
+				<section class="sec-bulue-box">
+					<div id="page-content-link_04" class="content">
+						<div class="p-side-3-8">
+							<div class="left-content">
+								<div class="security-outer">
+									<div class="margin-adjust">
+										<h2 class="left-pinkline-ttl">事業別お問い合わせ先</h2>
 									</div>
 
 									<div class="white-radius-box">
@@ -213,7 +234,7 @@ Template Name:お問い合わせ
 							</div>
 						</div>
 					</div>
-				</section>
+			</section>
 		</div>
 		
 	</div>

@@ -318,9 +318,9 @@ Template Name:トップページ
 					<ul class="top-recruit-info">
 						<?php while ( $recruit_query->have_posts() ) : $recruit_query->the_post(); ?>
 						<li class="recruit-info-item">
-							<div href="<?php the_permalink(); ?>" class="recruit-info-link">
+							<div class="recruit-info-link">
 								<span class="recruit-info-date"><?php echo get_the_date( 'Y.m.d' ); ?></span>
-								<a class="recruit-info-ttl"><?php the_title(); ?></a>
+								<a href="<?php the_permalink(); ?>" class="recruit-info-ttl"><?php the_title(); ?></a>
 							</div>
 						</li>
 						<?php endwhile; ?>

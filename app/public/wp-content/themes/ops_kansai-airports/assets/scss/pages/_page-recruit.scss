@@ -298,6 +298,7 @@
     }
     
     .bnr-requruit{
+        position: relative;
         margin-bottom: 20px;
         @media only screen and (min-width: g.$desktop-breakpoint-xl){
             margin-bottom: 30px;
@@ -305,7 +306,9 @@
         .d-md-block{
             display: none;
         }
-        a{
+    }
+
+    a.bnr-requruit-link {
             position: relative;
             @media only screen and (min-width: g.$desktop-breakpoint-md){
                 &:hover .bnr-requruit-btn .btn-bg{
@@ -314,7 +317,6 @@
                 }
             }
         }
-    }
     
     .bnr-requruit-btn{
         position: absolute;

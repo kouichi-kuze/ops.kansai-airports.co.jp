@@ -54,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<nav class="nav-pc-menu">
 			<ul class="nav-list">
 			  <li class="nav-item"> 
-				  <a class="nav-iink" href="">企業情報 <span>Company</span></a>
+				  <a class="nav-iink hover-item" href="">企業情報 <span>Company</span></a>
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
 					  <!-- <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>" >企業情報トップ</a> </li> -->
@@ -72,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				  </div>-->
 			  </li>
 			  <li class="nav-item"> 
-				  <a class="nav-iink" href="">事業紹介 <span>Service</span></a>
+				  <a class="nav-iink hover-item" href="">事業紹介 <span>Service</span></a>
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
 					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>services/">事業紹介トップ</a> </li>
@@ -88,7 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				  </div>
 			  </li>
 			  <li class="nav-item"> 
-				  <a class="nav-iink" href="">採用情報 <span>Recruit</span></a>
+				  <a class="nav-iink hover-item" href="">採用情報 <span>Recruit</span></a>
 				  <div class="secondmenu_outline">
 					<ul class="secondmenu">
 					  <li class="secondmenu-top_item"> <a class="" href="<?php echo home_url( '/' ); ?>recruit/">採用情報トップ</a> </li>

@@ -46,9 +46,9 @@ Template Name:先輩の声
                           'taxonomy'   => 'voices_category',
                           'hide_empty' => true,
                         ]);
-                        // 現在選択中のスラッグ
+                        // 現在選択中の値（エンコード済みのまま）
                         $current = isset($_GET['vc']) ? $_GET['vc'] : '';
-                        foreach( $terms_all as $term ) {
+                        foreach ( $terms_all as $term ) {
                           printf(
                             '<option value="%1$s"%2$s>%3$s</option>',
                             esc_attr( $term->slug ),
@@ -63,28 +63,34 @@ Template Name:先輩の声
                 </form>
                 <div class="recruit-voices-list-card">
                   <?php
-                    // フィルタ用パラメータ取得
-                    $filter_slug = isset( $_GET['vc'] ) ? sanitize_text_field( $_GET['vc'] ) : '';
+                  // ▼ 修正箇所：フィルタ用パラメータ取得＆二重デコード
+                  if ( isset( $_GET['vc'] ) && $_GET['vc'] !== '' ) {
+                      // 1回目で "%25e6..." → "%e6..." に、2回目で "%e6..." → "消防業務" に戻る
+                      $decoded = rawurldecode( rawurldecode( $_GET['vc'] ) );
+                      $filter_slug = sanitize_text_field( $decoded );
+                  } else {
+                      $filter_slug = '';
+                  }
 
-                    // WP_Query 用引数
-                    $args = [
-                      'post_type'      => 'voices',
-                      'posts_per_page' => 100,
-                      'paged'          => get_query_var('paged', 1),
+                  // WP_Query 用引数
+                  $args = [
+                    'post_type'      => 'voices',
+                    'posts_per_page' => 100,
+                    'paged'          => get_query_var('paged', 1),
+                  ];
+
+                  if ( $filter_slug ) {
+                    $args['tax_query'] = [
+                      [
+                        'taxonomy' => 'voices_category',
+                        'field'    => 'slug',
+                        'terms'    => $filter_slug,
+                      ]
                     ];
+                  }
 
-                    if ( $filter_slug ) {
-                      $args['tax_query'] = [
-                        [
-                          'taxonomy' => 'voices_category',
-                          'field'    => 'slug',
-                          'terms'    => $filter_slug,
-                        ]
-                      ];
-                    }
-
-                    $voices = new WP_Query( $args );
-                    ?>
+                  $voices = new WP_Query( $args );
+                  ?>
                   <?php if ( $voices->have_posts() ) : ?>
                   <ul class="recruit-voices-list">
                     <?php while ( $voices->have_posts() ) : $voices->the_post(); ?>
@@ -156,21 +162,12 @@ Template Name:先輩の声
                         </a>
                       </li>
                     <?php endwhile; ?>
-                    
                   </ul>
-<!--
-                  <?php
-                      // ページネーション
-                      echo paginate_links([
-                        'total'   => $voices->max_num_pages,
-                        'current' => max( 1, get_query_var('paged') ),
-                      ]);
-                      wp_reset_postdata();
-                    ?>
-                  <?php else : ?>
+
+                   <?php else : ?>
                     <p>該当する先輩の声はありません。</p>
-                  <?php endif; ?>
--->
+                  <?php endif; ?>                 
+
                 </div>
               </div>
             </div>

@@ -52,6 +52,7 @@ Template Name:消防事業
 								<ul class="services-subpage-slider">
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/001.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/001_2.jpg" /></li>
+									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/001_3.jpg" /></li>
 								</ul>
 							</li>
 						</ul>
@@ -78,7 +79,6 @@ Template Name:消防事業
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/002.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/003.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/004.jpg" /></li>
-									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/005.jpg" /></li>
 									<li><img alt="" src="<?php bloginfo('template_url'); ?>/assets/img/service/fire/kix/006.jpg" /></li>
 								</ul>
 							</li>
@@ -161,10 +161,8 @@ Template Name:消防事業
 		
 		
 		<div class="btn-bace-round">
-			<div class="btn-setting">
-			  <a href="<?php echo home_url( '/' ); ?>services" class="back">事業紹介一覧</a>
-			</div>
-		</div>		
+			<a class="btn-setting" href="<?php echo home_url( '/' ); ?>services" class="back">事業紹介一覧</a>
+		</div>	
 	</div>		
 	</div>
 <!--バナー共通パーツ-->

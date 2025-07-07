@@ -432,6 +432,20 @@
 .footer-copylink-area {
   bottom: 30px;
 }
+
+@media only screen and (min-width: g.$desktop-breakpoint-xl) {
+  .nav-pc-menu {
+    .nav-item {
+      &:hover {
+        > .nav-iink.hover-item {
+          pointer-events: none;
+          //cursor: default;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: g.$desktop-breakpoint-md) {
   .office-info {
     gap: 80px;
@@ -446,3 +460,5 @@
     margin-bottom: 20px;
   }
 }
+
+

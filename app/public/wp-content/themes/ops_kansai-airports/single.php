@@ -62,7 +62,7 @@
 					<!-- <?php previous_post_link( '%link', 'PREV', TRUE ) ?>-->
 					<div class="btn-center">
 						<div class="btn-bace-round">
-							<a class="btn-setting btn-sm" href="<?php echo get_option('home'); ?>/category/news/" class="back">お知らせ一覧</a>
+							<a class="btn-setting btn-sm" href="<?php echo get_option('home'); ?>/information" class="back">お知らせ一覧</a>
 						</div>
 					</div>
 					

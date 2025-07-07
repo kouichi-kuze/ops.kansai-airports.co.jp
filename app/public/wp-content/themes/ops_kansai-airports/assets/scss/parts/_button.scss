@@ -285,11 +285,18 @@
   }
 }
 
-.page-id-14,
 .page-id-10 {
 	.floating-recruit-btn {
 		@media only screen and (min-width: g.$desktop-breakpoint-md){
 			top: 440px;
+		}
+	}
+}
+
+.page-id-14 {
+	.floating-recruit-btn {
+		@media only screen and (min-width: g.$desktop-breakpoint-md){
+			top: 500px;
 		}
 	}
 }

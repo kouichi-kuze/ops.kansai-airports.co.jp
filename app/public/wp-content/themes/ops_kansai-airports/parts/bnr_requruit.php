@@ -1,21 +1,20 @@
 		<div class="footer-bnr-content bg-color-primary">
 			<div class="p-side-15-8">
 				<div class="max-138">
-					<ul class="bnr-requruit">
-						<a href="https://job.rikunabi.com/2026/company/r572772023/" target="_blank">
+					<a class="bnr-requruit-link" href="" target="_blank" style="pointer-events: none;">
+					<ul class="bnr-requruit" style="position: relative;">
 							<li class="img">
-								<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/bnr_reqruit_pc.png" alt="採用サイト（新卒・中途）空港内のさまざまなフィールドで活躍している先輩たちの担当業務や入社動機などをご紹介。" class="d-md-block">
-								<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/bnr_reqruit_sp.png" alt="採用サイト（新卒・中途）空港内のさまざまなフィールドで活躍している先輩たちの担当業務や入社動機などをご紹介。" class="d-md-none">
+								<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/bnr_reqruit_comingsoon_pc.png" alt="採用サイト（新卒・中途）空港内のさまざまなフィールドで活躍している先輩たちの担当業務や入社動機などをご紹介。" class="d-md-block">
+								<img src="<?php bloginfo('template_url'); ?>/assets/img/recruit/bnr_reqruit_comingsoon_sp.png" alt="採用サイト（新卒・中途）空港内のさまざまなフィールドで活躍している先輩たちの担当業務や入社動機などをご紹介。" class="d-md-none">
 							</li>
-							<li class="bnr-requruit-btn">
+							<!--<li class="bnr-requruit-btn">
 								<div class="btn-over">
 									<span class="btn-bg"></span>
 									<span class="btn-text">募集要項・エントリー</span>
 								</div>
-								
-							</li>
-						</a>
+							</li>-->
 					</ul>
+					</a>
 					<div class="bnr-voice">
 						<a href="<?php echo home_url( '/' ); ?>/voices/">
 							<div class="bnr-voice-btn">

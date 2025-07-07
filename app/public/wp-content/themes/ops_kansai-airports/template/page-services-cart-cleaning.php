@@ -73,10 +73,8 @@ Template Name:清掃カート事業
 		
 		
 		<div class="btn-bace-round">
-			<div class="btn-setting">
-			  <a href="<?php echo home_url( '/' ); ?>services" class="back">事業紹介一覧</a>
-			</div>
-		</div>		
+			<a class="btn-setting" href="<?php echo home_url( '/' ); ?>services" class="back">事業紹介一覧</a>
+		</div>	
 	</div>
 	</div>
 <!--バナー共通パーツ-->

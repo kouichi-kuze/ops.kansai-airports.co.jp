@@ -65,7 +65,7 @@ Template Name:企業概要
 								<dt class="title">代表者</dt>
 								<dd class="text">
 									代表取締役会長：ヤニック・アイユリ<br>
-									代表取締役社長：石川 浩司<br>
+									代表取締役社長：松井 光市<br>
 									取締役：北林 弘幹<br>
 									監査役：坂本 龍平<br>
 									監査役：片平　聡<br>
